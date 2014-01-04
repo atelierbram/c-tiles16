@@ -122,7 +122,7 @@ h3,
 .tagline {
   @extend %reset;
   font-size: 1.1875em;
-  line-height: 0.5; 
+  line-height: 0.55;
   letter-spacing: 2px;
   word-spacing: -3px;
   color: #fff;
@@ -131,7 +131,6 @@ h3,
   clear: none;
   text-indent: .2em;
 }
-
 .tagline b {
   font-weight: normal;
   display: inline-block;
