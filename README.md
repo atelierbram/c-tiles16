@@ -2,6 +2,8 @@
 
 Colorscheming with Variables
 
+[this text in HTML format](http://atelierbram.github.io/c-tiles16/)
+
 ## Introduction
 It’ s one thing two have color variables declared on top of your Sass/Less/Stylus stylesheet. It’ s another thing to use them in an intuitive and meaningfull way in your designs. That’s  where c-Tiles16 comes in to help out. There are two parts:
 
@@ -20,7 +22,6 @@ A possible way to make this tool, or rather collection-of-tools, your own can be
 * from the dropdown-menu you can pick and see how other colorschemes look.
 * there’s a button for toggling the page background-color, but you can also hover with your mouse over the colortiles
 * refresh the colorschemer-webpage after each time you edit your `ctiles16-custom.scss`-colorscheme-variables file (or use something like LiveReload)
-* refresh the page after each edit (or use something like LiveReload)
 * When following the workflow above, you have been using [c-Tiles16](http//atelierbram.github.io/c-tiles16) to make a colorscheme made out of sixteen colors</li>
 
 ## Development
