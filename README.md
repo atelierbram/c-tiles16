@@ -7,12 +7,12 @@ It’ s one thing two have color variables declared on top of your Sass/Less/Sty
 
 1.  A build script named `ctiles16`, that is a fork of [Base16](https://github.com/chriskempson/base16-builder), and can be executed from the terminal/commandline, and generates preprocessor variables to be used by Sass, Less, or Stylus
 
-2. A [colorscheming test playground](http://atelierbram.github.io/c-base16/colorscheming) that is assembled to have the best colorscheming tools, alongside colorscheme-tiles **on one webpage**-test-playground, making it convenient to create your own colorscheme, with sixteen variables
+2. A [colorscheming test playground](http://atelierbram.github.io/c-tiles16/colorscheming) that is assembled to have the best colorscheming tools, alongside colorscheme-tiles **on one webpage**-test-playground, making it convenient to create your own colorscheme, with sixteen variables
 
 ## Getting started
 A possible way to make this tool, or rather collection-of-tools, your own can be:
 
-* download the [zip-file](https://github.com/atelierbram/c-tiles/archive/master.zip), or clone the [the repo](https://github.com/atelierbram/c-tiles) to your own computer
+* download the [zip-file](https://github.com/atelierbram/c-tiles16/archive/master.zip), or clone the [the repo](https://github.com/atelierbram/c-tiles16) to your own computer
 * when using Sass, open `assets/sass/ctiles16-custom.scss` (which is a copy of `ctiles16-ctiles.scss`) in a text-editor. Don’t rename it just yet, but:
 * (this works best full screen) start editing the values of the variables with the text-editor on one side, and the browser-window with the test colorscheming playground (`colorscheming/index.html`) on the other side of your screen
 * play with the hsl-picker to help you get along
