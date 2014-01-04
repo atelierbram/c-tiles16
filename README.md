@@ -37,9 +37,9 @@ Since c-Tiles16 is a fork of Base16-builder, you can [look it up on Github](http
 Easily build color variations of Base16 with YAML scheme definitions and ERB templates.
 Requires Ruby 1.9 or greater.
 
-go in the terminal to `c-tiles/schemes/`
+go in the terminal to `c-tiles16/schemes/`
 ```bash
-cd  c-tiles/schemes/
+cd  c-tiles16/schemes/
 ```
 
 To build all schemes:
