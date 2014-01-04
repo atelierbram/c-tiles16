@@ -121,15 +121,15 @@ h3,
 }
 .tagline {
   @extend %reset;
-  font-size: 1.25em;
-  line-height: 0.5;
-
-  // padding-left: 6.85em;
+  font-size: 1.1875em;
+  line-height: 0.5; 
   letter-spacing: 2px;
   word-spacing: -3px;
   color: #fff;
   text-shadow: 1px 1px 0px rgba(0,0,0,.5);
   white-space: nowrap;
+  clear: none;
+  text-indent: .2em;
 }
 
 .tagline b {

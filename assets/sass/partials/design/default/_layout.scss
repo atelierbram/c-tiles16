@@ -216,15 +216,14 @@ $zen-columns: 1;
 }
 .content .colorscheme-tiles,
 .content .color-functions {
-  // max-width: 528px;
-  /* 512 + 16px */
-
   max-width: 384px; /* 24 * 16px */
 }
 .header .colorscheme-tiles {
-  max-width: 96px;
-  min-height: 114px;
+  float: left;
+  width: 96px;
+  min-height: 110px;
   padding-top: 1em;
+  clear: both;
 }
 .alpha {
   font-size: 3em;
