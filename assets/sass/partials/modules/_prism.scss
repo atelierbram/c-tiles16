@@ -1,0 +1,124 @@
+/*
+
+Name:       Base16 Atelier Forest Dark
+Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+
+Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/ 
+code[class*="language-"],
+pre[class*="language-"] {
+  color: $base07;
+  @extend %monospace !optional;
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  word-spacing: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background: $base00;
+  color: $base05;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: $base02;
+}
+
+.token.punctuation {
+  color: $base05;;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.null,
+.token.operator,
+.token.boolean,
+.token.number {
+  color: $base09;
+}
+.token.property {
+  color: $base16-yellow;
+}
+.token.tag {
+  color: $base16-blue;
+}
+.token.string {
+  color: $base16-cyan;
+}
+.token.selector {
+  color: $base16-violet;
+}
+.token.attr-name {
+  color: $base09;
+}
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: $base16-cyan;
+}
+
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: $base16-green;
+}
+
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: $base16-cyan;
+}
+
+.token.placeholder,
+.token.variable {
+  color: $base16-blue;
+}
+
+.token.important {
+  color: $base16-red;
+  font-weight: bold;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre > code.highlight {
+  outline: .4em solid $base16-red;
+  outline-offset: .4em;
+}
+

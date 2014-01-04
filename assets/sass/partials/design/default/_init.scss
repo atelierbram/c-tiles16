@@ -1,0 +1,97 @@
+$strict-normalize: false !default;
+
+$base-font-family:  pt_sans_narrowregular, AvenirNext-Regular,  DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif !default;
+
+$base-font-size: 16px !default;
+// Override default set in Compass' Vertical Rhythm partial.
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default; // Override default set in Compass' Vertical Rhythm partial.
+
+// The font sizes for h1-h6.
+$h1-font-size: 5    * $base-font-size !default;
+$h2-font-size: 3  * $base-font-size !default;
+$h3-font-size: 2 * $base-font-size !default;
+$h4-font-size: 1.75    * $base-font-size !default;
+$h5-font-size: 1.5 * $base-font-size !default;
+$h6-font-size: 1.25 * $base-font-size !default;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 32px !default;
+
+// Legacy browser variables for Compass.
+$legacy-support-for-ie6           : false;
+$legacy-support-for-ie7           : false;
+
+// Set up Zen Grids.
+$zen-columns                      : 1;
+$zen-gutters                      : 32px;
+$zen-auto-include-grid-item-base  : false;
+
+@import "compass";
+@import "compass/layout";
+@import "compass/css3/";
+@import "compass/support";
+@import "compass/typography/vertical_rhythm";
+
+// Import fonts and colorvariables
+@import "fontface";
+@import "color-vars";
+
+%reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+%sans {
+  font-family: pt_sans_narrowregular, AvenirNext-Regular, DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+%sans-condensed {
+  font-family: cuprumbold, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+  // font-weight: 700;
+}
+%sans-bold {
+  font-family: AvenirNextCondensed-Bold, DejaVuSansCondensed, "Lucida Grande", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-weight: bold;
+}
+%monospace {
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+%a-center {
+  text-align: center;
+}
+%relative {
+  position: relative;
+}
+%absolute {
+  position: absolute;
+}
+%pad {
+  padding: 1em !important;
+}
+%mtm {
+  margin-top: 1em;
+}
+%schemegradient {
+  background-image: linear-gradient(to right, $base16-yellow, $base16-yellow 12.5%, $base16-orange 12.5%, $base16-orange 25%, $base16-red 25%, $base16-red 37.5%, $base16-magenta 37.5%, $base16-magenta 50%, $base16-violet 50%, $base16-violet 62.5%, $base16-blue 62.5%, $base16-blue 75%, $base16-cyan 75%, $base16-cyan 87.5%, $base16-green 87.5%, $base16-green);
+}
+%linkcolor { color: $base16-violet; }
+%linkcolor-light { color: lighten($base16-violet,15%); }
+%linkcolor-dark { color: darken($base16-violet,5%); }
+
+
+@mixin rebase($rebase00,$rebase01,$rebase03,$rebase04,$rebase05,$rebase06,$rebase07)
+{
+  background-color:$rebase01;
+  color:$rebase07;
+}
+
+// Import all the parts.
+@import "normalize";
+@import "modules";
+@import "../../zen-grids/grids";
+@import "../../zen-grids/background";
+@import "../../zen-grids/flow";
+@import "layout";
+

@@ -1,0 +1,374 @@
+/* =====  buttons from formalize.me ===== */
+// @import "compass/css3";
+
+.btn {
+  -webkit-appearance: none;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: $base06 darken($base06,10%) lighten($base05,10%);
+  cursor: pointer;
+  color: $base01;
+  display: inline-block;
+  outline: 0;
+  overflow: visible;
+  margin: .5em .125em;
+  padding: .25em 1em .35em;
+  text-shadow: $base07 0 1px 1px;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  // font-size: 1.125em;
+  @extend %sans-condensed;
+  background-color: darken($base07,2.5%);
+  background-image: linear-gradient(to bottom, $base07, darken($base07,2.5%) 1px, darken($base06,2.5%));
+
+  &:hover {
+    background-color: $base07;
+    background-image: linear-gradient(to bottom, lighten($base07,2.5%), $base07 1px, lighten($base06,2.5%));
+    text-decoration: none;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, darken($base06,2.5%), darken($base07,2.5%));
+    box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base05 $base06 lighten($base05,5%);
+  }
+  &:invalid {
+    box-shadow: none;
+  }
+  // Add blue glow.
+  &:focus {
+    box-shadow: $base16-blue 0 0 5px 0;
+    // for Opera
+    z-index: 1;
+  }
+}
+.btn--bg-toggle {
+  float: none;
+  // @extend %absolute;
+  position: absolute;
+  right: 1em;
+  bottom: 2em;
+}
+.btn--top-action {
+  // @extend %absolute;
+  position: absolute;
+  right: 1em;
+  top: 3.7em;
+  cursor: pointer;
+  z-index: 9;
+}
+
+/* ===== colored buttons  ===== */
+.btn--base00,
+.bg-base00 .btn--ctiles {
+  border-color: $base01 $base00 darken($base00,2.5%);
+  color: $base07;
+  // text-shadow: darken($base00,2.5%) 0 1px 1px;
+  text-shadow: none;
+  background-color: $base00;
+  background-image: linear-gradient(to bottom, $base02, $base05 1px, $base00);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: $base01;
+    background-image: linear-gradient(to bottom, $base03, lighten($base05,15%) 1px, $base01);
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, $base00, $base02);
+    box-shadow: rgba(255,255,255,0.25) inset 0 1px 2px 0;
+    border-color: $base02 darken($base02,5%);
+  }
+}
+
+.btn--base01,
+.bg-base01 .btn--ctiles {
+  border-color: $base02 $base01 darken($base01,2.5%);
+  color: $base07;
+  // text-shadow: darken($base00,2.5%) 0 1px 1px;
+  text-shadow: none;
+  background-color: $base01;
+  background-image: linear-gradient(to bottom, $base03, tint($base05,5%) 1px, $base01);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: $base01;
+    background-image: linear-gradient(to bottom, $base04, tint($base06,15%) 1px, $base02);
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, $base01, $base03);
+    box-shadow: rgba(255,255,255,0.25) inset 0 1px 2px 0;
+    border-color: $base03 darken($base03,5%);
+  }
+}
+
+.btn--base02,
+.bg-base02 .btn--ctiles {
+  border-color: $base03 $base02 darken($base02,2.5%);
+  color: $base07;
+  // text-shadow: darken($base00,2.5%) 0 1px 1px;
+  text-shadow: none;
+  background-color: $base02;
+  background-image: linear-gradient(to bottom, $base04, lighten($base05,25%) 1px, $base02);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: $base01;
+    background-image: linear-gradient(to bottom, $base05, lighten($base05,15%) 1px, $base03);
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, $base03, $base05);
+    box-shadow: rgba(255,255,255,0.25) inset 0 1px 2px 0;
+    border-color: $base04 darken($base04,5%);
+  }
+}
+
+.btn--base03,
+.bg-base03 .btn--ctiles {
+  border-color: $base04 $base03 darken($base03,2.5%);
+  color: $base07;
+  // text-shadow: darken($base00,2.5%) 0 1px 1px;
+  text-shadow: none;
+  background-color: $base03;
+  background-image: linear-gradient(to bottom, $base05, lighten($base05,25%) 1px, $base03);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: $base04;
+    background-image: linear-gradient(to bottom, $base05, lighten($base05,35%) 1px, $base04);
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, $base00, $base02);
+    box-shadow: rgba(255,255,255,0.25) inset 0 1px 2px 0;
+    border-color: $base05 darken($base05,5%);
+  }
+}
+
+.btn--base06,
+.bg-base06 .btn--ctiles {
+  border-color: $base06 darken($base06,10%) lighten($base05,10%);
+  color: $base01;
+  text-shadow: $base07 0 1px 1px;
+  background-color: darken($base07,2.5%);
+  background-image: linear-gradient(to bottom, $base07, darken($base07,2.5%) 1px, darken($base06,2.5%));
+
+  &:hover {
+    background-color: $base07;
+    background-image: linear-gradient(to bottom, lighten($base07,2.5%), $base07 1px, lighten($base06,2.5%));
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, darken($base06,2.5%), darken($base07,2.5%));
+    box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base05 $base06 lighten($base05,5%);
+  }
+}
+
+.btn--base07,
+.bg-base07 .btn--ctiles {
+  border-color: $base06 darken($base06,10%) lighten($base05,10%);
+  color: $base01;
+  text-shadow: $base07 0 1px 1px;
+  background-color: $base07;
+  background-image: linear-gradient(to bottom, $base07 $base06);
+
+  &:hover {
+    background-color: $base07;
+    background-image: linear-gradient(to bottom, lighten($base07,5%), $base07 1px, lighten($base06,5%));
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, darken($base06,2.5%), lighten($base07,2.5%));
+    box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base06 $base07 lighten($base06,5%);
+  }
+}
+
+.btn--base16-yellow,
+.bg-base16-yellow .btn--ctiles {
+  border-color: lighten($base16-yellow,15%) $base16-yellow darken($base16-yellow,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-yellow;
+  background-image: linear-gradient(to bottom, $base16-yellow, lighten($base16-yellow,2.5%) 1px, shade($base16-yellow,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-yellow,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-yellow,2.5%), lighten($base16-yellow,5%) 1px, shade($base16-yellow, 20%));
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-yellow,15%), $base16-yellow);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-yellow darken($base16-yellow,5%);
+  }
+}
+
+.btn--base16-orange,
+.bg-base16-orange .btn--ctiles {
+  border-color: lighten($base16-orange,15%) $base16-orange darken($base16-orange,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-orange;
+  background-image: linear-gradient(to bottom, $base16-orange, lighten($base16-orange,2.5%) 1px, shade($base16-orange,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-orange,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-orange,2.5%), lighten($base16-orange,5%) 1px, shade($base16-orange, 20%));
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-orange,15%), $base16-orange);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-orange darken($base16-orange,5%);
+  }
+}
+
+.btn--base16-red,
+.bg-base16-red .btn--ctiles {
+  border-color: lighten($base16-red,15%) $base16-red darken($base16-red,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-red;
+  background-image: linear-gradient(to bottom, $base16-red, lighten($base16-red,2.5%) 1px, shade($base16-red,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-red,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-red,2.5%), lighten($base16-red,5%) 1px, shade($base16-red, 20%)); 
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-red,15%), $base16-red);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-red darken($base16-red,5%);
+  }
+}
+
+.btn--base16-magenta,
+.bg-base16-magenta .btn--ctiles {
+  border-color: lighten($base16-magenta,15%) $base16-magenta darken($base16-magenta,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-magenta;
+  background-image: linear-gradient(to bottom, $base16-magenta, lighten($base16-magenta,2.5%) 1px, shade($base16-magenta,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-magenta,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-magenta,2.5%), lighten($base16-magenta,5%) 1px, shade($base16-magenta, 20%)); 
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-magenta,15%), $base16-magenta);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-magenta darken($base16-magenta,5%);
+  }
+}
+
+.btn--base16-violet,
+.bg-base16-violet .btn--ctiles {
+  border-color: lighten($base16-violet,15%) $base16-violet darken($base16-violet,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-violet;
+  background-image: linear-gradient(to bottom, $base16-violet, lighten($base16-violet,2.5%) 1px, shade($base16-violet,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-violet,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-violet,2.5%), lighten($base16-violet,5%) 1px, shade($base16-violet, 20%));
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-violet,15%), $base16-violet);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-violet darken($base16-violet,5%);
+  }
+}
+
+.btn--base16-blue,
+.bg-base16-blue .btn--ctiles {
+  border-color: lighten($base16-blue,15%) $base16-blue darken($base16-blue,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-blue;
+  background-image: linear-gradient(to bottom, $base16-blue, lighten($base16-blue,2.5%) 1px, shade($base16-blue,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-blue,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-blue,2.5%), lighten($base16-blue,5%) 1px, shade($base16-blue, 20%)); 
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-blue,15%), $base16-blue);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-blue darken($base16-blue,5%);
+  }
+}
+
+.btn--base16-cyan,
+.bg-base16-cyan .btn--ctiles {
+  border-color: lighten($base16-cyan,15%) $base16-cyan darken($base16-cyan,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-cyan;
+  background-image: linear-gradient(to bottom, $base16-cyan, lighten($base16-cyan,2.5%) 1px, shade($base16-cyan,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-cyan,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-cyan,2.5%), lighten($base16-cyan,5%) 1px, shade($base16-cyan, 20%)); 
+    color: #fff;
+
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-cyan,15%), $base16-cyan);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-cyan darken($base16-cyan,5%);
+  }
+}
+
+.btn--base16-green,
+.bg-base16-green .btn--ctiles {
+  border-color: lighten($base16-green,15%) $base16-green darken($base16-green,5%);
+  color: $base07;
+  text-shadow: darken($base00,2.5%) 0 1px 1px;
+  // text-shadow: none;
+  background-color: $base16-green;
+  background-image: linear-gradient(to bottom, $base16-green, lighten($base16-green,2.5%) 1px, shade($base16-green,25%));
+  letter-spacing: 1px;
+  word-spacing: -1px;
+
+  &:hover {
+    background-color: lighten($base16-green,15%);
+    background-image: linear-gradient(to bottom, lighten($base16-green,2.5%), lighten($base16-green,5%) 1px, shade($base16-green, 20%)); 
+    color: #fff;
+  }
+  &:active {
+    background-image: linear-gradient(to bottom, shade($base16-green,15%), $base16-green);
+    // box-shadow: rgba(0,0,0,0.25) inset 0 1px 2px 0;
+    border-color: $base16-green darken($base16-green,5%);
+  }
+}
+
+

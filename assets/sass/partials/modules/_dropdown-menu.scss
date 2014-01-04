@@ -1,0 +1,87 @@
+@import "compass/css3";
+// http://codepen.io/larrygeams/pen/feoDc
+// http://css-tricks.com/long-dropdowns-solution/
+.dropdown li{
+  // font-size: 1.125em;
+  font-weight: bold;
+  float: right;
+  width: 192px;
+  // width: 245px;
+  position: relative;
+  background: $base06;
+}
+
+.dropdown a:hover{
+  color: #000;
+}
+
+.dropdown li a {
+  display: block;
+  padding: .5em;
+  color: $base00;
+  position: relative;
+  z-index: 4;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.dropdown li a:hover,
+.dropdown li a.hover{
+  background: $base16-cyan;
+  position: relative;
+  color: $base07;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // width: 245px;
+  width: 192px;
+  z-index: 3;
+}
+
+.dropdown ul li {
+  font-weight: normal;
+  background: $base07;
+  color: $base00;
+  border-top: 1px solid lighten($base07, 15%);
+  border-bottom: 1px solid $base06;
+}
+
+.dropdown ul li a {
+  display: block;
+  color: $base01 !important;
+  background: lighten($base07,2.5%) !important;
+}
+
+.dropdown .is-selected,
+.dropdown ul li a:hover {
+  display: block;
+  background: $base16-cyan !important;
+  color: #fff !important;
+}
+.drop > a {
+  position: relative; 
+  @extend %a-center;
+}
+
+.drop > a:after {
+  content:"";
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  border-left: 5px solid transparent;
+  border-top: 5px solid $base02;
+  border-right: 5px solid transparent;
+  z-index: 999;
+}
+
+.drop > a:hover:after{
+  content:"";
+  border-left: 5px solid transparent;
+  border-top: 5px solid $base07;
+  border-right: 5px solid transparent;
+}
+

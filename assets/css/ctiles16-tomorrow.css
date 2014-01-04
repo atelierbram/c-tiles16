@@ -1,0 +1,3438 @@
+/*
+
+Name: Tomorrow
+Author: Chris Kempson (http://chriskempson.com)
+
+Sass-variables template by Bram de Haan (https://github.com/atelierbram/c-tiles16)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+@font-face {
+  font-family: 'pt_sans_narrowregular';
+  src: url("../type/ptsans/PTN57F-webfont.eot");
+  src: url("../type/ptsans/PTN57F-webfont.eot?#iefix") format("embedded-opentype"), url("../type/ptsans/PTN57F-webfont.woff") format("woff"), url("../type/ptsans/PTN57F-webfont.ttf") format("truetype"), url("../type/ptsans/PTN57F-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cuprumbold';
+  src: url("../type/cuprum/Cuprum-Bold-webfont.eot");
+  src: url("../type/cuprum/Cuprum-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../type/cuprum/Cuprum-Bold-webfont.woff") format("woff"), url("../type/cuprum/Cuprum-Bold-webfont.ttf") format("truetype"), url("../type/cuprum/Cuprum-Bold-webfont.svg#cuprumbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== fallback for omitting CAPITALISATION of last character of variable, (somehow like all small characters better) ===== */
+/* ===== convert code to easier to remember color-names  ===== */
+/* ===== to invert/swap out color-values within the scheme itself  ===== */
+/* ===== background colors for the 16 SVG demo tiles  ===== */
+/* line 38, ../sass/partials/design/default/_color-vars.scss */
+.fill-base00 {
+  fill: #1d1f21;
+}
+
+/* line 39, ../sass/partials/design/default/_color-vars.scss */
+.fill-base01 {
+  fill: #282a2e;
+}
+
+/* line 40, ../sass/partials/design/default/_color-vars.scss */
+.fill-base02 {
+  fill: #373b41;
+}
+
+/* line 41, ../sass/partials/design/default/_color-vars.scss */
+.fill-base03 {
+  fill: #969896;
+}
+
+/* line 42, ../sass/partials/design/default/_color-vars.scss */
+.fill-base04 {
+  fill: #b4b7b4;
+}
+
+/* line 43, ../sass/partials/design/default/_color-vars.scss */
+.fill-base05 {
+  fill: #c5c8c6;
+}
+
+/* line 44, ../sass/partials/design/default/_color-vars.scss */
+.fill-base06 {
+  fill: #e0e0e0;
+}
+
+/* line 45, ../sass/partials/design/default/_color-vars.scss */
+.fill-base07 {
+  fill: white;
+}
+
+/* line 46, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-red {
+  fill: #cc6666;
+}
+
+/* line 47, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-orange {
+  fill: #de935f;
+}
+
+/* line 48, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-yellow {
+  fill: #f0c674;
+}
+
+/* line 49, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-green {
+  fill: #b5bd68;
+}
+
+/* line 50, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-cyan {
+  fill: #8abeb7;
+}
+
+/* line 51, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-blue {
+  fill: #81a2be;
+}
+
+/* line 52, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-violet {
+  fill: #b294bb;
+}
+
+/* line 53, ../sass/partials/design/default/_color-vars.scss */
+.fill-base16-magenta {
+  fill: #a3685a;
+}
+
+/* ===== Sass and Compass color functions - toggle buttons  ===== */
+/* line 60, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base00 {
+  fill: #1d1e21;
+}
+
+/* line 61, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base01 {
+  fill: #28292e;
+}
+
+/* line 62, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base02 {
+  fill: #373941;
+}
+
+/* line 63, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base03 {
+  fill: #969897;
+}
+
+/* line 64, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base04 {
+  fill: #b4b7b5;
+}
+
+/* line 65, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base05 {
+  fill: #c5c8c7;
+}
+
+/* line 66, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base06 {
+  fill: #e0e0e0;
+}
+
+/* line 67, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base07 {
+  fill: white;
+}
+
+/* line 68, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-red {
+  fill: #cc8066;
+}
+
+/* line 69, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-orange {
+  fill: #deb35f;
+}
+
+/* line 70, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-yellow {
+  fill: #f0e574;
+}
+
+/* line 71, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-green {
+  fill: #a0bd68;
+}
+
+/* line 72, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-cyan {
+  fill: #8ab8be;
+}
+
+/* line 73, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-blue {
+  fill: #8193be;
+}
+
+/* line 74, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-violet {
+  fill: #bb94ba;
+}
+
+/* line 75, ../sass/partials/design/default/_color-vars.scss */
+.is-hue-adjusted .fill-base16-magenta {
+  fill: #a37a5a;
+}
+
+/* line 77, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base00 {
+  fill: #41454a;
+}
+
+/* line 78, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base01 {
+  fill: #4c4f57;
+}
+
+/* line 79, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base02 {
+  fill: #5a616a;
+}
+
+/* line 80, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base03 {
+  fill: #bdbebd;
+}
+
+/* line 81, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base04 {
+  fill: #dbdcdb;
+}
+
+/* line 82, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base05 {
+  fill: #eceded;
+}
+
+/* line 83, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base06 {
+  fill: white;
+}
+
+/* line 84, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base07 {
+  fill: white;
+}
+
+/* line 85, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-red {
+  fill: #df9f9f;
+}
+
+/* line 86, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-orange {
+  fill: #ebbe9e;
+}
+
+/* line 87, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-yellow {
+  fill: #f7e2b9;
+}
+
+/* line 88, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-green {
+  fill: #cfd49d;
+}
+
+/* line 89, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-cyan {
+  fill: #bbd9d5;
+}
+
+/* line 90, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-blue {
+  fill: #b3c7d8;
+}
+
+/* line 91, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-violet {
+  fill: #d4c3d9;
+}
+
+/* line 92, ../sass/partials/design/default/_color-vars.scss */
+.is-lightened .fill-base16-magenta {
+  fill: #bf958b;
+}
+
+/* line 94, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base00 {
+  fill: black;
+}
+
+/* line 95, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base01 {
+  fill: #040505;
+}
+
+/* line 96, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base02 {
+  fill: #141518;
+}
+
+/* line 97, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base03 {
+  fill: #707270;
+}
+
+/* line 98, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base04 {
+  fill: #8d928d;
+}
+
+/* line 99, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base05 {
+  fill: #9ea39f;
+}
+
+/* line 100, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base06 {
+  fill: #bababa;
+}
+
+/* line 101, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base07 {
+  fill: #d9d9d9;
+}
+
+/* line 102, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-red {
+  fill: #ac3939;
+}
+
+/* line 103, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-orange {
+  fill: #c76a29;
+}
+
+/* line 104, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-yellow {
+  fill: #e9aa2f;
+}
+
+/* line 105, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-green {
+  fill: #8f9742;
+}
+
+/* line 106, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-cyan {
+  fill: #5aa298;
+}
+
+/* line 107, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-blue {
+  fill: #537ca0;
+}
+
+/* line 108, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-violet {
+  fill: #90659d;
+}
+
+/* line 109, ../sass/partials/design/default/_color-vars.scss */
+.is-darkened .fill-base16-magenta {
+  fill: #72493f;
+}
+
+/* line 111, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base00 {
+  fill: #181f26;
+}
+
+/* line 112, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base01 {
+  fill: #222834;
+}
+
+/* line 113, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base02 {
+  fill: #2e394a;
+}
+
+/* line 114, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base03 {
+  fill: #86a886;
+}
+
+/* line 115, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base04 {
+  fill: #a9c2a9;
+}
+
+/* line 116, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base05 {
+  fill: #bdd0c3;
+}
+
+/* line 117, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base06 {
+  fill: #e5dbdb;
+}
+
+/* line 118, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base07 {
+  fill: white;
+}
+
+/* line 119, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-red {
+  fill: #db5757;
+}
+
+/* line 120, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-orange {
+  fill: #ec9051;
+}
+
+/* line 121, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-yellow {
+  fill: #fcca68;
+}
+
+/* line 122, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-green {
+  fill: #c2cd58;
+}
+
+/* line 123, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-cyan {
+  fill: #7cccc1;
+}
+
+/* line 124, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-blue {
+  fill: #73a3cc;
+}
+
+/* line 125, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-violet {
+  fill: #b987c8;
+}
+
+/* line 126, ../sass/partials/design/default/_color-vars.scss */
+.is-saturated .fill-base16-magenta {
+  fill: #b65c47;
+}
+
+/* line 128, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base00 {
+  fill: #1f1f1f;
+}
+
+/* line 129, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base01 {
+  fill: #2b2b2b;
+}
+
+/* line 130, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base02 {
+  fill: #3c3c3c;
+}
+
+/* line 131, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base03 {
+  fill: #979797;
+}
+
+/* line 132, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base04 {
+  fill: #b5b5b5;
+}
+
+/* line 133, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base05 {
+  fill: #c7c7c7;
+}
+
+/* line 134, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base06 {
+  fill: #e0e0e0;
+}
+
+/* line 135, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base07 {
+  fill: white;
+}
+
+/* line 136, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-red {
+  fill: #bd7575;
+}
+
+/* line 137, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-orange {
+  fill: #d0966d;
+}
+
+/* line 138, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-yellow {
+  fill: #e4c280;
+}
+
+/* line 139, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-green {
+  fill: #a8ad78;
+}
+
+/* line 140, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-cyan {
+  fill: #98b0ad;
+}
+
+/* line 141, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-blue {
+  fill: #8fa1b0;
+}
+
+/* line 142, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-violet {
+  fill: #aba1ae;
+}
+
+/* line 143, ../sass/partials/design/default/_color-vars.scss */
+.is-desaturated .fill-base16-magenta {
+  fill: #90746d;
+}
+
+/* line 145, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base00 {
+  fill: #1f1f1f;
+}
+
+/* line 146, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base01 {
+  fill: #2b2b2b;
+}
+
+/* line 147, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base02 {
+  fill: #3c3c3c;
+}
+
+/* line 148, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base03 {
+  fill: #979797;
+}
+
+/* line 149, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base04 {
+  fill: #b5b5b5;
+}
+
+/* line 150, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base05 {
+  fill: #c7c7c7;
+}
+
+/* line 151, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base06 {
+  fill: #e0e0e0;
+}
+
+/* line 152, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base07 {
+  fill: white;
+}
+
+/* line 153, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-red {
+  fill: #999999;
+}
+
+/* line 154, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-orange {
+  fill: #9f9f9f;
+}
+
+/* line 155, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-yellow {
+  fill: #b2b2b2;
+}
+
+/* line 156, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-green {
+  fill: #939393;
+}
+
+/* line 157, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-cyan {
+  fill: #a4a4a4;
+}
+
+/* line 158, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-blue {
+  fill: #a0a0a0;
+}
+
+/* line 159, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-violet {
+  fill: #a8a8a8;
+}
+
+/* line 160, ../sass/partials/design/default/_color-vars.scss */
+.is-grayscaled .fill-base16-magenta {
+  fill: #7f7f7f;
+}
+
+/* line 162, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base00 {
+  fill: #211f1d;
+}
+
+/* line 163, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base01 {
+  fill: #2e2c28;
+}
+
+/* line 164, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base02 {
+  fill: #413d37;
+}
+
+/* line 165, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base03 {
+  fill: #989698;
+}
+
+/* line 166, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base04 {
+  fill: #b7b4b7;
+}
+
+/* line 167, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base05 {
+  fill: #c8c5c7;
+}
+
+/* line 168, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base06 {
+  fill: #e0e0e0;
+}
+
+/* line 169, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base07 {
+  fill: white;
+}
+
+/* line 170, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-red {
+  fill: #66cccc;
+}
+
+/* line 171, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-orange {
+  fill: #5faade;
+}
+
+/* line 172, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-yellow {
+  fill: #749ef0;
+}
+
+/* line 173, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-green {
+  fill: #7068bd;
+}
+
+/* line 174, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-cyan {
+  fill: #be8a91;
+}
+
+/* line 175, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-blue {
+  fill: #be9d81;
+}
+
+/* line 176, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-violet {
+  fill: #9dbb94;
+}
+
+/* line 177, ../sass/partials/design/default/_color-vars.scss */
+.is-complemented .fill-base16-magenta {
+  fill: #5a95a3;
+}
+
+/* line 179, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base00 {
+  fill: #e2e0de;
+}
+
+/* line 180, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base01 {
+  fill: #d7d5d1;
+}
+
+/* line 181, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base02 {
+  fill: #c8c4be;
+}
+
+/* line 182, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base03 {
+  fill: #696769;
+}
+
+/* line 183, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base04 {
+  fill: #4b484b;
+}
+
+/* line 184, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base05 {
+  fill: #3a3739;
+}
+
+/* line 185, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base06 {
+  fill: #1f1f1f;
+}
+
+/* line 186, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base07 {
+  fill: black;
+}
+
+/* line 187, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-red {
+  fill: #339999;
+}
+
+/* line 188, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-orange {
+  fill: #216ca0;
+}
+
+/* line 189, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-yellow {
+  fill: #0f398b;
+}
+
+/* line 190, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-green {
+  fill: #4a4297;
+}
+
+/* line 191, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-cyan {
+  fill: #754148;
+}
+
+/* line 192, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-blue {
+  fill: #7e5d41;
+}
+
+/* line 193, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-violet {
+  fill: #4d6b44;
+}
+
+/* line 194, ../sass/partials/design/default/_color-vars.scss */
+.is-inverted .fill-base16-magenta {
+  fill: #5c97a5;
+}
+
+/* line 196, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base00 {
+  fill: #181a1c;
+}
+
+/* line 197, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base01 {
+  fill: #222327;
+}
+
+/* line 198, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base02 {
+  fill: #2e3237;
+}
+
+/* line 199, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base03 {
+  fill: #7f817f;
+}
+
+/* line 200, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base04 {
+  fill: #999b99;
+}
+
+/* line 201, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base05 {
+  fill: #a7aaa8;
+}
+
+/* line 202, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base06 {
+  fill: #bebebe;
+}
+
+/* line 203, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base07 {
+  fill: #d8d8d8;
+}
+
+/* line 204, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-red {
+  fill: #ad5656;
+}
+
+/* line 205, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-orange {
+  fill: #bc7c50;
+}
+
+/* line 206, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-yellow {
+  fill: #cca862;
+}
+
+/* line 207, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-green {
+  fill: #99a058;
+}
+
+/* line 208, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-cyan {
+  fill: #75a19b;
+}
+
+/* line 209, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-blue {
+  fill: #6d89a1;
+}
+
+/* line 210, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-violet {
+  fill: #977d9e;
+}
+
+/* line 211, ../sass/partials/design/default/_color-vars.scss */
+.is-shaded .fill-base16-magenta {
+  fill: #8a584c;
+}
+
+/* line 213, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base00 {
+  fill: #3e4042;
+}
+
+/* line 214, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base01 {
+  fill: #48494d;
+}
+
+/* line 215, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base02 {
+  fill: #55585d;
+}
+
+/* line 216, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base03 {
+  fill: #a5a7a5;
+}
+
+/* line 217, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base04 {
+  fill: #bfc1bf;
+}
+
+/* line 218, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base05 {
+  fill: #cdd0ce;
+}
+
+/* line 219, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base06 {
+  fill: #e4e4e4;
+}
+
+/* line 220, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base07 {
+  fill: white;
+}
+
+/* line 221, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-red {
+  fill: #d37c7c;
+}
+
+/* line 222, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-orange {
+  fill: #e2a377;
+}
+
+/* line 223, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-yellow {
+  fill: #f2ce88;
+}
+
+/* line 224, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-green {
+  fill: #c0c67e;
+}
+
+/* line 225, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-cyan {
+  fill: #9bc7c1;
+}
+
+/* line 226, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-blue {
+  fill: #93afc7;
+}
+
+/* line 227, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-violet {
+  fill: #bda4c5;
+}
+
+/* line 228, ../sass/partials/design/default/_color-vars.scss */
+.is-tinted .fill-base16-magenta {
+  fill: #b07e72;
+}
+
+/* line 230, ../sass/partials/design/default/_color-vars.scss */
+.bg-base00 {
+  background-color: #1d1f21;
+}
+
+/* line 231, ../sass/partials/design/default/_color-vars.scss */
+.bg-base01 {
+  background-color: #282a2e;
+}
+
+/* line 232, ../sass/partials/design/default/_color-vars.scss */
+.bg-base02 {
+  background-color: #373b41;
+}
+
+/* line 233, ../sass/partials/design/default/_color-vars.scss */
+.bg-base03 {
+  background-color: #969896;
+}
+
+/* line 234, ../sass/partials/design/default/_color-vars.scss */
+.bg-base04 {
+  background-color: #b4b7b4;
+}
+
+/* line 235, ../sass/partials/design/default/_color-vars.scss */
+.bg-base05 {
+  background-color: #c5c8c6;
+}
+
+/* line 236, ../sass/partials/design/default/_color-vars.scss */
+.bg-base06 {
+  background-color: #e0e0e0;
+}
+
+/* line 237, ../sass/partials/design/default/_color-vars.scss */
+.bg-base07 {
+  background-color: white;
+}
+
+/* line 238, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-yellow {
+  background-color: #f0c674;
+}
+
+/* line 239, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-orange {
+  background-color: #de935f;
+}
+
+/* line 240, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-red {
+  background-color: #cc6666;
+}
+
+/* line 241, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-magenta {
+  background-color: #a3685a;
+}
+
+/* line 242, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-violet {
+  background-color: #b294bb;
+}
+
+/* line 243, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-blue {
+  background-color: #81a2be;
+}
+
+/* line 244, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-cyan {
+  background-color: #8abeb7;
+}
+
+/* line 245, ../sass/partials/design/default/_color-vars.scss */
+.bg-base16-green {
+  background-color: #b5bd68;
+}
+
+/* line 41, ../sass/partials/design/default/_init.scss */
+body, .tagline, .article h2,
+.article h3, .arc90-listItem, .subfooter h3, .subfooter li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* line 50, ../sass/partials/design/default/_init.scss */
+h1, h2, h3, h4, h5, h6, .btn, .accordion-header {
+  font-family: cuprumbold, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+}
+
+/* line 54, ../sass/partials/design/default/_init.scss */
+em,
+.content b {
+  font-family: AvenirNextCondensed-Bold, DejaVuSansCondensed, "Lucida Grande", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-weight: bold;
+}
+
+/* line 58, ../sass/partials/design/default/_init.scss */
+input,
+.hslpicker input, code,
+kbd,
+pre,
+samp, code[class*="language-"],
+pre[class*="language-"], input#arc90-color, .arc90-swatchContainer .arc90-swatch, .arc90-codeOutput .arc90-input, style[contenteditable] {
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+
+/* line 61, ../sass/partials/design/default/_init.scss */
+.footer, .drop > a, .color-functions {
+  text-align: center;
+}
+
+/* line 70, ../sass/partials/design/default/_init.scss */
+.note {
+  padding: 1em !important;
+}
+
+/* line 73, ../sass/partials/design/default/_init.scss */
+.article footer {
+  margin-top: 1em;
+}
+
+/* line 76, ../sass/partials/design/default/_init.scss */
+.tagline,
+.footer {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f0c674), color-stop(12.5%, #f0c674), color-stop(12.5%, #de935f), color-stop(25%, #de935f), color-stop(25%, #cc6666), color-stop(37.5%, #cc6666), color-stop(37.5%, #a3685a), color-stop(50%, #a3685a), color-stop(50%, #b294bb), color-stop(62.5%, #b294bb), color-stop(62.5%, #81a2be), color-stop(75%, #81a2be), color-stop(75%, #8abeb7), color-stop(87.5%, #8abeb7), color-stop(87.5%, #b5bd68), to(#b5bd68));
+  background-image: -webkit-linear-gradient(left, #f0c674, #f0c674 12.5%, #de935f 12.5%, #de935f 25%, #cc6666 25%, #cc6666 37.5%, #a3685a 37.5%, #a3685a 50%, #b294bb 50%, #b294bb 62.5%, #81a2be 62.5%, #81a2be 75%, #8abeb7 75%, #8abeb7 87.5%, #b5bd68 87.5%, #b5bd68);
+  background-image: linear-gradient(to right, #f0c674, #f0c674 12.5%, #de935f 12.5%, #de935f 25%, #cc6666 25%, #cc6666 37.5%, #a3685a 37.5%, #a3685a 50%, #b294bb 50%, #b294bb 62.5%, #81a2be 62.5%, #81a2be 75%, #8abeb7 75%, #8abeb7 87.5%, #b5bd68 87.5%, #b5bd68);
+}
+
+/* line 80, ../sass/partials/design/default/_init.scss */
+.dark a {
+  color: #d4c3d9;
+}
+
+/* line 81, ../sass/partials/design/default/_init.scss */
+a {
+  color: #a784b1;
+}
+
+/* normalize.scss v2.1.3 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
+/* line 3, ../sass/partials/design/default/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/partials/design/default/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 23, ../sass/partials/design/default/_normalize.scss */
+html {
+  font-family: pt_sans_narrowregular, AvenirNext-Regular, DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-size: 100%;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  /* Establish a vertical rhythm unit using $base-line-height. */
+  line-height: 1.5em;
+}
+
+/* line 42, ../sass/partials/design/default/_normalize.scss */
+body {
+  font-size: 100%;
+  line-height: 1.375;
+  background-color: white;
+  color: #1d1f21;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+/* line 52, ../sass/partials/design/default/_normalize.scss */
+body::before {
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 0 10px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.5);
+  height: 15px;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 63, ../sass/partials/design/default/_normalize.scss */
+.dark {
+  background-color: #282a2e;
+  color: white;
+}
+
+/* line 64, ../sass/partials/design/default/_normalize.scss */
+.dark .arc90-wrapper {
+  color: #1d1f21;
+}
+
+/* line 67, ../sass/partials/design/default/_normalize.scss */
+a {
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 76, ../sass/partials/design/default/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 81, ../sass/partials/design/default/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+  color: #81a2be;
+}
+
+/* line 88, ../sass/partials/design/default/_normalize.scss */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 5em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 .3em 0;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: #282a2e;
+  white-space: nowrap;
+}
+
+/* line 106, ../sass/partials/design/default/_normalize.scss */
+.dark h1 {
+  color: #e0e0e0;
+}
+
+/* line 110, ../sass/partials/design/default/_normalize.scss */
+h2,
+.h2 {
+  font-size: 2em;
+}
+
+/* line 114, ../sass/partials/design/default/_normalize.scss */
+h3,
+.h3 {
+  font-size: 1.5em;
+}
+
+/* line 122, ../sass/partials/design/default/_normalize.scss */
+.tagline {
+  font-size: 1.25em;
+  line-height: 0.5;
+  letter-spacing: 2px;
+  word-spacing: -3px;
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* line 135, ../sass/partials/design/default/_normalize.scss */
+.tagline b {
+  font-weight: normal;
+  display: inline-block;
+  -webkit-transform: translateY(-1em);
+  -ms-transform: translateY(-1em);
+  transform: translateY(-1em);
+}
+
+/* line 141, ../sass/partials/design/default/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 145, ../sass/partials/design/default/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 148, ../sass/partials/design/default/_normalize.scss */
+em {
+  font-style: normal;
+}
+
+/* line 155, ../sass/partials/design/default/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 159, ../sass/partials/design/default/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 164, ../sass/partials/design/default/_normalize.scss */
+mark {
+  background: #f0c674;
+  color: #1d1f21;
+}
+
+/* line 172, ../sass/partials/design/default/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-size: 0.875em;
+}
+
+/* ===== Github styles  ===== */
+/* line 179, ../sass/partials/design/default/_normalize.scss */
+.article p > code,
+.article li > code,
+.accordion code {
+  margin: 0 2px;
+  padding: .125em .5em;
+  border: 1px solid #e0e0e0;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 192, ../sass/partials/design/default/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 203, ../sass/partials/design/default/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 207, ../sass/partials/design/default/_normalize.scss */
+small {
+  font-size: 90%;
+}
+
+/* line 212, ../sass/partials/design/default/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 219, ../sass/partials/design/default/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 223, ../sass/partials/design/default/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 232, ../sass/partials/design/default/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: .5em 0 1em;
+}
+
+/* line 240, ../sass/partials/design/default/_normalize.scss */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+
+/* line 246, ../sass/partials/design/default/_normalize.scss */
+dd {
+  margin: 0 0 0 32px;
+}
+
+/* line 252, ../sass/partials/design/default/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 32px;
+}
+
+/* line 258, ../sass/partials/design/default/_normalize.scss */
+img,
+svg {
+  border: 0;
+  max-width: 100%;
+}
+
+/* line 263, ../sass/partials/design/default/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 270, ../sass/partials/design/default/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/* line 281, ../sass/partials/design/default/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 286, ../sass/partials/design/default/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ===== custom  ===== */
+/* line 293, ../sass/partials/design/default/_normalize.scss */
+.note {
+  background-color: #f2f3e4;
+  margin: 1em 0 !important;
+  border: 1px solid #b2d4d0;
+}
+
+/* line 300, ../sass/partials/design/default/_normalize.scss */
+.dark .note {
+  background-color: #4a4297;
+  border: 1px solid #754148;
+}
+
+/* line 310, ../sass/partials/design/default/_normalize.scss */
+.footer a {
+  display: inline-block;
+}
+
+/* line 314, ../sass/partials/design/default/_normalize.scss */
+.app--info dd ul,
+.app--info dd ol {
+  padding-left: 22px;
+}
+
+/* ===== README styles of index page  ===== */
+/* line 319, ../sass/partials/design/default/_normalize.scss */
+.article {
+  padding: 2em 1.5em;
+  font-size: 1.125em;
+  -webkit-column-width: 20em;
+  -moz-column-width: 20em;
+  column-width: 20em;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+}
+
+/* line 327, ../sass/partials/design/default/_normalize.scss */
+.article p,
+.article ul,
+.article ol {
+  max-width: 30em;
+}
+
+/* line 330, ../sass/partials/design/default/_normalize.scss */
+.article p {
+  padding: .5em 0;
+  margin: 0;
+}
+
+/* line 334, ../sass/partials/design/default/_normalize.scss */
+.article .intro {
+  font-size: 1.1em;
+}
+
+/* line 341, ../sass/partials/design/default/_normalize.scss */
+.article .intro,
+.article h3 + p,
+.article h3 + ul,
+.article h3 + ol {
+  padding-top: 0;
+}
+
+/* line 345, ../sass/partials/design/default/_normalize.scss */
+.article ul,
+.article ol {
+  padding-left: 1.1em;
+}
+
+/* line 349, ../sass/partials/design/default/_normalize.scss */
+.article ul {
+  list-style: circle;
+}
+
+/* line 353, ../sass/partials/design/default/_normalize.scss */
+.article h2,
+.article h3 {
+  color: #de935f;
+}
+
+/* line 357, ../sass/partials/design/default/_normalize.scss */
+.article pre[class*="language-"] {
+  padding: .5em 1em;
+}
+
+/* line 4, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown li {
+  font-weight: bold;
+  float: right;
+  width: 192px;
+  position: relative;
+  background: #e0e0e0;
+}
+
+/* line 14, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown a:hover {
+  color: #000;
+}
+
+/* line 18, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown li a {
+  display: block;
+  padding: .5em;
+  color: #1d1f21;
+  position: relative;
+  z-index: 4;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+/* line 29, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown li a:hover,
+.dropdown li a.hover {
+  background: #8abeb7;
+  position: relative;
+  color: white;
+}
+
+/* line 35, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 192px;
+  z-index: 3;
+}
+
+/* line 45, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown ul li {
+  font-weight: normal;
+  background: white;
+  color: #1d1f21;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* line 53, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown ul li a {
+  display: block;
+  color: #282a2e !important;
+  background: white !important;
+}
+
+/* line 60, ../sass/partials/modules/_dropdown-menu.scss */
+.dropdown .is-selected,
+.dropdown ul li a:hover {
+  display: block;
+  background: #8abeb7 !important;
+  color: #fff !important;
+}
+
+/* line 65, ../sass/partials/modules/_dropdown-menu.scss */
+.drop > a {
+  position: relative;
+}
+
+/* line 70, ../sass/partials/modules/_dropdown-menu.scss */
+.drop > a:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  border-left: 5px solid transparent;
+  border-top: 5px solid #373b41;
+  border-right: 5px solid transparent;
+  z-index: 999;
+}
+
+/* line 81, ../sass/partials/modules/_dropdown-menu.scss */
+.drop > a:hover:after {
+  content: "";
+  border-left: 5px solid transparent;
+  border-top: 5px solid white;
+  border-right: 5px solid transparent;
+}
+
+/* =====  buttons from formalize.me ===== */
+/* line 4, ../sass/partials/modules/_buttons.scss */
+.btn {
+  -webkit-appearance: none;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: #e0e0e0 #c7c7c7 #dfe1e0;
+  cursor: pointer;
+  color: #282a2e;
+  display: inline-block;
+  outline: 0;
+  overflow: visible;
+  margin: .5em .125em;
+  padding: .25em 1em .35em;
+  text-shadow: white 0 1px 1px;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(1px, #f9f9f9), to(#dadada));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f9f9f9 1px, #dadada);
+  background-image: linear-gradient(to bottom, #ffffff, #f9f9f9 1px, #dadada);
+}
+/* line 26, ../sass/partials/modules/_buttons.scss */
+.btn:hover {
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(1px, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 1px, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff 1px, #e6e6e6);
+  text-decoration: none;
+}
+/* line 31, ../sass/partials/modules/_buttons.scss */
+.btn:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #dadada, #f9f9f9);
+  background-image: linear-gradient(to bottom, #dadada, #f9f9f9);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  border-color: #c5c8c6 #e0e0e0 #d2d4d3;
+}
+/* line 36, ../sass/partials/modules/_buttons.scss */
+.btn:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 40, ../sass/partials/modules/_buttons.scss */
+.btn:focus {
+  -webkit-box-shadow: #81a2be 0 0 5px 0;
+  box-shadow: #81a2be 0 0 5px 0;
+  z-index: 1;
+}
+
+/* line 46, ../sass/partials/modules/_buttons.scss */
+.btn--bg-toggle {
+  float: none;
+  position: absolute;
+  right: 1em;
+  bottom: 2em;
+}
+
+/* line 53, ../sass/partials/modules/_buttons.scss */
+.btn--top-action {
+  position: absolute;
+  right: 1em;
+  top: 3.7em;
+  cursor: pointer;
+  z-index: 9;
+}
+
+/* ===== colored buttons  ===== */
+/* line 64, ../sass/partials/modules/_buttons.scss */
+.btn--base00,
+.bg-base00 .btn--ctiles {
+  border-color: #282a2e #1d1f21 #17191a;
+  color: white;
+  text-shadow: none;
+  background-color: #1d1f21;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#373b41), color-stop(1px, #c5c8c6), to(#1d1f21));
+  background-image: -webkit-linear-gradient(top, #373b41, #c5c8c6 1px, #1d1f21);
+  background-image: linear-gradient(to bottom, #373b41, #c5c8c6 1px, #1d1f21);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 74, ../sass/partials/modules/_buttons.scss */
+.btn--base00:hover,
+.bg-base00 .btn--ctiles:hover {
+  background-color: #282a2e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#969896), color-stop(1px, #eceded), to(#282a2e));
+  background-image: -webkit-linear-gradient(top, #969896, #eceded 1px, #282a2e);
+  background-image: linear-gradient(to bottom, #969896, #eceded 1px, #282a2e);
+}
+/* line 78, ../sass/partials/modules/_buttons.scss */
+.btn--base00:active,
+.bg-base00 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1d1f21), to(#373b41));
+  background-image: -webkit-linear-gradient(top, #1d1f21, #373b41);
+  background-image: linear-gradient(to bottom, #1d1f21, #373b41);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  border-color: #373b41 #2b2e33;
+}
+
+/* line 86, ../sass/partials/modules/_buttons.scss */
+.btn--base01,
+.bg-base01 .btn--ctiles {
+  border-color: #373b41 #282a2e #222427;
+  color: white;
+  text-shadow: none;
+  background-color: #282a2e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#969896), color-stop(1px, #c7cac8), to(#282a2e));
+  background-image: -webkit-linear-gradient(top, #969896, #c7cac8 1px, #282a2e);
+  background-image: linear-gradient(to bottom, #969896, #c7cac8 1px, #282a2e);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 96, ../sass/partials/modules/_buttons.scss */
+.btn--base01:hover,
+.bg-base01 .btn--ctiles:hover {
+  background-color: #282a2e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b7b4), color-stop(1px, #e4e4e4), to(#373b41));
+  background-image: -webkit-linear-gradient(top, #b4b7b4, #e4e4e4 1px, #373b41);
+  background-image: linear-gradient(to bottom, #b4b7b4, #e4e4e4 1px, #373b41);
+}
+/* line 100, ../sass/partials/modules/_buttons.scss */
+.btn--base01:active,
+.bg-base01 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#282a2e), to(#969896));
+  background-image: -webkit-linear-gradient(top, #282a2e, #969896);
+  background-image: linear-gradient(to bottom, #282a2e, #969896);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  border-color: #969896 #898b89;
+}
+
+/* line 108, ../sass/partials/modules/_buttons.scss */
+.btn--base02,
+.bg-base02 .btn--ctiles {
+  border-color: #969896 #373b41 #31353a;
+  color: white;
+  text-shadow: none;
+  background-color: #373b41;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b7b4), color-stop(1px, #ffffff), to(#373b41));
+  background-image: -webkit-linear-gradient(top, #b4b7b4, #ffffff 1px, #373b41);
+  background-image: linear-gradient(to bottom, #b4b7b4, #ffffff 1px, #373b41);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 118, ../sass/partials/modules/_buttons.scss */
+.btn--base02:hover,
+.bg-base02 .btn--ctiles:hover {
+  background-color: #282a2e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c8c6), color-stop(1px, #eceded), to(#969896));
+  background-image: -webkit-linear-gradient(top, #c5c8c6, #eceded 1px, #969896);
+  background-image: linear-gradient(to bottom, #c5c8c6, #eceded 1px, #969896);
+}
+/* line 122, ../sass/partials/modules/_buttons.scss */
+.btn--base02:active,
+.bg-base02 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#969896), to(#c5c8c6));
+  background-image: -webkit-linear-gradient(top, #969896, #c5c8c6);
+  background-image: linear-gradient(to bottom, #969896, #c5c8c6);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  border-color: #b4b7b4 #a7aba7;
+}
+
+/* line 130, ../sass/partials/modules/_buttons.scss */
+.btn--base03,
+.bg-base03 .btn--ctiles {
+  border-color: #b4b7b4 #969896 #909290;
+  color: white;
+  text-shadow: none;
+  background-color: #969896;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c8c6), color-stop(1px, #ffffff), to(#969896));
+  background-image: -webkit-linear-gradient(top, #c5c8c6, #ffffff 1px, #969896);
+  background-image: linear-gradient(to bottom, #c5c8c6, #ffffff 1px, #969896);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 140, ../sass/partials/modules/_buttons.scss */
+.btn--base03:hover,
+.bg-base03 .btn--ctiles:hover {
+  background-color: #b4b7b4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c8c6), color-stop(1px, #ffffff), to(#b4b7b4));
+  background-image: -webkit-linear-gradient(top, #c5c8c6, #ffffff 1px, #b4b7b4);
+  background-image: linear-gradient(to bottom, #c5c8c6, #ffffff 1px, #b4b7b4);
+}
+/* line 144, ../sass/partials/modules/_buttons.scss */
+.btn--base03:active,
+.bg-base03 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1d1f21), to(#373b41));
+  background-image: -webkit-linear-gradient(top, #1d1f21, #373b41);
+  background-image: linear-gradient(to bottom, #1d1f21, #373b41);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
+  border-color: #c5c8c6 #b8bcb9;
+}
+
+/* line 152, ../sass/partials/modules/_buttons.scss */
+.btn--base06,
+.bg-base06 .btn--ctiles {
+  border-color: #e0e0e0 #c7c7c7 #dfe1e0;
+  color: #282a2e;
+  text-shadow: white 0 1px 1px;
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(1px, #f9f9f9), to(#dadada));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f9f9f9 1px, #dadada);
+  background-image: linear-gradient(to bottom, #ffffff, #f9f9f9 1px, #dadada);
+}
+/* line 159, ../sass/partials/modules/_buttons.scss */
+.btn--base06:hover,
+.bg-base06 .btn--ctiles:hover {
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(1px, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 1px, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff 1px, #e6e6e6);
+}
+/* line 163, ../sass/partials/modules/_buttons.scss */
+.btn--base06:active,
+.bg-base06 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #dadada, #f9f9f9);
+  background-image: linear-gradient(to bottom, #dadada, #f9f9f9);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  border-color: #c5c8c6 #e0e0e0 #d2d4d3;
+}
+
+/* line 171, ../sass/partials/modules/_buttons.scss */
+.btn--base07,
+.bg-base07 .btn--ctiles {
+  border-color: #e0e0e0 #c7c7c7 #dfe1e0;
+  color: #282a2e;
+  text-shadow: white 0 1px 1px;
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+}
+/* line 178, ../sass/partials/modules/_buttons.scss */
+.btn--base07:hover,
+.bg-base07 .btn--ctiles:hover {
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(1px, #ffffff), to(#ededed));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 1px, #ededed);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff 1px, #ededed);
+}
+/* line 182, ../sass/partials/modules/_buttons.scss */
+.btn--base07:active,
+.bg-base07 .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #dadada, #ffffff);
+  background-image: linear-gradient(to bottom, #dadada, #ffffff);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
+  border-color: #e0e0e0 white #ededed;
+}
+
+/* line 190, ../sass/partials/modules/_buttons.scss */
+.btn--base16-yellow,
+.bg-base16-yellow .btn--ctiles {
+  border-color: #f7e2b9 #f0c674 #eebd5d;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #f0c674;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0c674), color-stop(1px, #f1cb80), to(#b49457));
+  background-image: -webkit-linear-gradient(top, #f0c674, #f1cb80 1px, #b49457);
+  background-image: linear-gradient(to bottom, #f0c674, #f1cb80 1px, #b49457);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 200, ../sass/partials/modules/_buttons.scss */
+.btn--base16-yellow:hover,
+.bg-base16-yellow .btn--ctiles:hover {
+  background-color: #f7e2b9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1cb80), color-stop(1px, #f2cf8b), to(#c09e5c));
+  background-image: -webkit-linear-gradient(top, #f1cb80, #f2cf8b 1px, #c09e5c);
+  background-image: linear-gradient(to bottom, #f1cb80, #f2cf8b 1px, #c09e5c);
+  color: #fff;
+}
+/* line 205, ../sass/partials/modules/_buttons.scss */
+.btn--base16-yellow:active,
+.bg-base16-yellow .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cca862), to(#f0c674));
+  background-image: -webkit-linear-gradient(top, #cca862, #f0c674);
+  background-image: linear-gradient(to bottom, #cca862, #f0c674);
+  border-color: #f0c674 #eebd5d;
+}
+
+/* line 213, ../sass/partials/modules/_buttons.scss */
+.btn--base16-orange,
+.bg-base16-orange .btn--ctiles {
+  border-color: #ebbe9e #de935f #da854a;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #de935f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#de935f), color-stop(1px, #e09a6a), to(#a66e47));
+  background-image: -webkit-linear-gradient(top, #de935f, #e09a6a 1px, #a66e47);
+  background-image: linear-gradient(to bottom, #de935f, #e09a6a 1px, #a66e47);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 223, ../sass/partials/modules/_buttons.scss */
+.btn--base16-orange:hover,
+.bg-base16-orange .btn--ctiles:hover {
+  background-color: #ebbe9e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e09a6a), color-stop(1px, #e2a174), to(#b1754c));
+  background-image: -webkit-linear-gradient(top, #e09a6a, #e2a174 1px, #b1754c);
+  background-image: linear-gradient(to bottom, #e09a6a, #e2a174 1px, #b1754c);
+  color: #fff;
+}
+/* line 228, ../sass/partials/modules/_buttons.scss */
+.btn--base16-orange:active,
+.bg-base16-orange .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc7c50), to(#de935f));
+  background-image: -webkit-linear-gradient(top, #bc7c50, #de935f);
+  background-image: linear-gradient(to bottom, #bc7c50, #de935f);
+  border-color: #de935f #da854a;
+}
+
+/* line 236, ../sass/partials/modules/_buttons.scss */
+.btn--base16-red,
+.bg-base16-red .btn--ctiles {
+  border-color: #df9f9f #cc6666 #c65353;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #cc6666;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cc6666), color-stop(1px, #cf7070), to(#994c4c));
+  background-image: -webkit-linear-gradient(top, #cc6666, #cf7070 1px, #994c4c);
+  background-image: linear-gradient(to bottom, #cc6666, #cf7070 1px, #994c4c);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 246, ../sass/partials/modules/_buttons.scss */
+.btn--base16-red:hover,
+.bg-base16-red .btn--ctiles:hover {
+  background-color: #df9f9f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cf7070), color-stop(1px, #d27979), to(#a35151));
+  background-image: -webkit-linear-gradient(top, #cf7070, #d27979 1px, #a35151);
+  background-image: linear-gradient(to bottom, #cf7070, #d27979 1px, #a35151);
+  color: #fff;
+}
+/* line 251, ../sass/partials/modules/_buttons.scss */
+.btn--base16-red:active,
+.bg-base16-red .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ad5656), to(#cc6666));
+  background-image: -webkit-linear-gradient(top, #ad5656, #cc6666);
+  background-image: linear-gradient(to bottom, #ad5656, #cc6666);
+  border-color: #cc6666 #c65353;
+}
+
+/* line 259, ../sass/partials/modules/_buttons.scss */
+.btn--base16-magenta,
+.bg-base16-magenta .btn--ctiles {
+  border-color: #bf958b #a3685a #935e51;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #a3685a;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a3685a), color-stop(1px, #a86f62), to(#7a4e43));
+  background-image: -webkit-linear-gradient(top, #a3685a, #a86f62 1px, #7a4e43);
+  background-image: linear-gradient(to bottom, #a3685a, #a86f62 1px, #7a4e43);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 269, ../sass/partials/modules/_buttons.scss */
+.btn--base16-magenta:hover,
+.bg-base16-magenta .btn--ctiles:hover {
+  background-color: #bf958b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a86f62), color-stop(1px, #ad776a), to(#825348));
+  background-image: -webkit-linear-gradient(top, #a86f62, #ad776a 1px, #825348);
+  background-image: linear-gradient(to bottom, #a86f62, #ad776a 1px, #825348);
+  color: #fff;
+}
+/* line 274, ../sass/partials/modules/_buttons.scss */
+.btn--base16-magenta:active,
+.bg-base16-magenta .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8a584c), to(#a3685a));
+  background-image: -webkit-linear-gradient(top, #8a584c, #a3685a);
+  background-image: linear-gradient(to bottom, #8a584c, #a3685a);
+  border-color: #a3685a #935e51;
+}
+
+/* line 282, ../sass/partials/modules/_buttons.scss */
+.btn--base16-violet,
+.bg-base16-violet .btn--ctiles {
+  border-color: #d4c3d9 #b294bb #a784b1;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #b294bb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b294bb), color-stop(1px, #b89cc0), to(#856f8c));
+  background-image: -webkit-linear-gradient(top, #b294bb, #b89cc0 1px, #856f8c);
+  background-image: linear-gradient(to bottom, #b294bb, #b89cc0 1px, #856f8c);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 292, ../sass/partials/modules/_buttons.scss */
+.btn--base16-violet:hover,
+.bg-base16-violet .btn--ctiles:hover {
+  background-color: #d4c3d9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b89cc0), color-stop(1px, #bda4c5), to(#8e7695));
+  background-image: -webkit-linear-gradient(top, #b89cc0, #bda4c5 1px, #8e7695);
+  background-image: linear-gradient(to bottom, #b89cc0, #bda4c5 1px, #8e7695);
+  color: #fff;
+}
+/* line 297, ../sass/partials/modules/_buttons.scss */
+.btn--base16-violet:active,
+.bg-base16-violet .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#977d9e), to(#b294bb));
+  background-image: -webkit-linear-gradient(top, #977d9e, #b294bb);
+  background-image: linear-gradient(to bottom, #977d9e, #b294bb);
+  border-color: #b294bb #a784b1;
+}
+
+/* line 305, ../sass/partials/modules/_buttons.scss */
+.btn--base16-blue,
+.bg-base16-blue .btn--ctiles {
+  border-color: #b3c7d8 #81a2be #7096b5;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #81a2be;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#81a2be), color-stop(1px, #89a8c2), to(#60798e));
+  background-image: -webkit-linear-gradient(top, #81a2be, #89a8c2 1px, #60798e);
+  background-image: linear-gradient(to bottom, #81a2be, #89a8c2 1px, #60798e);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 315, ../sass/partials/modules/_buttons.scss */
+.btn--base16-blue:hover,
+.bg-base16-blue .btn--ctiles:hover {
+  background-color: #b3c7d8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#89a8c2), color-stop(1px, #92aec7), to(#678198));
+  background-image: -webkit-linear-gradient(top, #89a8c2, #92aec7 1px, #678198);
+  background-image: linear-gradient(to bottom, #89a8c2, #92aec7 1px, #678198);
+  color: #fff;
+}
+/* line 320, ../sass/partials/modules/_buttons.scss */
+.btn--base16-blue:active,
+.bg-base16-blue .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6d89a1), to(#81a2be));
+  background-image: -webkit-linear-gradient(top, #6d89a1, #81a2be);
+  background-image: linear-gradient(to bottom, #6d89a1, #81a2be);
+  border-color: #81a2be #7096b5;
+}
+
+/* line 328, ../sass/partials/modules/_buttons.scss */
+.btn--base16-cyan,
+.bg-base16-cyan .btn--ctiles {
+  border-color: #bbd9d5 #8abeb7 #7ab5ad;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #8abeb7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8abeb7), color-stop(1px, #92c3bc), to(#678e89));
+  background-image: -webkit-linear-gradient(top, #8abeb7, #92c3bc 1px, #678e89);
+  background-image: linear-gradient(to bottom, #8abeb7, #92c3bc 1px, #678e89);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 338, ../sass/partials/modules/_buttons.scss */
+.btn--base16-cyan:hover,
+.bg-base16-cyan .btn--ctiles:hover {
+  background-color: #bbd9d5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#92c3bc), color-stop(1px, #9ac7c1), to(#6e9892));
+  background-image: -webkit-linear-gradient(top, #92c3bc, #9ac7c1 1px, #6e9892);
+  background-image: linear-gradient(to bottom, #92c3bc, #9ac7c1 1px, #6e9892);
+  color: #fff;
+}
+/* line 344, ../sass/partials/modules/_buttons.scss */
+.btn--base16-cyan:active,
+.bg-base16-cyan .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#75a19b), to(#8abeb7));
+  background-image: -webkit-linear-gradient(top, #75a19b, #8abeb7);
+  background-image: linear-gradient(to bottom, #75a19b, #8abeb7);
+  border-color: #8abeb7 #7ab5ad;
+}
+
+/* line 352, ../sass/partials/modules/_buttons.scss */
+.btn--base16-green,
+.bg-base16-green .btn--ctiles {
+  border-color: #cfd49d #b5bd68 #acb556;
+  color: white;
+  text-shadow: #17191a 0 1px 1px;
+  background-color: #b5bd68;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b5bd68), color-stop(1px, #b9c171), to(#878d4e));
+  background-image: -webkit-linear-gradient(top, #b5bd68, #b9c171 1px, #878d4e);
+  background-image: linear-gradient(to bottom, #b5bd68, #b9c171 1px, #878d4e);
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+/* line 362, ../sass/partials/modules/_buttons.scss */
+.btn--base16-green:hover,
+.bg-base16-green .btn--ctiles:hover {
+  background-color: #cfd49d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b9c171), color-stop(1px, #bec57a), to(#909753));
+  background-image: -webkit-linear-gradient(top, #b9c171, #bec57a 1px, #909753);
+  background-image: linear-gradient(to bottom, #b9c171, #bec57a 1px, #909753);
+  color: #fff;
+}
+/* line 367, ../sass/partials/modules/_buttons.scss */
+.btn--base16-green:active,
+.bg-base16-green .btn--ctiles:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#99a058), to(#b5bd68));
+  background-image: -webkit-linear-gradient(top, #99a058, #b5bd68);
+  background-image: linear-gradient(to bottom, #99a058, #b5bd68);
+  border-color: #b5bd68 #acb556;
+}
+
+/*
+
+Name:       Base16 Atelier Forest Dark
+Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+
+Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+/* line 11, ../sass/partials/modules/_prism.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background: #1d1f21;
+  color: #c5c8c6;
+}
+
+/* Code blocks */
+/* line 37, ../sass/partials/modules/_prism.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+/* Inline code */
+/* line 44, ../sass/partials/modules/_prism.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 52, ../sass/partials/modules/_prism.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #373b41;
+}
+
+/* line 56, ../sass/partials/modules/_prism.scss */
+.token.punctuation {
+  color: #c5c8c6;
+}
+
+/* line 60, ../sass/partials/modules/_prism.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 67, ../sass/partials/modules/_prism.scss */
+.token.null,
+.token.operator,
+.token.boolean,
+.token.number {
+  color: #de935f;
+}
+
+/* line 70, ../sass/partials/modules/_prism.scss */
+.token.property {
+  color: #f0c674;
+}
+
+/* line 73, ../sass/partials/modules/_prism.scss */
+.token.tag {
+  color: #81a2be;
+}
+
+/* line 76, ../sass/partials/modules/_prism.scss */
+.token.string {
+  color: #8abeb7;
+}
+
+/* line 79, ../sass/partials/modules/_prism.scss */
+.token.selector {
+  color: #b294bb;
+}
+
+/* line 82, ../sass/partials/modules/_prism.scss */
+.token.attr-name {
+  color: #de935f;
+}
+
+/* line 88, ../sass/partials/modules/_prism.scss */
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #8abeb7;
+}
+
+/* line 96, ../sass/partials/modules/_prism.scss */
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #b5bd68;
+}
+
+/* line 102, ../sass/partials/modules/_prism.scss */
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #8abeb7;
+}
+
+/* line 107, ../sass/partials/modules/_prism.scss */
+.token.placeholder,
+.token.variable {
+  color: #81a2be;
+}
+
+/* line 111, ../sass/partials/modules/_prism.scss */
+.token.important {
+  color: #cc6666;
+  font-weight: bold;
+}
+
+/* line 116, ../sass/partials/modules/_prism.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 120, ../sass/partials/modules/_prism.scss */
+pre > code.highlight {
+  outline: 0.4em solid #cc6666;
+  outline-offset: .4em;
+}
+
+/* line 4, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 2em 1em 2.5em 1em;
+  background-color: #b4b7b4;
+  position: relative;
+}
+
+/* line 13, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:before, .hslpicker .bgs:before, .hslpicker .slider:before {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)), -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)), linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+  background-position: 0px 0px, 10px 10px;
+}
+
+/* line 25, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:before, .hslpicker .bgs:before, .hslpicker .slider:before, .hslpicker .color-tiles:after, .hslpicker .bgs:after, .hslpicker .slider:after {
+  content: "";
+  z-index: -2;
+}
+/* line 29, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:after, .hslpicker .bgs:after, .hslpicker .slider:after {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -4px;
+  right: -4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px inset, rgba(255, 255, 255, 0.1) 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px inset, rgba(255, 255, 255, 0.1) 0 1px;
+}
+/* line 34, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:before, .hslpicker .bgs:before, .hslpicker .slider:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 39, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles {
+  position: relative;
+  width: 119px;
+  height: 119px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 49, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:after {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* line 50, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:before {
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 52, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles .tile {
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 55, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles div .tile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 58, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles div .tile, .hslpicker .color-tiles .bg {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+}
+
+/* line 63, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .foreground,
+.hslpicker .background {
+  position: absolute;
+  width: 119px;
+  height: 119px;
+}
+
+/* line 69, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .foreground {
+  z-index: 2;
+}
+
+/* line 72, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .background {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* line 75, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .expose {
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: .4;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 89, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .expose:before, .hslpicker .expose:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+}
+/* line 95, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .expose:before {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-bottom: 0;
+  border-right: 0;
+  top: 3px;
+  left: 3px;
+}
+/* line 99, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .expose:after {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-top: 0;
+  border-left: 0;
+  bottom: 3px;
+  right: 3px;
+}
+
+/* line 104, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-tiles:hover .expose {
+  opacity: 1;
+}
+
+/* line 107, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .expose, .expose:hover {
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  right: 3px;
+}
+
+/* line 114, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .expose:before, .hslpicker .exposed .expose:after {
+  height: 4px;
+  width: 4px;
+}
+/* line 115, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .expose:before {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-top: 0;
+  border-left: 0;
+  top: 3px;
+  left: 3px;
+}
+/* line 119, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .expose:after {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-bottom: 0;
+  border-right: 0;
+  bottom: 3px;
+  right: 3px;
+}
+
+/* line 124, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .background-color {
+  z-index: 0;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* line 130, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .bg {
+  left: 0;
+}
+/* line 131, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .foreground {
+  left: 29px;
+  top: 29px;
+  width: 90px;
+  height: 90px;
+}
+/* line 135, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .background {
+  right: 29px;
+  width: 90px;
+  height: 90px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
+}
+/* line 140, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .foreground {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
+  cursor: pointer;
+}
+/* line 145, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .exposed .selected:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0px 1px inset, rgba(0, 0, 0, 0.5) 0 0 0 5px inset;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 0 0px 1px inset, rgba(0, 0, 0, 0.5) 0 0 0 5px inset;
+  cursor: pointer;
+}
+
+/* line 156, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .background,
+.hslpicker .foreground {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 159, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs {
+  position: absolute;
+  left: 136px;
+  width: 30px;
+}
+/* line 166, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs, .hslpicker .bgs:before, .hslpicker .bgs:after {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+/* line 167, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs:after {
+  right: 0px;
+}
+/* line 168, ../sass/partials/modules/_hsl-picker.scss */
+.exposed .hslpicker .bgs div {
+  left: 0;
+}
+/* line 169, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs div {
+  width: 30px;
+  height: 29px;
+  position: relative;
+  margin-top: 1px;
+  cursor: pointer;
+}
+/* line 177, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs div:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 0;
+}
+/* line 178, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs div:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 180, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs .none {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* line 183, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs .light {
+  background: #fff;
+}
+/* line 184, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs .dark {
+  background: #000;
+}
+/* line 185, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs .random {
+  background: #007fff;
+}
+/* line 187, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .bgs .random:after {
+  content: "";
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 6px 5px, rgba(255, 255, 255, 0.4) 6px 6px 1px, rgba(0, 0, 0, 0.8) 18px 5px, rgba(255, 255, 255, 0.4) 18px 6px 1px, rgba(0, 0, 0, 0.8) 12px 12px, rgba(255, 255, 255, 0.4) 12px 13px 1px, rgba(0, 0, 0, 0.8) 6px 19px, rgba(255, 255, 255, 0.4) 6px 20px 1px, rgba(0, 0, 0, 0.8) 18px 19px, rgba(255, 255, 255, 0.4) 18px 20px 1px;
+  box-shadow: rgba(0, 0, 0, 0.8) 6px 5px, rgba(255, 255, 255, 0.4) 6px 6px 1px, rgba(0, 0, 0, 0.8) 18px 5px, rgba(255, 255, 255, 0.4) 18px 6px 1px, rgba(0, 0, 0, 0.8) 12px 12px, rgba(255, 255, 255, 0.4) 12px 13px 1px, rgba(0, 0, 0, 0.8) 6px 19px, rgba(255, 255, 255, 0.4) 6px 20px 1px, rgba(0, 0, 0, 0.8) 18px 19px, rgba(255, 255, 255, 0.4) 18px 20px 1px;
+}
+
+/* line 208, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .slider {
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  position: relative;
+  width: 381px;
+  margin: 3px 5px 10px;
+  cursor: pointer;
+  height: 20px;
+  float: left;
+  clear: left;
+}
+/* line 209, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .slider, .hslpicker .slider > div {
+  width: 381px;
+  height: 20px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px, black 0 0 2px 1px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px, black 0 0 2px 1px;
+}
+/* line 213, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .slider > div {
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 226, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .slider:after, .hslpicker .slider:before {
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+/* line 229, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .slider:hover .handle {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 233, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .handle {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: -1px;
+  content: " ";
+  width: 22px;
+  height: 22px;
+  z-index: 1;
+  background-color: #dddddd;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 15, color-stop(0%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(255, 255, 255, 0.2)));
+  background-image: -webkit-radial-gradient(top center, circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
+  background-image: radial-gradient(top center, circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: white 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px -1px 1px inset, rgba(0, 0, 0, 0.4) 0px 1px 4px 0px, rgba(0, 0, 0, 0.6) 0 0 2px;
+  box-shadow: white 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px -1px 1px inset, rgba(0, 0, 0, 0.4) 0px 1px 4px 0px, rgba(0, 0, 0, 0.6) 0 0 2px;
+}
+
+/* line 249, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .sliders {
+  overflow: hidden;
+}
+/* line 251, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .sliders input {
+  width: 40px;
+  text-align: right;
+  font-size: .9em;
+  padding: 3px 4px;
+  float: left;
+  margin-left: 8px;
+}
+
+/* line 260, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-inputs {
+  clear: left;
+}
+/* line 262, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-inputs input {
+  text-align: center;
+  margin-left: 2px;
+  margin-bottom: .25em;
+}
+/* line 264, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .color-inputs input:first-child {
+  margin-left: 0;
+}
+
+/* line 268, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker-input {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
+  padding: 8px 6px;
+  background-color: #373b41;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: rgba(0, 0, 0, 0.5) 0 2px 1px;
+}
+/* line 279, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker-input:focus {
+  outline: none;
+  color: #fff;
+}
+
+/* line 281, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker #hex {
+  width: 5.7em;
+}
+
+/* line 282, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker #rgba {
+  width: 14em;
+}
+
+/* line 283, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker #hsla {
+  width: 15em;
+}
+
+/* line 285, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker input.error {
+  -webkit-box-shadow: rgba(255, 127, 127, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  box-shadow: rgba(255, 127, 127, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  background-color: rgba(102, 0, 0, 0.3);
+  color: #ff0f0f;
+}
+
+/* line 291, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .url {
+  display: inline-block;
+  padding: 0 8px 2px;
+  text-shadow: inherit;
+  text-align: center;
+  line-height: 2em;
+  cursor: text;
+  margin: 0;
+  border: 0;
+  width: 168px;
+  color: #666;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none;
+}
+/* line 305, ../sass/partials/modules/_hsl-picker.scss */
+.hslpicker .url:focus, .hslpicker .url:hover {
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px 0px inset;
+  color: #999;
+}
+
+/*
+PAGE & STRUCTURAL STYLES
+
+General page and structural styles
+ */
+/* line 18, ../sass/partials/modules/_arc90.scss */
+.arc90-wrapper {
+  margin: 0 auto;
+  clear: both;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 10px;
+  -webkit-box-shadow: #e0e0e0 3px 0;
+  box-shadow: #e0e0e0 3px 0;
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+
+/*
+INPUT ELEMENTS
+
+Page styles for input elements
+
+ */
+/* line 37, ../sass/partials/modules/_arc90.scss */
+.arc90-wrapper label {
+  color: #b4b7b4;
+  padding-top: 5px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+/* line 45, ../sass/partials/modules/_arc90.scss */
+label[for="arc90-color"],
+input#arc90-color {
+  margin-left: -5em;
+}
+
+/* line 48, ../sass/partials/modules/_arc90.scss */
+input#arc90-color {
+  border: 1px solid #c5c8c6;
+  border-bottom-color: #e0e0e0;
+  color: #282a2e;
+  -webkit-box-shadow: inset 0 1px 2px #eee;
+  box-shadow: inset 0 1px 2px #eee;
+  border-radius: 3px;
+  padding-left: 2em;
+  font-size: 1em;
+  height: 44px;
+  width: 100%;
+  position: relative;
+  z-index: 500;
+}
+/* line 65, ../sass/partials/modules/_arc90.scss */
+input#arc90-color::-webkit-input-placeholder {
+  color: #969896;
+}
+/* line 73, ../sass/partials/modules/_arc90.scss */
+input#arc90-color:focus {
+  outline: none;
+  border: 1px solid #a3685a;
+  -webkit-box-shadow: 0 0 8px rgba(163, 104, 90, 0.6);
+  box-shadow: 0 0 8px rgba(163, 104, 90, 0.6);
+}
+
+/* line 79, ../sass/partials/modules/_arc90.scss */
+label[for="arc90-color"] {
+  position: absolute;
+  padding: 0 0 0 1.4em;
+  color: #969896;
+  z-index: 501;
+}
+
+/* line 87, ../sass/partials/modules/_arc90.scss */
+.fakeSlider {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* line 92, ../sass/partials/modules/_arc90.scss */
+.ui-slider {
+  position: relative;
+}
+
+/* line 97, ../sass/partials/modules/_arc90.scss */
+.ui-widget-content {
+  border-top: 2px solid #C5C5C5;
+  border-bottom: 2px solid #C5C5C5;
+  height: 0px;
+}
+
+/* line 103, ../sass/partials/modules/_arc90.scss */
+.ui-slider-handle {
+  background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+  position: absolute;
+  z-index: 10;
+  bottom: -9px;
+  margin-top: -3px;
+  width: 20px;
+  height: 20px;
+  margin-left: -1%;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 118, ../sass/partials/modules/_arc90.scss */
+input[type='range'] {
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
+  height: 8px;
+  border-radius: 6px;
+}
+
+/* line 127, ../sass/partials/modules/_arc90.scss */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  z-index: 100;
+  position: relative;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+
+/*
+LIST ITEMS
+
+Styles for each <li> item
+ */
+/* line 148, ../sass/partials/modules/_arc90.scss */
+.arc90-content {
+  list-style: none;
+  padding: 1em;
+}
+
+/* line 152, ../sass/partials/modules/_arc90.scss */
+.arc90-listItem {
+  text-align: center;
+  position: relative;
+  opacity: 1;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+/* line 163, ../sass/partials/modules/_arc90.scss */
+.arc90-listItem.slider {
+  margin: 25px 0;
+}
+/* line 166, ../sass/partials/modules/_arc90.scss */
+.arc90-listItem.slider input {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 172, ../sass/partials/modules/_arc90.scss */
+.arc90-listItem.slider label {
+  font-size: 0.875em;
+}
+/* line 175, ../sass/partials/modules/_arc90.scss */
+.arc90-listItem.slider a {
+  position: absolute;
+  right: 3%;
+  top: -7px;
+}
+
+/* line 189, ../sass/partials/modules/_arc90.scss */
+.focus label,
+.focus #help {
+  color: #a3685a;
+}
+/* line 192, ../sass/partials/modules/_arc90.scss */
+.focus #help {
+  opacity: 1;
+}
+
+/* line 198, ../sass/partials/modules/_arc90.scss */
+.inactive .arc90-listItem {
+  opacity: .15;
+}
+/* line 202, ../sass/partials/modules/_arc90.scss */
+.inactive .arc90-listItem#arc90-swatch1 {
+  opacity: 1;
+}
+/* line 206, ../sass/partials/modules/_arc90.scss */
+.inactive .arc90-listItem #arc90-colorOutput {
+  opacity: 0;
+}
+
+/*
+SWATCHES
+
+Styles for the main content swatches
+ */
+/* line 239, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchPointer {
+  width: 0;
+  height: 0;
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+  border-left: 40px solid #fff;
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  right: -40px;
+}
+
+/* line 252, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer {
+  color: #fff;
+  float: left;
+  position: relative;
+}
+/* line 259, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer.arc90-swatch1 {
+  width: 47%;
+}
+/* line 262, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer.arc90-swatch2 {
+  width: 53%;
+}
+/* line 266, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer .arc90-swatch {
+  height: 300px;
+  line-height: 300px;
+  width: 100%;
+  font-size: 1.125em;
+}
+/* line 274, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer .arc90-colorInput {
+  position: relative;
+  width: 130px;
+  margin: 0 auto;
+}
+/* line 282, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer .arc90-colorOutput {
+  opacity: 1;
+  width: 130px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border: 0px solid #000;
+  color: #fff;
+  position: relative;
+  z-index: 500;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px inset;
+}
+/* line 299, ../sass/partials/modules/_arc90.scss */
+.arc90-swatchContainer .arc90-swatchLabel {
+  position: absolute;
+  width: 100%;
+  display: none;
+  padding: 20px 0;
+  color: #b4b7b4;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 0.625em;
+}
+
+/*
+INDIVIDUAL ELEMENTS
+
+Styles for individual elements on the page */
+/* line 317, ../sass/partials/modules/_arc90.scss */
+.arc90-codeHelp {
+  background-color: white;
+  border: 1px solid #EBEBEB;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 -4px 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -4px 6px;
+  color: #353535;
+  display: none;
+  left: 20%;
+  padding: .5em;
+  position: absolute;
+  text-align: center;
+  top: 260px;
+  z-index: 400;
+  width: 60%;
+}
+
+/* line 335, ../sass/partials/modules/_arc90.scss */
+.arc90-codeOutput {
+  clear: both;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+/* line 340, ../sass/partials/modules/_arc90.scss */
+.arc90-codeOutput .arc90-input {
+  padding: 14px 0;
+  margin: 0;
+  width: 100%;
+  background: #f2f2f2;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  border: none;
+}
+/* line 352, ../sass/partials/modules/_arc90.scss */
+.arc90-codeOutput .arc90-input::-webkit-input-placeholder {
+  color: #a3685a;
+}
+/* line 362, ../sass/partials/modules/_arc90.scss */
+.arc90-codeOutput .arc90-input:hover {
+  color: #a3685a;
+}
+/* line 366, ../sass/partials/modules/_arc90.scss */
+.arc90-codeOutput .arc90-input:focus {
+  background: #a3685a;
+  color: #fff;
+}
+
+/* line 373, ../sass/partials/modules/_arc90.scss */
+.initialHelp {
+  opacity: 0;
+  position: absolute;
+  left: 80%;
+  top: 40%;
+  color: #b4b7b4;
+  font-size: 0.875em;
+  line-height: 2;
+  width: 400px;
+  color: #a3685a;
+  z-index: 400;
+}
+
+/* line 4, ../sass/partials/design/default/_layout.scss */
+head, style[contenteditable] {
+  display: block;
+}
+
+/* line 5, ../sass/partials/design/default/_layout.scss */
+style[contenteditable] {
+  font-size: 0.875em;
+  line-height: 1.5;
+  white-space: pre;
+  padding: 0.5em;
+  background: #282a2e;
+  border: 3px solid #75a19b;
+  border-left-width: 0;
+  border-right-width: 0;
+  -webkit-box-shadow: rgba(29, 31, 33, 0.75) 8px 16px 12px inset;
+  box-shadow: rgba(29, 31, 33, 0.75) 8px 16px 12px inset;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  height: 110px;
+  -webkit-transform: translateY(-107px);
+  -ms-transform: translateY(-107px);
+  transform: translateY(-107px);
+  position: relative;
+  z-index: 2;
+  color: transparent;
+}
+
+/* line 24, ../sass/partials/design/default/_layout.scss */
+style[contenteditable]:focus {
+  border-color: #8abeb7;
+  outline: 0;
+  color: #fff;
+}
+
+/* line 29, ../sass/partials/design/default/_layout.scss */
+style[contenteditable]:hover {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  color: #fff;
+}
+
+/* line 33, ../sass/partials/design/default/_layout.scss */
+style[contenteditable]::after {
+  content: 'live editing';
+  position: absolute;
+  width: 128px;
+  height: 34px;
+  right: 1em;
+  bottom: -48px;
+  margin-top: -123px;
+  z-index: 999;
+  vertical-align: baseline;
+  text-align: center;
+  padding-top: 1em;
+  background-color: #75a19b;
+  color: #fff;
+  border-bottom-right-radius: 32px 24px;
+  border-bottom-left-radius: 32px 24px;
+  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 52, ../sass/partials/design/default/_layout.scss */
+.header {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  height: 114px;
+  z-index: 1;
+  background-color: #c5c8c6;
+}
+
+/* line 60, ../sass/partials/design/default/_layout.scss */
+.app .header {
+  margin-top: -107px;
+}
+
+/* line 63, ../sass/partials/design/default/_layout.scss */
+.is-hovered .header {
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  transform: scale(1, 0);
+  z-index: -1;
+}
+
+/* line 67, ../sass/partials/design/default/_layout.scss */
+.dark .header {
+  background-color: #1d1f21;
+}
+
+/* line 71, ../sass/partials/design/default/_layout.scss */
+.header {
+  position: relative;
+}
+
+/* line 75, ../sass/partials/design/default/_layout.scss */
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 93.75em;
+  position: relative;
+}
+/* line 56, ../sass/partials/zen-grids/_grids.scss */
+.centered:before, .centered:after {
+  content: "";
+  display: table;
+}
+/* line 60, ../sass/partials/zen-grids/_grids.scss */
+.centered:after {
+  clear: both;
+}
+
+/* line 87, ../sass/partials/design/default/_layout.scss */
+.wrapper {
+  overflow: hidden;
+}
+
+/* line 56, ../sass/partials/zen-grids/_grids.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 60, ../sass/partials/zen-grids/_grids.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 95, ../sass/partials/design/default/_layout.scss */
+.color-functions,
+.code-container, .colorscheme-tiles,
+.grid-item {
+  padding-left: 16px;
+  padding-right: 16px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+}
+
+/* line 106, ../sass/partials/design/default/_layout.scss */
+.header,
+.subfooter,
+.footer,
+.info {
+  clear: both;
+}
+
+/* line 110, ../sass/partials/design/default/_layout.scss */
+.styleswitcher {
+  position: absolute;
+  float: none;
+  top: 2em;
+  left: 384px;
+  background-color: #8abeb7;
+}
+
+/* line 118, ../sass/partials/design/default/_layout.scss */
+.content {
+  margin-top: 2em;
+}
+
+/* line 122, ../sass/partials/design/default/_layout.scss */
+.sidebar {
+  margin-bottom: 6em;
+}
+
+/* line 125, ../sass/partials/design/default/_layout.scss */
+.section-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 131, ../sass/partials/design/default/_layout.scss */
+.section-footer small {
+  margin-right: 1em;
+}
+
+/* line 134, ../sass/partials/design/default/_layout.scss */
+.section-footer a {
+  display: inline-block;
+  padding: .25em;
+}
+
+/* line 138, ../sass/partials/design/default/_layout.scss */
+.hslpicker a {
+  color: #fcf5e7;
+}
+
+/* line 143, ../sass/partials/design/default/_layout.scss */
+.color-functions,
+.code-container {
+  clear: left;
+}
+
+/* line 152, ../sass/partials/design/default/_layout.scss */
+.colorscheme,
+.article,
+.subfooter {
+  overflow: auto;
+}
+
+/* line 156, ../sass/partials/design/default/_layout.scss */
+.subfooter {
+  color: #373b41;
+  padding-left: 1em;
+}
+
+/* line 160, ../sass/partials/design/default/_layout.scss */
+.dark .subfooter {
+  color: #e0e0e0;
+}
+
+/* line 166, ../sass/partials/design/default/_layout.scss */
+.subfooter ul {
+  list-style: circle;
+  font-size: 1.125em;
+  btn--rightmargin: 0 0 1em;
+  padding: 0 0 0 1.2em;
+}
+
+/* line 174, ../sass/partials/design/default/_layout.scss */
+.subfooter li {
+  text-indent: -.25em;
+}
+
+/* line 178, ../sass/partials/design/default/_layout.scss */
+.subfooter li a {
+  display: inline-block;
+  padding: .125em .25em;
+}
+
+/* line 182, ../sass/partials/design/default/_layout.scss */
+.footer {
+  line-height: 1;
+  max-height: 1em;
+}
+
+/* line 186, ../sass/partials/design/default/_layout.scss */
+.copyright {
+  -webkit-transform: translateY(1em);
+  -ms-transform: translateY(1em);
+  transform: translateY(1em);
+  padding: 1em 0;
+  background: #373b41;
+  border-top: 1px solid #282a2e;
+  color: #e0e0e0;
+}
+
+/* line 193, ../sass/partials/design/default/_layout.scss */
+.dark .copyright {
+  background: #c5c8c6;
+  border-top: 1px solid #b4b7b4;
+  color: #282a2e;
+}
+
+/* line 198, ../sass/partials/design/default/_layout.scss */
+.copyright a {
+  color: white;
+}
+
+/* line 201, ../sass/partials/design/default/_layout.scss */
+.copyright a:hover {
+  color: #81a2be;
+}
+
+/* line 204, ../sass/partials/design/default/_layout.scss */
+.dark .copyright a {
+  color: #615166;
+}
+
+/* line 208, ../sass/partials/design/default/_layout.scss */
+.dropdown,
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 218, ../sass/partials/design/default/_layout.scss */
+.content .colorscheme-tiles,
+.content .color-functions {
+  /* 512 + 16px */
+  max-width: 384px;
+  /* 24 * 16px */
+}
+
+/* line 224, ../sass/partials/design/default/_layout.scss */
+.header .colorscheme-tiles {
+  max-width: 96px;
+  min-height: 114px;
+  padding-top: 1em;
+}
+
+/* line 229, ../sass/partials/design/default/_layout.scss */
+.alpha {
+  font-size: 3em;
+}
+
+/* line 232, ../sass/partials/design/default/_layout.scss */
+.block {
+  display: block;
+}
+
+/* line 236, ../sass/partials/design/default/_layout.scss */
+rect[class^="fill-"]:hover {
+  cursor: pointer;
+}
+
+/* =====  http://codepen.io/rommelxcastro/pen/krtmi ===== */
+/* line 240, ../sass/partials/design/default/_layout.scss */
+.info {
+  margin: 2em 1em;
+}
+
+/* =====  Accordion Styles ===== */
+/* http://jsfiddle.net/devinwalker/drpKm/3096/light/ */
+/* line 245, ../sass/partials/design/default/_layout.scss */
+.accordion {
+  margin: 0 0 30px;
+  border: 1px solid #e0e0e0;
+  border-bottom-color: #eceded;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* line 252, ../sass/partials/design/default/_layout.scss */
+.accordion-header {
+  background-color: #f3d18f;
+  border-bottom: 1px solid #ebb346;
+  font-size: 1.5em;
+}
+
+/* line 258, ../sass/partials/design/default/_layout.scss */
+.accordion-active {
+  background-color: #f0c674;
+}
+
+/* line 261, ../sass/partials/design/default/_layout.scss */
+.accordion dd {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 0 0 1em;
+  margin: 0;
+  -webkit-transition: max-height 1s ease-in-out;
+  transition: max-height 1s ease-in-out;
+  font-size: 1.125em;
+  max-width: 34em;
+}
+
+/* line 274, ../sass/partials/design/default/_layout.scss */
+.accordion .slide-up {
+  overflow: hidden;
+  -webkit-transition: max-height 0.1s;
+  transition: max-height 0.1s;
+}
+
+/* line 278, ../sass/partials/design/default/_layout.scss */
+.accordion .active {
+  display: block;
+  max-height: 800px;
+  padding: 1em;
+}
+
+/* line 283, ../sass/partials/design/default/_layout.scss */
+.accordion dt {
+  cursor: pointer;
+  padding: 8px 15px;
+  margin: 0;
+}
+
+/* line 288, ../sass/partials/design/default/_layout.scss */
+.accordion dt:before {
+  content: " \25B6";
+  padding-right: 5px;
+}
+
+/* line 292, ../sass/partials/design/default/_layout.scss */
+.accordion .accordion-active:before {
+  content: " \25BE";
+  padding-right: 5px;
+}
+
+/* line 296, ../sass/partials/design/default/_layout.scss */
+.accordion .accordion-active:hover {
+  cursor: default;
+}
+
+/* line 299, ../sass/partials/design/default/_layout.scss */
+.dark .accordion {
+  color: #282a2e;
+  border-color: #b4b7b4;
+  border-bottom-color: #969896;
+}
+
+/* ===== end accordion  ===== */
+/* line 306, ../sass/partials/design/default/_layout.scss */
+.full-width {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 560px) {
+  /* line 312, ../sass/partials/design/default/_layout.scss */
+  .readme .btn--top-action {
+    top: 7em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 325, ../sass/partials/design/default/_layout.scss */
+  .content {
+    float: left;
+    width: 40%;
+  }
+
+  /* line 331, ../sass/partials/design/default/_layout.scss */
+  .sidebar {
+    overflow: auto;
+    margin-top: 2.5em;
+  }
+
+  /* line 337, ../sass/partials/design/default/_layout.scss */
+  .hslpicker {
+    float: right;
+    position: relative;
+  }
+
+  /* line 342, ../sass/partials/design/default/_layout.scss */
+  .subfooter {
+    padding: 2em 0;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  /* line 348, ../sass/partials/design/default/_layout.scss */
+  .hslpicker {
+    padding-left: 3em;
+    position: relative;
+  }
+
+  /* line 353, ../sass/partials/design/default/_layout.scss */
+  .hslpicker .bgs {
+    left: -38px;
+  }
+
+  /* line 356, ../sass/partials/design/default/_layout.scss */
+  .hslpicker .color-tiles {
+    float: left;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  /* line 362, ../sass/partials/design/default/_layout.scss */
+  .article {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

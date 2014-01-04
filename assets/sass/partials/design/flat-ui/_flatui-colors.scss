@@ -1,0 +1,70 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Global values
+// --------------------------------------------------
+
+//
+// Color Swatches
+// --------------------------------------------------
+
+$midnight-blue:  $base00;         // #2c3e50
+$wet-asphalt:    $base01;         // #34495e
+// $base02 and $base03 came are blends of $wet-asphalt and $asbestos
+$asbestos:       $base04;         // #7f8c8d
+$concrete:       $base05;         // #95a5a6
+$silver:         $base06;         // #bdc3c7
+$clouds:         $base07;         // #ecf0f1
+$alizarin:       $base16-red;     // $base08
+// base16-orange is a 50% blend of carrot and pumpkin
+$orange:         $base16-yellow;  // $base0a
+$nephritis:      $base16-green;   // $base0b
+$green-sea:      $base16-cyan;    // $base0c
+$peter-river:    $base16-blue;    // $base0d
+$amethyst:       $base16-violet;  // $base0e
+$flatui-magenta: $base16-magenta; // $base0f
+
+$turquoise:     #1abc9c;
+// $green-sea:     #16a085;
+$emerald:       #2ecc71;
+// $nephritis:     #27ae60;
+// $peter-river:   #3498db;
+$belize-hole:   #2980b9;
+// $amethyst:      #9b59b6;
+$wisteria:      #8e44ad;
+// $wet-asphalt:   #34495e;
+// $midnight-blue: #2c3e50;
+
+$sun-flower:    #f1c40f;
+$orange:        #f39c12;
+
+$carrot:        #e67e22;
+$pumpkin:       #d35400;
+
+// $alizarin:      #e74c3c;
+$pomegranate:   #c0392b;
+
+// $clouds:        #ecf0f1;
+// $silver:        #bdc3c7;
+
+// $concrete:      #95a5a6;
+// $asbestos:      #7f8c8d;
+
+// Main Colors
+// -------------------------
+$base:             $wet-asphalt;
+$firm:             $turquoise;
+
+$gray:             $concrete;
+$lightgray:        $silver;
+$inverse:          white;
+
+$success:          $emerald;
+$danger:           $alizarin;
+$warning:          $sun-flower;
+$info:             $peter-river;
+
+$link-color:       $green-sea;
+$link-hover-color: $turquoise;
+

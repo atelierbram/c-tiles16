@@ -1,0 +1,322 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>c-Tiles16 - Colorscheming with Variables</title>
+<link rel="stylesheet" href="../assets/css/ctiles16-custom.css" id="stylesheet" />
+<!-- <link rel="stylesheet" href="../assets/css/ctiles16-pantone2014spring.css" id="stylesheet" /> -->
+<style contenteditable>.fill-base00 {fill:} .fill-base01 {fill:} .fill-base02 {fill:} .fill-base03 {fill:}
+.fill-base04 {fill:} .fill-base05 {fill:} .fill-base06 {fill:} .fill-base07 {fill:}
+.fill-base16-yellow {fill:} .fill-base16-orange {fill:} .fill-base16-red {fill:} .fill-base16-magenta {fill:}
+.fill-base16-violet {fill:} .fill-base16-blue {fill:} .fill-base16-cyan {fill:} .fill-base16-green {fill:}</style>
+<link id="favicon" rel="shortcut icon" type="image/x-icon" href="../assets/img/ui/favicon.ico" />
+<link rel="apple-touch-icon" href="../assets/img/ui/apple-touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/img/ui/apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/img/ui/apple-touch-icon-iphone4.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/img/ui/apple-touch-icon-ipad3.png" />
+
+<meta name="robots" content="index, follow">
+<meta name="description" content="Colection of colorscheming tools, purposely and conveniently together in one webpage"/>
+<link rel="author" href="https://plus.google.com/111567145811003203990/posts">
+<script src="../assets/js/libs/modernizr.custom.min.js"></script>
+</head>
+
+<body class="app">
+
+<header class="header">
+  <div class="centered">
+    <a href="http://github.com/atelierbram/c-tiles16">
+      <div id="svgLogo" class="colorscheme-tiles"><img src="../assets/img/svg/logo_96x96.svg" alt="c-Tiles logo"> 
+    </div></a><!-- /.colorscheme-tiles #svgLogo -->
+
+    <h1 id="appTitle" class="foreground-color">c-Tiles16</h1>
+    <p class="tagline"><b>Colorscheming with Variables</b></p><!-- </a> -->    <button id="headerReset" class="btn btn--reset btn--ctiles btn--top-action">reset header bg</button>
+
+  </div>
+</header>
+
+<div id="wrapper" class="centered wrapper">
+
+  <section class="content">
+
+    <div class="colorscheme">
+      <div id="svg-container" class="colorscheme-tiles">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="352px" height="352px" viewBox="0 0 352 352" enable-background="new 0 0 352 352" xml:space="preserve" id="svgPic">
+          <g>
+          <rect                 class="fill-base00"         width="88" height="88"/>
+          <rect x="88"          class="fill-base01"         width="88" height="88"/>
+          <rect x="176"         class="fill-base02"         width="88" height="88"/>
+          <rect x="264"         class="fill-base03"         width="88" height="88"/>
+          <rect y="88"          class="fill-base04"         width="88" height="88"/>
+          <rect x="88"  y="88"  class="fill-base05"         width="88" height="88"/>
+          <rect x="176" y="88"  class="fill-base06"         width="88" height="88"/>
+          <rect x="264" y="88"  class="fill-base07"         width="88" height="88"/>
+          <rect x="176" y="176" class="fill-base16-red"     width="88" height="88"/>
+          <rect x="88"  y="176" class="fill-base16-orange"  width="88" height="88"/>
+          <rect y="176"         class="fill-base16-yellow"  width="88" height="88"/>
+          <rect x="264" y="264" class="fill-base16-green"   width="88" height="88"/>
+          <rect x="176" y="264" class="fill-base16-cyan"    width="88" height="88"/>
+          <rect x="88"  y="264" class="fill-base16-blue"    width="88" height="88"/>
+          <rect y="264"         class="fill-base16-violet"  width="88" height="88"/>
+          <rect x="264" y="176" class="fill-base16-magenta" width="88" height="88"/>
+          </g>
+        </svg>
+      </div><!-- /.colorscheme-tiles #svg-container -->
+
+      <div class="color-functions">
+        <button id="btnAdjustHue" class="btn btnAdjustHue">adjust hue</button>
+        <button id="btnLighten" class="btn">lighten</button>
+        <button id="btnDarken" class="btn">darken</button>
+        <button id="btnSaturate" class="btn">saturate</button>
+        <button id="btnDesaturate" class="btn">desaturate</button>
+        <button id="btnGrayscale" class="btn">grayscale</button>
+        <button id="btnComplement" class="btn">complement</button>
+        <button id="btnInvert" class="btn">invert</button>
+        <button id="btnShade" class="btn">shade</button>
+        <button id="btnTint" class="btn">tint</button>
+        <button id="btnReset" class="btn btn--base16-cyan full-width">reset</button>
+      </div><!-- /.colorfunctions -->
+    </div><!-- /.colorscheme -->
+
+    <article class="app--info">
+      <div id="code-container" class="code-container">
+        <h3>Sass Syntax - scss</h3>
+        <pre class="language-scss"><code class="language-scss"><span class="token selector">.is-hue-adjusted </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> adjust-hue(<span class="token variable">$base00</span>,15deg)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-lightened    </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> lighten(<span class="token variable">$base01</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-darkened     </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> darken(<span class="token variable">$base02</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-saturated    </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> saturate(<span class="token variable">$base03</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-desaturated  </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> desaturate(<span class="token variable">$base04</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-grayscaled   </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> grayscale(<span class="token variable">$base05</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-complemented </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> complement(<span class="token variable">$base06</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-inverted     </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> invert(<span class="token variable">$base07</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-shaded       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> shade(<span class="token variable">$red</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-tinted       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> tint(<span class="token variable">$orange</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+        <p class="note">All functions here are increased here by 15%, except: grayscale, complement, and invert, which are &#8216;boolean&#8217; functions.</p>
+      </div><!-- /.code-container -->
+
+
+      <section class="info">
+        <h2>Colorscheming</h2>
+        <dl id="accordion" class="accordion">
+          <dt class="accordion-header">Introduction</dt>
+          <dd>
+          <ol>
+            <li>This colorscheming test playground assembles the best colorscheming tools conveniently on <em>one webpage</em>, making it convenient to create your own colorscheme, with sixteen variables</li>
+          </ol>
+
+          </dd>
+          <dt class="accordion-header">Getting Started</dt>
+          <dd>
+
+          <p>A possible way to make this tool, or rather collection-of-tools, your own can be:</p>
+          <ul>
+
+            <li>download the <a href="https://github.com/atelierbram/c-tiles/archive/master.zip">zip-file</a><i> (, or clone <a href="https://github.com/atelierbram/c-tiles">the repo</a>)</i></li>
+
+            <li>when using Sass, open <code>assets/sass/ctiles16-custom.scss</code> (which is a copy of <code>ctiles16-ctiles.scss</code>) in a text-editor. Don’t rename it just yet, but:</li>
+
+            <li>(this works best full screen) start editing the values of the variables with the text-editor on one side, and the browser-window with the test colorscheming playground (<code><a href="colorscheming">colorscheming/index.html</a></code>) on the other side of your screen</li>
+            <li>play with the hsl-picker to help you get along</li>
+            <li>try some live editing with the hidden styles in the top.</li>
+            <li>from the dropdown-menu you can pick and see how other colorschemes look.</li>
+
+            <li>there’s a button for toggling the page background-color, and you can also hover with your mouse over the colortiles, to see the effect of a larger amount colorfield</li>
+
+            <li>refresh the colorschemer-webpage after each time you edit your <code>ctiles16-custom.scss</code> -colorscheme-variables file (or use something like LiveReload)</li>
+
+            <li>When following the workflow above, you have been using <a href="http://atelierbram.github.io/c-tiles16">c-Tiles</a> to make a colorscheme made out of sixteen colors</li>
+          </ul>
+          </dd>
+          <dt class="accordion-header">Development</dt>
+          <dd>
+          <ul>
+
+            <li>Now put the colorscheme you just made as one of the first partial files to import in the <code>_base-partial</code> file (the one that is included throughout the whole project)</li>
+            <li>Keep using the colorschermer any time you like to generate color-values during the design phase of the website</li>
+
+            <li>One can make it a personal challenge to only use the colorscheme values, or variations of those with Sass color-functions</li>
+
+            <li>BTW: You can also try to make a pull request on Github, in order to submit your colorscheme to this collection <a href="https://github.com/atelierbram/c-tiles">here on c-Tiles16</a></li>
+          </ul>
+          </dd>
+        </dl><!-- /.accordion -->
+      </section><!-- /.info -->
+
+    </article>
+
+    <footer class="subfooter">
+
+      <div class="credits grid-item">
+        <h3>Credits</h3>
+        <ul>
+          <li><a href="https://github.com/chriskempson/base16-builder">Base16 Builder</a> by <a href="http://chriskempson.com/">Chris Kempson</a></li>
+          <li><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></li>
+          <li><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></li>
+        </ul>
+      </div>
+
+      <div class="resources grid-item">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="http://prismjs.com/">Prism</a> by <a href="http://lea.verou.me">Lea Verou</a></li>
+          <li><a href="https://github.com/MoOx/sass-prism-theme-base">Sass Prism base theme</a> by <a href="http://moox.io/">Maxime Thirouin</a></li>
+          <li><a href="http://formalize.me/">Formalize</a>  by <a href="http://sonspring.com/">Nathan Smith</a></li>
+          <li><a href="http://codepen.io/larrygeams/pen/feoDc">long dropdown menu</a> by <a href="http://css-tricks.com/long-dropdowns-solution/">Chris Coyier</a> and <a href="http://larrygeams.comze.com/">Geams</a></li>
+          <li><a href="http://wordimpress.com/super-lightweight-jquery-website-accordions-without-a-plugin/">lightweight accordion</a> by <a href="http://wordimpress.com/author/wordimpressadmin/">Devin Walker</a></li>
+        </ul>
+      </div>
+    </footer><!-- /.subfooter -->
+
+  </section><!-- /.content -->
+
+  <aside class="sidebar">
+    <section id="hslpicker" class="hslpicker">
+      <!-- <a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a> -->
+      <div class="frame">
+        <div id='tiles' class='color-tiles'>
+          <div class='foreground tile selected' data-name='foreground' title='Adjust foreground tile'>
+            <div class='foreground-color tile'></div>
+          </div>
+          <div class='background tile' data-name='background' title='Adjust background tile'>
+            <div class='background-color tile'></div>
+          </div>
+          <div class='bgs'>
+            <div class='bg none' title='Transparent' data-color='[360,100,100,0]'></div>
+            <div class='bg light' title='White' data-color='[360,100,100,1]'></div>
+            <div class='bg dark' title='Black' data-color='[0,0,0,1]'></div>
+            <div class='bg random' title='Random' data-color='random'></div>
+          </div>
+          <div class='expose' title='show/hide background tile'></div>
+        </div>
+        <div id='picker' class='sliders'>
+          <div class="slider"><div id='h-slider'><div class='handle'></div></div></div> <input id='h' class="hslpicker-input">
+          <div class="slider"><div id='s-slider'><div class='handle'></div></div></div> <input id='s' class="hslpicker-input">
+          <div class="slider"><div id='l-slider'><div class='handle'></div></div></div> <input id='l' class="hslpicker-input">
+          <div class="slider"><div id='a-slider'><div class='handle'></div></div></div> <input id='a' class="hslpicker-input">
+        </div>
+      </div>
+      <div class='color-inputs'>
+        <input id="hex" spellcheck="false" type="text" class="hslpicker-input">
+        <input id="rgba" spellcheck="false" type="text" class="hslpicker-input">
+        <input id="hsla" spellcheck="false" type="text" class="hslpicker-input">
+      </div>
+
+      <footer class="section-footer"><small><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></small></footer>
+    </section><!-- /.hslpicker -->
+
+    <section id="arc90-container" class="arc90-wrapper">
+      <!-- <a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a> -->
+      <form action="http://localhost/~bram/playground/color/c-tiles16/colorscheming/index.html" method="get" accept-charset="utf-8" class="inactive" id="arc90-form">
+        <ul id="arc90-content" class="arc90-content clearfix">
+
+          <li id="arc90-swatch1" class="arc90-listItem arc90-swatch1 arc90-swatchContainer">
+          <p class="arc90-swatchLabel">Input color</p>
+          <div class="arc90-swatch">
+            <div id="arc90-colorInput"  class="arc90-colorInput">
+              <label for="arc90-color">#</label>
+              <input type="text" name="arc90-color" id="arc90-color" class="arc90-color arc90-input" maxlength="6" placeholder="0183B7" />
+              <div id="initialHelp" class="initialHelp">
+                &larr; Copy and paste the hex code: <br class="clear"/>the one you found above
+              </div>
+            </div>
+
+            <div class="arc90-swatchPointer"></div>
+          </div>
+          </li>
+
+          <li id="arc90-swatch2" class="arc90-listItem arc90-swatch2 arc90-swatchContainer">
+          <p class="arc90-swatchLabel">Output color</p>
+          <div class="arc90-swatch"><span id="arc90-colorOutput" class="arc90-colorOutput"></span></div>
+          </li>
+
+          <li class="arc90-listItem">
+          <div id="arc90-codeOutput" class="arc90-codeOutput">
+            <input type="text" id="arc90-code"  class="arc90-input" tabindex="-1" readonly="readonly" placeholder="Fiddle with the sliders to get the SASS" />
+          </div>
+          <div class="arc90-codeHelp">
+            <p>Copy and use the code below:</p>
+          </div>
+          </li>
+
+          <li class="arc90-listItem slider">
+          <a href="#" class="arc90-reset">Reset</a>
+          <input type="range" min="0" max="100" id="slider_l" class="arc90-input" />
+          <label for="slider_l">&larr; darken | lighten &rarr;</label>
+          </li>
+          <li class="arc90-listItem slider">
+          <a href="#" class="arc90-reset">Reset</a>
+          <input type="range" min="0" max="100" id="slider_s" class="arc90-input"/>
+          <label for="slider_s">&larr; desaturate | saturate &rarr;</label>
+          </li>
+          <li class="arc90-listItem slider">
+          <a href="#" class="arc90-reset">Reset</a>
+          <input type="range" min="0" max="360" id="slider_h" class="arc90-input" />
+          <label for="slider_h">&larr; adjust hue &rarr;</label>
+          </li>
+        </ul>
+      </form>
+      <footer class="section-footer"><small><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></small></footer>
+    </section><!-- /.arc90-wrapper --> 
+  </aside>
+
+
+  <div class="styleswitcher">
+    <ul class="dropdown">
+      <li class="drop"><a href="#">Choose a Colorscheme</a>
+      <ul class="sub_menu">
+        <li><a class="styleswitch switchto-ctiles16-custom" href="?ctiles16-custom.css" title="ctiles16-custom">custom</a></li>
+        <!-- <li><a class="styleswitch switchto-ctiles16-ctiles" href="?ctiles16-ctiles.css" title="ctiles16-ctiles">ctiles</a></li> -->
+        <li><a class="styleswitch switchto-ctiles16-3024" href="?ctiles16-3024.css" title="ctiles16-3024">3024</a></li>
+        <li><a class="styleswitch switchto-ctiles16-chalk" href="?ctiles16-chalk.css" title="ctiles16-chalk">Chalk</a></li>
+        <li><a class="styleswitch switchto-ctiles16-eighties" href="?ctiles16-eighties.css" title="ctiles16-eighties">Eighties</a></li>
+        <li><a class="styleswitch switchto-ctiles16-greenscreen" href="?ctiles16-greenscreen.css" title="ctiles16-greenscreen">Greenscreen</a></li>
+        <li><a class="styleswitch switchto-ctiles16-mocha" href="?ctiles16-mocha.css" title="ctiles16-mocha">Mocha</a></li>
+        <li><a class="styleswitch switchto-ctiles16-monokai" href="?ctiles16-monokai.css" title="ctiles16-monokai">Monokai</a></li>
+        <li><a class="styleswitch switchto-ctiles16-ocean" href="?ctiles16-ocean.css" title="ctiles16-ocean">Ocean</a></li>
+        <li><a class="styleswitch switchto-ctiles16-railscasts" href="?ctiles16-railscasts.css" title="ctiles16-railscasts">Railscasts</a></li>
+        <!-- <li><a class="styleswitch switchto-ctiles16-shapeshifter" href="?ctiles16-shapeshifter.css" title="ctiles16-shapeshifter">Shapeshifter</a></li> -->
+        <li><a class="styleswitch switchto-ctiles16-solarized" href="?ctiles16-solarized.css" title="ctiles16-solarized">Solarized</a></li>
+        <li><a class="styleswitch switchto-ctiles16-tomorrow" href="?ctiles16-tomorrow.css" title="ctiles16-tomorrow">Tomorrow</a></li>
+        <li><a class="styleswitch switchto-ctiles16-atelierforest" href="?ctiles16-atelierforest" title="ctiles16-atelierforest">Atelierforest</a></li>
+        <li><a class="styleswitch switchto-ctiles16-atelierheath" href="?ctiles16-atelierheath" title="ctiles16-atelierheath">Atelierheath</a></li>
+        <li><a class="styleswitch switchto-ctiles16-atelierlakeside" href="?ctiles16-atelierlakeside" title="ctiles16-atelierlakeside">Atelierlakeside</a></li>
+        <li><a class="styleswitch switchto-ctiles16-atelierseaside is-selected" href="?ctiles16-atelierseaside" title="ctiles16-atelierseaside">Atelierseaside</a></li>
+        <li><a class="styleswitch switchto-ctiles16-atelierdune" href="?ctiles16-atelierdune" title="ctiles16-atelierdune">Atelierdune</a></li>
+        <li><a class="styleswitch switchto-ctiles16-flatui" href="?ctiles16-flatui" title="flat ui">Flatui</a></li>
+        <li><a class="styleswitch switchto-ctiles16-pantone2014spring" href="?ctiles16-pantone2014spring" title="pantone 2014 spring">Pantone Spring 2014</a></li>
+      </ul>
+      </li>
+    </ul>
+  </div><!-- /.styleswitcher> -->
+  <button id="bgToggle" class="btn btn--bg-toggle">toggle bg-color</button>
+
+</div><!-- /.centered #wrapper-->
+
+<footer class="footer">
+  <div class="copyright">
+    <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
+    <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+
+<!-- <script src="../assets/js/dropdown-menu.js"></script> -->
+<!-- <script src="../assets/js/styleswitcher.js"></script> -->
+<!-- <script src="../assets/js/color-functions.js"></script> -->
+<!-- <script src="../assets/js/hsl-picker-max.js"></script> -->
+<!-- <script src="../assets/js/arc90-Color.js"></script> -->
+<!-- <script src="../assets/js/arc90-Transforms.js"></script> -->
+<!-- <script src="../assets/js/arc90.js"></script> -->
+<script src="../assets/js/ctiles.min.js"></script>
+
+<!--initiate hslpicker-->
+<script>
+$(document).ready(function(){
+    site = require('site')()
+    });
+</script>
+</body>
+
+</html>

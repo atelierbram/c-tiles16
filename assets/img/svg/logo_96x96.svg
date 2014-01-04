@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96" height="96" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve" id="svgPic">
+<g>
+<rect                fill="#101718" width="24" height="24"/>
+<rect x="24"         fill="#1f2a2e" width="24" height="24"/>
+<rect x="48"         fill="#364549" width="24" height="24"/>
+<rect x="72"         fill="#48575b" width="24" height="24"/>
+<rect y="24"         fill="#607176" width="24" height="24"/>
+<rect x="24"  y="24" fill="#7b8a8e" width="24" height="24"/>
+<rect x="48"  y="24" fill="#b8d7e0" width="24" height="24"/>
+<rect x="72"  y="24" fill="#f0fbff" width="24" height="24"/>
+<rect x="48"  y="48" fill="#ec134d" width="24" height="24"/>
+<rect x="24"  y="48" fill="#e63600" width="24" height="24"/>
+<rect y="48"         fill="#ff9c19" width="24" height="24"/>
+<rect x="72"  y="72" fill="#11d4a0" width="24" height="24"/>
+<rect x="48"  y="72" fill="#17a4cf" width="24" height="24"/>
+<rect x="24"  y="72" fill="#1a7dff" width="24" height="24"/>
+<rect y="72"         fill="#7e47ea" width="24" height="24"/>
+<rect x="72"  y="48" fill="#e212d5" width="24" height="24"/>
+</g>
+</svg>

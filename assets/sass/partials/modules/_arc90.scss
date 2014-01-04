@@ -1,0 +1,386 @@
+// Variables
+$bodyFontSize         : 16;
+$textColor            : $base01;
+$lightBackgroundColor : $base07;
+$lightTextColor       : $base04;
+$highlightColor       : $base16-magenta;
+$placeholderText      : $base03;
+
+/*
+PAGE & STRUCTURAL STYLES
+
+General page and structural styles
+ */
+.arc90-wrapper * {
+  // @include box-sizing(border-box);
+}
+
+.arc90-wrapper {
+  // max-width: 850px;
+  margin: 0 auto;
+  clear: both;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: $base06 3px 0;
+  border: 1px solid $base06;
+  // @extend %relative; 
+  position: relative;
+}
+
+/*
+INPUT ELEMENTS
+
+Page styles for input elements
+
+ */
+.arc90-wrapper label {
+  color: $lightTextColor;
+  padding-top: 5px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+label[for="arc90-color"],
+input#arc90-color {
+  margin-left: -5em;
+}
+input#arc90-color {
+  border: 1px solid $base05;
+  border-bottom-color: $base06;
+  color: $textColor;
+  box-shadow: inset 0 1px 2px #eee;
+  border-radius: 3px;
+  padding-left: 2em;
+  font-size: 1em;
+  height: 44px;
+  width: 100%;
+  @extend %monospace !optional;
+  // We need to float the input on top of BG or we can't
+  // re-focus with ze mouse
+  // @extend %relative; 
+  position: relative;
+  z-index: 500;
+
+  &::-webkit-input-placeholder {
+    color: $placeholderText;
+  }
+
+  &:-moz-placeholder {
+    color: $placeholderText;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $highlightColor;
+    box-shadow: 0 0 8px transparentize($highlightColor, .4);
+  }
+}
+label[for="arc90-color"] {
+  // @extend %absolute;
+  position: absolute;
+  padding: 0 0 0 1.4em;
+  color: $placeholderText;
+  z-index: 501;
+}
+
+.fakeSlider {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.ui-slider {
+  // @extend %relative; 
+  position: relative;
+}
+
+.ui-widget-content {
+  border-top: 2px solid #C5C5C5;
+  border-bottom: 2px solid #C5C5C5;
+  height: 0px;
+}
+
+.ui-slider-handle {
+  background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
+  background-size: 20px 20px;
+  // @extend %absolute; 
+  position: absolute;
+  z-index: 10;
+  bottom: -9px;
+  margin-top: -3px;
+  width: 20px;
+  height: 20px;
+  margin-left: -1%;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
+  height: 8px;
+  border-radius: 6px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  z-index: 100;
+  // @extend %relative; 
+  position: relative;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
+  background-size: 20px 20px;
+}
+
+/*
+LIST ITEMS
+
+Styles for each <li> item
+ */
+.arc90-content {
+  list-style: none;
+  padding: 1em;
+}
+.arc90-listItem {
+  text-align: center;
+  // @extend %relative; 
+  position: relative;
+  opacity: 1;
+  transition: .5s all ease;
+  @extend %reset !optional;
+
+  // Slider Controls
+  // Would be cool to dynamically set a gradient on these
+  // that way you could see what direction your colors are going...
+  &.slider {
+    margin: 25px 0;
+
+    input {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    label {
+      font-size: (14em / $bodyFontSize);
+    }
+    a {
+      // @extend %absolute; 
+  position: absolute;
+      right: 3%;
+      top: -7px;
+      // font-size: (10em / $bodyFontSize);
+    }
+  }
+}
+// This will be for when the color input is in focus
+// we should add some classes like "filled" and "unfilled"
+// for when the main color input is filled, then we can tone down
+.focus {
+  label,
+  #help {
+    color: $highlightColor;
+  }
+  #help {
+    opacity: 1;
+  }
+}
+.inactive {
+
+  .arc90-listItem {
+    opacity: .15;
+
+
+    &#arc90-swatch1 {
+      opacity: 1;
+    }
+
+    #arc90-colorOutput{
+      opacity: 0;
+    }
+
+  }
+}
+
+/*
+SWATCHES
+
+Styles for the main content swatches
+ */
+
+
+// Rounding corners
+
+@media only screen and (min-width: 565px) {
+
+  // #swatch1 .swatch{
+  //     @include border-top-left-radius(10px);
+  // }
+
+  // #swatch2 .swatch{
+  //     @include border-top-right-radius(10px);
+  // }
+
+  // #container {
+  //     @include border-radius(10px);
+  // }
+}
+
+// The pointer from Swatch 1 to Swatch 2
+
+.arc90-swatchPointer {
+  width: 0;
+  height: 0;
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+  border-left: 40px solid #fff;
+  // @extend %absolute; 
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  right: -40px;
+}
+
+.arc90-swatchContainer {
+  color: #fff;
+  float: left;
+
+  // @extend %relative; 
+  position: relative;
+
+  &.arc90-swatch1 {
+    width: 47%;
+  }
+  &.arc90-swatch2 {
+    width: 53%;
+  }
+
+  .arc90-swatch {
+    height: 300px;
+    line-height: 300px;
+    width: 100%;
+    font-size: (18em / $bodyFontSize);
+    @extend %monospace !optional;
+  }
+
+  .arc90-colorInput {
+    // @extend %relative;
+
+  position: relative;
+    width: 130px;
+    margin: 0 auto;
+  }
+
+  .arc90-colorOutput {
+    opacity: 1;
+    width: 130px;
+    background: rgba(0,0,0,.5);
+    padding: 10px 20px;
+    border: 0px solid #000;
+    color: #fff;
+    // We need to make this selectable
+    // @extend %relative;
+
+  position: relative;
+    z-index: 500;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,.5) 0 0 8px inset;
+  }
+
+  // Swatch labels
+  .arc90-swatchLabel {
+    // @extend %absolute; 
+  position: absolute;
+    width: 100%;
+    display: none;
+    padding: 20px 0;
+    color: $lightTextColor;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: (10em / $bodyFontSize);
+  }
+}
+
+/*
+INDIVIDUAL ELEMENTS
+
+Styles for individual elements on the page */
+.arc90-codeHelp {
+  background-color: white;
+  border: 1px solid #EBEBEB;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: rgba(0,0,0,.1) 0 -4px 6px;
+  color: #353535;
+  display: none;
+  left: 20%;
+  padding: .5em;
+  // @extend %absolute; 
+  position: absolute;
+  text-align: center;
+  top: 260px;
+  z-index: 400;
+  width: 60%;
+}
+
+.arc90-codeOutput {
+  clear: both;
+  border-top: 1px solid darken(#eee,4);
+  border-bottom: 1px solid darken(#eee,4);
+
+  .arc90-input {
+    @extend %monospace;
+    padding: 14px 0;
+    margin: 0;
+    // font-size: (14em / $bodyFontSize);
+    width: 100%;
+    background: darken($lightBackgroundColor,5);
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    border: none;
+
+    &::-webkit-input-placeholder {
+      color: $highlightColor;
+      @extend %sans !optional;
+    }
+
+    &:-moz-placeholder {
+      @extend %sans !optional;
+      color: $highlightColor;
+    }
+
+    &:hover {
+      color: $highlightColor;
+    }
+
+    &:focus {
+      background: $highlightColor;
+      color: #fff;
+    }
+  }
+}
+
+.initialHelp {
+  opacity: 0;
+  @extend %sans !optional;
+  // @extend %absolute; 
+  position: absolute;
+  left: 80%; // Animates to 45%
+  top: 40%;
+  color: $lightTextColor;
+  font-size: (14em / $bodyFontSize);
+  line-height: 2;
+  width: 400px;
+  color: $highlightColor;
+  z-index: 400;
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>c-Tiles16 - Colorscheming with Sixteen Variables</title>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="assets/css/ctiles16-ctiles.css" id="stylesheet" />
+<!-- <link rel="stylesheet" href="assets/css/ctiles16-pantone2014spring.css" id="stylesheet" /> -->
+<link id="favicon" rel="shortcut icon" type="image/x-icon" href="assets/img/ui/favicon.ico" />
+<link rel="apple-touch-icon" href="assets/img/ui/apple-touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="assets/img/ui/apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="assets/img/ui/apple-touch-icon-iphone4.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="assets/img/ui/apple-touch-icon-ipad3.png" />
+
+<meta name="robots" content="index, follow">
+<meta name="description" content="Colection of colorscheming tools, purposely and conveniently together in one webpage"/>
+<link rel="author" href="https://plus.google.com/111567145811003203990/posts">
+<script src="assets/js/libs/modernizr.custom.min.js"></script>
+</head>
+
+<body class="readme">
+
+<header class="header">
+  <div class="centered">
+    <a href="http://github.com/atelierbram/c-tiles16"><div id="svgLogo" class="colorscheme-tiles">
+        <img src="assets/img/svg/logo_96x96.svg" alt="c-Tiles logo">
+    </div></a><!-- /.colorscheme-tiles #svgLogo -->
+
+    <h1 id="appTitle" class="foreground-color">c-Tiles16</h1>
+    <p class="tagline"><b>Colorscheming with Variables</b></p><!-- </a> -->
+
+    <a class="btn btn--ctiles btn--top-action btn--base16-cyan" href="colorscheming">go colorscheming!</a>
+  </div>
+</header>
+<div id="wrapper" class="centered">
+
+  <section>
+
+    <article class="article">
+
+      <h2>Introduction</h2>
+
+      <p class="intro">It’ s one thing two have your color variables declared on top of your Sass/Less/Stylus stylesheet. It’ s another thing to find the time to use them in an intuitive and meaningfull way in your designs. That’s where c-Tiles16 comes in to help out. There are two parts:
+      </p>
+
+      <ol>
+        <li>A build script named <code>ctiles16</code> that is a fork of <a href="https://github.com/chriskempson/base16-builder">Base16</a>, which can be executed from the terminal/commandline and generates preprocessor variables to be used by Sass, Less, or Stylus</li>
+        <li>A <a href="http://atelierbram.github.io/c-base16/colorscheming">colorscheming test playground</a> that is assembled to have the best colorscheming tools, alongside colorscheme-tiles <em>on one webpage</em>-test-playground, making it convenient to create your own colorscheme, with sixteen variables</li>
+      </ol>
+
+      <h3>Getting started</h3>
+
+      <p>A possible way to make this tool, or rather collection-of-tools, your own can be:</p>
+
+      <ul>
+        <li>download the <a href="https://github.com/atelierbram/c-tiles/archive/master.zip">zip-file</a><i> (, or clone <a href="https://github.com/atelierbram/c-tiles">the repo</a>)</i></li>
+        <li>when using Sass, open <code>assets/sass/ctiles16-custom.scss</code> (which is a copy of <code>ctiles16-ctiles.scss</code>) in a text-editor. Don’t rename it just yet, but:</li>
+        <li>(this works best full screen) start editing the values of the variables with the text-editor on one side, and the browser-window with the test colorscheming playground (<code><a href="colorscheming">colorscheming/index.html</a></code>) on the other side of your screen</li>
+        <li>play with the hsl-picker to help you get along</li>
+        <li>try some live editing with the hidden styles at the top</li>
+        <li>from the dropdown-menu you can pick and see how other colorschemes look</li>
+        <li>there’s a button for toggling the page background-color, and you can also hover with your mouse over the colortiles, to see the effect of a larger amount colorfield</li>
+        <li>refresh the colorschemer-webpage after each time you edit your <code>ctiles16-custom.scss</code> -colorscheme-variables file (or use something like LiveReload)</li>
+        <li>When following the workflow above, you have been using <a href="http://atelierbram.github.io/c-tiles16">c-Tiles</a> to make a colorscheme made out of sixteen colors</li>
+      </ul>
+
+      <h3>Development</h3>
+
+      <ul>
+        <li>Now put the colorscheme you just made as one of the first partial files to import in the <code>_base-partial</code> file (the one that is included throughout the whole project)</li>
+        <li>Keep using the colorschermer any time you like to generate color-values during the design phase of the website</li>
+
+        <li>One can make it a personal challenge to only use the colorscheme values, or variations of those with Sass color-functions</li>
+        <li>BTW: You can also try to make a pull request on Github, in order to submit your colorscheme to this collection <a href="https://github.com/atelierbram/c-tiles">here on c-Tiles16</a></li>
+      </ul>
+
+      <h3>Usage of buildtool</h3>
+      <p class="note">Since c-Tiles16 is a fork of Base16-builder, you can <a href="https://github.com/chriskempson/base16-builder">look it up on Github</a> for more information.</p>
+
+      <p>Easily build color variations of c-Tiles16 with YAML scheme definitions and ERB templates.
+      Requires Ruby 1.9 or greater.</p>
+
+      <p>go in the terminal to <code>c-tiles/schemes/</code></p>
+      <pre class="language-bash"><code class="language-bash">
+cd  c-tiles/schemes/
+      </code></pre>
+
+      <p>To build all schemes:</p>
+
+      <pre class="language-bash"><code class="language-bash">
+../ctiles16
+      </code></pre>
+
+      <p>Build only the ‘default’ theme</p>
+      <pre class="language-bash"><code class="language-bash">
+../ctiles16 default.yml
+      </code></pre>
+
+      <p>Build a scheme stored on some webspace:</p>
+
+      <pre class="language-bash"><code class="language-bash">
+./ctiles16 https://awesome-schemes.com/my-scheme.yml
+      </code></pre>
+
+      <footer>
+        <h3>Credits</h3>
+        <ul>
+          <li><a href="https://github.com/chriskempson/base16-builder">Base16 Builder</a> by <a href="http://chriskempson.com/">Chris Kempson</a></li>
+          <li><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></li>
+          <li><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></li>
+        </ul>
+      </footer>
+
+    </article>
+  </section><!-- /.content -->
+
+</div><!-- /.centered #wrapper-->
+
+<footer class="footer">
+  <div class="copyright">
+    <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
+    <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
+  </div>
+</footer>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<!-- <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script> -->
+<!-- <script src="assets/js/styleswitcher.js"></script> -->
+</body>
+
+</html>

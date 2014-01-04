@@ -1,0 +1,64 @@
+$placid-blue:    #87d4fa;
+$violet-tulip:   #8f9cff;
+$hemlock:        #9cf5a6;
+$paloma:         $base04;         //         #a6c2ba
+$sand:           $base05;         //         #ccba85
+$freesia:        $base16-yellow;  // $base0a #ffdb00
+$cayenne:        $base16-red;     // $base08 #f04270
+$celosia-orange: $base16-orange;  // $base09 #ff5e33
+$radiant-orchid: $base16-magenta; // $base0f #ad59ff
+$dazzling-blue:  $base16-blue;    // $base0d #146eff
+$purple-haze:    $base16-violet;  // $base0e #707dd9
+$comfrey:        $base16-green;   // $base0b #3ca555
+$magenta-purple  #752563;
+
+// $base16-cyan = $base0c: #288aaa; // blend of comfrey (green) and dazzling blue
+
+// PANTONE COLOR HEX VALUE
+// 15-3920 Placid Blue     #87d4fa
+// 16-3823 Violet Tulip    #8f9cff
+// 15-6114 Hemlock         #9cf5a6
+// 16-0000 Paloma          #a6c2ba
+// 15-1225 Sand            #ccba85
+// 14-0852 Freesia         #ffdb00
+// 18-1651 Cayenne         #f04270
+// 17-1360 Celosia Orange  #ff5e33
+// 18-3224 Radiant Orchid  #ad59ff
+// 18-3949 Dazzling Blue   #146eff
+// 18-3718 Purple Haze     #707dd9
+// 18-6216 Comfrey         #3ca555
+// 19-2428 Magenta Purple  #752563
+
+// http://www.pantone.com/downloads/support/FCR/PANTONE_FCR_Spring_2014.pdf
+// http://web.forret.com/tools/color.asp
+
+// PANTONE COLOR CMYK VALUE
+// 15-3920 Placid Blue 47.17.2.0
+// 16-3823 Violet Tulip 44.39.0.0
+// 15-6114 Hemlock 39.4.35.0
+// 16-0000 Paloma 35.24.27.0
+// 15-1225 Sand 20.27.48.0
+// 14-0852 Freesia 0.14.100.0
+// 18-1651 Cayenne 6.74.56.0
+// 17-1360 Celosia Orange 0.63.80.0
+// 18-3224 Radiant Orchid 32.65.0.0
+// 18-3949 Dazzling Blue 92.57.0.0
+// 18-3718 Purple Haze 56.51.15.0
+// 18-6216 Comfrey 74.28.63.10
+// 19-2428 Magenta Purple 51.94.24.24
+
+$blue-light:        $placid-blue;
+$electric-ladyland: $violet-tulip;
+$green-light:       $hemlock;
+$gray:              $paloma;
+$ocre-light:        $sand;
+$yellow:            $freesia;
+$red:               $cayenne;
+$orange:            $celosia-orange;
+$violet:            $radiant-orchid;
+$blue-dark:         $dazzling-blue;
+$jimi-hendrix:      $purple-haze;
+$green:             $comfrey;
+$magenta-dark:      $magenta-purple;
+
+$gray-light: lighten($gray,25%);

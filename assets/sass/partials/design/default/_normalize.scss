@@ -1,0 +1,364 @@
+/* normalize.scss v2.1.3 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
+
+* {
+  box-sizing: border-box;
+  // outline: 1px dotted salmon;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+html {
+  font-family: $base-font-family;
+  @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    font-size: 100% * ($base-font-size / 16px); /* 3 */
+  }
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+
+  @if not $strict-normalize {
+    /* Establish a vertical rhythm unit using $base-line-height. */
+    @include adjust-leading-to(1);
+  }
+}
+
+input,
+.hslpicker input {
+  @extend %monospace !optional;
+}
+
+body  {
+  font-size: 100%;
+  line-height: 1.375;
+  background-color: $base07;
+  color: $base00;
+  @extend %reset !optional;
+  @extend %sans !optional;
+  transition: background-color .5s ease;
+}
+body::before /*,
+.header::before */ {
+  content: "";
+  position: absolute;
+  box-shadow: 0 10px 14px rgba(0,0,0,0.5);
+  height: 15px;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  z-index: 100;
+}
+// mixin defined in _init.scss
+.dark { @include rebase($base00,$base01,$base03,$base04,$base05,$base06,$base07)}
+.dark .arc90-wrapper {
+  color: $base00;
+}
+a {
+  background: transparent;
+  @extend %linkcolor-dark !optional;
+  text-decoration: none;
+}
+.dark a {
+  @extend %linkcolor-light !optional;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  color: $base16-blue;
+  // text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6 { @extend %sans-condensed !optional; }
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    @include adjust-font-size-to( $h1-font-size );
+  }
+  @else {
+    font-size: 1em * ($h1-font-size / $base-font-size);
+  }
+  margin: 0;
+  // padding: 0 0 .3em 1.55em;
+
+  padding: 0 0 .3em 0;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: $base01;
+  // background-color: $base16-orange;
+  white-space: nowrap;
+}
+.dark h1 {
+  color: $base06;
+}
+h2,
+.h2 {
+  font-size: 2em;
+}
+h3,
+.h3 {
+  font-size: 1.5em;
+}
+
+.tagline,
+.footer {
+  @extend %schemegradient;
+}
+.tagline {
+  @extend %reset;
+  font-size: 1.25em;
+  line-height: 0.5;
+
+  // padding-left: 6.85em;
+  letter-spacing: 2px;
+  word-spacing: -3px;
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0,0,0,.5);
+  white-space: nowrap;
+}
+
+.tagline b {
+  font-weight: normal;
+  display: inline-block;
+  transform: translateY(-1em);
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: normal;
+}
+em,
+.content b {
+  @extend %sans-bold !optional;
+}
+dfn {
+  font-style: italic;
+}
+
+hr {
+  @include box-sizing(content-box);
+  height: 0;
+}
+
+mark {
+  background: $base16-yellow;
+  color: $base00;
+}
+
+code,
+kbd,
+pre,
+samp {
+  @extend %monospace !optional;
+  font-size: 0.875em;
+}
+/* ===== Github styles  ===== */
+.article p > code,
+.article li > code,
+.accordion code {
+  // font-size: .875em;
+  margin: 0 2px;
+  padding: .125em .5em;
+  border: 1px solid $base06;
+  background-color: shade($base07,5%);
+  border-radius: 3px;
+  white-space: nowrap
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  @else {
+    white-space: pre-wrap;
+  }
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 90%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+
+  dl,
+  menu,
+  ol,
+  ul {
+    margin: .5em 0 1em;
+  }
+
+  @if not $strict-normalize {
+    ol,
+    ul {
+      ol,
+      ul {
+        margin: 0;
+      }
+    }
+  }
+
+  dd {
+    margin: 0 0 0 $indent-amount;
+  }
+
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 $indent-amount;
+  }
+}
+
+img,
+svg {
+  border: 0;
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  margin: 0; /* 3 */
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    vertical-align: baseline; /* 4 */
+    *vertical-align: middle; /* 4 */
+  }
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ===== custom  ===== */
+
+.note {
+  background-color: lighten($base16-green,35%);
+  margin: 1em 0 !important;
+  // padding: 1em !important;
+  border: 1px solid tint($base16-cyan,35%);
+  @extend %pad !optional;
+}
+.dark .note {
+  background-color: invert($base16-green);
+  border: 1px solid invert($base16-cyan);
+}
+.subfooter {
+
+}
+.footer {
+  @extend %a-center;
+}
+.footer a {
+  display: inline-block;
+}
+.app--info dd ul,
+.app--info dd ol {
+  padding-left: 22px;
+}
+
+/* ===== README styles of index page  ===== */
+.article {
+  padding: 2em 1.5em;
+  font-size: 1.125em;
+  column-width: 20em;
+  column-gap: 2em;
+}
+.article p,
+.article ul,
+.article ol {
+  max-width: 30em;
+}
+.article p {
+  padding: .5em 0;
+  margin: 0;
+}
+.article .intro {
+  font-size: 1.1em;
+  // color: shade($base16-magenta, 35%);
+}
+.article .intro,
+.article h3 + p,
+.article h3 + ul,
+.article h3 + ol {
+  padding-top: 0;
+}
+.article ul,
+.article ol {
+  padding-left: 1.1em;
+  // font-size: .875em;
+}
+.article ul {
+  list-style: circle;
+}
+.article h2,
+.article h3 {
+  @extend %reset;
+  color: $base16-orange;
+}
+.article pre[class*="language-"] {
+  padding: .5em 1em;
+}
+.article footer {
+  @extend %mtm !optional;
+
+}
+

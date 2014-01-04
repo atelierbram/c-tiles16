@@ -1,0 +1,246 @@
+/* ===== fallback for omitting CAPITALISATION of last character of variable, (somehow like all small characters better) ===== */
+$base0a: $base0A !default;
+$base0b: $base0B !default;
+$base0c: $base0C !default;
+$base0d: $base0D !default;
+$base0e: $base0E !default;
+$base0f: $base0F !default;
+
+/* ===== convert code to easier to remember color-names  ===== */
+$base16-red:     $base08 !default;
+$base16-orange:  $base09 !default;
+$base16-yellow:  $base0a !default;
+$base16-green:   $base0b !default;
+$base16-cyan:    $base0c !default;
+$base16-blue:    $base0d !default;
+$base16-violet:  $base0e !default;
+$base16-magenta: $base0f !default;
+
+/* ===== to invert/swap out color-values within the scheme itself  ===== */
+$rebase16-base00:  $base07 !default;
+$rebase16-base01:  $base06 !default;
+$rebase16-base02:  $base05 !default;
+$rebase16-base03:  $base04 !default;
+$rebase16-base04:  $base03 !default;
+$rebase16-base05:  $base02 !default;
+$rebase16-base06:  $base01 !default;
+$rebase16-base07:  $base00 !default;
+$rebase16-red:     $base0c !default;
+$rebase16-orange:  $base0d !default;
+$rebase16-yellow:  $base0e !default;
+$rebase16-green:   $base0f !default;
+$rebase16-cyan:    $base08 !default;
+$rebase16-blue:    $base09 !default;
+$rebase16-violet:  $base0a !default;
+$rebase16-magenta: $base0b !default;
+
+/* ===== background colors for the 16 SVG demo tiles  ===== */
+.fill-base00         { fill: $base00; }
+.fill-base01         { fill: $base01; }
+.fill-base02         { fill: $base02; }
+.fill-base03         { fill: $base03; }
+.fill-base04         { fill: $base04; }
+.fill-base05         { fill: $base05; }
+.fill-base06         { fill: $base06; }
+.fill-base07         { fill: $base07; }
+.fill-base16-red     { fill: $base16-red; }
+.fill-base16-orange  { fill: $base16-orange; }
+.fill-base16-yellow  { fill: $base16-yellow; }
+.fill-base16-green   { fill: $base16-green; }
+.fill-base16-cyan    { fill: $base16-cyan; }
+.fill-base16-blue    { fill: $base16-blue; }
+.fill-base16-violet  { fill: $base16-violet; }
+.fill-base16-magenta { fill: $base16-magenta; }
+
+/* ===== Sass and Compass color functions - toggle buttons  ===== */
+// target the class-names of SVG's rect elements
+// .is-complemented rect[fill="#5AB738"] { fill: complement($base16-green); }
+// adjusting the fill attribute color values with Sass and Compass functions
+// .is-...: class-names are toggled on button click
+.is-hue-adjusted .fill-base00         { fill: adjust-hue($base00,  15deg); }
+.is-hue-adjusted .fill-base01         { fill: adjust-hue($base01,  15deg); }
+.is-hue-adjusted .fill-base02         { fill: adjust-hue($base02,  15deg); }
+.is-hue-adjusted .fill-base03         { fill: adjust-hue($base03,  15deg); }
+.is-hue-adjusted .fill-base04         { fill: adjust-hue($base04,  15deg); }
+.is-hue-adjusted .fill-base05         { fill: adjust-hue($base05,  15deg); }
+.is-hue-adjusted .fill-base06         { fill: adjust-hue($base06,  15deg); }
+.is-hue-adjusted .fill-base07         { fill: adjust-hue($base07,  15deg); }
+.is-hue-adjusted .fill-base16-red     { fill: adjust-hue($base16-red,     15deg); }
+.is-hue-adjusted .fill-base16-orange  { fill: adjust-hue($base16-orange,  15deg); }
+.is-hue-adjusted .fill-base16-yellow  { fill: adjust-hue($base16-yellow,  15deg); }
+.is-hue-adjusted .fill-base16-green   { fill: adjust-hue($base16-green,   15deg); }
+.is-hue-adjusted .fill-base16-cyan    { fill: adjust-hue($base16-cyan,    15deg); }
+.is-hue-adjusted .fill-base16-blue    { fill: adjust-hue($base16-blue,    15deg); }
+.is-hue-adjusted .fill-base16-violet  { fill: adjust-hue($base16-violet,  15deg); }
+.is-hue-adjusted .fill-base16-magenta { fill: adjust-hue($base16-magenta, 15deg); }
+
+.is-lightened .fill-base00         { fill: lighten($base00,  15%); }
+.is-lightened .fill-base01         { fill: lighten($base01,  15%); }
+.is-lightened .fill-base02         { fill: lighten($base02,  15%); }
+.is-lightened .fill-base03         { fill: lighten($base03,  15%); }
+.is-lightened .fill-base04         { fill: lighten($base04,  15%); }
+.is-lightened .fill-base05         { fill: lighten($base05,  15%); }
+.is-lightened .fill-base06         { fill: lighten($base06,  15%); }
+.is-lightened .fill-base07         { fill: lighten($base07,  15%); }
+.is-lightened .fill-base16-red     { fill: lighten($base16-red,     15%); }
+.is-lightened .fill-base16-orange  { fill: lighten($base16-orange,  15%); }
+.is-lightened .fill-base16-yellow  { fill: lighten($base16-yellow,  15%); }
+.is-lightened .fill-base16-green   { fill: lighten($base16-green,   15%); }
+.is-lightened .fill-base16-cyan    { fill: lighten($base16-cyan,    15%); }
+.is-lightened .fill-base16-blue    { fill: lighten($base16-blue,    15%); }
+.is-lightened .fill-base16-violet  { fill: lighten($base16-violet,  15%); }
+.is-lightened .fill-base16-magenta { fill: lighten($base16-magenta, 15%); }
+
+.is-darkened .fill-base00         { fill: darken($base00,  15%); }
+.is-darkened .fill-base01         { fill: darken($base01,  15%); }
+.is-darkened .fill-base02         { fill: darken($base02,  15%); }
+.is-darkened .fill-base03         { fill: darken($base03,  15%); }
+.is-darkened .fill-base04         { fill: darken($base04,  15%); }
+.is-darkened .fill-base05         { fill: darken($base05,  15%); }
+.is-darkened .fill-base06         { fill: darken($base06,  15%); }
+.is-darkened .fill-base07         { fill: darken($base07,  15%); }
+.is-darkened .fill-base16-red     { fill: darken($base16-red,     15%); }
+.is-darkened .fill-base16-orange  { fill: darken($base16-orange,  15%); }
+.is-darkened .fill-base16-yellow  { fill: darken($base16-yellow,  15%); }
+.is-darkened .fill-base16-green   { fill: darken($base16-green,   15%); }
+.is-darkened .fill-base16-cyan    { fill: darken($base16-cyan,    15%); }
+.is-darkened .fill-base16-blue    { fill: darken($base16-blue,    15%); }
+.is-darkened .fill-base16-violet  { fill: darken($base16-violet,  15%); }
+.is-darkened .fill-base16-magenta { fill: darken($base16-magenta, 15%); }
+
+.is-saturated .fill-base00         { fill: saturate($base00,  15%); }
+.is-saturated .fill-base01         { fill: saturate($base01,  15%); }
+.is-saturated .fill-base02         { fill: saturate($base02,  15%); }
+.is-saturated .fill-base03         { fill: saturate($base03,  15%); }
+.is-saturated .fill-base04         { fill: saturate($base04,  15%); }
+.is-saturated .fill-base05         { fill: saturate($base05,  15%); }
+.is-saturated .fill-base06         { fill: saturate($base06,  15%); }
+.is-saturated .fill-base07         { fill: saturate($base07,  15%); }
+.is-saturated .fill-base16-red     { fill: saturate($base16-red,     15%); }
+.is-saturated .fill-base16-orange  { fill: saturate($base16-orange,  15%); }
+.is-saturated .fill-base16-yellow  { fill: saturate($base16-yellow,  15%); }
+.is-saturated .fill-base16-green   { fill: saturate($base16-green,   15%); }
+.is-saturated .fill-base16-cyan    { fill: saturate($base16-cyan,    15%); }
+.is-saturated .fill-base16-blue    { fill: saturate($base16-blue,    15%); }
+.is-saturated .fill-base16-violet  { fill: saturate($base16-violet,  15%); }
+.is-saturated .fill-base16-magenta { fill: saturate($base16-magenta, 15%); }
+
+.is-desaturated .fill-base00         { fill: desaturate($base00,  15%); }
+.is-desaturated .fill-base01         { fill: desaturate($base01,  15%); }
+.is-desaturated .fill-base02         { fill: desaturate($base02,  15%); }
+.is-desaturated .fill-base03         { fill: desaturate($base03,  15%); }
+.is-desaturated .fill-base04         { fill: desaturate($base04,  15%); }
+.is-desaturated .fill-base05         { fill: desaturate($base05,  15%); }
+.is-desaturated .fill-base06         { fill: desaturate($base06,  15%); }
+.is-desaturated .fill-base07         { fill: desaturate($base07,  15%); }
+.is-desaturated .fill-base16-red     { fill: desaturate($base16-red,     15%); }
+.is-desaturated .fill-base16-orange  { fill: desaturate($base16-orange,  15%); }
+.is-desaturated .fill-base16-yellow  { fill: desaturate($base16-yellow,  15%); }
+.is-desaturated .fill-base16-green   { fill: desaturate($base16-green,   15%); }
+.is-desaturated .fill-base16-cyan    { fill: desaturate($base16-cyan,    15%); }
+.is-desaturated .fill-base16-blue    { fill: desaturate($base16-blue,    15%); }
+.is-desaturated .fill-base16-violet  { fill: desaturate($base16-violet,  15%); }
+.is-desaturated .fill-base16-magenta { fill: desaturate($base16-magenta, 15%); }
+
+.is-grayscaled .fill-base00         { fill: grayscale($base00); }
+.is-grayscaled .fill-base01         { fill: grayscale($base01); }
+.is-grayscaled .fill-base02         { fill: grayscale($base02); }
+.is-grayscaled .fill-base03         { fill: grayscale($base03); }
+.is-grayscaled .fill-base04         { fill: grayscale($base04); }
+.is-grayscaled .fill-base05         { fill: grayscale($base05); }
+.is-grayscaled .fill-base06         { fill: grayscale($base06); }
+.is-grayscaled .fill-base07         { fill: grayscale($base07); }
+.is-grayscaled .fill-base16-red     { fill: grayscale($base16-red); }
+.is-grayscaled .fill-base16-orange  { fill: grayscale($base16-orange); }
+.is-grayscaled .fill-base16-yellow  { fill: grayscale($base16-yellow); }
+.is-grayscaled .fill-base16-green   { fill: grayscale($base16-green); }
+.is-grayscaled .fill-base16-cyan    { fill: grayscale($base16-cyan); }
+.is-grayscaled .fill-base16-blue    { fill: grayscale($base16-blue); }
+.is-grayscaled .fill-base16-violet  { fill: grayscale($base16-violet); }
+.is-grayscaled .fill-base16-magenta { fill: grayscale($base16-magenta); }
+
+.is-complemented .fill-base00         { fill: complement($base00); }
+.is-complemented .fill-base01         { fill: complement($base01); }
+.is-complemented .fill-base02         { fill: complement($base02); }
+.is-complemented .fill-base03         { fill: complement($base03); }
+.is-complemented .fill-base04         { fill: complement($base04); }
+.is-complemented .fill-base05         { fill: complement($base05); }
+.is-complemented .fill-base06         { fill: complement($base06); }
+.is-complemented .fill-base07         { fill: complement($base07); }
+.is-complemented .fill-base16-red     { fill: complement($base16-red); }
+.is-complemented .fill-base16-orange  { fill: complement($base16-orange); }
+.is-complemented .fill-base16-yellow  { fill: complement($base16-yellow); }
+.is-complemented .fill-base16-green   { fill: complement($base16-green); }
+.is-complemented .fill-base16-cyan    { fill: complement($base16-cyan); }
+.is-complemented .fill-base16-blue    { fill: complement($base16-blue); }
+.is-complemented .fill-base16-violet  { fill: complement($base16-violet); }
+.is-complemented .fill-base16-magenta { fill: complement($base16-magenta); }
+
+.is-inverted .fill-base00         { fill: invert($base00); }
+.is-inverted .fill-base01         { fill: invert($base01); }
+.is-inverted .fill-base02         { fill: invert($base02); }
+.is-inverted .fill-base03         { fill: invert($base03); }
+.is-inverted .fill-base04         { fill: invert($base04); }
+.is-inverted .fill-base05         { fill: invert($base05); }
+.is-inverted .fill-base06         { fill: invert($base06); }
+.is-inverted .fill-base07         { fill: invert($base07); }
+.is-inverted .fill-base16-red     { fill: invert($base16-red); }
+.is-inverted .fill-base16-orange  { fill: invert($base16-orange); }
+.is-inverted .fill-base16-yellow  { fill: invert($base16-yellow); }
+.is-inverted .fill-base16-green   { fill: invert($base16-green); }
+.is-inverted .fill-base16-cyan    { fill: invert($base16-cyan); }
+.is-inverted .fill-base16-blue    { fill: invert($base16-blue); }
+.is-inverted .fill-base16-violet  { fill: invert($base16-violet); }
+.is-inverted .fill-base16-magenta { fill: invert($base16-magenta); }
+
+.is-shaded .fill-base00    { fill: shade($base00,  15%); }
+.is-shaded .fill-base01    { fill: shade($base01,  15%); }
+.is-shaded .fill-base02    { fill: shade($base02,  15%); }
+.is-shaded .fill-base03    { fill: shade($base03,  15%); }
+.is-shaded .fill-base04    { fill: shade($base04,  15%); }
+.is-shaded .fill-base05    { fill: shade($base05,  15%); }
+.is-shaded .fill-base06    { fill: shade($base06,  15%); }
+.is-shaded .fill-base07    { fill: shade($base07,  15%); }
+.is-shaded .fill-base16-red     { fill: shade($base16-red,     15%); }
+.is-shaded .fill-base16-orange  { fill: shade($base16-orange,  15%); }
+.is-shaded .fill-base16-yellow  { fill: shade($base16-yellow,  15%); }
+.is-shaded .fill-base16-green   { fill: shade($base16-green,   15%); }
+.is-shaded .fill-base16-cyan    { fill: shade($base16-cyan,    15%); }
+.is-shaded .fill-base16-blue    { fill: shade($base16-blue,    15%); }
+.is-shaded .fill-base16-violet  { fill: shade($base16-violet,  15%); }
+.is-shaded .fill-base16-magenta { fill: shade($base16-magenta, 15%); }
+
+.is-tinted .fill-base00    { fill: tint($base00,  15%); }
+.is-tinted .fill-base01    { fill: tint($base01,  15%); }
+.is-tinted .fill-base02    { fill: tint($base02,  15%); }
+.is-tinted .fill-base03    { fill: tint($base03,  15%); }
+.is-tinted .fill-base04    { fill: tint($base04,  15%); }
+.is-tinted .fill-base05    { fill: tint($base05,  15%); }
+.is-tinted .fill-base06    { fill: tint($base06,  15%); }
+.is-tinted .fill-base07    { fill: tint($base07,  15%); }
+.is-tinted .fill-base16-red     { fill: tint($base16-red,     15%); }
+.is-tinted .fill-base16-orange  { fill: tint($base16-orange,  15%); }
+.is-tinted .fill-base16-yellow  { fill: tint($base16-yellow,  15%); }
+.is-tinted .fill-base16-green   { fill: tint($base16-green,   15%); }
+.is-tinted .fill-base16-cyan    { fill: tint($base16-cyan,    15%); }
+.is-tinted .fill-base16-blue    { fill: tint($base16-blue,    15%); }
+.is-tinted .fill-base16-violet  { fill: tint($base16-violet,  15%); }
+.is-tinted .fill-base16-magenta { fill: tint($base16-magenta, 15%); }
+
+.bg-base00         { background-color: $base00; }
+.bg-base01         { background-color: $base01; }
+.bg-base02         { background-color: $base02; }
+.bg-base03         { background-color: $base03; }
+.bg-base04         { background-color: $base04; }
+.bg-base05         { background-color: $base05; }
+.bg-base06         { background-color: $base06; }
+.bg-base07         { background-color: $base07; }
+.bg-base16-yellow  { background-color: $base16-yellow; }
+.bg-base16-orange  { background-color: $base16-orange; }
+.bg-base16-red     { background-color: $base16-red; }
+.bg-base16-magenta { background-color: $base16-magenta; }
+.bg-base16-violet  { background-color: $base16-violet; }
+.bg-base16-blue    { background-color: $base16-blue; }
+.bg-base16-cyan    { background-color: $base16-cyan; }
+.bg-base16-green   { background-color: $base16-green; }
+

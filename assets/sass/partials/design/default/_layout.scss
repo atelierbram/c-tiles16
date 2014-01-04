@@ -1,0 +1,367 @@
+* {
+  // outline: 1px dotted salmon;
+}
+head, style[contenteditable] {display: block;}
+style[contenteditable] {
+  font-size: 0.875em;
+  line-height: 1.5;
+  @extend %monospace;
+  white-space: pre;
+  padding: 0.5em;
+  background: $base01;
+  border: 3px solid shade($base16-cyan,15%);
+  border-left-width: 0;
+  border-right-width: 0;
+  @include box-shadow(rgba($base00, 0.75) 8px 16px 12px inset);
+  transition: all .35s ease-in-out;
+  height: 110px;
+  transform: translateY(-107px);
+  // @extend %relative;
+  position: relative;
+  z-index: 2;
+  color: transparent;
+}
+style[contenteditable]:focus {
+  border-color: $base16-cyan;
+  outline: 0;
+  color: #fff;
+}
+style[contenteditable]:hover {
+  transform: translateY(0);
+  color: #fff;
+}
+style[contenteditable]::after {
+  content: 'live editing';
+  // @extend %absolute;
+  position: absolute;
+  width: 128px;
+  height: 34px;
+  right: 1em;
+  bottom: -48px;
+  margin-top: -123px;
+  z-index: 999;
+  vertical-align: baseline;
+  text-align: center;
+  padding-top: 1em;
+  background-color: shade($base16-cyan,15%);
+  color: #fff;
+  border-bottom-right-radius: 32px 24px;
+  border-bottom-left-radius: 32px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.header {
+  transition: all .35s ease-in-out;
+  // height: 140px;
+  height: 114px;
+  // margin-top: -107px;
+  z-index: 1;
+  background-color: $base05;
+}
+.app .header {
+  margin-top: -107px;
+}
+.is-hovered .header {
+  transform: scale(1,0);
+  z-index: -1;
+}
+.dark .header {
+  background-color: $base00;
+}
+$zen-columns: 1;
+.header {
+  // @extend %relative;
+  position: relative;
+}
+.centered {
+  // @include zen-grid-background();
+  @include zen-grid-container();
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  // max-width: 1500px;
+  max-width: 93.75em;
+  // @extend %relative;
+  position: relative;
+}
+.wrapper {
+  overflow: hidden;
+  // background-color: $base07;
+}
+.clearfix {
+  @include zen-grid-container();
+}
+%grid-item,
+.grid-item {
+  @include zen-grid-item-base();
+  float: left;
+}
+%grid-item-right {
+  @include zen-grid-item-base();
+  float: right;
+}
+.header,
+.subfooter,
+.footer,
+.info {
+  @include zen-new-row(both);
+  // @extend %grid-item;
+}
+.styleswitcher {
+  // @extend %absolute;
+  position: absolute;
+  float: none;
+  top: 2em;
+  left: 384px;
+  background-color: $base16-cyan;
+}
+.content {
+  margin-top: 2em;
+}
+// leave room for button
+.sidebar {
+  margin-bottom: 6em;
+}
+.section-footer {
+  // @extend %absolute;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.section-footer small {
+  margin-right: 1em;
+}
+.section-footer a {
+  display: inline-block;
+  padding: .25em;
+}
+.hslpicker a {
+  // @extend %linkcolor-light !optional;
+  color: lighten($base16-yellow, 25%);
+}
+.color-functions,
+.code-container {
+  @include zen-new-row(left);
+  @extend %grid-item;
+}
+.color-functions{
+  @extend %a-center;
+}
+.colorscheme,
+.article,
+.subfooter {
+  overflow: auto;
+}
+
+.subfooter {
+  color: $base02;
+  padding-left: 1em;
+}
+.dark .subfooter {
+  color: $base06;
+}
+.subfooter h3 {
+  @extend %reset;
+}
+.subfooter ul {
+  list-style: circle;
+  font-size: 1.125em;
+  // margin: 0 0 3em;
+  // padding: 0 0 0 .25em;
+  btn--rightmargin: 0 0 1em;
+  padding: 0 0 0 1.2em;
+}
+.subfooter li {
+  @extend %reset;
+  text-indent: -.25em;
+}
+.subfooter li a {
+  display: inline-block;
+  padding: .125em .25em;
+}
+.footer {
+  line-height: 1;
+  max-height: 1em;
+}
+.copyright {
+  transform: translateY(1em);
+  padding: 1em 0;
+  background: $base02;
+  border-top: 1px solid $base01;
+  color: $base06;
+}
+.dark .copyright {
+  background: ($base05);
+  border-top: 1px solid $base04;
+  color: $base01;
+}
+.copyright a {
+  color: $base07;
+}
+.copyright a:hover {
+  color: $base16-blue;
+}
+.dark .copyright a {
+  color: shade($base16-violet,45%);
+}
+.dropdown,
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.colorscheme-tiles,
+.color-functions {
+  @extend %grid-item;
+}
+.content .colorscheme-tiles,
+.content .color-functions {
+  // max-width: 528px;
+  /* 512 + 16px */
+
+  max-width: 384px; /* 24 * 16px */
+}
+.header .colorscheme-tiles {
+  max-width: 96px;
+  min-height: 114px;
+  padding-top: 1em;
+}
+.alpha {
+  font-size: 3em;
+}
+.block {
+  display: block;
+}
+
+rect[class^="fill-"]:hover { cursor: pointer;
+}
+/* =====  http://codepen.io/rommelxcastro/pen/krtmi ===== */
+// accordion
+.info {
+  margin: 2em 1em;
+}
+/* =====  Accordion Styles ===== */
+/* http://jsfiddle.net/devinwalker/drpKm/3096/light/ */
+.accordion {
+  margin: 0 0 30px;
+  border: 1px solid $base06;
+  border-bottom-color: lighten($base05,15%);
+  border-radius: 4px;
+  background-color: #fff;
+}
+.accordion-header {
+  background-color: tint($base16-yellow,20%);
+  border-bottom: 1px solid darken($base16-yellow,10%);
+  @extend %sans-condensed;
+  font-size: 1.5em;
+}
+.accordion-active {
+  background-color: $base16-yellow;
+}
+.accordion dd {
+  // display: none;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 0 0 1em;
+  margin: 0;
+  // border-bottom: 1px solid $base06;
+  // transition: all 1s ease-in-out;
+  transition: max-height 1s ease-in-out;
+  font-size: 1.125em;
+  max-width: 34em;
+}
+
+.accordion .slide-up {
+  overflow: hidden;
+  transition: max-height 0.1s;
+}
+.accordion .active {
+  display: block;
+  max-height: 800px;
+  padding: 1em;
+}
+.accordion dt {
+  cursor: pointer;
+  padding: 8px 15px;
+  margin: 0;
+}
+.accordion dt:before {
+  content: " \25B6";
+  padding-right: 5px;
+}
+.accordion .accordion-active:before {
+  content: " \25BE";
+  padding-right: 5px;
+}
+.accordion .accordion-active:hover {
+  cursor: default;
+}
+.dark .accordion {
+  color: $base01;
+  border-color: $base04;
+  border-bottom-color: $base03;
+}
+/* ===== end accordion  ===== */
+
+.full-width {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media only screen and (max-width: 560px) {
+  .readme .btn--top-action {
+    // transform: translateY(7em);
+    top: 7em;
+  }
+}
+
+// @media only screen and (min-width: 1490px) {
+@media only screen and (min-width: 800px) {
+  $zen-columns: 10;
+
+  .centered {
+    // @include zen-grid-background();
+  }
+  .content {
+    // @include zen-grid-item(4,1);
+    float: left;
+    width: 40%;
+    // margin-right: auto;
+  }
+  .sidebar {
+    // @include zen-grid-item(7, 1, right);
+    overflow: auto;
+    margin-top: 2.5em;
+    // outline: 1px dotted green;
+  }
+  .hslpicker {
+    float: right;
+    position: relative;
+
+  }
+  .subfooter {
+    padding: 2em 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .hslpicker {
+    padding-left: 3em;
+    position: relative;
+  }
+
+  .hslpicker .bgs {
+    left: -38px;
+  }
+  .hslpicker .color-tiles {
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .article {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
