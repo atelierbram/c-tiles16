@@ -7,9 +7,7 @@ require 'csso'
 on_stylesheet_saved do |file|
   css = File.read(file)
   File.open(file, 'w') do |io|
-#    io << Csso.optimize( AutoprefixerRails.compile(css) )
-#    io << ( AutoprefixerRails.compile(css) )
-     io << ( AutoprefixerRails.process(css) )
+     io << Csso.optimize( AutoprefixerRails.compile(css) )
   end
 end
 
@@ -21,7 +19,7 @@ images_dir = "assets/img"
 javascripts_dir = "assets/js"
 fonts_dir = "type"
 
-output_style = :expanded
+# output_style = :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
