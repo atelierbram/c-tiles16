@@ -2,7 +2,9 @@
 
 Colorscheming with Variables
 
-[this text in HTML format](http://atelierbram.github.io/c-tiles16/)
+![screenshot of c-Tiles16 colorschemer](https://lh3.googleusercontent.com/-uhokcZnG_8Q/UshwNPVK7OI/AAAAAAAAAx0/bTmK9IxkeNI/s800/ctiles16-colorscheming_400x400.jpg)
+
+[Readme in HTML format](http://atelierbram.github.io/c-tiles16/)
 
 ## Introduction
 It’ s one thing two have color variables declared on top of your Sass/Less/Stylus stylesheet. It’ s another thing to use them in an intuitive and meaningfull way in your designs. That’s  where c-Tiles16 comes in to help out. There are two parts:
