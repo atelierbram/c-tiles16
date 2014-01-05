@@ -433,7 +433,6 @@ input::-moz-focus-inner {
   left: -32px;
   background: $base07;
   background: linear-gradient($base07,$base06);
-  color: $base00;;
   height: 44px;
   width: 250px;
   text-decoration: none;
@@ -457,6 +456,10 @@ input::-moz-focus-inner {
 .forkme:hover {
   // color: #2C6EB4;
   color: $base16-blue;
+}
+.forkme,
+.dark .forkme {
+  color: $base00;
 }
 /* ===== end footer  ===== */
 
