@@ -50,14 +50,14 @@ body  {
 }
 body::before /*,
 .header::before */ {
-  content: "";
-  position: absolute;
-  box-shadow: 0 10px 14px rgba(0,0,0,0.5);
-  height: 15px;
-  left: 0;
-  top: -15px;
-  width: 100%;
-  z-index: 100;
+content: "";
+position: absolute;
+box-shadow: 0 10px 14px rgba(0,0,0,0.5);
+height: 15px;
+left: 0;
+top: -15px;
+width: 100%;
+z-index: 100;
 }
 // mixin defined in _init.scss
 .dark { @include rebase($base00,$base01,$base03,$base04,$base05,$base06,$base07)}
@@ -119,6 +119,10 @@ h3,
 .footer {
   @extend %schemegradient;
 }
+h1,
+.tagline {
+  padding-left: 96px
+}
 .tagline {
   @extend %reset;
   font-size: 1.1875em;
@@ -129,7 +133,7 @@ h3,
   text-shadow: 1px 1px 0px rgba(0,0,0,.5);
   white-space: nowrap;
   clear: none;
-  text-indent: .2em;
+  text-indent: .25em;
 }
 .tagline b {
   font-weight: normal;
@@ -300,15 +304,6 @@ input::-moz-focus-inner {
   background-color: invert($base16-green);
   border: 1px solid invert($base16-cyan);
 }
-.subfooter {
-
-}
-.footer {
-  @extend %a-center;
-}
-.footer a {
-  display: inline-block;
-}
 .app--info dd ul,
 .app--info dd ol {
   padding-left: 22px;
@@ -342,11 +337,14 @@ input::-moz-focus-inner {
 }
 .article ul,
 .article ol {
-  padding-left: 1.1em;
+  padding-left: 1.25em;
   // font-size: .875em;
 }
 .article ul {
   list-style: circle;
+}
+.article li {
+  text-indent: -0.25em;
 }
 .article h2,
 .article h3 {
@@ -360,4 +358,105 @@ input::-moz-focus-inner {
   @extend %mtm !optional;
 
 }
+
+/* ===== .footer  ===== */
+.footer {
+  position: relative;
+  @extend %a-center;
+  line-height: 1;
+  max-height: 1em;
+}
+.subfooter {
+  color: $base02;
+  padding-left: 1em;
+}
+.dark .subfooter {
+  color: $base06;
+}
+.subfooter h3 {
+  @extend %reset;
+}
+.subfooter ul {
+  list-style: circle;
+  font-size: 1.125em;
+  // btn--rightmargin: 0 0 1em;
+  padding: 0 0 0 1.2em;
+}
+.subfooter li {
+  @extend %reset;
+  text-indent: -.25em;
+}
+.subfooter li a {
+  display: inline-block;
+  padding: .125em .25em;
+}
+
+.copyright {
+  transform: translateY(1em);
+  padding: 1em 0;
+  background: $base02;
+  border-top: 1px solid $base01;
+  color: $base06;
+}
+.dark .copyright {
+  background: ($base05);
+  border-top: 1px solid $base04;
+  color: $base01;
+}
+.copyright a {
+  color: $base07;
+  display: inline-block;
+}
+.copyright a:hover {
+  color: $base16-blue;
+}
+.dark .copyright a {
+  color: shade($base16-violet,45%);
+}
+
+/* ===== fork me on Github  ===== */
+// http://codepen.io/radheybikaner/pen/zvBsI
+.box--forkme {
+  // background: tan;
+  width: 165px;
+  height: 165px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.forkme {
+  display: block;
+  position: absolute;
+  bottom: 38px;
+  left: -32px;
+  background: $base07;
+  background: linear-gradient($base07,$base06);
+  color: $base00;;
+  height: 44px;
+  width: 250px;
+  text-decoration: none;
+  text-align: center;
+  @extend %sans-condensed;
+  font-size: 2em;
+  line-height: 32px;
+  transform: rotate(-45deg);
+  border-top: 1px solid $base06;
+  border-bottom: 1px solid $base05;
+  transition: color ease 142ms;
+}
+.forkme span {
+  display: block;
+  text-transform: uppercase;
+  position: absolute;
+  left: 100px;
+  top: 18px;
+  font-size: 13px;
+}
+.forkme:hover {
+  // color: #2C6EB4;
+  color: $base16-blue;
+}
+/* ===== end footer  ===== */
 
