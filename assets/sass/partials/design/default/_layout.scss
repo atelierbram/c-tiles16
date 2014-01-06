@@ -111,9 +111,18 @@ $zen-columns: 1;
   // @extend %absolute;
   position: absolute;
   float: none;
+  background-color: $base16-cyan;
+}
+.wrapper > .styleswitcher {
   top: 2em;
   left: 384px;
-  background-color: $base16-cyan;
+}
+.colorblend-table {
+  position: relative;
+}
+.colorblend-table .styleswitcher {
+  top: 2.4em;
+  right: 1em;
 }
 .content {
   margin-top: 2em;
@@ -152,7 +161,7 @@ $zen-columns: 1;
 .subfooter {
   overflow: auto;
 }
-// 
+//
 // .subfooter {
 //   color: $base02;
 //   padding-left: 1em;

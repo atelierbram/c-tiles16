@@ -438,20 +438,22 @@ input::-moz-focus-inner {
   text-decoration: none;
   text-align: center;
   @extend %sans-condensed;
-  font-size: 2em;
+  font-size: 30px;
   line-height: 32px;
   transform: rotate(-45deg);
   border-top: 1px solid $base06;
   border-bottom: 1px solid $base05;
   transition: color ease 142ms;
+  letter-spacing: -1px;
 }
 .forkme span {
   display: block;
   text-transform: uppercase;
   position: absolute;
-  left: 100px;
+  left: 101px;
   top: 18px;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 .forkme:hover {
   // color: #2C6EB4;

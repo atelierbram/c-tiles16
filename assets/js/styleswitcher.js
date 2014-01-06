@@ -1,5 +1,5 @@
 $(function() {
-  $(".switchto-ctiles16-flatui").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-flatui.css");return false}); 
+  $(".switchto-ctiles16-flatui").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-flatui.css");return false});
   $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
@@ -95,6 +95,39 @@ $(".fill-base16-cyan").hover(function() {
 
 $(".fill-base16-green").hover(function() {
   $("body").toggleClass("bg-base16-green");
+});
+
+$(".switchto-blend-yellow").click(function() {
+  $(".colorblend-table").removeClass("bl-o bl-r bl-m bl-v bl-b bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-y");
+});
+$(".switchto-blend-orange").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-r bl-m bl-v bl-b bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-o");
+});
+ $(".switchto-blend-red").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-m bl-v bl-b bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-r");
+});
+ $(".switchto-blend-magenta").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-v bl-b bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-m");
+});
+ $(".switchto-blend-violet").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-b bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-v");
+});
+ $(".switchto-blend-blue").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-c bl-g");
+  $(".colorblend-table").toggleClass("bl-b");
+});
+ $(".switchto-blend-cyan").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-b bl-g");
+  $(".colorblend-table").toggleClass("bl-c");
+});
+ $(".switchto-blend-green").click(function() {
+  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-b bl-c");
+  $(".colorblend-table").toggleClass("bl-g");
 });
 
 /**
