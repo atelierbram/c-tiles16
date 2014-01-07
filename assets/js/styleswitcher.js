@@ -97,37 +97,40 @@ $(".fill-base16-green").hover(function() {
   $("body").toggleClass("bg-base16-green");
 });
 
+$(".styleswitch").click(function() {
+  $(".colorblend-table").removeClass("bl-start");
+});
 $(".switchto-blend-yellow").click(function() {
-  $(".colorblend-table").removeClass("bl-o bl-r bl-m bl-v bl-b bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-y");
+  $(".colorblend-table").removeClass("bl-2 bl-3 bl-4 bl-5 bl-6 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-1");
 });
 $(".switchto-blend-orange").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-r bl-m bl-v bl-b bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-o");
+  $(".colorblend-table").removeClass("bl-1 bl-3 bl-4 bl-5 bl-6 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-2");
 });
  $(".switchto-blend-red").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-m bl-v bl-b bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-r");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-4 bl-5 bl-6 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-3");
 });
  $(".switchto-blend-magenta").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-v bl-b bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-m");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-3 bl-5 bl-6 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-4");
 });
  $(".switchto-blend-violet").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-b bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-v");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-3 bl-4 bl-6 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-5");
 });
  $(".switchto-blend-blue").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-c bl-g");
-  $(".colorblend-table").toggleClass("bl-b");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-3 bl-4 bl-5 bl-7 bl-8");
+  $(".colorblend-table").toggleClass("bl-6");
 });
  $(".switchto-blend-cyan").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-b bl-g");
-  $(".colorblend-table").toggleClass("bl-c");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-3 bl-4 bl-5 bl-6 bl-8");
+  $(".colorblend-table").toggleClass("bl-7");
 });
  $(".switchto-blend-green").click(function() {
-  $(".colorblend-table").removeClass("bl-y bl-o bl-r bl-m bl-v bl-b bl-c");
-  $(".colorblend-table").toggleClass("bl-g");
+  $(".colorblend-table").removeClass("bl-1 bl-2 bl-3 bl-4 bl-5 bl-6 bl-7");
+  $(".colorblend-table").toggleClass("bl-8");
 });
 
 /**

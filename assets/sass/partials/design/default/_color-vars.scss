@@ -1,20 +1,29 @@
 /* ===== fallback for omitting CAPITALISATION of last character of variable, (somehow like all small characters better) ===== */
-$base0a: $base0A !default;
-$base0b: $base0B !default;
-$base0c: $base0C !default;
-$base0d: $base0D !default;
-$base0e: $base0E !default;
-$base0f: $base0F !default;
-
+// $base0a: $base0A !default;
+// $base0b: $base0B !default;
+// $base0c: $base0C !default;
+// $base0d: $base0D !default;
+// $base0e: $base0E !default;
+// $base0f: $base0F !default;
+//
 /* ===== convert code to easier to remember color-names  ===== */
-$base16-red:     $base08 !default;
-$base16-orange:  $base09 !default;
-$base16-yellow:  $base0a !default;
-$base16-green:   $base0b !default;
-$base16-cyan:    $base0c !default;
-$base16-blue:    $base0d !default;
-$base16-violet:  $base0e !default;
-$base16-magenta: $base0f !default;
+// $base16-red:     $base08 !default;
+// $base16-orange:  $base09 !default;
+// $base16-yellow:  $base0a !default;
+// $base16-green:   $base0b !default;
+// $base16-cyan:    $base0c !default;
+// $base16-blue:    $base0d !default;
+// $base16-violet:  $base0e !default;
+// $base16-magenta: $base0f !default;
+
+$base16-red:     $base08;
+$base16-orange:  $base09;
+$base16-yellow:  $base0a;
+$base16-green:   $base0b;
+$base16-cyan:    $base0c;
+$base16-blue:    $base0d;
+$base16-violet:  $base0e;
+$base16-magenta: $base0f;
 
 /* ===== to invert/swap out color-values within the scheme itself  ===== */
 $rebase16-base00:  $base07 !default;
