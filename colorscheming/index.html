@@ -76,6 +76,10 @@
         <button id="btnInvert" class="btn">invert</button>
         <button id="btnShade" class="btn">shade</button>
         <button id="btnTint" class="btn">tint</button>
+        <button id="btnTransparentize" class="btn">transparentize</button>
+        <button id="btnScale" class="btn">scale</button>
+        <button id="btnAdjustColor" class="btn">adjust color</button>
+
         <button id="btnReset" class="btn btn--base16-cyan full-width">reset</button>
       </div><!-- /.colorfunctions -->
     </div><!-- /.colorscheme -->
@@ -92,7 +96,15 @@
 .is-complemented </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> complement(<span class="token variable">$base06</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
 .is-inverted     </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> invert(<span class="token variable">$base07</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
 .is-shaded       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> shade(<span class="token variable">$red</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-tinted       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> tint(<span class="token variable">$orange</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+.is-tinted       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> tint(<span class="token variable">$orange</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.is-transprtized </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> transparentize(<span class="token variable">$magenta</span>, 0.5)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-scaled       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> scale-color(<span class="token variable">$violet</span>,
+                                      <span class="token variable">$saturation</span><span class="token punctuation">:</span> 15%,
+                                      <span class="token variable">$lightness</span><span class="token punctuation">:</span> 15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
+.is-c-adjusted </span>  <span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> adjust-color(<span class="token variable">$blue</span>,
+                                       <span class="token variable">$hue</span><span class="token punctuation">:</span> 15deg,
+                                       <span class="token variable">$saturation</span><span class="token punctuation">:</span> 15%,
+                                       <span class="token variable">$lightness</span><span class="token punctuation">:</span> 15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre> 
         <p class="note">All functions here are increased here by 15%, except: grayscale, complement, and invert, which are &#8216;boolean&#8217; functions.</p>
       </div><!-- /.code-container -->
 
@@ -573,7 +585,7 @@
         <pre class="  language-scss"><code class=" language-scss"><span class="token selector">.blue-mix-yellow </span><span class="token punctuation">{</span>
   <span class="token property">color</span><span class="token punctuation">:</span> mix(<span class="token variable">$base16-yellow</span>,<span class="token variable">$base16-blue</span>,31.25%)<span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// #6186B7
-</span><span class="token punctuation">}</span></code></pre>
+        </span><span class="token punctuation">}</span></code></pre>
       </div><!-- /.code-container -->
 
     </section>
@@ -619,20 +631,20 @@
     <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
     <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
   </div>
- <div class="box--forkme"><a href="http://github.com/atelierbram/c-tiles16" target="_blank" class="forkme">github<span>fork me on</span></a></div>
+  <div class="box--forkme"><a href="http://github.com/atelierbram/c-tiles16" target="_blank" class="forkme">github<span>fork me on</span></a></div>
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
 
-<!-- <script src="../assets/js/dropdown-menu.js"></script> -->
-<!-- <script src="../assets/js/styleswitcher.js"></script> -->
-<!-- <script src="../assets/js/color-functions.js"></script> -->
-<!-- <script src="../assets/js/hsl-picker-max.js"></script> -->
-<!-- <script src="../assets/js/arc90-Color.js"></script> -->
-<!-- <script src="../assets/js/arc90-Transforms.js"></script> -->
-<!-- <script src="../assets/js/arc90.js"></script> -->
-<script src="../assets/js/ctiles.min.js"></script>
+<script src="../assets/js/dropdown-menu.js"></script>
+<script src="../assets/js/styleswitcher.js"></script>
+<script src="../assets/js/color-functions.js"></script>
+<script src="../assets/js/hsl-picker-max.js"></script>
+<script src="../assets/js/arc90-Color.js"></script>
+<script src="../assets/js/arc90-Transforms.js"></script>
+<script src="../assets/js/arc90.js"></script>
+<!-- <script src="../assets/js/ctiles.min.js"></script> -->
 <!--initiate hslpicker-->
 <script>
 $(document).ready(function(){

@@ -349,7 +349,7 @@ input::-moz-focus-inner {
 .article h2,
 .article h3 {
   @extend %reset;
-  color: $base16-orange;
+  color: scale-color($base16-orange,$lightness: -20%);
 }
 .article pre[class*="language-"] {
   padding: .5em 1em;
@@ -416,10 +416,16 @@ input::-moz-focus-inner {
 
 /* ===== fork me on Github  ===== */
 // http://codepen.io/radheybikaner/pen/zvBsI
+
+/* hide for small screen, little room */
+.btn--bg-toggle,
 .box--forkme {
-  // background: tan;
-  width: 165px;
-  height: 165px;
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.box--forkme {
   position: absolute;
   right: 0;
   bottom: 0;

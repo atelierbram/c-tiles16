@@ -10,13 +10,13 @@
 <rect x="24"  y="24" fill="#7b8a8e" width="24" height="24"/>
 <rect x="48"  y="24" fill="#b8d7e0" width="24" height="24"/>
 <rect x="72"  y="24" fill="#f0fbff" width="24" height="24"/>
-<rect x="48"  y="48" fill="#ec134d" width="24" height="24"/>
-<rect x="24"  y="48" fill="#e63600" width="24" height="24"/>
-<rect y="48"         fill="#ff9c19" width="24" height="24"/>
-<rect x="72"  y="72" fill="#11d4a0" width="24" height="24"/>
+<rect x="48"  y="48" fill="#e72357" width="24" height="24"/>
+<rect x="24"  y="48" fill="#ff4f1a" width="24" height="24"/>
+<rect y="48"         fill="#e6970f" width="24" height="24"/>
+<rect x="72"  y="72" fill="#19b38a" width="24" height="24"/>
 <rect x="48"  y="72" fill="#17a4cf" width="24" height="24"/>
-<rect x="24"  y="72" fill="#1a7dff" width="24" height="24"/>
-<rect y="72"         fill="#7e47ea" width="24" height="24"/>
-<rect x="72"  y="48" fill="#e212d5" width="24" height="24"/>
+<rect x="24"  y="72" fill="#2481f9" width="24" height="24"/>
+<rect y="72"         fill="#8357db" width="24" height="24"/>
+<rect x="72"  y="48" fill="#e830dc" width="24" height="24"/>
 </g>
 </svg>

@@ -236,6 +236,57 @@ $rebase16-magenta: $base0b !default;
 .is-tinted .fill-base16-violet  { fill: tint($base16-violet,  15%); }
 .is-tinted .fill-base16-magenta { fill: tint($base16-magenta, 15%); }
 
+.is-transparentized .fill-base00    { fill: transparentize($base00,  0.5); }
+.is-transparentized .fill-base01    { fill: transparentize($base01,  0.5); }
+.is-transparentized .fill-base02    { fill: transparentize($base02,  0.5); }
+.is-transparentized .fill-base03    { fill: transparentize($base03,  0.5); }
+.is-transparentized .fill-base04    { fill: transparentize($base04,  0.5); }
+.is-transparentized .fill-base05    { fill: transparentize($base05,  0.5); }
+.is-transparentized .fill-base06    { fill: transparentize($base06,  0.5); }
+.is-transparentized .fill-base07    { fill: transparentize($base07,  0.5); }
+.is-transparentized .fill-base16-red     { fill: transparentize($base16-red,     0.5); }
+.is-transparentized .fill-base16-orange  { fill: transparentize($base16-orange,  0.5); }
+.is-transparentized .fill-base16-yellow  { fill: transparentize($base16-yellow,  0.5); }
+.is-transparentized .fill-base16-green   { fill: transparentize($base16-green,   0.5); }
+.is-transparentized .fill-base16-cyan    { fill: transparentize($base16-cyan,    0.5); }
+.is-transparentized .fill-base16-blue    { fill: transparentize($base16-blue,    0.5); }
+.is-transparentized .fill-base16-violet  { fill: transparentize($base16-violet,  0.5); }
+.is-transparentized .fill-base16-magenta { fill: transparentize($base16-magenta, 0.5); }
+
+.is-scaled .fill-base00    { fill: scale-color($base00,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base01    { fill: scale-color($base01,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base02    { fill: scale-color($base02,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base03    { fill: scale-color($base03,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base04    { fill: scale-color($base04,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base05    { fill: scale-color($base05,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base06    { fill: scale-color($base06,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base07    { fill: scale-color($base07,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-red     { fill: scale-color($base16-red,     $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-orange  { fill: scale-color($base16-orange,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-yellow  { fill: scale-color($base16-yellow,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-green   { fill: scale-color($base16-green,   $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-cyan    { fill: scale-color($base16-cyan,    $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-blue    { fill: scale-color($base16-blue,    $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-violet  { fill: scale-color($base16-violet,  $saturation: 15%, $lightness: 15%); }
+.is-scaled .fill-base16-magenta { fill: scale-color($base16-magenta, $saturation: 15%, $lightness: 15%); }
+
+.is-color-adjusted .fill-base00    { fill: adjust-color($base00,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base01    { fill: adjust-color($base01,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base02    { fill: adjust-color($base02,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base03    { fill: adjust-color($base03,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base04    { fill: adjust-color($base04,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base05    { fill: adjust-color($base05,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base06    { fill: adjust-color($base06,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base07    { fill: adjust-color($base07,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-red     { fill: adjust-color($base16-red,     $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-orange  { fill: adjust-color($base16-orange,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-yellow  { fill: adjust-color($base16-yellow,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-green   { fill: adjust-color($base16-green,   $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-cyan    { fill: adjust-color($base16-cyan,    $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-blue    { fill: adjust-color($base16-blue,    $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-violet  { fill: adjust-color($base16-violet,  $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+.is-color-adjusted .fill-base16-magenta { fill: adjust-color($base16-magenta, $hue: 15deg, $saturation: 15%, $lightness: 15%); }
+
 .bg-base00         { background-color: $base00; }
 .bg-base01         { background-color: $base01; }
 .bg-base02         { background-color: $base02; }

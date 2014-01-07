@@ -353,6 +353,19 @@ head, style[contenteditable] {display: none;}
   .subfooter {
     padding: 2em 0;
   }
+  .box--forkme,
+  .btn--bg-toggle {
+    display: block;
+    visibility: visible;
+  }
+  .box--forkme{
+    width: 165px;
+    height: 165px;
+  }
+  .btn--bg-toggle {
+    width: auto;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
