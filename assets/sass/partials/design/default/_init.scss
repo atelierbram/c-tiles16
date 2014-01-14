@@ -58,6 +58,7 @@ $zen-auto-include-grid-item-base  : false;
 %monospace {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 }
+
 %a-center {
   text-align: center;
 }
@@ -70,6 +71,17 @@ $zen-auto-include-grid-item-base  : false;
 %pad {
   padding: 1em !important;
 }
+
+%pad-v {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+%fullwidth {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 %mtm {
   margin-top: 1em;
 }
@@ -79,7 +91,6 @@ $zen-auto-include-grid-item-base  : false;
 %linkcolor { color: $base16-violet; }
 %linkcolor-light { color: lighten($base16-violet,15%); }
 %linkcolor-dark { color: darken($base16-violet,5%); }
-
 
 @mixin rebase($rebase00,$rebase01,$rebase03,$rebase04,$rebase05,$rebase06,$rebase07)
 {

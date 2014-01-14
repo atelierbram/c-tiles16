@@ -1,6 +1,8 @@
+// @import "base";
 * {
   // outline: 1px dotted salmon;
 }
+
 head, style[contenteditable] {display: block;}
 style[contenteditable] {
   font-size: 0.875em;
@@ -148,14 +150,21 @@ $zen-columns: 1;
   // @extend %linkcolor-light !optional;
   color: lighten($base16-yellow, 25%);
 }
-.color-functions,
+// .color-functions,
+.test-textcolor,
 .code-container {
   @include zen-new-row(left);
   @extend %grid-item;
 }
-.color-functions{
-  @extend %a-center;
+.test-textcolor h4 {
+  @extend %reset;
+  // padding:0;
+  // margin: 0;
 }
+
+// .color-functions{
+  // @extend %a-center;
+// }
 .colorscheme,
 .article,
 .subfooter {
@@ -217,14 +226,14 @@ $zen-columns: 1;
   padding: 0;
   list-style: none;
 }
+// .color-functions,
 .logo,
-.colorscheme-tiles,
-.color-functions {
+.colorscheme-tiles {
   @extend %grid-item;
 }
-.content .colorscheme-tiles,
-.content .color-functions {
-  max-width: 384px; /* 24 * 16px */
+// .content .color-functions {
+.content .colorscheme-tiles {
+  max-width: 384px; /* 24 * 16px */ @extend %a-center;
 }
 .header .centered {
   position: relative;
@@ -245,6 +254,62 @@ $zen-columns: 1;
 }
 
 rect[class^="fill-"]:hover { cursor: pointer;
+}
+
+/* =====   text-color sliders ===== */
+.color-sliders {
+  overflow: auto;
+  background-color: $base07;
+  @extend %pad-v !optional;
+}
+.slider-wrapper {
+  text-align: center;
+  overflow: auto;
+}
+.color-converter span {
+ line-height: 1.5;
+ display: inline-block;
+}
+input[type="range"] {
+  width: 75%;
+}
+.output {
+  min-height: 512px;
+  color: $base07;
+}
+.output--text {
+  // transform: translateY(-384px);
+  transform: translateY(-23em);
+  // margin-bottom: -128px;
+  margin-bottom: -21em;
+}
+.output,
+.output--text {
+  @extend %pad;
+  @extend %monospace;
+}
+.bold {
+  font-weight: bold;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  @extend %sans-condensed;
+}
+p {
+  padding: .5em 0;
+}
+.lorem {
+ font-family: $base-font-family;
+ // pt_sans_narrowregular, AvenirNextCondensed-Regular, DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  // @extend %sans;
+  text-align: left;
+}
+
+.pad {
+  @extend %pad;
+  overflow: auto;
 }
 /* =====  http://codepen.io/rommelxcastro/pen/krtmi ===== */
 // accordion
@@ -314,11 +379,13 @@ rect[class^="fill-"]:hover { cursor: pointer;
 }
 /* ===== end accordion  ===== */
 
-.full-width {
+.reset {
+  // @extend %fullwidth !optional;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
+
 @media only screen and (max-width: 560px) {
   /* .readme */.btn--top-action {
     top: 7em;

@@ -1,6 +1,7 @@
 $(function() {
   $(".switchto-ctiles16-flatui").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-flatui.css");return false});
-  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false});
+  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false}); 
+  $(".switchto-ctiles16-newdefaults").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-newdefaults.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
   $(".switchto-ctiles16-rebase").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-rebase.css");return false});

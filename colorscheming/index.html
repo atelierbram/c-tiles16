@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js app" lang="en">
 <head>
 <meta charset="utf-8">
 <title>c-Tiles16 - Colorscheming with Variables</title>
@@ -22,7 +22,7 @@
 <script src="../assets/js/libs/modernizr.custom.min.js"></script>
 </head>
 
-<body class="app">
+<body>
 
 <header class="header">
   <div class="centered">
@@ -65,592 +65,632 @@
         </svg>
       </div><!-- /.colorscheme-tiles #svg-container -->
 
-      <div class="color-functions">
-        <button id="btnAdjustHue" class="btn btnAdjustHue">adjust hue</button>
-        <button id="btnLighten" class="btn">lighten</button>
-        <button id="btnDarken" class="btn">darken</button>
-        <button id="btnSaturate" class="btn">saturate</button>
-        <button id="btnDesaturate" class="btn">desaturate</button>
-        <button id="btnGrayscale" class="btn">grayscale</button>
-        <button id="btnComplement" class="btn">complement</button>
-        <button id="btnInvert" class="btn">invert</button>
-        <button id="btnShade" class="btn">shade</button>
-        <button id="btnTint" class="btn">tint</button>
-        <button id="btnTransparentize" class="btn">transparentize</button>
-        <button id="btnScale" class="btn">scale</button>
-        <button id="btnAdjustColor" class="btn">adjust color</button>
 
-        <button id="btnReset" class="btn btn--base16-cyan full-width">reset</button>
-      </div><!-- /.colorfunctions -->
-    </div><!-- /.colorscheme -->
+      <article class="app--info">
+        <div class="code-container">
+          <h3>Sass Syntax - scss</h3>
+          <pre class="language-scss"><code class="language-scss">
+.hue-adjusted { fill: adjust-hue($base00,15deg); }
+.lightened    { fill: lighten($base01,15%); }
+.darkened     { fill: darken($base02,15%); }
+.saturated    { fill: saturate($base03,15%); }
+.desaturated  { fill: desaturate($base04,15%); }
+.grayscaled   { fill: grayscale($base05); }
+.complemented { fill: complement($base06); }
+.inverted     { fill: invert($base07); }
+.shaded       { fill: shade($red,15%); }
+.tinted       { fill: tint($orange,15%); }
+.transprtized { fill: transparentize($magenta, 0.5); }
+.scaled       { fill: scale-color($violet,
+                                  $saturation: 15%,
+                                  $lightness: 15%); }
+.c-adjusted   { fill: adjust-color($blue,
+                                   $hue: 15deg,
+                                   $saturation: 15%,
+                                   $lightness: 15%); }
+      </code></pre>
 
-    <article class="app--info">
-      <div class="code-container">
-        <h3>Sass Syntax - scss</h3>
-        <pre class="language-scss"><code class="language-scss"><span class="token selector">.is-hue-adjusted </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> adjust-hue(<span class="token variable">$base00</span>,15deg)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-lightened    </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> lighten(<span class="token variable">$base01</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-darkened     </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> darken(<span class="token variable">$base02</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-saturated    </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> saturate(<span class="token variable">$base03</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-desaturated  </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> desaturate(<span class="token variable">$base04</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-grayscaled   </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> grayscale(<span class="token variable">$base05</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-complemented </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> complement(<span class="token variable">$base06</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-inverted     </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> invert(<span class="token variable">$base07</span>)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-shaded       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> shade(<span class="token variable">$red</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-tinted       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> tint(<span class="token variable">$orange</span>,15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token selector">.is-transprtized </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> transparentize(<span class="token variable">$magenta</span>, 0.5)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-scaled       </span><span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> scale-color(<span class="token variable">$violet</span>,
-                                      <span class="token variable">$saturation</span><span class="token punctuation">:</span> 15%,
-                                      <span class="token variable">$lightness</span><span class="token punctuation">:</span> 15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token selector">
-.is-c-adjusted </span>  <span class="token punctuation">{</span> <span class="token property">fill</span><span class="token punctuation">:</span> adjust-color(<span class="token variable">$blue</span>,
-                                       <span class="token variable">$hue</span><span class="token punctuation">:</span> 15deg,
-                                       <span class="token variable">$saturation</span><span class="token punctuation">:</span> 15%,
-                                       <span class="token variable">$lightness</span><span class="token punctuation">:</span> 15%)<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre> 
-        <p class="note">All functions here are increased here by 15%, except: grayscale, complement, and invert, which are &#8216;boolean&#8217; functions.</p>
-      </div><!-- /.code-container -->
+         <p class="note">All functions here are increased here by 15%, except: grayscale, complement, and invert, which are &#8216;boolean&#8217; functions.</p>
+        </div><!-- /.code-container -->
 
+        <section id="testTextcolor" class="test-textcolor">
 
-      <section class="info">
-        <h2>Colorscheming</h2>
-        <dl id="accordion" class="accordion">
+          <!-- <button id="bgToggle" class="btn">toggle background-color</button> -->
 
-          <dt class="accordion-header">Introduction</dt>
-          <dd>This colorscheming test playground is assembled to have the best colorscheming tools, alongside colorscheme-tiles <em>on one webpage</em>-test-playground, making it convenient to create your own colorscheme, with sixteen variables</dd>
+          <div id="hsl-example" class="output class1">
 
-          <dt class="accordion-header">Getting Started</dt>
-          <dd>
-
-          <p>A possible way to make this tool, or rather collection-of-tools, your own can be:</p>
-          <ul>
-
-            <li>download the <a href="https://github.com/atelierbram/c-tiles16/archive/master.zip">zip-file</a><i> (, or clone <a href="https://github.com/atelierbram/c-tiles16">the repo</a>)</i></li>
-
-            <li>when using Sass, open <code>assets/sass/ctiles16-custom.scss</code> (which is a copy of <code>ctiles16-ctiles.scss</code>) in a text-editor. Don’t rename it just yet, but:</li>
-
-            <li>(this works best full screen) start editing the values of the variables with the text-editor on one side, and the browser-window with this test colorscheming playground (<code><a href="http://atelierbram.github.io/c-tiles16/colorscheming/#7b8a8e">colorscheming/index.html</a></code>) on the other side of your screen</li>
-            <li>play with the hsl-picker to help you get along</li>
-            <li>try some live editing with the hidden styles in the top.</li>
-            <li>from the dropdown-menu you can pick and see how other colorschemes look.</li>
-
-            <li>there’s a button for toggling the page background-color, and you can also hover with your mouse over the colortiles, to see the effect of a larger amount colorfield</li>
-
-            <li>refresh the colorschemer-webpage after each time you edit your <code>ctiles16-custom.scss</code> -colorscheme-variables file (or use something like LiveReload)</li>
-
-            <li>When following the workflow above, you have been using <a href="http://atelierbram.github.io/c-tiles16">c-Tiles16</a> to make a colorscheme made out of sixteen colors</li>
-          </ul>
-          </dd>
-          <dt class="accordion-header">Development</dt>
-          <dd>
-          <ul>
-
-            <li>Now put the colorscheme you just made as one of the first partial files to import in the <code>_base-partial</code> file (the one that is included throughout the whole project)</li>
-            <li>Keep using the colorschemer any time you like to generate color-values during the design phase of the website</li>
-
-            <li>One can make it a personal challenge to only use the colorscheme values, or variations of those with Sass color-functions</li>
-
-            <li>BTW: You can also try to make a pull request on Github, in order to submit your colorscheme to this collection <a href="https://github.com/atelierbram/c-tiles16">here on c-Tiles16</a></li>
-          </ul>
-          </dd>
-        </dl><!-- /.accordion -->
-      </section><!-- /.info -->
-
-    </article>
-
-    <footer class="subfooter">
-
-      <div class="credits grid-item">
-        <h3>Credits</h3>
-        <ul>
-          <li><a href="https://github.com/chriskempson/base16-builder">Base16 Builder</a> by <a href="http://chriskempson.com/">Chris Kempson</a></li>
-          <li><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></li>
-          <li><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></li>
-        </ul>
-      </div>
-
-      <div class="resources grid-item">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="http://prismjs.com/">Prism</a> by <a href="http://lea.verou.me">Lea Verou</a></li>
-          <li><a href="https://github.com/MoOx/sass-prism-theme-base">Sass Prism base theme</a> by <a href="http://moox.io/">Maxime Thirouin</a></li>
-          <li><a href="http://formalize.me/">Formalize</a>  by <a href="http://sonspring.com/">Nathan Smith</a></li>
-          <li><a href="http://codepen.io/larrygeams/pen/feoDc">long dropdown menu</a> by <a href="http://css-tricks.com/long-dropdowns-solution/">Chris Coyier</a> and <a href="http://larrygeams.comze.com/">Geams</a></li>
-          <li><a href="http://wordimpress.com/super-lightweight-jquery-website-accordions-without-a-plugin/">lightweight accordion</a> by <a href="http://wordimpress.com/author/wordimpressadmin/">Devin Walker</a></li>
-        </ul>
-      </div>
-    </footer><!-- /.subfooter -->
-
-  </section><!-- /.content -->
-
-  <aside class="sidebar">
-    <section id="hslpicker" class="hslpicker">
-      <!-- <a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a> -->
-      <div class="frame">
-        <div id='tiles' class='color-tiles'>
-          <div class='foreground tile selected' data-name='foreground' title='Adjust foreground tile'>
-            <div class='foreground-color tile'></div>
           </div>
-          <div class='background tile' data-name='background' title='Adjust background tile'>
-            <div class='background-color tile'></div>
+          <div id="hsl-example-text" class="output--text">
+
           </div>
-          <div class='bgs'>
-            <div class='bg none' title='Transparent' data-color='[360,100,100,0]'></div>
-            <div class='bg light' title='White' data-color='[360,100,100,1]'></div>
-            <div class='bg dark' title='Black' data-color='[0,0,0,1]'></div>
-            <div class='bg random' title='Random' data-color='random'></div>
-          </div>
-          <div class='expose' title='show/hide background tile'></div>
-        </div>
-        <div id='picker' class='sliders'>
-          <div class="slider"><div id='h-slider'><div class='handle'></div></div></div> <input id='h' class="hslpicker-input">
-          <div class="slider"><div id='s-slider'><div class='handle'></div></div></div> <input id='s' class="hslpicker-input">
-          <div class="slider"><div id='l-slider'><div class='handle'></div></div></div> <input id='l' class="hslpicker-input">
-          <div class="slider"><div id='a-slider'><div class='handle'></div></div></div> <input id='a' class="hslpicker-input">
-        </div>
-      </div>
-      <div class='color-inputs'>
-        <input id="hex" spellcheck="false" type="text" class="hslpicker-input">
-        <input id="rgba" spellcheck="false" type="text" class="hslpicker-input">
-        <input id="hsla" spellcheck="false" type="text" class="hslpicker-input">
-      </div>
 
-      <footer class="section-footer"><small><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></small></footer>
-    </section><!-- /.hslpicker -->
-
-    <section id="arc90-container" class="arc90-wrapper">
-      <!-- <a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a> -->
-      <form action="http://localhost/~bram/playground/color/c-tiles16/colorscheming/index.html" method="get" accept-charset="utf-8" class="inactive" id="arc90-form">
-        <ul id="arc90-content" class="arc90-content clearfix">
-
-          <li id="arc90-swatch1" class="arc90-listItem arc90-swatch1 arc90-swatchContainer">
-          <p class="arc90-swatchLabel">Input color</p>
-          <div class="arc90-swatch">
-            <div id="arc90-colorInput"  class="arc90-colorInput">
-              <label for="arc90-color">#</label>
-              <input type="text" name="arc90-color" id="arc90-color" class="arc90-color arc90-input" maxlength="6" placeholder="0183B7" />
-              <div id="initialHelp" class="initialHelp">
-                &larr; Copy and paste the hex code: <br class="clear"/>the one you found above
-              </div>
+          <div class="color-sliders">
+            <div id="bgSliders" class="slider-wrapper">
+              <pre contenteditable class="color-converter">background-color:<b>&nbsp;hsla</b>
+   <span class="hsl-value" id="hsl-h-value">188</span> <input id="hsl-h" type="range" min="0" max="360" value="188" onChange="changeHSL()">&nbsp;H&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-s-value">20% </span> <input id="hsl-s" type="range" min="0" max="100" value="20" onChange="changeHSL()">&nbsp;S&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-l-value">8%  </span> <input id="hsl-l" type="range" min="0" max="100" value="8" onChange="changeHSL()">&nbsp;L&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-a-value">1.00</span> <input id="hsl-a" type="range" min="0" max="100" value="100" onChange="changeHSL()">&nbsp;A&nbsp;&nbsp;
+              </pre>
+            </div>
+            <div id="textSliders" class="slider-wrapper">
+              <pre contenteditable class="color-converter">text-color:<b>&nbsp;hsla</b>
+   <span class="hsl-value" id="hsl-h-value-text">14 </span>  <input id="hsl-h-text" type="range" min="0" max="360" value="14" onChange="changeHSLText()">&nbsp;H&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-s-value-text">100%</span> <input id="hsl-s-text" type="range" min="0" max="100" value="100" onChange="changeHSLText()">&nbsp;S&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-l-value-text">55% </span> <input id="hsl-l-text" type="range" min="0" max="100" value="55" onChange="changeHSLText()">&nbsp;L&nbsp;&nbsp;
+   <span class="hsl-value" id="hsl-a-value-text">1.00</span>  <input id="hsl-a-text" type="range" min="0" max="100" value="100" onChange="changeHSLText()">&nbsp;A&nbsp;&nbsp;
+              </pre>
             </div>
 
-            <div class="arc90-swatchPointer"></div>
           </div>
-          </li>
+          <pre class="language-scss"><code class="language-scss">
+$base00:         hsla(188,  20%,  8%, 1); // #101718
+$base01:         hsla(196,  19%, 15%, 1); // #1f2a2e
+$base02:         hsla(193,  15%, 25%, 1); // #364549
+$base03:         hsla(193,  12%, 32%, 1); // #48575b
+$base04:         hsla(194,  10%, 42%, 1); // #607176
+$base05:         hsla(193, 100%, 55%, 1); // #7b8a8e
+$base06:         hsla(194,  39%, 80%, 1); // #b8d7e0
+$base07:         hsla(196, 100%, 97%, 1); // #f0fbff
+$base16-red:     hsla(344,  80%, 52%, 1); // #e72357
+$base16-orange:  hsla( 14, 100%, 55%, 1); // #ff4f1a
+$base16-yellow:  hsla( 38,  88%, 48%, 1); // #e6970f
+$base16-green:   hsla(164,  75%, 40%, 1); // #19b38a
+$base16-cyan:    hsla(194,  80%, 45%, 1); // #17a4cf
+$base16-blue:    hsla(214,  95%, 56%, 1); // #2481f9
+$base16-violet:  hsla(260,  65%, 60%, 1); // #8357db
+$base16-magenta: hsla(304,  80%, 55%, 1); // #e830dc
+          </code></pre>
+        </section>
 
-          <li id="arc90-swatch2" class="arc90-listItem arc90-swatch2 arc90-swatchContainer">
-          <p class="arc90-swatchLabel">Output color</p>
-          <div class="arc90-swatch"><span id="arc90-colorOutput" class="arc90-colorOutput"></span></div>
-          </li>
+        <section class="info">
+          <h2>Colorscheming</h2>
+          <dl id="accordion" class="accordion">
 
-          <li class="arc90-listItem">
-          <div id="arc90-codeOutput" class="arc90-codeOutput">
-            <input type="text" id="arc90-code"  class="arc90-input" tabindex="-1" readonly="readonly" placeholder="Fiddle with the sliders to get the SASS" />
-          </div>
-          <div class="arc90-codeHelp">
-            <p>Copy and use the code below:</p>
-          </div>
-          </li>
+            <dt class="accordion-header">Introduction</dt>
+            <dd>This colorscheming test playground is assembled to have the best colorscheming tools, alongside colorscheme-tiles <em>on one webpage</em>-test-playground, making it convenient to create your own colorscheme, with sixteen variables</dd>
 
-          <li class="arc90-listItem slider">
-          <a href="#" class="arc90-reset">Reset</a>
-          <input type="range" min="0" max="100" id="slider_l" class="arc90-input" />
-          <label for="slider_l">&larr; darken | lighten &rarr;</label>
-          </li>
-          <li class="arc90-listItem slider">
-          <a href="#" class="arc90-reset">Reset</a>
-          <input type="range" min="0" max="100" id="slider_s" class="arc90-input"/>
-          <label for="slider_s">&larr; desaturate | saturate &rarr;</label>
-          </li>
-          <li class="arc90-listItem slider">
-          <a href="#" class="arc90-reset">Reset</a>
-          <input type="range" min="0" max="360" id="slider_h" class="arc90-input" />
-          <label for="slider_h">&larr; adjust hue &rarr;</label>
-          </li>
-        </ul>
-      </form>
-      <footer class="section-footer"><small><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></small></footer>
-    </section><!-- /.arc90-wrapper -->
+            <dt class="accordion-header">Getting Started</dt>
+            <dd>
 
-    <section class="colorblend-table bl-start">
-      <div class="styleswitcher">
-        <ul class="dropdown">
-          <li class="drop"><a href="#">Choose a Blendcolor</a>
-          <ul class="sub_menu">
-            <li><a class="styleswitch switchto-blend-yellow" href="#!">yellow</a></li>
-            <li><a class="styleswitch switchto-blend-orange" href="#!">orange</a></li>
-            <li><a class="styleswitch switchto-blend-red" href="#!">red</a></li>
-            <li><a class="styleswitch switchto-blend-magenta" href="#!">magenta</a></li>
-            <li><a class="styleswitch switchto-blend-violet" href="#!">violet</a></li>
-            <li><a class="styleswitch switchto-blend-blue" href="#!">blue</a></li>
-            <li><a class="styleswitch switchto-blend-cyan" href="#!">cyan</a></li>
-            <li><a class="styleswitch switchto-blend-green" href="#!">green</a></li>
+            <p>A possible way to make this tool, or rather collection-of-tools, your own can be:</p>
+            <ul>
+
+              <li>download the <a href="https://github.com/atelierbram/c-tiles16/archive/master.zip">zip-file</a><i> (, or clone <a href="https://github.com/atelierbram/c-tiles16">the repo</a>)</i></li>
+
+              <li>when using Sass, open <code>assets/sass/ctiles16-custom.scss</code> (which is a copy of <code>ctiles16-ctiles.scss</code>) in a text-editor. Don’t rename it just yet, but:</li>
+
+              <li>(this works best full screen) start editing the values of the variables with the text-editor on one side, and the browser-window with this test colorscheming playground (<code><a href="http://atelierbram.github.io/c-tiles16/colorscheming/#7b8a8e">colorscheming/index.html</a></code>) on the other side of your screen</li>
+              <li>play with the hsl-picker to help you get along</li>
+              <li>try some live editing with the hidden styles in the top.</li>
+              <li>from the dropdown-menu you can pick and see how other colorschemes look.</li>
+
+              <li>there’s a button for toggling the page background-color, and you can also hover with your mouse over the colortiles, to see the effect of a larger amount colorfield</li>
+
+              <li>refresh the colorschemer-webpage after each time you edit your <code>ctiles16-custom.scss</code> -colorscheme-variables file (or use something like LiveReload)</li>
+
+              <li>When following the workflow above, you have been using <a href="http://atelierbram.github.io/c-tiles16">c-Tiles16</a> to make a colorscheme made out of sixteen colors</li>
+            </ul>
+            </dd>
+            <dt class="accordion-header">Development</dt>
+            <dd>
+            <ul>
+
+              <li>Now put the colorscheme you just made as one of the first partial files to import in the <code>_base-partial</code> file (the one that is included throughout the whole project)</li>
+              <li>Keep using the colorschemer any time you like to generate color-values during the design phase of the website</li>
+
+              <li>One can make it a personal challenge to only use the colorscheme values, or variations of those with Sass color-functions</li>
+
+              <li>BTW: You can also try to make a pull request on Github, in order to submit your colorscheme to this collection <a href="https://github.com/atelierbram/c-tiles16">here on c-Tiles16</a></li>
+            </ul>
+            </dd>
+          </dl><!-- /.accordion -->
+        </section><!-- /.info -->
+
+      </article>
+
+      <footer class="subfooter">
+
+        <div class="credits grid-item">
+          <h3>Credits</h3>
+          <ul>
+            <li><a href="https://github.com/chriskempson/base16-builder">Base16 Builder</a> by <a href="http://chriskempson.com/">Chris Kempson</a></li>
+            <li><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></li>
+            <li><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></li>
           </ul>
-          </li>
+        </div>
+
+        <div class="resources grid-item">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="http://prismjs.com/">Prism</a> by <a href="http://lea.verou.me">Lea Verou</a></li>
+            <li><a href="https://github.com/MoOx/sass-prism-theme-base">Sass Prism base theme</a> by <a href="http://moox.io/">Maxime Thirouin</a></li>
+            <li><a href="http://formalize.me/">Formalize</a>  by <a href="http://sonspring.com/">Nathan Smith</a></li>
+            <li><a href="http://codepen.io/larrygeams/pen/feoDc">long dropdown menu</a> by <a href="http://css-tricks.com/long-dropdowns-solution/">Chris Coyier</a> and <a href="http://larrygeams.comze.com/">Geams</a></li>
+            <li><a href="http://wordimpress.com/super-lightweight-jquery-website-accordions-without-a-plugin/">lightweight accordion</a> by <a href="http://wordimpress.com/author/wordimpressadmin/">Devin Walker</a></li>
+          </ul>
+        </div>
+      </footer><!-- /.subfooter -->
+
+    </section><!-- /.content -->
+
+    <aside class="sidebar">
+      <section id="hslpicker" class="hslpicker">
+        <!-- <a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a> -->
+        <div class="frame">
+          <div id='tiles' class='color-tiles'>
+            <div class='foreground tile selected' data-name='foreground' title='Adjust foreground tile'>
+              <div class='foreground-color tile'></div>
+            </div>
+            <div class='background tile' data-name='background' title='Adjust background tile'>
+              <div class='background-color tile'></div>
+            </div>
+            <div class='bgs'>
+              <div class='bg none' title='Transparent' data-color='[360,100,100,0]'></div>
+              <div class='bg light' title='White' data-color='[360,100,100,1]'></div>
+              <div class='bg dark' title='Black' data-color='[0,0,0,1]'></div>
+              <div class='bg random' title='Random' data-color='random'></div>
+            </div>
+            <div class='expose' title='show/hide background tile'></div>
+          </div>
+          <div id='picker' class='sliders'>
+            <div class="slider"><div id='h-slider'><div class='handle'></div></div></div> <input id='h' class="hslpicker-input">
+            <div class="slider"><div id='s-slider'><div class='handle'></div></div></div> <input id='s' class="hslpicker-input">
+            <div class="slider"><div id='l-slider'><div class='handle'></div></div></div> <input id='l' class="hslpicker-input">
+            <div class="slider"><div id='a-slider'><div class='handle'></div></div></div> <input id='a' class="hslpicker-input">
+          </div>
+        </div>
+        <div class='color-inputs'>
+          <input id="hex" spellcheck="false" type="text" class="hslpicker-input">
+          <input id="rgba" spellcheck="false" type="text" class="hslpicker-input">
+          <input id="hsla" spellcheck="false" type="text" class="hslpicker-input">
+        </div>
+
+        <footer class="section-footer"><small><a href="http://hslpicker.com/">HSL Color Picker</a> by <a href="http://brandonmathis.com">Brandon Mathis </a></small></footer>
+      </section><!-- /.hslpicker -->
+
+      <section id="arc90-container" class="arc90-wrapper">
+        <!-- <a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a> -->
+        <form action="http://localhost/~bram/playground/color/c-tiles16/colorscheming/index.html" method="get" accept-charset="utf-8" class="inactive" id="arc90-form">
+          <ul id="arc90-content" class="arc90-content clearfix">
+
+            <li id="arc90-swatch1" class="arc90-listItem arc90-swatch1 arc90-swatchContainer">
+            <p class="arc90-swatchLabel">Input color</p>
+            <div class="arc90-swatch">
+              <div id="arc90-colorInput"  class="arc90-colorInput">
+                <label for="arc90-color">#</label>
+                <input type="text" name="arc90-color" id="arc90-color" class="arc90-color arc90-input" maxlength="6" placeholder="0183B7" />
+                <div id="initialHelp" class="initialHelp">
+                  &larr; Copy and paste the hex code: <br class="clear"/>the one you found above
+                </div>
+              </div>
+
+              <div class="arc90-swatchPointer"></div>
+            </div>
+            </li>
+
+            <li id="arc90-swatch2" class="arc90-listItem arc90-swatch2 arc90-swatchContainer">
+            <p class="arc90-swatchLabel">Output color</p>
+            <div class="arc90-swatch"><span id="arc90-colorOutput" class="arc90-colorOutput"></span></div>
+            </li>
+
+            <li class="arc90-listItem">
+            <div id="arc90-codeOutput" class="arc90-codeOutput">
+              <input type="text" id="arc90-code"  class="arc90-input" tabindex="-1" readonly="readonly" placeholder="Fiddle with the sliders to get the SASS" />
+            </div>
+            <div class="arc90-codeHelp">
+              <p>Copy and use the code below:</p>
+            </div>
+            </li>
+
+            <li class="arc90-listItem slider">
+            <a href="#" class="arc90-reset">Reset</a>
+            <input type="range" min="0" max="100" id="slider_l" class="arc90-input" />
+            <label for="slider_l">&larr; darken | lighten &rarr;</label>
+            </li>
+            <li class="arc90-listItem slider">
+            <a href="#" class="arc90-reset">Reset</a>
+            <input type="range" min="0" max="100" id="slider_s" class="arc90-input"/>
+            <label for="slider_s">&larr; desaturate | saturate &rarr;</label>
+            </li>
+            <li class="arc90-listItem slider">
+            <a href="#" class="arc90-reset">Reset</a>
+            <input type="range" min="0" max="360" id="slider_h" class="arc90-input" />
+            <label for="slider_h">&larr; adjust hue &rarr;</label>
+            </li>
+          </ul>
+        </form>
+        <footer class="section-footer"><small><a href="http://sassme.arc90.com/">SassMe</a> by <a href="http://arc90.com">Arc90</a></small></footer>
+      </section><!-- /.arc90-wrapper -->
+
+      <section class="colorblend-table bl-start">
+        <div class="styleswitcher">
+          <ul class="dropdown">
+            <li class="drop"><a href="#">Choose a Blendcolor</a>
+            <ul class="sub_menu">
+              <li><a class="styleswitch switchto-blend-yellow" href="#!">yellow</a></li>
+              <li><a class="styleswitch switchto-blend-orange" href="#!">orange</a></li>
+              <li><a class="styleswitch switchto-blend-red" href="#!">red</a></li>
+              <li><a class="styleswitch switchto-blend-magenta" href="#!">magenta</a></li>
+              <li><a class="styleswitch switchto-blend-violet" href="#!">violet</a></li>
+              <li><a class="styleswitch switchto-blend-blue" href="#!">blue</a></li>
+              <li><a class="styleswitch switchto-blend-cyan" href="#!">cyan</a></li>
+              <li><a class="styleswitch switchto-blend-green" href="#!">green</a></li>
+            </ul>
+            </li>
+          </ul>
+        </div><!-- /.styleswitcher> -->
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px"
+          height="1024px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024">
+          <g id="bv_00">
+          <rect                class="bv_00_6-25"  width="64" height="64"/>
+          <rect x="64"         class="bv_00_12-50" width="64" height="64"/>
+          <rect x="128"        class="bv_00_18-75" width="64" height="64"/>
+          <rect x="192"        class="bv_00_25"    width="64" height="64"/>
+          <rect x="256"        class="bv_00_31-25" width="64" height="64"/>
+          <rect x="320"        class="bv_00_37-5"  width="64" height="64"/>
+          <rect x="384"        class="bv_00_43-75" width="64" height="64"/>
+          <rect x="448"        class="bv_00_50"    width="64" height="64"/>
+          <rect x="512"        class="bv_00_56-25" width="64" height="64"/>
+          <rect x="576"        class="bv_00_62-5"  width="64" height="64"/>
+          <rect x="640"        class="bv_00_68-75" width="64" height="64"/>
+          <rect x="704"        class="bv_00_75"    width="64" height="64"/>
+          <rect x="768"        class="bv_00_81-25" width="64" height="64"/>
+          <rect x="832"        class="bv_00_87-5"  width="64" height="64"/>
+          <rect x="896"        class="bv_00_93-75" width="64" height="64"/>
+          <rect x="960"        class="bv_00_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_01">
+          <rect y="64"         class="bv_01_6-25"  width="64" height="64"/>
+          <rect x="64"  y="64" class="bv_01_12-50" width="64" height="64"/>
+          <rect x="128" y="64" class="bv_01_18-75" width="64" height="64"/>
+          <rect x="192" y="64" class="bv_01_25"    width="64" height="64"/>
+          <rect x="256" y="64" class="bv_01_31-25" width="64" height="64"/>
+          <rect x="320" y="64" class="bv_01_37-5"  width="64" height="64"/>
+          <rect x="384" y="64" class="bv_01_43-75" width="64" height="64"/>
+          <rect x="448" y="64" class="bv_01_50"    width="64" height="64"/>
+          <rect x="512" y="64" class="bv_01_56-25" width="64" height="64"/>
+          <rect x="576" y="64" class="bv_01_62-5"  width="64" height="64"/>
+          <rect x="640" y="64" class="bv_01_68-75" width="64" height="64"/>
+          <rect x="704" y="64" class="bv_01_75"    width="64" height="64"/>
+          <rect x="768" y="64" class="bv_01_81-25" width="64" height="64"/>
+          <rect x="832" y="64" class="bv_01_87-5"  width="64" height="64"/>
+          <rect x="896" y="64" class="bv_01_93-75" width="64" height="64"/>
+          <rect x="960" y="64" class="bv_01_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_02">
+          <rect y="128"         class="bv_02_6-25"  width="64" height="64"/>
+          <rect x="64"  y="128" class="bv_02_12-50" width="64" height="64"/>
+          <rect x="128" y="128" class="bv_02_18-75" width="64" height="64"/>
+          <rect x="192" y="128" class="bv_02_25"    width="64" height="64"/>
+          <rect x="256" y="128" class="bv_02_31-25" width="64" height="64"/>
+          <rect x="320" y="128" class="bv_02_37-5"  width="64" height="64"/>
+          <rect x="384" y="128" class="bv_02_43-75" width="64" height="64"/>
+          <rect x="448" y="128" class="bv_02_50"    width="64" height="64"/>
+          <rect x="512" y="128" class="bv_02_56-25" width="64" height="64"/>
+          <rect x="576" y="128" class="bv_02_62-5"  width="64" height="64"/>
+          <rect x="640" y="128" class="bv_02_68-75" width="64" height="64"/>
+          <rect x="704" y="128" class="bv_02_75"    width="64" height="64"/>
+          <rect x="768" y="128" class="bv_02_81-25" width="64" height="64"/>
+          <rect x="832" y="128" class="bv_02_87-5"  width="64" height="64"/>
+          <rect x="896" y="128" class="bv_02_93-75" width="64" height="64"/>
+          <rect x="960" y="128" class="bv_02_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_03">
+          <rect y="192"         class="bv_03_6-25"  width="64" height="64"/>
+          <rect x="64" y="192"  class="bv_03_12-50" width="64" height="64"/>
+          <rect x="128" y="192" class="bv_03_18-75" width="64" height="64"/>
+          <rect x="192" y="192" class="bv_03_25"    width="64" height="64"/>
+          <rect x="256" y="192" class="bv_03_31-25" width="64" height="64"/>
+          <rect x="320" y="192" class="bv_03_37-5"  width="64" height="64"/>
+          <rect x="384" y="192" class="bv_03_43-75" width="64" height="64"/>
+          <rect x="448" y="192" class="bv_03_50"    width="64" height="64"/>
+          <rect x="512" y="192" class="bv_03_56-25" width="64" height="64"/>
+          <rect x="576" y="192" class="bv_03_62-5"  width="64" height="64"/>
+          <rect x="640" y="192" class="bv_03_68-75" width="64" height="64"/>
+          <rect x="704" y="192" class="bv_03_75"    width="64" height="64"/>
+          <rect x="768" y="192" class="bv_03_81-25" width="64" height="64"/>
+          <rect x="832" y="192" class="bv_03_87-5"  width="64" height="64"/>
+          <rect x="896" y="192" class="bv_03_93-75" width="64" height="64"/>
+          <rect x="960" y="192" class="bv_03_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_04">
+          <rect y="256"         class="bv_04_6-25"  width="64" height="64"/>
+          <rect x="64"  y="256" class="bv_04_12-50" width="64" height="64"/>
+          <rect x="128" y="256" class="bv_04_18-75" width="64" height="64"/>
+          <rect x="192" y="256" class="bv_04_25"    width="64" height="64"/>
+          <rect x="256" y="256" class="bv_04_31-25" width="64" height="64"/>
+          <rect x="320" y="256" class="bv_04_37-5"  width="64" height="64"/>
+          <rect x="384" y="256" class="bv_04_43-75" width="64" height="64"/>
+          <rect x="448" y="256" class="bv_04_50"    width="64" height="64"/>
+          <rect x="512" y="256" class="bv_04_56-25" width="64" height="64"/>
+          <rect x="576" y="256" class="bv_04_62-5"  width="64" height="64"/>
+          <rect x="640" y="256" class="bv_04_68-75" width="64" height="64"/>
+          <rect x="704" y="256" class="bv_04_75"    width="64" height="64"/>
+          <rect x="768" y="256" class="bv_04_81-25" width="64" height="64"/>
+          <rect x="832" y="256" class="bv_04_87-5"  width="64" height="64"/>
+          <rect x="896" y="256" class="bv_04_93-75" width="64" height="64"/>
+          <rect x="960" y="256" class="bv_04_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_05">
+          <rect y="320"         class="bv_05_6-25"  width="64" height="64"/>
+          <rect x="64"  y="320" class="bv_05_12-50" width="64" height="64"/>
+          <rect x="128" y="320" class="bv_05_18-75" width="64" height="64"/>
+          <rect x="192" y="320" class="bv_05_25"    width="64" height="64"/>
+          <rect x="256" y="320" class="bv_05_31-25" width="64" height="64"/>
+          <rect x="320" y="320" class="bv_05_37-5"  width="64" height="64"/>
+          <rect x="384" y="320" class="bv_05_43-75" width="64" height="64"/>
+          <rect x="448" y="320" class="bv_05_50"    width="64" height="64"/>
+          <rect x="512" y="320" class="bv_05_56-25" width="64" height="64"/>
+          <rect x="576" y="320" class="bv_05_62-5"  width="64" height="64"/>
+          <rect x="640" y="320" class="bv_05_68-75" width="64" height="64"/>
+          <rect x="704" y="320" class="bv_05_75"    width="64" height="64"/>
+          <rect x="768" y="320" class="bv_05_81-25" width="64" height="64"/>
+          <rect x="832" y="320" class="bv_05_87-5"  width="64" height="64"/>
+          <rect x="896" y="320" class="bv_05_93-75" width="64" height="64"/>
+          <rect x="960" y="320" class="bv_05_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_06">
+          <rect y="384"         class="bv_06_6-25"  width="64" height="64"/>
+          <rect x="64"  y="384" class="bv_06_12-50" width="64" height="64"/>
+          <rect x="128" y="384" class="bv_06_18-75" width="64" height="64"/>
+          <rect x="192" y="384" class="bv_06_25"    width="64" height="64"/>
+          <rect x="256" y="384" class="bv_06_31-25" width="64" height="64"/>
+          <rect x="320" y="384" class="bv_06_37-5"  width="64" height="64"/>
+          <rect x="384" y="384" class="bv_06_43-75" width="64" height="64"/>
+          <rect x="448" y="384" class="bv_06_50"    width="64" height="64"/>
+          <rect x="512" y="384" class="bv_06_56-25" width="64" height="64"/>
+          <rect x="576" y="384" class="bv_06_62-5"  width="64" height="64"/>
+          <rect x="640" y="384" class="bv_06_68-75" width="64" height="64"/>
+          <rect x="704" y="384" class="bv_06_75"    width="64" height="64"/>
+          <rect x="768" y="384" class="bv_06_81-25" width="64" height="64"/>
+          <rect x="832" y="384" class="bv_06_87-5"  width="64" height="64"/>
+          <rect x="896" y="384" class="bv_06_93-75" width="64" height="64"/>
+          <rect x="960" y="384" class="bv_06_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_07">
+          <rect y="448"         class="bv_07_6-25"  width="64" height="64"/>
+          <rect x="64"  y="448" class="bv_07_12-50" width="64" height="64"/>
+          <rect x="128" y="448" class="bv_07_18-75" width="64" height="64"/>
+          <rect x="192" y="448" class="bv_07_25"    width="64" height="64"/>
+          <rect x="256" y="448" class="bv_07_31-25" width="64" height="64"/>
+          <rect x="320" y="448" class="bv_07_37-5"  width="64" height="64"/>
+          <rect x="384" y="448" class="bv_07_43-75" width="64" height="64"/>
+          <rect x="448" y="448" class="bv_07_50"    width="64" height="64"/>
+          <rect x="512" y="448" class="bv_07_56-25" width="64" height="64"/>
+          <rect x="576" y="448" class="bv_07_62-5"  width="64" height="64"/>
+          <rect x="640" y="448" class="bv_07_68-75" width="64" height="64"/>
+          <rect x="704" y="448" class="bv_07_75"    width="64" height="64"/>
+          <rect x="768" y="448" class="bv_07_81-25" width="64" height="64"/>
+          <rect x="832" y="448" class="bv_07_87-5"  width="64" height="64"/>
+          <rect x="896" y="448" class="bv_07_93-75" width="64" height="64"/>
+          <rect x="960" y="448" class="bv_07_100"   width="64" height="64"/>
+          </g>
+          <g id="bv_y">
+          <rect y="512"         class="bv_y_6-25"   width="64" height="64"/>
+          <rect x="64"  y="512" class="bv_y_12-50"  width="64" height="64"/>
+          <rect x="128" y="512" class="bv_y_18-75"  width="64" height="64"/>
+          <rect x="192" y="512" class="bv_y_25"     width="64" height="64"/>
+          <rect x="256" y="512" class="bv_y_31-25"  width="64" height="64"/>
+          <rect x="320" y="512" class="bv_y_37-5"   width="64" height="64"/>
+          <rect x="384" y="512" class="bv_y_43-75"  width="64" height="64"/>
+          <rect x="448" y="512" class="bv_y_50"     width="64" height="64"/>
+          <rect x="512" y="512" class="bv_y_56-25"  width="64" height="64"/>
+          <rect x="576" y="512" class="bv_y_62-5"   width="64" height="64"/>
+          <rect x="640" y="512" class="bv_y_68-75"  width="64" height="64"/>
+          <rect x="704" y="512" class="bv_y_75"     width="64" height="64"/>
+          <rect x="768" y="512" class="bv_y_81-25"  width="64" height="64"/>
+          <rect x="832" y="512" class="bv_y_87-5"   width="64" height="64"/>
+          <rect x="896" y="512" class="bv_y_93-75"  width="64" height="64"/>
+          <rect x="960" y="512" class="bv_y_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_o">
+          <rect y="576"         class="bv_o_6-25"   width="64" height="64"/>
+          <rect x="64"  y="576" class="bv_o_12-50"  width="64" height="64"/>
+          <rect x="128" y="576" class="bv_o_18-75"  width="64" height="64"/>
+          <rect x="192" y="576" class="bv_o_25"     width="64" height="64"/>
+          <rect x="256" y="576" class="bv_o_31-25"  width="64" height="64"/>
+          <rect x="320" y="576" class="bv_o_37-5"   width="64" height="64"/>
+          <rect x="384" y="576" class="bv_o_43-75"  width="64" height="64"/>
+          <rect x="448" y="576" class="bv_o_50"     width="64" height="64"/>
+          <rect x="512" y="576" class="bv_o_56-25"  width="64" height="64"/>
+          <rect x="576" y="576" class="bv_o_62-5"   width="64" height="64"/>
+          <rect x="640" y="576" class="bv_o_68-75"  width="64" height="64"/>
+          <rect x="704" y="576" class="bv_o_75"     width="64" height="64"/>
+          <rect x="768" y="576" class="bv_o_81-25"  width="64" height="64"/>
+          <rect x="832" y="576" class="bv_o_87-5"   width="64" height="64"/>
+          <rect x="896" y="576" class="bv_o_93-75"  width="64" height="64"/>
+          <rect x="960" y="576" class="bv_o_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_r">
+          <rect y="640"         class="bv_r_6-25"   width="64" height="64"/>
+          <rect x="64"  y="640" class="bv_r_12-50"  width="64" height="64"/>
+          <rect x="128" y="640" class="bv_r_18-75"  width="64" height="64"/>
+          <rect x="192" y="640" class="bv_r_25"     width="64" height="64"/>
+          <rect x="256" y="640" class="bv_r_31-25"  width="64" height="64"/>
+          <rect x="320" y="640" class="bv_r_37-5"   width="64" height="64"/>
+          <rect x="384" y="640" class="bv_r_43-75"  width="64" height="64"/>
+          <rect x="448" y="640" class="bv_r_50"     width="64" height="64"/>
+          <rect x="512" y="640" class="bv_r_56-25"  width="64" height="64"/>
+          <rect x="576" y="640" class="bv_r_62-5"   width="64" height="64"/>
+          <rect x="640" y="640" class="bv_r_68-75"  width="64" height="64"/>
+          <rect x="704" y="640" class="bv_r_75"     width="64" height="64"/>
+          <rect x="768" y="640" class="bv_r_81-25"  width="64" height="64"/>
+          <rect x="832" y="640" class="bv_r_87-5"   width="64" height="64"/>
+          <rect x="896" y="640" class="bv_r_93-75"  width="64" height="64"/>
+          <rect x="960" y="640" class="bv_r_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_m">
+          <rect y="704"         class="bv_m_6-25"   width="64" height="64"/>
+          <rect x="64"  y="704" class="bv_m_12-50"  width="64" height="64"/>
+          <rect x="128" y="704" class="bv_m_18-75"  width="64" height="64"/>
+          <rect x="192" y="704" class="bv_m_25"     width="64" height="64"/>
+          <rect x="256" y="704" class="bv_m_31-25"  width="64" height="64"/>
+          <rect x="320" y="704" class="bv_m_37-5"   width="64" height="64"/>
+          <rect x="384" y="704" class="bv_m_43-75"  width="64" height="64"/>
+          <rect x="448" y="704" class="bv_m_50"     width="64" height="64"/>
+          <rect x="512" y="704" class="bv_m_56-25"  width="64" height="64"/>
+          <rect x="576" y="704" class="bv_m_62-5"   width="64" height="64"/>
+          <rect x="640" y="704" class="bv_m_68-75"  width="64" height="64"/>
+          <rect x="704" y="704" class="bv_m_75"     width="64" height="64"/>
+          <rect x="768" y="704" class="bv_m_81-25"  width="64" height="64"/>
+          <rect x="832" y="704" class="bv_m_87-5"   width="64" height="64"/>
+          <rect x="896" y="704" class="bv_m_93-75"  width="64" height="64"/>
+          <rect x="960" y="704" class="bv_m_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_v">
+          <rect y="768"         class="bv_v_6-25"   width="64" height="64"/>
+          <rect x="64"  y="768" class="bv_v_12-50"  width="64" height="64"/>
+          <rect x="128" y="768" class="bv_v_18-75"  width="64" height="64"/>
+          <rect x="192" y="768" class="bv_v_25"     width="64" height="64"/>
+          <rect x="256" y="768" class="bv_v_31-25"  width="64" height="64"/>
+          <rect x="320" y="768" class="bv_v_37-5"   width="64" height="64"/>
+          <rect x="384" y="768" class="bv_v_43-75"  width="64" height="64"/>
+          <rect x="448" y="768" class="bv_v_50"     width="64" height="64"/>
+          <rect x="512" y="768" class="bv_v_56-25"  width="64" height="64"/>
+          <rect x="576" y="768" class="bv_v_62-5"   width="64" height="64"/>
+          <rect x="640" y="768" class="bv_v_68-75"  width="64" height="64"/>
+          <rect x="704" y="768" class="bv_v_75"     width="64" height="64"/>
+          <rect x="768" y="768" class="bv_v_81-25"  width="64" height="64"/>
+          <rect x="832" y="768" class="bv_v_87-5"   width="64" height="64"/>
+          <rect x="896" y="768" class="bv_v_93-75"  width="64" height="64"/>
+          <rect x="960" y="768" class="bv_v_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_b">
+          <rect y="832"         class="bv_b_6-25"   width="64" height="64"/>
+          <rect x="64"  y="832" class="bv_b_12-50"  width="64" height="64"/>
+          <rect x="128" y="832" class="bv_b_18-75"  width="64" height="64"/>
+          <rect x="192" y="832" class="bv_b_25"     width="64" height="64"/>
+          <rect x="256" y="832" class="bv_b_31-25"  width="64" height="64"/>
+          <rect x="320" y="832" class="bv_b_37-5"   width="64" height="64"/>
+          <rect x="384" y="832" class="bv_b_43-75"  width="64" height="64"/>
+          <rect x="448" y="832" class="bv_b_50"     width="64" height="64"/>
+          <rect x="512" y="832" class="bv_b_56-25"  width="64" height="64"/>
+          <rect x="576" y="832" class="bv_b_62-5"   width="64" height="64"/>
+          <rect x="640" y="832" class="bv_b_68-75"  width="64" height="64"/>
+          <rect x="704" y="832" class="bv_b_75"     width="64" height="64"/>
+          <rect x="768" y="832" class="bv_b_81-25"  width="64" height="64"/>
+          <rect x="832" y="832" class="bv_b_87-5"   width="64" height="64"/>
+          <rect x="896" y="832" class="bv_b_93-75"  width="64" height="64"/>
+          <rect x="960" y="832" class="bv_b_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_c">
+          <rect y="896"         class="bv_c_6-25"   width="64" height="64"/>
+          <rect x="64"  y="896" class="bv_c_12-50"  width="64" height="64"/>
+          <rect x="128" y="896" class="bv_c_18-75"  width="64" height="64"/>
+          <rect x="192" y="896" class="bv_c_25"     width="64" height="64"/>
+          <rect x="256" y="896" class="bv_c_31-25"  width="64" height="64"/>
+          <rect x="320" y="896" class="bv_c_37-5"   width="64" height="64"/>
+          <rect x="384" y="896" class="bv_c_43-75"  width="64" height="64"/>
+          <rect x="448" y="896" class="bv_c_50"     width="64" height="64"/>
+          <rect x="512" y="896" class="bv_c_56-25"  width="64" height="64"/>
+          <rect x="576" y="896" class="bv_c_62-5"   width="64" height="64"/>
+          <rect x="640" y="896" class="bv_c_68-75"  width="64" height="64"/>
+          <rect x="704" y="896" class="bv_c_75"     width="64" height="64"/>
+          <rect x="768" y="896" class="bv_c_81-25"  width="64" height="64"/>
+          <rect x="832" y="896" class="bv_c_87-5"   width="64" height="64"/>
+          <rect x="896" y="896" class="bv_c_93-75"  width="64" height="64"/>
+          <rect x="960" y="896" class="bv_c_100"    width="64" height="64"/>
+          </g>
+          <g id="bv_g">
+          <rect y="960"         class="bv_g_6-25"   width="64" height="64"/>
+          <rect x="64"  y="960" class="bv_g_12-50"  width="64" height="64"/>
+          <rect x="128" y="960" class="bv_g_18-75"  width="64" height="64"/>
+          <rect x="192" y="960" class="bv_g_25"     width="64" height="64"/>
+          <rect x="256" y="960" class="bv_g_31-25"  width="64" height="64"/>
+          <rect x="320" y="960" class="bv_g_37-5"   width="64" height="64"/>
+          <rect x="384" y="960" class="bv_g_43-75"  width="64" height="64"/>
+          <rect x="448" y="960" class="bv_g_50"     width="64" height="64"/>
+          <rect x="512" y="960" class="bv_g_56-25"  width="64" height="64"/>
+          <rect x="576" y="960" class="bv_g_62-5"   width="64" height="64"/>
+          <rect x="640" y="960" class="bv_g_68-75"  width="64" height="64"/>
+          <rect x="704" y="960" class="bv_g_75"     width="64" height="64"/>
+          <rect x="768" y="960" class="bv_g_81-25"  width="64" height="64"/>
+          <rect x="832" y="960" class="bv_g_87-5"   width="64" height="64"/>
+          <rect x="896" y="960" class="bv_g_93-75"  width="64" height="64"/>
+          <rect x="960" y="960" class="bv_g_100"    width="64" height="64"/>
+          </g>
+        </svg>
+
+        <div class="code-container">
+          <h3>Sass Syntax - mix colorfunction</h3>
+
+          <pre class="  language-scss"><code class=" language-scss">
+.blue-mix-yellow {
+   color: mix($base16-yellow,$base16-blue,31.25%);
+  // #6186B7
+}
+          </code></pre>
+        </div><!-- /.code-container -->
+
+      </section>
+
+
+    </aside>
+
+
+    <div class="styleswitcher">
+      <ul class="dropdown">
+        <li class="drop"><a href="#">Choose a Colorscheme</a>
+        <ul class="sub_menu">
+          <li><a class="styleswitch switchto-ctiles16-custom" href="?ctiles16-custom.css" title="ctiles16-custom">custom</a></li>
+          <!-- <li><a class="styleswitch switchto-ctiles16-ctiles" href="?ctiles16-ctiles.css" title="ctiles16-ctiles">ctiles</a></li> -->
+          <li><a class="styleswitch switchto-ctiles16-3024" href="?ctiles16-3024.css" title="ctiles16-3024">3024</a></li>
+          <li><a class="styleswitch switchto-ctiles16-chalk" href="?ctiles16-chalk.css" title="ctiles16-chalk">Chalk</a></li>
+          <li><a class="styleswitch switchto-ctiles16-eighties" href="?ctiles16-eighties.css" title="ctiles16-eighties">Eighties</a></li>
+          <li><a class="styleswitch switchto-ctiles16-greenscreen" href="?ctiles16-greenscreen.css" title="ctiles16-greenscreen">Greenscreen</a></li>
+          <li><a class="styleswitch switchto-ctiles16-mocha" href="?ctiles16-mocha.css" title="ctiles16-mocha">Mocha</a></li>
+          <li><a class="styleswitch switchto-ctiles16-monokai" href="?ctiles16-monokai.css" title="ctiles16-monokai">Monokai</a></li>
+          <li><a class="styleswitch switchto-ctiles16-ocean" href="?ctiles16-ocean.css" title="ctiles16-ocean">Ocean</a></li>
+          <li><a class="styleswitch switchto-ctiles16-railscasts" href="?ctiles16-railscasts.css" title="ctiles16-railscasts">Railscasts</a></li>
+          <!-- <li><a class="styleswitch switchto-ctiles16-shapeshifter" href="?ctiles16-shapeshifter.css" title="ctiles16-shapeshifter">Shapeshifter</a></li> -->
+          <li><a class="styleswitch switchto-ctiles16-solarized" href="?ctiles16-solarized.css" title="ctiles16-solarized">Solarized</a></li>
+          <li><a class="styleswitch switchto-ctiles16-tomorrow" href="?ctiles16-tomorrow.css" title="ctiles16-tomorrow">Tomorrow</a></li>
+          <li><a class="styleswitch switchto-ctiles16-atelierforest" href="?ctiles16-atelierforest" title="ctiles16-atelierforest">Atelierforest</a></li>
+          <li><a class="styleswitch switchto-ctiles16-atelierheath" href="?ctiles16-atelierheath" title="ctiles16-atelierheath">Atelierheath</a></li>
+          <li><a class="styleswitch switchto-ctiles16-atelierlakeside" href="?ctiles16-atelierlakeside" title="ctiles16-atelierlakeside">Atelierlakeside</a></li>
+          <li><a class="styleswitch switchto-ctiles16-atelierseaside is-selected" href="?ctiles16-atelierseaside" title="ctiles16-atelierseaside">Atelierseaside</a></li>
+          <li><a class="styleswitch switchto-ctiles16-atelierdune" href="?ctiles16-atelierdune" title="ctiles16-atelierdune">Atelierdune</a></li>
+          <li><a class="styleswitch switchto-ctiles16-flatui" href="?ctiles16-flatui" title="flat ui">Flatui</a></li>
+          <li><a class="styleswitch switchto-ctiles16-pantone2014spring" href="?ctiles16-pantone2014spring" title="pantone 2014 spring">Pantone Spring 2014</a></li>
+          <!-- <li><a class="styleswitch switchto-ctiles16-newdefaults" href="?ctiles16-newdefaults" title="newdefaults">New Defaults</a></li> -->
         </ul>
-      </div><!-- /.styleswitcher> -->
-
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px"
-        height="1024px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024">
-        <g id="bv_00">
-        <rect                class="bv_00_6-25"  width="64" height="64"/>
-        <rect x="64"         class="bv_00_12-50" width="64" height="64"/>
-        <rect x="128"        class="bv_00_18-75" width="64" height="64"/>
-        <rect x="192"        class="bv_00_25"    width="64" height="64"/>
-        <rect x="256"        class="bv_00_31-25" width="64" height="64"/>
-        <rect x="320"        class="bv_00_37-5"  width="64" height="64"/>
-        <rect x="384"        class="bv_00_43-75" width="64" height="64"/>
-        <rect x="448"        class="bv_00_50"    width="64" height="64"/>
-        <rect x="512"        class="bv_00_56-25" width="64" height="64"/>
-        <rect x="576"        class="bv_00_62-5"  width="64" height="64"/>
-        <rect x="640"        class="bv_00_68-75" width="64" height="64"/>
-        <rect x="704"        class="bv_00_75"    width="64" height="64"/>
-        <rect x="768"        class="bv_00_81-25" width="64" height="64"/>
-        <rect x="832"        class="bv_00_87-5"  width="64" height="64"/>
-        <rect x="896"        class="bv_00_93-75" width="64" height="64"/>
-        <rect x="960"        class="bv_00_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_01">
-        <rect y="64"         class="bv_01_6-25"  width="64" height="64"/>
-        <rect x="64"  y="64" class="bv_01_12-50" width="64" height="64"/>
-        <rect x="128" y="64" class="bv_01_18-75" width="64" height="64"/>
-        <rect x="192" y="64" class="bv_01_25"    width="64" height="64"/>
-        <rect x="256" y="64" class="bv_01_31-25" width="64" height="64"/>
-        <rect x="320" y="64" class="bv_01_37-5"  width="64" height="64"/>
-        <rect x="384" y="64" class="bv_01_43-75" width="64" height="64"/>
-        <rect x="448" y="64" class="bv_01_50"    width="64" height="64"/>
-        <rect x="512" y="64" class="bv_01_56-25" width="64" height="64"/>
-        <rect x="576" y="64" class="bv_01_62-5"  width="64" height="64"/>
-        <rect x="640" y="64" class="bv_01_68-75" width="64" height="64"/>
-        <rect x="704" y="64" class="bv_01_75"    width="64" height="64"/>
-        <rect x="768" y="64" class="bv_01_81-25" width="64" height="64"/>
-        <rect x="832" y="64" class="bv_01_87-5"  width="64" height="64"/>
-        <rect x="896" y="64" class="bv_01_93-75" width="64" height="64"/>
-        <rect x="960" y="64" class="bv_01_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_02">
-        <rect y="128"         class="bv_02_6-25"  width="64" height="64"/>
-        <rect x="64"  y="128" class="bv_02_12-50" width="64" height="64"/>
-        <rect x="128" y="128" class="bv_02_18-75" width="64" height="64"/>
-        <rect x="192" y="128" class="bv_02_25"    width="64" height="64"/>
-        <rect x="256" y="128" class="bv_02_31-25" width="64" height="64"/>
-        <rect x="320" y="128" class="bv_02_37-5"  width="64" height="64"/>
-        <rect x="384" y="128" class="bv_02_43-75" width="64" height="64"/>
-        <rect x="448" y="128" class="bv_02_50"    width="64" height="64"/>
-        <rect x="512" y="128" class="bv_02_56-25" width="64" height="64"/>
-        <rect x="576" y="128" class="bv_02_62-5"  width="64" height="64"/>
-        <rect x="640" y="128" class="bv_02_68-75" width="64" height="64"/>
-        <rect x="704" y="128" class="bv_02_75"    width="64" height="64"/>
-        <rect x="768" y="128" class="bv_02_81-25" width="64" height="64"/>
-        <rect x="832" y="128" class="bv_02_87-5"  width="64" height="64"/>
-        <rect x="896" y="128" class="bv_02_93-75" width="64" height="64"/>
-        <rect x="960" y="128" class="bv_02_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_03">
-        <rect y="192"         class="bv_03_6-25"  width="64" height="64"/>
-        <rect x="64" y="192"  class="bv_03_12-50" width="64" height="64"/>
-        <rect x="128" y="192" class="bv_03_18-75" width="64" height="64"/>
-        <rect x="192" y="192" class="bv_03_25"    width="64" height="64"/>
-        <rect x="256" y="192" class="bv_03_31-25" width="64" height="64"/>
-        <rect x="320" y="192" class="bv_03_37-5"  width="64" height="64"/>
-        <rect x="384" y="192" class="bv_03_43-75" width="64" height="64"/>
-        <rect x="448" y="192" class="bv_03_50"    width="64" height="64"/>
-        <rect x="512" y="192" class="bv_03_56-25" width="64" height="64"/>
-        <rect x="576" y="192" class="bv_03_62-5"  width="64" height="64"/>
-        <rect x="640" y="192" class="bv_03_68-75" width="64" height="64"/>
-        <rect x="704" y="192" class="bv_03_75"    width="64" height="64"/>
-        <rect x="768" y="192" class="bv_03_81-25" width="64" height="64"/>
-        <rect x="832" y="192" class="bv_03_87-5"  width="64" height="64"/>
-        <rect x="896" y="192" class="bv_03_93-75" width="64" height="64"/>
-        <rect x="960" y="192" class="bv_03_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_04">
-        <rect y="256"         class="bv_04_6-25"  width="64" height="64"/>
-        <rect x="64"  y="256" class="bv_04_12-50" width="64" height="64"/>
-        <rect x="128" y="256" class="bv_04_18-75" width="64" height="64"/>
-        <rect x="192" y="256" class="bv_04_25"    width="64" height="64"/>
-        <rect x="256" y="256" class="bv_04_31-25" width="64" height="64"/>
-        <rect x="320" y="256" class="bv_04_37-5"  width="64" height="64"/>
-        <rect x="384" y="256" class="bv_04_43-75" width="64" height="64"/>
-        <rect x="448" y="256" class="bv_04_50"    width="64" height="64"/>
-        <rect x="512" y="256" class="bv_04_56-25" width="64" height="64"/>
-        <rect x="576" y="256" class="bv_04_62-5"  width="64" height="64"/>
-        <rect x="640" y="256" class="bv_04_68-75" width="64" height="64"/>
-        <rect x="704" y="256" class="bv_04_75"    width="64" height="64"/>
-        <rect x="768" y="256" class="bv_04_81-25" width="64" height="64"/>
-        <rect x="832" y="256" class="bv_04_87-5"  width="64" height="64"/>
-        <rect x="896" y="256" class="bv_04_93-75" width="64" height="64"/>
-        <rect x="960" y="256" class="bv_04_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_05">
-        <rect y="320"         class="bv_05_6-25"  width="64" height="64"/>
-        <rect x="64"  y="320" class="bv_05_12-50" width="64" height="64"/>
-        <rect x="128" y="320" class="bv_05_18-75" width="64" height="64"/>
-        <rect x="192" y="320" class="bv_05_25"    width="64" height="64"/>
-        <rect x="256" y="320" class="bv_05_31-25" width="64" height="64"/>
-        <rect x="320" y="320" class="bv_05_37-5"  width="64" height="64"/>
-        <rect x="384" y="320" class="bv_05_43-75" width="64" height="64"/>
-        <rect x="448" y="320" class="bv_05_50"    width="64" height="64"/>
-        <rect x="512" y="320" class="bv_05_56-25" width="64" height="64"/>
-        <rect x="576" y="320" class="bv_05_62-5"  width="64" height="64"/>
-        <rect x="640" y="320" class="bv_05_68-75" width="64" height="64"/>
-        <rect x="704" y="320" class="bv_05_75"    width="64" height="64"/>
-        <rect x="768" y="320" class="bv_05_81-25" width="64" height="64"/>
-        <rect x="832" y="320" class="bv_05_87-5"  width="64" height="64"/>
-        <rect x="896" y="320" class="bv_05_93-75" width="64" height="64"/>
-        <rect x="960" y="320" class="bv_05_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_06">
-        <rect y="384"         class="bv_06_6-25"  width="64" height="64"/>
-        <rect x="64"  y="384" class="bv_06_12-50" width="64" height="64"/>
-        <rect x="128" y="384" class="bv_06_18-75" width="64" height="64"/>
-        <rect x="192" y="384" class="bv_06_25"    width="64" height="64"/>
-        <rect x="256" y="384" class="bv_06_31-25" width="64" height="64"/>
-        <rect x="320" y="384" class="bv_06_37-5"  width="64" height="64"/>
-        <rect x="384" y="384" class="bv_06_43-75" width="64" height="64"/>
-        <rect x="448" y="384" class="bv_06_50"    width="64" height="64"/>
-        <rect x="512" y="384" class="bv_06_56-25" width="64" height="64"/>
-        <rect x="576" y="384" class="bv_06_62-5"  width="64" height="64"/>
-        <rect x="640" y="384" class="bv_06_68-75" width="64" height="64"/>
-        <rect x="704" y="384" class="bv_06_75"    width="64" height="64"/>
-        <rect x="768" y="384" class="bv_06_81-25" width="64" height="64"/>
-        <rect x="832" y="384" class="bv_06_87-5"  width="64" height="64"/>
-        <rect x="896" y="384" class="bv_06_93-75" width="64" height="64"/>
-        <rect x="960" y="384" class="bv_06_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_07">
-        <rect y="448"         class="bv_07_6-25"  width="64" height="64"/>
-        <rect x="64"  y="448" class="bv_07_12-50" width="64" height="64"/>
-        <rect x="128" y="448" class="bv_07_18-75" width="64" height="64"/>
-        <rect x="192" y="448" class="bv_07_25"    width="64" height="64"/>
-        <rect x="256" y="448" class="bv_07_31-25" width="64" height="64"/>
-        <rect x="320" y="448" class="bv_07_37-5"  width="64" height="64"/>
-        <rect x="384" y="448" class="bv_07_43-75" width="64" height="64"/>
-        <rect x="448" y="448" class="bv_07_50"    width="64" height="64"/>
-        <rect x="512" y="448" class="bv_07_56-25" width="64" height="64"/>
-        <rect x="576" y="448" class="bv_07_62-5"  width="64" height="64"/>
-        <rect x="640" y="448" class="bv_07_68-75" width="64" height="64"/>
-        <rect x="704" y="448" class="bv_07_75"    width="64" height="64"/>
-        <rect x="768" y="448" class="bv_07_81-25" width="64" height="64"/>
-        <rect x="832" y="448" class="bv_07_87-5"  width="64" height="64"/>
-        <rect x="896" y="448" class="bv_07_93-75" width="64" height="64"/>
-        <rect x="960" y="448" class="bv_07_100"   width="64" height="64"/>
-        </g>
-        <g id="bv_y">
-        <rect y="512"         class="bv_y_6-25"   width="64" height="64"/>
-        <rect x="64"  y="512" class="bv_y_12-50"  width="64" height="64"/>
-        <rect x="128" y="512" class="bv_y_18-75"  width="64" height="64"/>
-        <rect x="192" y="512" class="bv_y_25"     width="64" height="64"/>
-        <rect x="256" y="512" class="bv_y_31-25"  width="64" height="64"/>
-        <rect x="320" y="512" class="bv_y_37-5"   width="64" height="64"/>
-        <rect x="384" y="512" class="bv_y_43-75"  width="64" height="64"/>
-        <rect x="448" y="512" class="bv_y_50"     width="64" height="64"/>
-        <rect x="512" y="512" class="bv_y_56-25"  width="64" height="64"/>
-        <rect x="576" y="512" class="bv_y_62-5"   width="64" height="64"/>
-        <rect x="640" y="512" class="bv_y_68-75"  width="64" height="64"/>
-        <rect x="704" y="512" class="bv_y_75"     width="64" height="64"/>
-        <rect x="768" y="512" class="bv_y_81-25"  width="64" height="64"/>
-        <rect x="832" y="512" class="bv_y_87-5"   width="64" height="64"/>
-        <rect x="896" y="512" class="bv_y_93-75"  width="64" height="64"/>
-        <rect x="960" y="512" class="bv_y_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_o">
-        <rect y="576"         class="bv_o_6-25"   width="64" height="64"/>
-        <rect x="64"  y="576" class="bv_o_12-50"  width="64" height="64"/>
-        <rect x="128" y="576" class="bv_o_18-75"  width="64" height="64"/>
-        <rect x="192" y="576" class="bv_o_25"     width="64" height="64"/>
-        <rect x="256" y="576" class="bv_o_31-25"  width="64" height="64"/>
-        <rect x="320" y="576" class="bv_o_37-5"   width="64" height="64"/>
-        <rect x="384" y="576" class="bv_o_43-75"  width="64" height="64"/>
-        <rect x="448" y="576" class="bv_o_50"     width="64" height="64"/>
-        <rect x="512" y="576" class="bv_o_56-25"  width="64" height="64"/>
-        <rect x="576" y="576" class="bv_o_62-5"   width="64" height="64"/>
-        <rect x="640" y="576" class="bv_o_68-75"  width="64" height="64"/>
-        <rect x="704" y="576" class="bv_o_75"     width="64" height="64"/>
-        <rect x="768" y="576" class="bv_o_81-25"  width="64" height="64"/>
-        <rect x="832" y="576" class="bv_o_87-5"   width="64" height="64"/>
-        <rect x="896" y="576" class="bv_o_93-75"  width="64" height="64"/>
-        <rect x="960" y="576" class="bv_o_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_r">
-        <rect y="640"         class="bv_r_6-25"   width="64" height="64"/>
-        <rect x="64"  y="640" class="bv_r_12-50"  width="64" height="64"/>
-        <rect x="128" y="640" class="bv_r_18-75"  width="64" height="64"/>
-        <rect x="192" y="640" class="bv_r_25"     width="64" height="64"/>
-        <rect x="256" y="640" class="bv_r_31-25"  width="64" height="64"/>
-        <rect x="320" y="640" class="bv_r_37-5"   width="64" height="64"/>
-        <rect x="384" y="640" class="bv_r_43-75"  width="64" height="64"/>
-        <rect x="448" y="640" class="bv_r_50"     width="64" height="64"/>
-        <rect x="512" y="640" class="bv_r_56-25"  width="64" height="64"/>
-        <rect x="576" y="640" class="bv_r_62-5"   width="64" height="64"/>
-        <rect x="640" y="640" class="bv_r_68-75"  width="64" height="64"/>
-        <rect x="704" y="640" class="bv_r_75"     width="64" height="64"/>
-        <rect x="768" y="640" class="bv_r_81-25"  width="64" height="64"/>
-        <rect x="832" y="640" class="bv_r_87-5"   width="64" height="64"/>
-        <rect x="896" y="640" class="bv_r_93-75"  width="64" height="64"/>
-        <rect x="960" y="640" class="bv_r_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_m">
-        <rect y="704"         class="bv_m_6-25"   width="64" height="64"/>
-        <rect x="64"  y="704" class="bv_m_12-50"  width="64" height="64"/>
-        <rect x="128" y="704" class="bv_m_18-75"  width="64" height="64"/>
-        <rect x="192" y="704" class="bv_m_25"     width="64" height="64"/>
-        <rect x="256" y="704" class="bv_m_31-25"  width="64" height="64"/>
-        <rect x="320" y="704" class="bv_m_37-5"   width="64" height="64"/>
-        <rect x="384" y="704" class="bv_m_43-75"  width="64" height="64"/>
-        <rect x="448" y="704" class="bv_m_50"     width="64" height="64"/>
-        <rect x="512" y="704" class="bv_m_56-25"  width="64" height="64"/>
-        <rect x="576" y="704" class="bv_m_62-5"   width="64" height="64"/>
-        <rect x="640" y="704" class="bv_m_68-75"  width="64" height="64"/>
-        <rect x="704" y="704" class="bv_m_75"     width="64" height="64"/>
-        <rect x="768" y="704" class="bv_m_81-25"  width="64" height="64"/>
-        <rect x="832" y="704" class="bv_m_87-5"   width="64" height="64"/>
-        <rect x="896" y="704" class="bv_m_93-75"  width="64" height="64"/>
-        <rect x="960" y="704" class="bv_m_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_v">
-        <rect y="768"         class="bv_v_6-25"   width="64" height="64"/>
-        <rect x="64"  y="768" class="bv_v_12-50"  width="64" height="64"/>
-        <rect x="128" y="768" class="bv_v_18-75"  width="64" height="64"/>
-        <rect x="192" y="768" class="bv_v_25"     width="64" height="64"/>
-        <rect x="256" y="768" class="bv_v_31-25"  width="64" height="64"/>
-        <rect x="320" y="768" class="bv_v_37-5"   width="64" height="64"/>
-        <rect x="384" y="768" class="bv_v_43-75"  width="64" height="64"/>
-        <rect x="448" y="768" class="bv_v_50"     width="64" height="64"/>
-        <rect x="512" y="768" class="bv_v_56-25"  width="64" height="64"/>
-        <rect x="576" y="768" class="bv_v_62-5"   width="64" height="64"/>
-        <rect x="640" y="768" class="bv_v_68-75"  width="64" height="64"/>
-        <rect x="704" y="768" class="bv_v_75"     width="64" height="64"/>
-        <rect x="768" y="768" class="bv_v_81-25"  width="64" height="64"/>
-        <rect x="832" y="768" class="bv_v_87-5"   width="64" height="64"/>
-        <rect x="896" y="768" class="bv_v_93-75"  width="64" height="64"/>
-        <rect x="960" y="768" class="bv_v_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_b">
-        <rect y="832"         class="bv_b_6-25"   width="64" height="64"/>
-        <rect x="64"  y="832" class="bv_b_12-50"  width="64" height="64"/>
-        <rect x="128" y="832" class="bv_b_18-75"  width="64" height="64"/>
-        <rect x="192" y="832" class="bv_b_25"     width="64" height="64"/>
-        <rect x="256" y="832" class="bv_b_31-25"  width="64" height="64"/>
-        <rect x="320" y="832" class="bv_b_37-5"   width="64" height="64"/>
-        <rect x="384" y="832" class="bv_b_43-75"  width="64" height="64"/>
-        <rect x="448" y="832" class="bv_b_50"     width="64" height="64"/>
-        <rect x="512" y="832" class="bv_b_56-25"  width="64" height="64"/>
-        <rect x="576" y="832" class="bv_b_62-5"   width="64" height="64"/>
-        <rect x="640" y="832" class="bv_b_68-75"  width="64" height="64"/>
-        <rect x="704" y="832" class="bv_b_75"     width="64" height="64"/>
-        <rect x="768" y="832" class="bv_b_81-25"  width="64" height="64"/>
-        <rect x="832" y="832" class="bv_b_87-5"   width="64" height="64"/>
-        <rect x="896" y="832" class="bv_b_93-75"  width="64" height="64"/>
-        <rect x="960" y="832" class="bv_b_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_c">
-        <rect y="896"         class="bv_c_6-25"   width="64" height="64"/>
-        <rect x="64"  y="896" class="bv_c_12-50"  width="64" height="64"/>
-        <rect x="128" y="896" class="bv_c_18-75"  width="64" height="64"/>
-        <rect x="192" y="896" class="bv_c_25"     width="64" height="64"/>
-        <rect x="256" y="896" class="bv_c_31-25"  width="64" height="64"/>
-        <rect x="320" y="896" class="bv_c_37-5"   width="64" height="64"/>
-        <rect x="384" y="896" class="bv_c_43-75"  width="64" height="64"/>
-        <rect x="448" y="896" class="bv_c_50"     width="64" height="64"/>
-        <rect x="512" y="896" class="bv_c_56-25"  width="64" height="64"/>
-        <rect x="576" y="896" class="bv_c_62-5"   width="64" height="64"/>
-        <rect x="640" y="896" class="bv_c_68-75"  width="64" height="64"/>
-        <rect x="704" y="896" class="bv_c_75"     width="64" height="64"/>
-        <rect x="768" y="896" class="bv_c_81-25"  width="64" height="64"/>
-        <rect x="832" y="896" class="bv_c_87-5"   width="64" height="64"/>
-        <rect x="896" y="896" class="bv_c_93-75"  width="64" height="64"/>
-        <rect x="960" y="896" class="bv_c_100"    width="64" height="64"/>
-        </g>
-        <g id="bv_g">
-        <rect y="960"         class="bv_g_6-25"   width="64" height="64"/>
-        <rect x="64"  y="960" class="bv_g_12-50"  width="64" height="64"/>
-        <rect x="128" y="960" class="bv_g_18-75"  width="64" height="64"/>
-        <rect x="192" y="960" class="bv_g_25"     width="64" height="64"/>
-        <rect x="256" y="960" class="bv_g_31-25"  width="64" height="64"/>
-        <rect x="320" y="960" class="bv_g_37-5"   width="64" height="64"/>
-        <rect x="384" y="960" class="bv_g_43-75"  width="64" height="64"/>
-        <rect x="448" y="960" class="bv_g_50"     width="64" height="64"/>
-        <rect x="512" y="960" class="bv_g_56-25"  width="64" height="64"/>
-        <rect x="576" y="960" class="bv_g_62-5"   width="64" height="64"/>
-        <rect x="640" y="960" class="bv_g_68-75"  width="64" height="64"/>
-        <rect x="704" y="960" class="bv_g_75"     width="64" height="64"/>
-        <rect x="768" y="960" class="bv_g_81-25"  width="64" height="64"/>
-        <rect x="832" y="960" class="bv_g_87-5"   width="64" height="64"/>
-        <rect x="896" y="960" class="bv_g_93-75"  width="64" height="64"/>
-        <rect x="960" y="960" class="bv_g_100"    width="64" height="64"/>
-        </g>
-      </svg>
-
-      <div class="code-container">
-        <h3>Sass Syntax - mix colorfunction</h3>
-
-        <pre class="  language-scss"><code class=" language-scss"><span class="token selector">.blue-mix-yellow </span><span class="token punctuation">{</span>
-  <span class="token property">color</span><span class="token punctuation">:</span> mix(<span class="token variable">$base16-yellow</span>,<span class="token variable">$base16-blue</span>,31.25%)<span class="token punctuation">;</span>
-  <span class="token comment" spellcheck="true">// #6186B7
-        </span><span class="token punctuation">}</span></code></pre>
-      </div><!-- /.code-container -->
-
-    </section>
-
-
-  </aside>
-
-
-  <div class="styleswitcher">
-    <ul class="dropdown">
-      <li class="drop"><a href="#">Choose a Colorscheme</a>
-      <ul class="sub_menu">
-        <li><a class="styleswitch switchto-ctiles16-custom" href="?ctiles16-custom.css" title="ctiles16-custom">custom</a></li>
-        <!-- <li><a class="styleswitch switchto-ctiles16-ctiles" href="?ctiles16-ctiles.css" title="ctiles16-ctiles">ctiles</a></li> -->
-        <li><a class="styleswitch switchto-ctiles16-3024" href="?ctiles16-3024.css" title="ctiles16-3024">3024</a></li>
-        <li><a class="styleswitch switchto-ctiles16-chalk" href="?ctiles16-chalk.css" title="ctiles16-chalk">Chalk</a></li>
-        <li><a class="styleswitch switchto-ctiles16-eighties" href="?ctiles16-eighties.css" title="ctiles16-eighties">Eighties</a></li>
-        <li><a class="styleswitch switchto-ctiles16-greenscreen" href="?ctiles16-greenscreen.css" title="ctiles16-greenscreen">Greenscreen</a></li>
-        <li><a class="styleswitch switchto-ctiles16-mocha" href="?ctiles16-mocha.css" title="ctiles16-mocha">Mocha</a></li>
-        <li><a class="styleswitch switchto-ctiles16-monokai" href="?ctiles16-monokai.css" title="ctiles16-monokai">Monokai</a></li>
-        <li><a class="styleswitch switchto-ctiles16-ocean" href="?ctiles16-ocean.css" title="ctiles16-ocean">Ocean</a></li>
-        <li><a class="styleswitch switchto-ctiles16-railscasts" href="?ctiles16-railscasts.css" title="ctiles16-railscasts">Railscasts</a></li>
-        <!-- <li><a class="styleswitch switchto-ctiles16-shapeshifter" href="?ctiles16-shapeshifter.css" title="ctiles16-shapeshifter">Shapeshifter</a></li> -->
-        <li><a class="styleswitch switchto-ctiles16-solarized" href="?ctiles16-solarized.css" title="ctiles16-solarized">Solarized</a></li>
-        <li><a class="styleswitch switchto-ctiles16-tomorrow" href="?ctiles16-tomorrow.css" title="ctiles16-tomorrow">Tomorrow</a></li>
-        <li><a class="styleswitch switchto-ctiles16-atelierforest" href="?ctiles16-atelierforest" title="ctiles16-atelierforest">Atelierforest</a></li>
-        <li><a class="styleswitch switchto-ctiles16-atelierheath" href="?ctiles16-atelierheath" title="ctiles16-atelierheath">Atelierheath</a></li>
-        <li><a class="styleswitch switchto-ctiles16-atelierlakeside" href="?ctiles16-atelierlakeside" title="ctiles16-atelierlakeside">Atelierlakeside</a></li>
-        <li><a class="styleswitch switchto-ctiles16-atelierseaside is-selected" href="?ctiles16-atelierseaside" title="ctiles16-atelierseaside">Atelierseaside</a></li>
-        <li><a class="styleswitch switchto-ctiles16-atelierdune" href="?ctiles16-atelierdune" title="ctiles16-atelierdune">Atelierdune</a></li>
-        <li><a class="styleswitch switchto-ctiles16-flatui" href="?ctiles16-flatui" title="flat ui">Flatui</a></li>
-        <li><a class="styleswitch switchto-ctiles16-pantone2014spring" href="?ctiles16-pantone2014spring" title="pantone 2014 spring">Pantone Spring 2014</a></li>
+        </li>
       </ul>
-      </li>
-    </ul>
-  </div><!-- /.styleswitcher> -->
-  <button id="bgToggle" class="btn btn--bg-toggle">toggle bg-color</button>
+    </div><!-- /.styleswitcher> -->
+    <button id="bgToggle" class="btn btn--bg-toggle">toggle bg-color</button>
 
-</div><!-- /.centered #wrapper-->
+  </div><!-- /.centered #wrapper-->
 
-<footer class="footer">
-  <div class="copyright">
-    <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
-    <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
-  </div>
-  <div class="box--forkme"><a href="http://github.com/atelierbram/c-tiles16" target="_blank" class="forkme">github<span>fork me on</span></a></div>
-</footer>
+  <footer class="footer">
+    <div class="copyright">
+      <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
+      <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
+    </div>
+    <div class="box--forkme"><a href="http://github.com/atelierbram/c-tiles16" target="_blank" class="forkme">github<span>fork me on</span></a></div>
+  </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
 
-<script src="../assets/js/dropdown-menu.js"></script>
-<script src="../assets/js/styleswitcher.js"></script>
-<script src="../assets/js/color-functions.js"></script>
-<script src="../assets/js/hsl-picker-max.js"></script>
-<script src="../assets/js/arc90-Color.js"></script>
-<script src="../assets/js/arc90-Transforms.js"></script>
-<script src="../assets/js/arc90.js"></script>
-<!-- <script src="../assets/js/ctiles.min.js"></script> -->
-<!--initiate hslpicker-->
-<script>
+  <!-- <script src="../assets/js/dropdown-menu.js"></script> -->
+  <!-- <script src="../assets/js/styleswitcher.js"></script> -->
+  <!-- <script src="../assets/js/buttons.js"></script> -->
+  <!-- <script src="../assets/js/text-color.js"></script> -->
+  <!-- <script src="../assets/js/color-functions.js"></script> -->
+  <!-- <script src="../assets/js/hsl-picker-max.js"></script> -->
+  <!-- <script src="../assets/js/arc90-Color.js"></script> -->
+  <!-- <script src="../assets/js/arc90-Transforms.js"></script> -->
+  <!-- <script src="../assets/js/arc90.js"></script> -->
+  <!-- <script src="../assets/js/libs/prism-comp-scss.min.js"></script> -->
+  <script src="../assets/js/ctiles.min.js"></script>
+  <!--initiate hslpicker-->
+  <script>
 $(document).ready(function(){
     site = require('site')()
     });
-</script>
-</body>
+  </script>
+  </body>
 
-</html>
+  </html>
