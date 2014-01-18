@@ -1,0 +1,163 @@
+$colors-list:
+$orange
+$green
+$cyan
+$blue
+$magenta;
+
+
+@for $i from 1 through length($colors-list) {
+
+  .color-scale--list-#{$i} {
+    @include bg-tonic($scale-tonic: nth($colors-list, $i),$light:25)
+  }
+  .color-scale--list-#{$i} li:nth-of-type(1) {
+    @include bg-cooler-6($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(2) {
+    @include bg-cooler-5($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(3) {
+    @include bg-cooler-4($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(4) {
+    @include bg-cooler-3($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(5) {
+    @include bg-cooler-2($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(6) {
+    @include bg-cooler-1($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(7) {
+    background-color: nth($colors-list, $i);
+  }
+  .color-scale--list-#{$i} li:nth-of-type(8) {
+    @include bg-warmer-1($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(9) {
+    @include bg-warmer-2($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(10) {
+    @include bg-warmer-3($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(11) {
+    @include bg-warmer-4($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(12) {
+    @include bg-warmer-5($scale-tonic: nth($colors-list, $i))
+  }
+  .color-scale--list-#{$i} li:nth-of-type(13) {
+    @include bg-warmer-6($scale-tonic: nth($colors-list, $i))
+  }
+
+}
+
+.box {
+  width: 100%;
+}
+.box--demo {
+  min-height: 200px;
+  @include bg-warmer-3(tan,$sat:-15,$light:15);
+}
+
+/* ===== general / layout  ===== */
+.header {
+  overflow: hidden;
+}
+.centered {
+  // @include zen-grid-background();
+}
+
+.article {
+  overflow: visible;
+}
+.pagetitle {
+  font-size: 3em;
+  margin: 1em 0 0 0;
+  padding-left: .5em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.pagetitle,
+.pagetitle a {
+  @include fg-cooler-2($base16-orange);
+}
+
+.pagetitle a:hover {
+  @include fg-cooler-2($base16-violet,$sat: 5,$light:-5);
+}
+.byline {
+  font-size: 1.125em;
+  padding-top: 0;
+  padding-left: 2em;
+  margin: 0;
+}
+.color-scale {
+  padding-left: 16px;
+  padding-right: 16px;
+  clear: both;
+}
+.color-scale--list {
+  @extend %grid-item;
+  width: 100%;
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.color-scale--list li {
+  // float: left;
+  padding: 1.5em;
+}
+.article p {
+  margin: 0 1em;
+}
+.code-container {
+  width: 100%;
+}
+.p-note {
+  @include bg-warmer-2($base16-green,$sat:-15,$light:45);
+  border: 1px solid adjust-color($base16-cyan,$hue: -5,$saturation: -15,$lightness: 30);
+}
+.article .p-note {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.article p:last-child {
+  margin-bottom: 5em;
+}
+
+@media only screen and (min-width:450px) {
+  .color-scale--list {
+    width: 20%;
+  }
+
+  .code-container {
+    max-width: 32em;
+  }
+}
+@media only screen and (min-width:1100px) {
+  .pagetitle {
+    margin-top: .25em;
+  }
+  .color-scale {
+    @include zen-grid-item(4,1);
+    margin-right: auto;
+  }
+  .article {
+    overflow: auto;
+  }
+  .pagetitle {
+    padding-left: 42.5%;
+    padding-left: calc(40% + .75em);
+    // padding-left: 2em;
+  }
+  .byline {
+    // padding-left: 6em;
+    padding-left: 42.5%;
+    padding-left: calc(40% + 3em);
+  }
+
+}

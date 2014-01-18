@@ -1,0 +1,85 @@
+$scale-tonic: hsl(236, 100%, 50%) !default; // #01f
+/* ===== derivatives  ===== */
+
+/* ===== mixins for scaling of text-color (fg=foreground) ===== */
+@mixin fg-cooler-1($scale-tonic,$hu:-6,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-cooler-2($scale-tonic,$hu:-12,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-cooler-3($scale-tonic,$hu:-18,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-cooler-4($scale-tonic,$hu:-24,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-cooler-5($scale-tonic,$hu:-30,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-cooler-6($scale-tonic,$hu:-36,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-tonic($scale-tonic,$hu:0,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-1($scale-tonic,$hu:6,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-2($scale-tonic,$hu:12,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-3($scale-tonic,$hu:18,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-4($scale-tonic,$hu:24,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-5($scale-tonic,$hu:30,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin fg-warmer-6($scale-tonic,$hu:36,$sat:0,$light:0) {
+  color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+
+/* ===== mixins for scaling of background-color  ===== */
+@mixin bg-cooler-1($scale-tonic,$hu:-6,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-cooler-2($scale-tonic,$hu:-12,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-cooler-3($scale-tonic,$hu:-18,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-cooler-4($scale-tonic,$hu:-24,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-cooler-5($scale-tonic,$hu:-30,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-cooler-6($scale-tonic,$hu:-36,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-tonic($scale-tonic,$hu:0,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-1($scale-tonic,$hu:6,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-2($scale-tonic,$hu:12,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-3($scale-tonic,$hu:18,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-4($scale-tonic,$hu:24,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-5($scale-tonic,$hu:30,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+@mixin bg-warmer-6($scale-tonic,$hu:36,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,$hue:$hu,$saturation:$sat,$lightness:$light)
+}
+

@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>c-Tiles16 - Colorscheming with Sixteen Variables</title>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="../assets/css/scaling.css" id="stylesheet" />
+<!-- <link rel="stylesheet" href="../assets/css/ctiles16-pantone2014spring.css" id="stylesheet" /> -->
+<link id="favicon" rel="shortcut icon" type="image/x-icon" href="../assets/img/ui/favicon.ico" />
+<link rel="apple-touch-icon" href="../assets/img/ui/apple-touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/img/ui/apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/img/ui/apple-touch-icon-iphone4.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/img/ui/apple-touch-icon-ipad3.png" />
+
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Colection of colorscheming tools, purposely and conveniently together in one webpage"/>
+<link rel="author" href="https://plus.google.com/111567145811003203990/posts">
+<script src="../assets/js/libs/modernizr.custom.min.js"></script>
+</head>
+
+<body class="scaling">
+
+<header class="header">
+  <div class="centered">
+    <a href="http://github.com/atelierbram/c-tiles16" id="svgLogo" class="logo">
+      <img src="../assets/img/svg/logo_96x96.svg" alt="logo c-Tiles16, Colorscheming with Variables">
+    </a><!-- /.logo #svgLogo -->
+
+    <h1 id="appTitle" class="foreground-color">c-Tiles16</h1>
+    <p class="tagline"><b>Colorscheming with Variables</b></p>
+
+    <a class="btn btn--ctiles btn--top-action btn--base16-cyan" href="index.html#7b8a8e">go colorscheming!</a>
+  </div>
+</header>
+<div id="wrapper" class="centered">
+
+
+  <h2 class="pagetitle"><a href="http://atelierbram.github.io/c-tiles16/colorscheming/scaling.html">Color Scaling by Adjusting</a></h2>
+
+  <p class="byline">Colorscheme color variations workflow with <code class="code">adjust&#8211;color</code> Sass mixins</p>
+
+  <div class="color-scale">
+    <ul class="color-scale--list color-scale--list-1"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+    <ul class="color-scale--list color-scale--list-2"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+    <ul class="color-scale--list color-scale--list-3"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+    <ul class="color-scale--list color-scale--list-4"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+    <ul class="color-scale--list color-scale--list-5"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+  </div>
+  <!-- <div class="overflow"> -->
+  <article class="article">
+
+  <p class="intro">The background&#8211;colors for these five demo color&#8211;scales, together, encircle the complete color&#8211;gamut, each scale in twelve steps (of six degrees) incremental hue&#8211;value from one base&#8211;color, made with Sass mixins.
+  </p>
+  <!-- <p> -->
+  <!--The mixins in this example come from that one base-color.-->
+  <!-- </p> -->
+  <p class="p-note">
+  A well&#8211;tried way of using color in web&#8211;development is adjusting the temperature, lightness and saturation from a (colorscheme&#8211;)color, for a specific text&#8211;, background&#8211;, or border&#8211;color. Using Sass for this common use&#8211;case can, (besides speeding up the process) make the logic behind the making of color&#8211;variations from a colorscheme clearer, because the origin of the chosen color&#8211;value, in relation to the colorscheme, is right there in the declaration. Also having mixins available for this, can compress the code you have to write.
+  </p>
+  <div id="code-container" class="container code-container">
+    <!-- <h3>Sass Syntax - scss</h3> -->
+    <p>Consider the Sass source code for the <code>p.note</code> from above:</p>
+    <pre class="language-scss"><code class="language-scss">
+.note {
+  @include bg-warmer-2($base16-green,$sat:-15,$light:45);
+  border: 1px solid adjust-color($base16-cyan,
+                                 $hue:-5,
+                                 $saturation:-15,
+                                 $lightness:30);
+}
+    </code></pre>
+  </div>
+  <p>
+  The first declaration is including the Sass mixin for the background&#8211;color, and the second is a similar declaration for the border, but not abstracted away in a mixin.
+  </p>
+  <p>
+  At the end of the day it&#8217;s a matter of preference. The only limitation with these mixins, really, is the six&#8211;degree&#8211;hue&#8211;step. In practice this is quite workable I find, but when one needs finer tuning, then it&#8217;s back to using the Sass color&#8211;functions on their own.</p>
+
+   <div id="code-container" class="container code-container">
+    <p>Sass mixin example:</p>
+    <pre class="language-scss"><code class="language-scss">
+@mixin bg-warmer-2($scale-tonic,$hu:12,$sat:0,$light:0) {
+  background-color: adjust-color($scale-tonic,
+                                 $hue:$hu:
+                                 $saturation:$sat,
+                                 $lightness:$light)
+}
+    </code></pre>
+    <p>Taking this a step further would be making mixins for modules, complete with gradients, borders, box&#8211;shadow etc.; which will make sense as long as the code is reusable.</p>
+    <p><a href="#!">on Codepen</a></p>
+  </div>
+
+  </article>
+
+</div><!-- /.centered #wrapper-->
+
+<footer class="footer">
+  <div class="copyright">
+    <small>&copy; 2013 <a href="http://atelierbramdehaan.nl/">Bram de Haan</a></small>
+    <small>Released under <a href="http://atelierbram.mit-license.org">MIT Licence</a></small>
+  </div>
+  <div class="box--forkme"><a href="http://github.com/atelierbram/c-tiles16" target="_blank" class="forkme">github<span>fork me on</span></a></div>
+</footer>
+<script src="../assets/js/libs/prism-comp-scss.min.js"></script>
+</body>
+
+</html>
+

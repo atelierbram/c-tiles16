@@ -177,6 +177,7 @@ samp {
   font-size: 0.875em;
 }
 /* ===== Github styles  ===== */
+.code,
 .article p > code,
 .article li > code,
 .accordion code {
@@ -309,13 +310,19 @@ input::-moz-focus-inner {
   padding-left: 22px;
 }
 
-/* ===== README styles of index page  ===== */
+/* ===== Typography  ===== */
 .article {
+  font-size: 1.125em;
+}
+
+/* ===== README styles of index page  ===== */
+.readme .article {
   padding: 2em 1.5em;
   font-size: 1.125em;
   column-width: 20em;
   column-gap: 2em;
 }
+
 .article p,
 .article ul,
 .article ol {
@@ -325,11 +332,11 @@ input::-moz-focus-inner {
   padding: .5em 0;
   margin: 0;
 }
-.article .intro {
-  font-size: 1.1em;
-  // color: shade($base16-magenta, 35%);
+/* .article */.intro {
+font-size: 1.1em;
+// color: shade($base16-magenta, 35%);
 }
-.article .intro,
+/* .article */.intro,
 .article h3 + p,
 .article h3 + ul,
 .article h3 + ol {

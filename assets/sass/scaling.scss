@@ -1,0 +1,37 @@
+/*
+
+Name: c-Tiles
+Author: Bram de Haan (http://atelierbram.github.io/c-tiles16/colorscheming)
+
+Sass-variables template by Bram de Haan (https://github.com/atelierbram/c-tiles16)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+$base00: #101718;
+$base01: #1f2a2e;
+$base02: #364549;
+$base03: #48575b;
+$base04: #607176;
+$base05: #7b8a8e;
+$base06: #b8d7e0;
+$base07: #f0fbff;
+$base08: #e72357;
+$base09: #ff4f1a;
+$base0a: #e6970f;
+$base0b: #19b38a;
+$base0c: #17a4cf;
+$base0d: #2481f9;
+$base0e: #8357db;
+$base0f: #e830dc;
+
+/* ===== 5 colorcircle colors (quints)  ===== */
+$blue:    hsl(236, 100%, 50%) !default; // #01f
+$magenta: hsl(308, 100%, 50%) !default; // #f0d
+$orange:  hsl( 20, 100%, 50%) !default; // #f50
+$green:   hsl( 92, 100%, 50%) !default; // #7f0
+$cyan:    hsl(160, 100%, 50%) !default; // #0fa
+
+@import "partials/design/default/init";
+@import "partials/modules/scaling";
+@import "partials/design/scaling/layout";
