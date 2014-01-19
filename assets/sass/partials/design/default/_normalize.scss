@@ -394,6 +394,7 @@ font-size: 1.1em;
 .subfooter li {
   @extend %reset;
   text-indent: -.25em;
+  white-space: nowrap;
 }
 .subfooter li a {
   display: inline-block;
