@@ -46,17 +46,19 @@ $zen-auto-include-grid-item-base  : false;
 }
 %sans {
   font-family: pt_sans_narrowregular, AvenirNextCondensed-Regular, DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-weight: normal;
 }
 %sans-condensed {
   font-family: cuprumbold, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
-  // font-weight: 700;
+  font-weight: normal;
 }
 %sans-bold {
   font-family: pt_sans_narrowbold, AvenirNextCondensed-Bold, DejaVuSansCondensed, "Lucida Grande", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 %monospace {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-weight: normal;
 }
 
 %a-center {
