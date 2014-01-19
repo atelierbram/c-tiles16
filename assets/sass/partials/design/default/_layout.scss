@@ -295,16 +295,14 @@ input[type="range"] {
 h4 {
   text-transform: uppercase;
   font-size: 1.25em;
-  @extend %sans-condensed;
+  // @extend %sans-condensed;
 }
 p {
   padding: .5em 0;
 }
 .lorem {
  font-family: $base-font-family;
- // pt_sans_narrowregular, AvenirNextCondensed-Regular, DejaVuSansCondensed, "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-  // @extend %sans;
-  text-align: left;
+ text-align: left;
 }
 
 .pad {
@@ -328,7 +326,7 @@ p {
 .accordion-header {
   background-color: tint($base16-yellow,20%);
   border-bottom: 1px solid darken($base16-yellow,10%);
-  @extend %sans-condensed;
+  @extend %sans-bold;
   font-size: 1.5em;
 }
 .accordion-active {
@@ -364,6 +362,7 @@ p {
 .accordion dt:before {
   content: " \25B6";
   padding-right: 5px;
+  font-size: .75em;
 }
 .accordion .accordion-active:before {
   content: " \25BE";

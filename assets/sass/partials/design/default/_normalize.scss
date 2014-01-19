@@ -48,16 +48,15 @@ body  {
   @extend %sans !optional;
   transition: background-color .5s ease;
 }
-body::before /*,
-.header::before */ {
-content: "";
-position: absolute;
-box-shadow: 0 10px 14px rgba(0,0,0,0.5);
-height: 15px;
-left: 0;
-top: -15px;
-width: 100%;
-z-index: 100;
+body::before {
+  content: "";
+  position: absolute;
+  box-shadow: 0 10px 14px rgba(0,0,0,0.5);
+  height: 15px;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  z-index: 100;
 }
 // mixin defined in _init.scss
 .dark { @include rebase($base00,$base01,$base03,$base04,$base05,$base06,$base07)}
@@ -65,12 +64,12 @@ z-index: 100;
   color: $base00;
 }
 a {
+  @include fg-tonic($base16-violet,$sat:20,$light:-10);
   background: transparent;
-  @extend %linkcolor-dark !optional;
   text-decoration: none;
 }
 .dark a {
-  @extend %linkcolor-light !optional;
+  @include fg-tonic($base16-violet,$sat:20,$light:20);
 }
 
 a:focus {
@@ -84,7 +83,8 @@ a:hover {
   // text-decoration: underline;
 }
 
-h1,h2,h3,h4,h5,h6 { @extend %sans-condensed !optional; }
+h1 { @extend %sans-condensed !optional; }
+h2,h3,h4,h5,h6 { @extend %sans-bold !optional; }
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
   @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
@@ -295,10 +295,12 @@ input::-moz-focus-inner {
 /* ===== custom  ===== */
 
 .note {
-  background-color: lighten($base16-green,35%);
+  @include bg-tonic($base16-green,$sat:-15,$light:45);
+  // background-color: lighten($base16-green,35%);
   margin: 1em 0 !important;
   // padding: 1em !important;
-  border: 1px solid tint($base16-cyan,35%);
+  border: 1px solid adjust-color($base16-cyan,$hue:-5,$saturation:-15,$lightness:30);
+  // border: 1px solid tint($base16-cyan,35%);
   @extend %pad !optional;
 }
 .dark .note {
@@ -356,14 +358,14 @@ font-size: 1.1em;
 .article h2,
 .article h3 {
   @extend %reset;
-  color: scale-color($base16-orange,$lightness: -20%);
+  @include fg-tonic($base16-orange,$hu:-4,$sat:5,$light:-5);
+  // color: scale-color($base16-orange,$lightness: -20%);
 }
 .article pre[class*="language-"] {
   padding: .5em 1em;
 }
 .article footer {
   @extend %mtm !optional;
-
 }
 
 /* ===== .footer  ===== */
@@ -450,6 +452,7 @@ font-size: 1.1em;
   width: 250px;
   text-decoration: none;
   text-align: center;
+  // @extend %sans-bold;
   @extend %sans-condensed;
   font-size: 30px;
   line-height: 32px;

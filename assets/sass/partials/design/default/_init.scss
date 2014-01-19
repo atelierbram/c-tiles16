@@ -52,7 +52,7 @@ $zen-auto-include-grid-item-base  : false;
   // font-weight: 700;
 }
 %sans-bold {
-  font-family: AvenirNextCondensed-Bold, DejaVuSansCondensed, "Lucida Grande", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-family: pt_sans_narrowbold, AvenirNextCondensed-Bold, DejaVuSansCondensed, "Lucida Grande", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   font-weight: bold;
 }
 %monospace {
@@ -88,9 +88,6 @@ $zen-auto-include-grid-item-base  : false;
 %schemegradient {
   background-image: linear-gradient(to right, $base16-yellow, $base16-yellow 12.5%, $base16-orange 12.5%, $base16-orange 25%, $base16-red 25%, $base16-red 37.5%, $base16-magenta 37.5%, $base16-magenta 50%, $base16-violet 50%, $base16-violet 62.5%, $base16-blue 62.5%, $base16-blue 75%, $base16-cyan 75%, $base16-cyan 87.5%, $base16-green 87.5%, $base16-green);
 }
-%linkcolor { color: $base16-violet; }
-%linkcolor-light { color: lighten($base16-violet,15%); }
-%linkcolor-dark { color: darken($base16-violet,5%); }
 
 @mixin rebase($rebase00,$rebase01,$rebase03,$rebase04,$rebase05,$rebase06,$rebase07)
 {
@@ -99,10 +96,10 @@ $zen-auto-include-grid-item-base  : false;
 }
 
 // Import all the parts.
-@import "normalize";
-@import "modules";
 @import "../../zen-grids/grids";
 @import "../../zen-grids/background";
 @import "../../zen-grids/flow";
+@import "modules";
+@import "normalize";
 @import "layout";
 

@@ -7,7 +7,6 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 <link rel="stylesheet" href="../assets/css/scaling.css" id="stylesheet" />
-<!-- <link rel="stylesheet" href="../assets/css/ctiles16-pantone2014spring.css" id="stylesheet" /> -->
 <link id="favicon" rel="shortcut icon" type="image/x-icon" href="../assets/img/ui/favicon.ico" />
 <link rel="apple-touch-icon" href="../assets/img/ui/apple-touch-icon-iphone.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/ui/apple-touch-icon-ipad.png" />
@@ -38,7 +37,7 @@
 <div id="wrapper" class="centered">
 
 
-  <h2 class="pagetitle"><a href="http://atelierbram.github.io/c-tiles16/colorscheming/scaling.html">Color Scaling by Adjusting</a></h2>
+  <h2 class="pagetitle"><a href="http://atelierbram.github.io/c-tiles16/colorscheming/scaling.html">Color Adjusting with Sass Mixins</a></h2>
 
   <p class="byline">Colorscheme color variations workflow with <code class="code">adjust&#8211;color</code> Sass mixins</p>
 
@@ -76,8 +75,6 @@
   <p>
   The first declaration is including the Sass mixin for the background&#8211;color, and the second is a similar declaration for the border, but not abstracted away in a mixin.
   </p>
-  <p>
-  At the end of the day it&#8217;s a matter of preference. The only limitation with these mixins, really, is the six&#8211;degree&#8211;hue&#8211;step. In practice this is quite workable I find, but when one needs finer tuning, then it&#8217;s back to using the Sass color&#8211;functions on their own.</p>
 
    <div class="container code-container">
     <p>Sass mixin example:</p>
@@ -89,7 +86,18 @@
                                  $lightness:$light)
 }
     </code></pre>
+ <p>These mixins are really flexible, because when the six&#8211;degree&#8211;hue&#8211;step is to big, one can adapt it with the <code>$hue variable</code>:
+ </p>
+     <pre class="language-scss"><code class="language-scss">
+@include fg-tonic($base16-orange,$hu:-3,$sat:5,$light:-5);
+}
+     </code></pre>
+
+     <p>But the biggest advantage, in my book, of doing things this way, is to have an easy way to implement the <code>adjust-color</code> function, for this allows you to keep the colors vivid, instead of white-washing or dulling it as you do when mixin colors with white or black, like in <code>lighten</code> <code>tint</code> <code>darken</code> or <code>shade</code> functions.
+     </p>
+
     <p>Taking this a step further would be making mixins for modules, complete with gradients, borders, box&#8211;shadow etc.; which will make sense as long as the code is reusable.</p>
+    <p>Recommended video by Brandon Mathis: <a href="http://brandonmathis.com/blog/2010/09/21/fast-color-theming-with-compass-and-sass/">faster color theming with Compass and Sass</a></p>
         <p>
       <a href="http://codepen.io/atelierbram/pen/EifxK">on Codepen</a> &middot;
       <a href="http://atelierbram.github.io/c-tiles16/colorscheming/scaling.html">on Github</a>

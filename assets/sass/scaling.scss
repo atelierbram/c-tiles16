@@ -33,5 +33,5 @@ $green:   hsl( 92, 100%, 50%) !default; // #7f0
 $cyan:    hsl(160, 100%, 50%) !default; // #0fa
 
 @import "partials/design/default/init";
-@import "partials/modules/scaling";
+// @import "partials/modules/scaling";
 @import "partials/design/scaling/layout";

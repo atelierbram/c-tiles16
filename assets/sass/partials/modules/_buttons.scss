@@ -19,7 +19,7 @@
   vertical-align: top;
   width: auto;
   // font-size: 1.125em;
-  @extend %sans-condensed;
+  @extend %sans-bold;
   background-color: darken($base07,2.5%);
   background-image: linear-gradient(to bottom, $base07, darken($base07,2.5%) 1px, darken($base06,2.5%));
 
