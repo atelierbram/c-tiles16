@@ -60,7 +60,7 @@
   <p class="p-note">
   A well&#8211;tried way of using color in web&#8211;development is adjusting the temperature, lightness and saturation from a (colorscheme&#8211;)color, for a specific text&#8211;, background&#8211;, or border&#8211;color. Using Sass for this common use&#8211;case can, (besides speeding up the process) make the logic behind the making of color&#8211;variations from a colorscheme clearer, because the origin of the chosen color&#8211;value, in relation to the colorscheme, is right there in the declaration. Also having mixins available for this, can compress the code you have to write.
   </p>
-  <div id="code-container" class="container code-container">
+  <div class="container code-container">
     <!-- <h3>Sass Syntax - scss</h3> -->
     <p>Consider the Sass source code for the <code>p.note</code> from above:</p>
     <pre class="language-scss"><code class="language-scss">
@@ -79,7 +79,7 @@
   <p>
   At the end of the day it&#8217;s a matter of preference. The only limitation with these mixins, really, is the six&#8211;degree&#8211;hue&#8211;step. In practice this is quite workable I find, but when one needs finer tuning, then it&#8217;s back to using the Sass color&#8211;functions on their own.</p>
 
-   <div id="code-container" class="container code-container">
+   <div class="container code-container">
     <p>Sass mixin example:</p>
     <pre class="language-scss"><code class="language-scss">
 @mixin bg-warmer-2($scale-tonic,$hu:12,$sat:0,$light:0) {
