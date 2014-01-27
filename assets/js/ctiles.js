@@ -80,7 +80,7 @@ $(function() {
   $(".switchto-ctiles16-monokai").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-monokai.css");return false});
   $(".switchto-ctiles16-ocean").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-ocean.css");return false});
   $(".switchto-ctiles16-railscasts").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-railscasts.css");return false});
-  $(".switchto-ctiles16-shapeshifter").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-shapeshifter.css");return false});
+  $(".switchto-ctiles16-kitchen").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-kitchen.css");return false});
   $(".switchto-ctiles16-solarized").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-solarized.css");return false});
   $(".switchto-ctiles16-tomorrow").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-tomorrow.css");return false});
   $(".styleswitch").click(function(){$(".styleswitch").removeClass("is-selected");$(this).toggleClass("is-selected");return false})
