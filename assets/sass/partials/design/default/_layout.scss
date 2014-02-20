@@ -69,7 +69,7 @@ style[contenteditable]::after {
 .dark .header {
   background-color: $base00;
 }
-$zen-columns: 1;
+$zen-columns: 1 !global;
 .header {
   // @extend %relative;
   position: relative;
@@ -394,7 +394,7 @@ head, style[contenteditable] {display: none;}
 
 // @media only screen and (min-width: 1490px) {
 @media only screen and (min-width: 800px) {
-  $zen-columns: 10;
+  $zen-columns: 10 !global;
 
   .centered {
     // @include zen-grid-background();

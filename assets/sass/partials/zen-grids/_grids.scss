@@ -25,8 +25,8 @@ $box-sizing-polyfill-path         : ""          !default;
 $zen-box-sizing                   : border-box  !default;
 
 // @see http://next.zengrids.com/reference/grids/#legacy-support-for-ie7
-$legacy-support-for-ie7           : false       !default;
-$legacy-support-for-ie6           : false       !default;
+// $legacy-support-for-ie7           : false       !default;
+// $legacy-support-for-ie6           : false       !default;
 
 // Specify the default floating direction for zen's mixins. @see http://next.zengrids.com/reference/grids/#zen-direction
 $zen-direction                    : left        !default;
@@ -47,9 +47,9 @@ $zen-switch-direction             : false       !default;
 ) {
 
   // @TODO: This is a pre-IE8 line of code; don't remember why its needed.
-  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
-    *position: relative;
-  }
+  // @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
+    // *position: relative;
+  // }
 
   // We use the "micro clearfix", instead of Compass' clearfix or pie-clearfix.
   &:before,
@@ -60,9 +60,9 @@ $zen-switch-direction             : false       !default;
   &:after {
     clear: both;
   }
-  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
-    *zoom: 1;
-  }
+  // @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
+    // *zoom: 1;
+  // }
 
   // Un-do the gutter padding of the parent grid item.
   @if $context == flow and $gutter-method == padding {
@@ -122,9 +122,9 @@ $zen-switch-direction             : false       !default;
     #{$dir}: $margin;
     #{$rev}: -100%;
   }
-  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
-    *margin-#{$rev}: -99.9%;
-  }
+  // @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
+  //   *margin-#{$rev}: -99.9%;
+  // }
 
   // Auto-apply the unit base mixin.
   @if $auto-include-grid-item-base {
@@ -178,24 +178,24 @@ $zen-switch-direction             : false       !default;
   // Prevent overflowing content from being hidden beneath other grid items.
   word-wrap: break-word;
 
-  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
-    @if $box-sizing == border-box and $box-sizing-polyfill-path == "" {
-      @warn "Setting $box-sizing to #{$box-sizing} will fail for legacy IE browsers because the $box-sizing-polyfill-path is empty.";
-    }
-    @if $box-sizing-polyfill-path != "" {
-      *behavior: url($box-sizing-polyfill-path);
-    }
-    @if $legacy-support-for-ie6 {
+  // @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) {
+  //   @if $box-sizing == border-box and $box-sizing-polyfill-path == "" {
+  //     @warn "Setting $box-sizing to #{$box-sizing} will fail for legacy IE browsers because the $box-sizing-polyfill-path is empty.";
+  //   }
+    // @if $box-sizing-polyfill-path != "" {
+    //   *behavior: url($box-sizing-polyfill-path);
+    // }
+    // @if $legacy-support-for-ie6 {
       // Display inline or double your floated margin!
       // @see http://www.positioniseverything.net/explorer/doubled-margin.html
-      _display: inline;
+      // _display: inline;
       // Prevent overflowing content from breaking the layout.
-      _overflow: hidden;
+      // _overflow: hidden;
       // In IE6, overflow visible is broken.
       // @see http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
-      _overflow-y: visible;
-    }
-  }
+      // _overflow-y: visible;
+    // }
+  // }
 }
 
 //

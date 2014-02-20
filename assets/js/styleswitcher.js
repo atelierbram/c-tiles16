@@ -1,6 +1,6 @@
 $(function() {
   $(".switchto-ctiles16-flatui").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-flatui.css");return false});
-  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false}); 
+  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false});
   $(".switchto-ctiles16-newdefaults").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-newdefaults.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
@@ -22,6 +22,8 @@ $(function() {
   $(".switchto-ctiles16-shapeshifter").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-shapeshifter.css");return false});
   $(".switchto-ctiles16-solarized").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-solarized.css");return false});
   $(".switchto-ctiles16-tomorrow").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-tomorrow.css");return false});
+  $(".switchto-ctiles16-kitchen").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-kitchen.css");return false});
+  $(".switchto-ctiles16-studio").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-studio.css");return false});
   $(".styleswitch").click(function(){$(".styleswitch").removeClass("is-selected");$(this).toggleClass("is-selected");return false})
 });
 $("#bgToggle").click(function() {

@@ -20,13 +20,13 @@ $h6-font-size: 1.25 * $base-font-size !default;
 $indent-amount: 32px !default;
 
 // Legacy browser variables for Compass.
-$legacy-support-for-ie6           : false;
-$legacy-support-for-ie7           : false;
+// $legacy-support-for-ie6           : false;
+// $legacy-support-for-ie7           : false;
 
 // Set up Zen Grids.
-$zen-columns                      : 1;
-$zen-gutters                      : 32px;
-$zen-auto-include-grid-item-base  : false;
+$zen-columns                      : 1 !default;
+$zen-gutters                      : 32px !default;
+$zen-auto-include-grid-item-base  : false !default;
 
 @import "compass";
 @import "compass/layout";

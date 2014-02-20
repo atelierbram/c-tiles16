@@ -10,13 +10,13 @@
   cursor: pointer;
 }
 
-$b-color: #fff !default;
+// $b-color: #fff !default;
 
 $list: ($base16-yellow, $base16-orange, $base16-red, $base16-magenta, $base16-violet, $base16-blue, $base16-cyan, $base16-green);
 @for $i from 1 through length($list) {
   .bl-#{$i},
   .bl-start {
-    $b-color: nth($list, $i);
+    $b-color: nth($list, $i) !global;
     background-color: grayscale($b-color);
 
     .bv_00_6-25 { fill: mix($b-color,$base00,6.25%); }

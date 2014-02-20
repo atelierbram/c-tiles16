@@ -61,7 +61,7 @@ $(function(){
 
 $(function() {
   $(".switchto-ctiles16-flatui").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-flatui.css");return false});
-  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false}); 
+  $(".switchto-ctiles16-pantone2014spring").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-pantone2014spring.css");return false});
   $(".switchto-ctiles16-newdefaults").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-newdefaults.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
   $(".switchto-ctiles16-custom").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-custom.css");return false});
@@ -81,6 +81,7 @@ $(function() {
   $(".switchto-ctiles16-ocean").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-ocean.css");return false});
   $(".switchto-ctiles16-railscasts").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-railscasts.css");return false});
   $(".switchto-ctiles16-kitchen").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-kitchen.css");return false});
+  $(".switchto-ctiles16-studio").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-studio.css");return false});
   $(".switchto-ctiles16-solarized").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-solarized.css");return false});
   $(".switchto-ctiles16-tomorrow").click(function(){$("#stylesheet").attr("href","../assets/css/ctiles16-tomorrow.css");return false});
   $(".styleswitch").click(function(){$(".styleswitch").removeClass("is-selected");$(this).toggleClass("is-selected");return false})
@@ -801,8 +802,8 @@ $('#btnTint').on('click', function() {
   $('#wrapper').addClass("is-toggled");
 });
 $('#btnTransparentize').on('click', function() {
-  $('#wrapper').toggleClass("is-transparentized"); 
-  $('#wrapper').removeClass("is-tinted"); 
+  $('#wrapper').toggleClass("is-transparentized");
+  $('#wrapper').removeClass("is-tinted");
   $('#wrapper').removeClass('is-color-adjusted');
   $('#wrapper').removeClass('is-scaled');
   $('#wrapper').removeClass('is-hue-adjusted');
@@ -817,10 +818,10 @@ $('#btnTransparentize').on('click', function() {
   $('#wrapper').removeClass("is-not-toggled");
   $('#wrapper').addClass("is-toggled");
 });
- 
+
 $('#btnScale').on('click', function() {
   $('#wrapper').toggleClass("is-scaled");
-  $('#wrapper').removeClass("is-tinted"); 
+  $('#wrapper').removeClass("is-tinted");
   $('#wrapper').removeClass('is-color-adjusted');
   $('#wrapper').removeClass('is-transparentized');
   $('#wrapper').removeClass('is-hue-adjusted');
@@ -837,7 +838,7 @@ $('#btnScale').on('click', function() {
 });
 $('#btnAdjustColor').on('click', function() {
   $('#wrapper').toggleClass("is-color-adjusted");
-  $('#wrapper').removeClass("is-tinted"); 
+  $('#wrapper').removeClass("is-tinted");
   $('#wrapper').removeClass('is-transparentized');
   $('#wrapper').removeClass('is-scaled');
   $('#wrapper').removeClass('is-hue-adjusted');
@@ -3251,7 +3252,7 @@ $(function(){
 
     $('<div id="'+rangeID+'" class="fakeSlider">').slider({ max : rangeMax, min : rangeMin }).insertAfter(r);
     });
-  } 
+  }
 
   // Cache jQuery selectors
   var $slider_l   = $('#slider_l'), // Slider: Lightness
@@ -3414,7 +3415,7 @@ $(function(){
   });
 
 
-  // Clicking the code will select the text in the input and 
+  // Clicking the code will select the text in the input and
   // give you a helpful message
   $codeOutput.data('state', 'default');
   $codeOutput.on('vanish', function(){
@@ -3547,7 +3548,7 @@ $(function(){
     });
   } else {
     $form.on('change', 'input[type=range]', function(e) {
-      var $el = $(e.target), 
+      var $el = $(e.target),
       val = $el.val(),
       id  = $el.attr('id');
     deriveTransformation($el, val, id);

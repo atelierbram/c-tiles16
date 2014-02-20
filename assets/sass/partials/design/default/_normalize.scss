@@ -22,16 +22,11 @@ summary {
 
 html {
   font-family: $base-font-family;
-  @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    font-size: 100% * ($base-font-size / 16px); /* 3 */
-  }
+  font-size: 100% * ($base-font-size / 16px); /* 3 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 
-  @if not $strict-normalize {
-    /* Establish a vertical rhythm unit using $base-line-height. */
-    @include adjust-leading-to(1);
-  }
+  @include adjust-leading-to(1);
 }
 
 input,
@@ -47,6 +42,7 @@ body  {
   @extend %reset !optional;
   @extend %sans !optional;
   transition: background-color .5s ease;
+  outline: 1px dotted tan;
 }
 body::before {
   content: "";
@@ -83,24 +79,16 @@ a:hover {
   // text-decoration: underline;
 }
 
-h1 { @extend %sans-condensed !optional; }
 h2,h3,h4,h5,h6 { @extend %sans-bold !optional; }
 h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    @include adjust-font-size-to( $h1-font-size );
-  }
-  @else {
-    font-size: 1em * ($h1-font-size / $base-font-size);
-  }
+  @extend %sans-condensed !optional; 
+  @include adjust-font-size-to( $h1-font-size );
+  font-size: 1em * ($h1-font-size / $base-font-size);
   margin: 0;
-  // padding: 0 0 .3em 1.55em;
-
   padding: 0 0 .3em 0;
   line-height: 1;
   letter-spacing: -3px;
   color: $base01;
-  // background-color: $base16-orange;
   white-space: nowrap;
 }
 .dark h1 {
@@ -194,14 +182,7 @@ samp {
  */
 
 pre {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  @else {
-    white-space: pre-wrap;
-  }
+  white-space: pre-wrap;
 }
 
 q {
@@ -228,34 +209,30 @@ sub {
   bottom: -0.25em;
 }
 
-@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
 
-  dl,
-  menu,
+dl,
+menu,
+ol,
+ul {
+  margin: .5em 0 1em;
+}
+
+ol,
+ul {
   ol,
   ul {
-    margin: .5em 0 1em;
+    margin: 0;
   }
+}
 
-  @if not $strict-normalize {
-    ol,
-    ul {
-      ol,
-      ul {
-        margin: 0;
-      }
-    }
-  }
+dd {
+  margin: 0 0 0 $indent-amount;
+}
 
-  dd {
-    margin: 0 0 0 $indent-amount;
-  }
-
-  menu,
-  ol,
-  ul {
-    padding: 0 0 0 $indent-amount;
-  }
+menu,
+ol,
+ul {
+  padding: 0 0 0 $indent-amount;
 }
 
 img,
@@ -274,11 +251,7 @@ select,
 textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 2 */
-  margin: 0; /* 3 */
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    vertical-align: baseline; /* 4 */
-    *vertical-align: middle; /* 4 */
-  }
+  margin: 0; /* 3 */ 
 }
 
 button,
