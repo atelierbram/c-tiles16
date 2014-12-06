@@ -1,0 +1,641 @@
+/* line 79, ../sass/pantone2015spring.scss */
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* line 86, ../sass/pantone2015spring.scss */
+html {
+  background: #c6cbcc;
+  -webkit-animation-name: bg-color;
+          animation-name: bg-color;
+  -webkit-animation-duration: 90s;
+          animation-duration: 90s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/* line 94, ../sass/pantone2015spring.scss */
+body {
+  font: 100%/1.5 AvenirNextCondensed-Regular, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 1em;
+  padding-bottom: 3em;
+  width: 42em;
+  color: #111;
+}
+
+/* line 102, ../sass/pantone2015spring.scss */
+h1,
+header p {
+  letter-spacing: -1px;
+  word-spacing: 1px;
+  line-height: 1;
+  font-size: 2.2em;
+  padding: 0 16px;
+  -webkit-animation-name: color;
+          animation-name: color;
+  -webkit-animation-duration: 90s;
+          animation-duration: 90s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/* line 115, ../sass/pantone2015spring.scss */
+h1 {
+  color: #955251;
+  text-transform: capitalize;
+}
+
+/* line 120, ../sass/pantone2015spring.scss */
+header p {
+  color: #955251;
+  font-size: 1.75em;
+  text-align: right;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+/* line 127, ../sass/pantone2015spring.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  background: #8a8587;
+}
+
+/* line 134, ../sass/pantone2015spring.scss */
+col:nth-of-type(1) {
+  background: rgba(0, 0, 0, 0.125);
+  width: 62.5%;
+}
+
+/* line 138, ../sass/pantone2015spring.scss */
+col:nth-of-type(2) {
+  width: 20%;
+}
+
+/* line 141, ../sass/pantone2015spring.scss */
+col:nth-of-type(3) {
+  width: 17.5%;
+}
+
+/* line 144, ../sass/pantone2015spring.scss */
+thead {
+  display: table-header-group;
+}
+
+/* line 147, ../sass/pantone2015spring.scss */
+header,
+thead th {
+  font-family: cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+/* line 152, ../sass/pantone2015spring.scss */
+thead th {
+  border-bottom: 1px solid #333;
+  text-align: right;
+  font-size: 1.125em;
+  background: #a39fa1;
+  text-transform: uppercase;
+}
+
+/* line 159, ../sass/pantone2015spring.scss */
+thead th:nth-of-type(1) {
+  text-align: left;
+}
+
+/* line 163, ../sass/pantone2015spring.scss */
+th[scope="col"] {
+  border-bottom: 3px solid #8a8587;
+}
+
+/* line 166, ../sass/pantone2015spring.scss */
+th[scope="row"] {
+  text-align: left;
+}
+
+/* line 169, ../sass/pantone2015spring.scss */
+th, td {
+  padding: .5em 1em;
+}
+
+/* line 172, ../sass/pantone2015spring.scss */
+td:nth-of-type(1) {
+  text-align: right;
+}
+
+/* line 175, ../sass/pantone2015spring.scss */
+td:nth-of-type(2) {
+  text-align: right;
+}
+
+/* line 178, ../sass/pantone2015spring.scss */
+tr:nth-of-type(1) {
+  background: #9dc6d8;
+  color: #224554;
+}
+
+/* line 182, ../sass/pantone2015spring.scss */
+tr:nth-of-type(2) {
+  background: #00b2ca;
+  color: #002b31;
+}
+
+/* line 186, ../sass/pantone2015spring.scss */
+tr:nth-of-type(3) {
+  background: #7dcfb6;
+  color: #15382d;
+}
+
+/* line 190, ../sass/pantone2015spring.scss */
+tr:nth-of-type(4) {
+  background: #144e89;
+  color: #a9cef3;
+}
+
+/* line 194, ../sass/pantone2015spring.scss */
+tr:nth-of-type(5) {
+  background: #d2b29a;
+  color: #4b3422;
+}
+
+/* line 198, ../sass/pantone2015spring.scss */
+tr:nth-of-type(6) {
+  background: #e3868f;
+  color: #56141a;
+}
+
+/* line 202, ../sass/pantone2015spring.scss */
+tr:nth-of-type(7) {
+  background: #f79256;
+  color: #4a1e04;
+}
+
+/* line 206, ../sass/pantone2015spring.scss */
+tr:nth-of-type(8) {
+  background: #ead98b;
+  color: #645512;
+}
+
+/* line 210, ../sass/pantone2015spring.scss */
+tr:nth-of-type(9) {
+  background: #955251;
+  color: #f6efef;
+}
+
+/* line 214, ../sass/pantone2015spring.scss */
+tr:nth-of-type(10) {
+  background: #c6cbcc;
+  color: #454c4e;
+}
+
+/* line 218, ../sass/pantone2015spring.scss */
+tr:nth-of-type(11) {
+  background: #7da1bf;
+  color: #141f29;
+}
+
+/* line 222, ../sass/pantone2015spring.scss */
+tr:nth-of-type(12) {
+  background: #4e6e38;
+  color: #ebf2e6;
+}
+
+/* line 226, ../sass/pantone2015spring.scss */
+tr:nth-of-type(13) {
+  background: #7f8040;
+  color: black;
+}
+
+/* line 230, ../sass/pantone2015spring.scss */
+tr:nth-of-type(14) {
+  background: #c78d6b;
+  color: #25170e;
+}
+
+/* line 234, ../sass/pantone2015spring.scss */
+tr:nth-of-type(15) {
+  background: #8a8587;
+  color: #080808;
+}
+
+/* line 238, ../sass/pantone2015spring.scss */
+tr:nth-of-type(16) {
+  background: #b38fb1;
+  color: #281b27;
+}
+
+/* line 243, ../sass/pantone2015spring.scss */
+ul {
+  list-style: none;
+}
+
+/* line 246, ../sass/pantone2015spring.scss */
+a {
+  color: #144e89;
+  display: inline-block;
+  padding: .25em 0;
+  text-decoration: none;
+}
+
+/* line 252, ../sass/pantone2015spring.scss */
+a:hover {
+  color: #b38fb1;
+}
+
+/* line 255, ../sass/pantone2015spring.scss */
+footer,
+footer ul {
+  overflow: auto;
+}
+
+/* line 259, ../sass/pantone2015spring.scss */
+footer {
+  margin: 0 auto;
+  border-top: 3px solid #757172;
+  padding: 2em 1em 1em;
+  background: #8a8587;
+}
+
+/* line 265, ../sass/pantone2015spring.scss */
+footer li {
+  font-size: .875em;
+  text-align: center;
+}
+
+/* line 269, ../sass/pantone2015spring.scss */
+footer a {
+  float: left;
+  width: 100%;
+}
+
+@-webkit-keyframes bg-color {
+  0% {
+    background: #fff;
+  }
+  6% {
+    background: #fff;
+  }
+  6.6% {
+    background: #9dc6d8;
+  }
+  12.6% {
+    background: #9dc6d8;
+  }
+  13.2% {
+    background: #e3868f;
+  }
+  19.2% {
+    background: #e3868f;
+  }
+  19.8% {
+    background: #7dcfb6;
+  }
+  25.8% {
+    background: #7dcfb6;
+  }
+  26.4% {
+    background: #8a8587;
+  }
+  32.4% {
+    background: #8a8587;
+  }
+  33% {
+    background: #ead98b;
+  }
+  39% {
+    background: #ead98b;
+  }
+  39.6% {
+    background: #7f8040;
+  }
+  45.6% {
+    background: #7f8040;
+  }
+  46.2% {
+    background: #955251;
+  }
+  52.2% {
+    background: #955251;
+  }
+  52.8% {
+    background: #f79256;
+  }
+  58.8% {
+    background: #f79256;
+  }
+  59.4% {
+    background: #b38fb1;
+  }
+  65.4% {
+    background: #b38fb1;
+  }
+  66% {
+    background: #144e89;
+  }
+  72% {
+    background: #144e89;
+  }
+  72.6% {
+    background: #e3868f;
+  }
+  78.6% {
+    background: #e3868f;
+  }
+  79.2% {
+    background: #4e6e38;
+  }
+  85.2% {
+    background: #4e6e38;
+  }
+  85.8% {
+    background: #c78d6b;
+  }
+  91.8% {
+    background: #c78d6b;
+  }
+  92.4% {
+    background: #c6cbcc;
+  }
+}
+
+@keyframes bg-color {
+  0% {
+    background: #fff;
+  }
+  6% {
+    background: #fff;
+  }
+  6.6% {
+    background: #9dc6d8;
+  }
+  12.6% {
+    background: #9dc6d8;
+  }
+  13.2% {
+    background: #e3868f;
+  }
+  19.2% {
+    background: #e3868f;
+  }
+  19.8% {
+    background: #7dcfb6;
+  }
+  25.8% {
+    background: #7dcfb6;
+  }
+  26.4% {
+    background: #8a8587;
+  }
+  32.4% {
+    background: #8a8587;
+  }
+  33% {
+    background: #ead98b;
+  }
+  39% {
+    background: #ead98b;
+  }
+  39.6% {
+    background: #7f8040;
+  }
+  45.6% {
+    background: #7f8040;
+  }
+  46.2% {
+    background: #955251;
+  }
+  52.2% {
+    background: #955251;
+  }
+  52.8% {
+    background: #f79256;
+  }
+  58.8% {
+    background: #f79256;
+  }
+  59.4% {
+    background: #b38fb1;
+  }
+  65.4% {
+    background: #b38fb1;
+  }
+  66% {
+    background: #144e89;
+  }
+  72% {
+    background: #144e89;
+  }
+  72.6% {
+    background: #e3868f;
+  }
+  78.6% {
+    background: #e3868f;
+  }
+  79.2% {
+    background: #4e6e38;
+  }
+  85.2% {
+    background: #4e6e38;
+  }
+  85.8% {
+    background: #c78d6b;
+  }
+  91.8% {
+    background: #c78d6b;
+  }
+  92.4% {
+    background: #c6cbcc;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    color: #955251;
+  }
+  6% {
+    color: #955251;
+  }
+  6.6% {
+    color: #4e6e38;
+  }
+  12.6% {
+    color: #4e6e38;
+  }
+  13.2% {
+    color: white;
+  }
+  19.2% {
+    color: white;
+  }
+  19.8% {
+    color: #144e89;
+  }
+  25.8% {
+    color: #144e89;
+  }
+  26.4% {
+    color: #ead98b;
+  }
+  32.4% {
+    color: #ead98b;
+  }
+  33% {
+    color: #955251;
+  }
+  39% {
+    color: #955251;
+  }
+  39.6% {
+    color: #9dc6d8;
+  }
+  45.6% {
+    color: #9dc6d8;
+  }
+  46.2% {
+    color: #c6cbcc;
+  }
+  52.2% {
+    color: #c6cbcc;
+  }
+  52.8% {
+    color: #7f8040;
+  }
+  58.8% {
+    color: #7f8040;
+  }
+  59.4% {
+    color: #c6cbcc;
+  }
+  65.4% {
+    color: #c6cbcc;
+  }
+  66% {
+    color: #e3868f;
+  }
+  72% {
+    color: #e3868f;
+  }
+  72.6% {
+    color: #c6cbcc;
+  }
+  78.6% {
+    color: #c6cbcc;
+  }
+  79.2% {
+    color: #ead98b;
+  }
+  85.2% {
+    color: #ead98b;
+  }
+  85.8% {
+    color: #955251;
+  }
+  91.8% {
+    color: #955251;
+  }
+  92.4% {
+    color: #8a8587;
+  }
+}
+@keyframes color {
+  0% {
+    color: #955251;
+  }
+  6% {
+    color: #955251;
+  }
+  6.6% {
+    color: #4e6e38;
+  }
+  12.6% {
+    color: #4e6e38;
+  }
+  13.2% {
+    color: white;
+  }
+  19.2% {
+    color: white;
+  }
+  19.8% {
+    color: #144e89;
+  }
+  25.8% {
+    color: #144e89;
+  }
+  26.4% {
+    color: #ead98b;
+  }
+  32.4% {
+    color: #ead98b;
+  }
+  33% {
+    color: #955251;
+  }
+  39% {
+    color: #955251;
+  }
+  39.6% {
+    color: #9dc6d8;
+  }
+  45.6% {
+    color: #9dc6d8;
+  }
+  46.2% {
+    color: #c6cbcc;
+  }
+  52.2% {
+    color: #c6cbcc;
+  }
+  52.8% {
+    color: #7f8040;
+  }
+  58.8% {
+    color: #7f8040;
+  }
+  59.4% {
+    color: #c6cbcc;
+  }
+  65.4% {
+    color: #c6cbcc;
+  }
+  66% {
+    color: #e3868f;
+  }
+  72% {
+    color: #e3868f;
+  }
+  72.6% {
+    color: #c6cbcc;
+  }
+  78.6% {
+    color: #c6cbcc;
+  }
+  79.2% {
+    color: #ead98b;
+  }
+  85.2% {
+    color: #ead98b;
+  }
+  85.8% {
+    color: #955251;
+  }
+  91.8% {
+    color: #955251;
+  }
+  92.4% {
+    color: #8a8587;
+  }
+}

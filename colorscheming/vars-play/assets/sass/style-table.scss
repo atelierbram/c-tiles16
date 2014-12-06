@@ -1,0 +1,224 @@
+@import "components/typography";
+@import "components/gruvbox-vars";
+@import "components/text-contrast";
+
+
+html {
+  background: $dark0_hard;
+}
+* {
+  // outline: 1px dotted salmon;
+}
+
+.container {
+ background: $dark0;
+}
+.container--default col {
+  width: 16.66%;
+}
+.container--hsl col {
+  width: 25%;
+}
+col:nth-of-type(1) {
+  // background: rgba(0,0,0,.125);
+  // width: 16.66%;
+}
+col:nth-of-type(2) {
+  // width: 16.66%;
+}
+col:nth-of-type(3) {
+  // width: 16.66%;
+}
+col:nth-of-type(4) {
+  // width: 16.66%;
+}
+col:nth-of-type(5) {
+  // width: 16.66%;
+}
+col:nth-of-type(6) {
+  // width: 16.66%;
+}
+thead {
+  display: table-header-group;
+}
+thead tr {
+  // background-color: $light3;
+}
+header,
+thead th {
+  font-family: AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+  font-weight: 700;
+}
+thead th {
+  border-bottom: 3px solid $medium;
+  text-align: right;
+  font-size: 1.125em;
+  // background: lighten($gray,10%);
+  background: $light3;
+  text-transform: uppercase;
+}
+thead th:nth-of-type(1) {
+  text-align: left;
+}
+
+th[scope="row"] {
+  text-align: left;
+}
+th, td {
+  padding: .5em 1em;
+}
+td {
+  text-align: right;
+}
+th:empty,
+td:empty,
+tbody tr:nth-of-type(1) {
+  background: $dark0-hard;
+  color: text-contrast($dark0-hard);
+}
+tr:nth-of-type(2) {
+  background: $dark0;
+  color: text-contrast($dark0);
+}
+tr:nth-of-type(3) {
+  background: $dark0_soft;
+  color: text-contrast($dark0_soft);
+}
+tr:nth-of-type(4) {
+  background: $dark1;
+  color: text-contrast($dark1);
+}
+tr:nth-of-type(5) {
+  background: $dark2;
+  color: text-contrast($dark2);
+}
+tr:nth-of-type(6) {
+  background: $dark3;
+  color: text-contrast($dark3);
+}
+tr:nth-of-type(7) {
+  background: $dark4;
+  color: text-contrast($dark4);
+}
+// tr:nth-of-type(8) = empty
+tr:nth-of-type(9),
+tr:nth-of-type(10) {
+  background: $medium;
+  color: text-contrast($medium);
+}
+// tr:nth-of-type(11) = empty
+tr:nth-of-type(12) {
+  background: $light0_hard;
+  color: text-contrast($light0_hard);
+}
+tr:nth-of-type(13) {
+  background: $light0;
+  color: text-contrast($light0);
+}
+tr:nth-of-type(14) {
+  background: $light0_soft;
+  color: text-contrast($light0_soft);
+}
+tr:nth-of-type(15) {
+  background: $light1;
+  color: text-contrast($light1);
+}
+tr:nth-of-type(16) {
+  background: $light2;
+  color: text-contrast($light2);
+}
+tr:nth-of-type(17) {
+  background: $light3;
+  color: text-contrast($light3);
+}
+tr:nth-of-type(18) {
+  background: $light4;
+  color: text-contrast($light4);
+}
+// tr:nth-of-type(19) = empty
+tr:nth-of-type(20) {
+  background: $bright_red;
+  color: text-contrast($bright_red);
+}
+tr:nth-of-type(21) {
+  background: $bright_green;
+  color: text-contrast($bright_green);
+}
+tr:nth-of-type(22) {
+  background: $bright_yellow;
+  color: text-contrast($bright_yellow);
+}
+tr:nth-of-type(23) {
+  background: $bright_blue;
+  color: text-contrast($bright_blue);
+}
+tr:nth-of-type(24) {
+  background: $bright_purple;
+  color: text-contrast($bright_purple);
+}
+tr:nth-of-type(25) {
+  background: $bright_aqua;
+  color: text-contrast($bright_aqua);
+}
+tr:nth-of-type(26) {
+  background: $bright_orange;
+  color: text-contrast($bright_orange);
+}
+// tr:nth-of-type(27) = empty
+tr:nth-of-type(28) {
+  background: $neutral_red;
+  color: text-contrast($neutral_red);
+}
+tr:nth-of-type(29) {
+  background: $neutral_green;
+  color: text-contrast($neutral_green);
+}
+tr:nth-of-type(30) {
+  background: $neutral_yellow;
+  color: text-contrast($neutral_yellow);
+}
+tr:nth-of-type(31) {
+  background: $neutral_blue;
+  color: text-contrast($neutral_blue);
+}
+tr:nth-of-type(32) {
+  background: $neutral_purple;
+  color: text-contrast($neutral_purple);
+}
+tr:nth-of-type(33) {
+  background: $neutral_aqua;
+  color: text-contrast($neutral_aqua);
+}
+tr:nth-of-type(34) {
+  background: $neutral_orange;
+  color: text-contrast($neutral_orange);
+}
+// tr:nth-of-type(35) = empty
+tr:nth-of-type(36) {
+  background: $neutral_red;
+  color: text-contrast($neutral_red);
+}
+tr:nth-of-type(37) {
+  background: $faded_green;
+  color: text-contrast($faded_green);
+}
+tr:nth-of-type(38) {
+  background: $faded_yellow;
+  color: text-contrast($faded_yellow);
+}
+tr:nth-of-type(39) {
+  background: $faded_blue;
+  color: text-contrast($faded_blue);
+}
+tr:nth-of-type(40) {
+  background: $faded_purple;
+  color: text-contrast($faded_purple);
+}
+tr:nth-of-type(41) {
+  background: $faded_aqua;
+  color: text-contrast($faded_aqua);
+}
+tr:nth-of-type(42) {
+  background: $faded_orange;
+  color: text-contrast($faded_orange);
+}

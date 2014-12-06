@@ -1,0 +1,292 @@
+@import "components/typography";
+@import "components/gruvbox-vars";
+@import "components/text-contrast";
+
+/*
+  CUSTOM PRISM THEME
+*/
+
+// VARS
+// $base00: hsl(10, 1%, 10%);
+// $base01: hsl(10, 1%, 15%);
+// $base02: hsl(10, 2%, 30%);
+// $base03: hsl(10, 2%, 40%);
+// $base04: hsl(10, 3%, 50%);
+// $base05: hsl(10, 4%, 60%);
+// $base06: hsl(10, 9%, 87%);
+// $base07: hsl(10, 10%, 97%);
+// $base08: hsl(0, 65%, 50%);
+// $base09: hsl(20, 80%, 48%);
+// $base0A: hsl(40, 100%, 45%);
+// $base0B: hsl(170, 100%, 30%);
+// $base0C: hsl(190, 70%, 35%);
+// $base0D: hsl(220, 65%, 55%);
+// $base0E: hsl(295, 55%, 52%);
+// $base0F: hsl(340, 80%, 45%);
+//
+$red:     $neutral_red;
+$orange:  $neutral_orange;
+$yellow:  $neutral_yellow;
+$green:   $bright_green;
+$cyan:    $neutral_aqua;
+$blue:    $neutral_blue;
+$violet:  $neutral_purple;
+
+// $very-light-gray: darken($base06,10%);
+$very-light-gray: $light0_soft;
+$light-gray: $light4;
+$gray: $dark0_soft;
+$dark-gray: $dark0;
+$very-dark-gray: $dark0_hard;
+$purple: $neutral_purple;
+$light-orange: $bright_orange;
+
+// MAPPED VARS
+
+$syntax-text-color: $bright_aqua;
+$syntax-cursor-color: $light0;
+$syntax-selection-color: lighten($dark-gray, 10%);
+// $syntax-background-color: $very-dark-gray;
+$syntax-background-color: $dark0;
+$syntax-wrap-guide-color: $dark-gray;
+$syntax-indent-guide-color: $gray;
+$syntax-invisible-character-color: $gray;
+$syntax-result-marker-color: $light-gray;
+$syntax-result-marker-color-selected: $light0;
+$syntax-gutter-text-color: $very-light-gray;
+$syntax-gutter-text-color-selected: $syntax-gutter-text-color;
+$syntax-gutter-background-color: $dark-gray;
+$syntax-gutter-background-color-selected: $gray;
+$syntax-color-renamed: $blue;
+$syntax-color-added: $green;
+$syntax-color-modified: $orange;
+$syntax-color-removed: $red;
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: $light-gray;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+  overflow-wrap: break-word;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+code[class*="language-css"],
+pre[class*="language-css"] {
+  color: $orange;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: $syntax-selection-color;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: $syntax-selection-color;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: $syntax-background-color;
+  border-color: darken($dark0,1%);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment {
+  font-style: italic;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: $light-gray;
+}
+
+.token {
+  &.punctuation {
+    color: $bright_blue;
+    &.comment {
+      color: #675a80;
+    }
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: $syntax-text-color;
+    }
+    &.heading,
+    &.identity {
+      color: $blue;
+    }
+
+    &.important {
+      color: $light-orange;
+    }
+  }
+  &.operator {
+    color: $syntax-text-color;
+  }
+  &.entity {
+    color: $light-orange;
+    // text-decoration: underline;
+  }
+  &.function,
+  &.keyword {
+    color: $bright_orange;
+  }
+  &.regexp,
+  &.important {
+    color: $cyan;
+  }
+  &.selector {
+    color: $bright_red;
+    // text-decoration: underline;
+  }
+  &.tag {
+    color: $light-gray;
+  }
+  &.tag-id {
+    color: $bright_aqua;
+  }
+  &.attr-name {
+    color: $bright_aqua;
+  }
+  &.attr-value {
+    color: $green;
+
+    .punctuation {
+      color: $bright_blue;
+    }
+  }
+  &.atrule {
+    color: $cyan;
+
+    .atrule-id {
+      color: $purple;
+    }
+    .punctuation {
+      color: $bright_blue;
+    }
+  }
+  &.string,
+  &.char,
+  &.builtin,
+  &.url {
+    color: $green;
+  }
+  &.pseudo-class {
+    color: $orange;
+  }
+  &.boolean,
+  &.number,
+  &.constant {
+    color: $orange;
+  }
+  &.symbol {
+    color: $green;
+  }
+  &.property {
+    color: $syntax-text-color;
+  }
+  &.important {
+    font-weight: bold;
+  }
+  &.entity {
+    cursor: help;
+  }
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.char {
+  color: $red;
+}
+
+/*
+  GENERAL "MEH" STYLES
+*/
+
+html,
+body {
+  background-color: $dark0_hard;
+}
+body {
+  margin: 0;
+  padding: 40px;
+}
+.wrapper {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.col pre {
+  max-height: 250px;
+}
+h2 {
+  color: $light0;
+  text-shadow: 0 1px 2px rgba(0,0,0, .2);
+}
+a {
+  text-decoration: none;
+  color: $violet;
+}
+
+// old
+// html {
+//   background: $dark0_hard;
+// }
+// * {
+  // outline: 1px dotted salmon;
+// }
+
+// .container {
+//  background: $dark0;
+// }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(black,0.3);
+  border-radius: 3px;
+  background-color: $dark0_hard;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: $dark0_hard;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 6px rgba(black,.3);
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: $dark0_hard;
+}

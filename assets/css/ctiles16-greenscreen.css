@@ -69,7 +69,7 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 
 /* line 54, ../sass/partials/design/default/_color-vars.scss */
 .fill-base07 {
-  fill: lime;
+  fill: #00ff00;
 }
 
 /* line 55, ../sass/partials/design/default/_color-vars.scss */
@@ -1190,7 +1190,7 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 
 /* line 297, ../sass/partials/design/default/_color-vars.scss */
 .bg-base07 {
-  background-color: lime;
+  background-color: #00ff00;
 }
 
 /* line 298, ../sass/partials/design/default/_color-vars.scss */
@@ -1298,7 +1298,6 @@ samp, style[contenteditable], .output,
 /* line 90, ../sass/partials/design/default/_init.scss */
 .tagline,
 .footer {
-  background-image: -webkit-gradient(linear, left top, right top, from(#007700), color-stop(12.5%, #007700), color-stop(12.5%, #009900), color-stop(25%, #009900), color-stop(25%, #007700), color-stop(37.5%, #007700), color-stop(37.5%, #005500), color-stop(50%, #005500), color-stop(50%, #00bb00), color-stop(62.5%, #00bb00), color-stop(62.5%, #009900), color-stop(75%, #009900), color-stop(75%, #005500), color-stop(87.5%, #005500), color-stop(87.5%, #00bb00), to(#00bb00));
   background-image: -webkit-linear-gradient(left, #007700, #007700 12.5%, #009900 12.5%, #009900 25%, #007700 25%, #007700 37.5%, #005500 37.5%, #005500 50%, #00bb00 50%, #00bb00 62.5%, #009900 62.5%, #009900 75%, #005500 75%, #005500 87.5%, #00bb00 87.5%, #00bb00);
   background-image: linear-gradient(to right, #007700, #007700 12.5%, #009900 12.5%, #009900 25%, #007700 25%, #007700 37.5%, #005500 37.5%, #005500 50%, #00bb00 50%, #00bb00 62.5%, #009900 62.5%, #009900 75%, #005500 75%, #005500 87.5%, #00bb00 87.5%, #00bb00);
 }
@@ -1333,7 +1332,7 @@ samp, style[contenteditable], .output,
 .dropdown li a.hover {
   background: #005500;
   position: relative;
-  color: lime;
+  color: #00ff00;
 }
 
 /* line 35, ../sass/partials/modules/_dropdown-menu.scss */
@@ -1349,7 +1348,7 @@ samp, style[contenteditable], .output,
 /* line 45, ../sass/partials/modules/_dropdown-menu.scss */
 .dropdown ul li {
   font-weight: normal;
-  background: lime;
+  background: #00ff00;
   color: #001100;
   border-top: 1px solid #4dff4d;
   border-bottom: 1px solid #00dd00;
@@ -1391,7 +1390,7 @@ samp, style[contenteditable], .output,
 .drop > a:hover:after {
   content: "";
   border-left: 5px solid transparent;
-  border-top: 5px solid lime;
+  border-top: 5px solid #00ff00;
   border-right: 5px solid transparent;
 }
 
@@ -1400,7 +1399,6 @@ samp, style[contenteditable], .output,
 .btn {
   -webkit-appearance: none;
   border-radius: 4px;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid;
   border-color: #00dd00 #00aa00 #00ee00;
@@ -1411,40 +1409,34 @@ samp, style[contenteditable], .output,
   overflow: visible;
   margin: .5em .125em;
   padding: .25em 1em .35em;
-  text-shadow: lime 0 1px 1px;
+  text-shadow: #00ff00 0 1px 1px;
   text-decoration: none;
   vertical-align: top;
   width: auto;
   background-color: #00f200;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00ff00), color-stop(1px, #00f200), to(#00d000));
   background-image: -webkit-linear-gradient(top, #00ff00, #00f200 1px, #00d000);
   background-image: linear-gradient(to bottom, #00ff00, #00f200 1px, #00d000);
 }
 /* line 26, ../sass/partials/modules/_buttons.scss */
 .btn:hover {
-  background-color: lime;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0dff0d), color-stop(1px, #00ff00), to(#00ea00));
+  background-color: #00ff00;
   background-image: -webkit-linear-gradient(top, #0dff0d, #00ff00 1px, #00ea00);
   background-image: linear-gradient(to bottom, #0dff0d, #00ff00 1px, #00ea00);
   text-decoration: none;
 }
 /* line 31, ../sass/partials/modules/_buttons.scss */
 .btn:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00d000), to(#00f200));
   background-image: -webkit-linear-gradient(top, #00d000, #00f200);
   background-image: linear-gradient(to bottom, #00d000, #00f200);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
   border-color: #00bb00 #00dd00 #00d400;
 }
 /* line 36, ../sass/partials/modules/_buttons.scss */
 .btn:invalid {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 40, ../sass/partials/modules/_buttons.scss */
 .btn:focus {
-  -webkit-box-shadow: #009900 0 0 5px 0;
   box-shadow: #009900 0 0 5px 0;
   z-index: 1;
 }
@@ -1471,10 +1463,9 @@ samp, style[contenteditable], .output,
 .btn--base00,
 .bg-base00 .btn--ctiles {
   border-color: #003300 #001100 #000400;
-  color: lime;
+  color: #00ff00;
   text-shadow: none;
   background-color: #001100;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#005500), color-stop(1px, #00bb00), to(#001100));
   background-image: -webkit-linear-gradient(top, #005500, #00bb00 1px, #001100);
   background-image: linear-gradient(to bottom, #005500, #00bb00 1px, #001100);
   letter-spacing: 1px;
@@ -1484,17 +1475,14 @@ samp, style[contenteditable], .output,
 .btn--base00:hover,
 .bg-base00 .btn--ctiles:hover {
   background-color: #003300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#007700), color-stop(1px, #08ff08), to(#003300));
   background-image: -webkit-linear-gradient(top, #007700, #08ff08 1px, #003300);
   background-image: linear-gradient(to bottom, #007700, #08ff08 1px, #003300);
 }
 /* line 77, ../sass/partials/modules/_buttons.scss */
 .btn--base00:active,
 .bg-base00 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#001100), to(#005500));
   background-image: -webkit-linear-gradient(top, #001100, #005500);
   background-image: linear-gradient(to bottom, #001100, #005500);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   border-color: #005500 #003b00;
 }
@@ -1503,10 +1491,9 @@ samp, style[contenteditable], .output,
 .btn--base01,
 .bg-base01 .btn--ctiles {
   border-color: #005500 #003300 #002600;
-  color: lime;
+  color: #00ff00;
   text-shadow: none;
   background-color: #003300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#007700), color-stop(1px, #0cbe0c), to(#003300));
   background-image: -webkit-linear-gradient(top, #007700, #0cbe0c 1px, #003300);
   background-image: linear-gradient(to bottom, #007700, #0cbe0c 1px, #003300);
   letter-spacing: 1px;
@@ -1516,17 +1503,14 @@ samp, style[contenteditable], .output,
 .btn--base01:hover,
 .bg-base01 .btn--ctiles:hover {
   background-color: #003300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009900), color-stop(1px, #26e226), to(#005500));
   background-image: -webkit-linear-gradient(top, #009900, #26e226 1px, #005500);
   background-image: linear-gradient(to bottom, #009900, #26e226 1px, #005500);
 }
 /* line 99, ../sass/partials/modules/_buttons.scss */
 .btn--base01:active,
 .bg-base01 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#003300), to(#007700));
   background-image: -webkit-linear-gradient(top, #003300, #007700);
   background-image: linear-gradient(to bottom, #003300, #007700);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   border-color: #007700 #005e00;
 }
@@ -1535,10 +1519,9 @@ samp, style[contenteditable], .output,
 .btn--base02,
 .bg-base02 .btn--ctiles {
   border-color: #007700 #005500 #004800;
-  color: lime;
+  color: #00ff00;
   text-shadow: none;
   background-color: #005500;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009900), color-stop(1px, #3cff3c), to(#005500));
   background-image: -webkit-linear-gradient(top, #009900, #3cff3c 1px, #005500);
   background-image: linear-gradient(to bottom, #009900, #3cff3c 1px, #005500);
   letter-spacing: 1px;
@@ -1548,17 +1531,14 @@ samp, style[contenteditable], .output,
 .btn--base02:hover,
 .bg-base02 .btn--ctiles:hover {
   background-color: #003300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00bb00), color-stop(1px, #08ff08), to(#007700));
   background-image: -webkit-linear-gradient(top, #00bb00, #08ff08 1px, #007700);
   background-image: linear-gradient(to bottom, #00bb00, #08ff08 1px, #007700);
 }
 /* line 121, ../sass/partials/modules/_buttons.scss */
 .btn--base02:active,
 .bg-base02 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#007700), to(#00bb00));
   background-image: -webkit-linear-gradient(top, #007700, #00bb00);
   background-image: linear-gradient(to bottom, #007700, #00bb00);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   border-color: #009900 green;
 }
@@ -1567,10 +1547,9 @@ samp, style[contenteditable], .output,
 .btn--base03,
 .bg-base03 .btn--ctiles {
   border-color: #009900 #007700 #006a00;
-  color: lime;
+  color: #00ff00;
   text-shadow: none;
   background-color: #007700;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00bb00), color-stop(1px, #3cff3c), to(#007700));
   background-image: -webkit-linear-gradient(top, #00bb00, #3cff3c 1px, #007700);
   background-image: linear-gradient(to bottom, #00bb00, #3cff3c 1px, #007700);
   letter-spacing: 1px;
@@ -1580,17 +1559,14 @@ samp, style[contenteditable], .output,
 .btn--base03:hover,
 .bg-base03 .btn--ctiles:hover {
   background-color: #009900;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00bb00), color-stop(1px, #6eff6e), to(#009900));
   background-image: -webkit-linear-gradient(top, #00bb00, #6eff6e 1px, #009900);
   background-image: linear-gradient(to bottom, #00bb00, #6eff6e 1px, #009900);
 }
 /* line 143, ../sass/partials/modules/_buttons.scss */
 .btn--base03:active,
 .bg-base03 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#001100), to(#005500));
   background-image: -webkit-linear-gradient(top, #001100, #005500);
   background-image: linear-gradient(to bottom, #001100, #005500);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(255, 255, 255, 0.25) inset 0 1px 2px 0;
   border-color: #00bb00 #00a200;
 }
@@ -1600,27 +1576,23 @@ samp, style[contenteditable], .output,
 .bg-base06 .btn--ctiles {
   border-color: #00dd00 #00aa00 #00ee00;
   color: #003300;
-  text-shadow: lime 0 1px 1px;
+  text-shadow: #00ff00 0 1px 1px;
   background-color: #00f200;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00ff00), color-stop(1px, #00f200), to(#00d000));
   background-image: -webkit-linear-gradient(top, #00ff00, #00f200 1px, #00d000);
   background-image: linear-gradient(to bottom, #00ff00, #00f200 1px, #00d000);
 }
 /* line 158, ../sass/partials/modules/_buttons.scss */
 .btn--base06:hover,
 .bg-base06 .btn--ctiles:hover {
-  background-color: lime;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0dff0d), color-stop(1px, #00ff00), to(#00ea00));
+  background-color: #00ff00;
   background-image: -webkit-linear-gradient(top, #0dff0d, #00ff00 1px, #00ea00);
   background-image: linear-gradient(to bottom, #0dff0d, #00ff00 1px, #00ea00);
 }
 /* line 162, ../sass/partials/modules/_buttons.scss */
 .btn--base06:active,
 .bg-base06 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00d000), to(#00f200));
   background-image: -webkit-linear-gradient(top, #00d000, #00f200);
   background-image: linear-gradient(to bottom, #00d000, #00f200);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
   border-color: #00bb00 #00dd00 #00d400;
 }
@@ -1630,39 +1602,34 @@ samp, style[contenteditable], .output,
 .bg-base07 .btn--ctiles {
   border-color: #00dd00 #00aa00 #00ee00;
   color: #003300;
-  text-shadow: lime 0 1px 1px;
-  background-color: lime;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00ff00), to(#00dd00));
+  text-shadow: #00ff00 0 1px 1px;
+  background-color: #00ff00;
   background-image: -webkit-linear-gradient(top, #00ff00, #00dd00);
   background-image: linear-gradient(to bottom, #00ff00, #00dd00);
 }
 /* line 177, ../sass/partials/modules/_buttons.scss */
 .btn--base07:hover,
 .bg-base07 .btn--ctiles:hover {
-  background-color: lime;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1aff1a), color-stop(1px, #00ff00), to(#00f700));
+  background-color: #00ff00;
   background-image: -webkit-linear-gradient(top, #1aff1a, #00ff00 1px, #00f700);
   background-image: linear-gradient(to bottom, #1aff1a, #00ff00 1px, #00f700);
 }
 /* line 181, ../sass/partials/modules/_buttons.scss */
 .btn--base07:active,
 .bg-base07 .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00d000), to(#0dff0d));
   background-image: -webkit-linear-gradient(top, #00d000, #0dff0d);
   background-image: linear-gradient(to bottom, #00d000, #0dff0d);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.25) inset 0 1px 2px 0;
-  border-color: #00dd00 lime #00f700;
+  border-color: #00dd00 #00ff00 #00f700;
 }
 
 /* line 188, ../sass/partials/modules/_buttons.scss */
 .btn--base16-yellow,
 .bg-base16-yellow .btn--ctiles {
   border-color: #00c300 #007700 #005e00;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #007700;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#007700), color-stop(1px, #008400), to(#005900));
   background-image: -webkit-linear-gradient(top, #007700, #008400 1px, #005900);
   background-image: linear-gradient(to bottom, #007700, #008400 1px, #005900);
   letter-spacing: 1px;
@@ -1672,7 +1639,6 @@ samp, style[contenteditable], .output,
 .btn--base16-yellow:hover,
 .bg-base16-yellow .btn--ctiles:hover {
   background-color: #00c300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#008400), color-stop(1px, #009100), to(#005f00));
   background-image: -webkit-linear-gradient(top, #008400, #009100 1px, #005f00);
   background-image: linear-gradient(to bottom, #008400, #009100 1px, #005f00);
   color: #fff;
@@ -1680,7 +1646,6 @@ samp, style[contenteditable], .output,
 /* line 204, ../sass/partials/modules/_buttons.scss */
 .btn--base16-yellow:active,
 .bg-base16-yellow .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#006500), to(#007700));
   background-image: -webkit-linear-gradient(top, #006500, #007700);
   background-image: linear-gradient(to bottom, #006500, #007700);
   border-color: #007700 #005e00;
@@ -1690,10 +1655,9 @@ samp, style[contenteditable], .output,
 .btn--base16-orange,
 .bg-base16-orange .btn--ctiles {
   border-color: #00e600 #009900 green;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #009900;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009900), color-stop(1px, #00a600), to(#007200));
   background-image: -webkit-linear-gradient(top, #009900, #00a600 1px, #007200);
   background-image: linear-gradient(to bottom, #009900, #00a600 1px, #007200);
   letter-spacing: 1px;
@@ -1703,7 +1667,6 @@ samp, style[contenteditable], .output,
 .btn--base16-orange:hover,
 .bg-base16-orange .btn--ctiles:hover {
   background-color: #00e600;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00a600), color-stop(1px, #00b300), to(#007a00));
   background-image: -webkit-linear-gradient(top, #00a600, #00b300 1px, #007a00);
   background-image: linear-gradient(to bottom, #00a600, #00b300 1px, #007a00);
   color: #fff;
@@ -1711,7 +1674,6 @@ samp, style[contenteditable], .output,
 /* line 227, ../sass/partials/modules/_buttons.scss */
 .btn--base16-orange:active,
 .bg-base16-orange .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#008200), to(#009900));
   background-image: -webkit-linear-gradient(top, #008200, #009900);
   background-image: linear-gradient(to bottom, #008200, #009900);
   border-color: #009900 green;
@@ -1721,10 +1683,9 @@ samp, style[contenteditable], .output,
 .btn--base16-red,
 .bg-base16-red .btn--ctiles {
   border-color: #00c300 #007700 #005e00;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #007700;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#007700), color-stop(1px, #008400), to(#005900));
   background-image: -webkit-linear-gradient(top, #007700, #008400 1px, #005900);
   background-image: linear-gradient(to bottom, #007700, #008400 1px, #005900);
   letter-spacing: 1px;
@@ -1734,7 +1695,6 @@ samp, style[contenteditable], .output,
 .btn--base16-red:hover,
 .bg-base16-red .btn--ctiles:hover {
   background-color: #00c300;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#008400), color-stop(1px, #009100), to(#005f00));
   background-image: -webkit-linear-gradient(top, #008400, #009100 1px, #005f00);
   background-image: linear-gradient(to bottom, #008400, #009100 1px, #005f00);
   color: #fff;
@@ -1742,7 +1702,6 @@ samp, style[contenteditable], .output,
 /* line 250, ../sass/partials/modules/_buttons.scss */
 .btn--base16-red:active,
 .bg-base16-red .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#006500), to(#007700));
   background-image: -webkit-linear-gradient(top, #006500, #007700);
   background-image: linear-gradient(to bottom, #006500, #007700);
   border-color: #007700 #005e00;
@@ -1752,10 +1711,9 @@ samp, style[contenteditable], .output,
 .btn--base16-magenta,
 .bg-base16-magenta .btn--ctiles {
   border-color: #00a200 #005500 #003b00;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #005500;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#005500), color-stop(1px, #006200), to(#003f00));
   background-image: -webkit-linear-gradient(top, #005500, #006200 1px, #003f00);
   background-image: linear-gradient(to bottom, #005500, #006200 1px, #003f00);
   letter-spacing: 1px;
@@ -1765,7 +1723,6 @@ samp, style[contenteditable], .output,
 .btn--base16-magenta:hover,
 .bg-base16-magenta .btn--ctiles:hover {
   background-color: #00a200;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#006200), color-stop(1px, #006e00), to(#004400));
   background-image: -webkit-linear-gradient(top, #006200, #006e00 1px, #004400);
   background-image: linear-gradient(to bottom, #006200, #006e00 1px, #004400);
   color: #fff;
@@ -1773,7 +1730,6 @@ samp, style[contenteditable], .output,
 /* line 273, ../sass/partials/modules/_buttons.scss */
 .btn--base16-magenta:active,
 .bg-base16-magenta .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#004800), to(#005500));
   background-image: -webkit-linear-gradient(top, #004800, #005500);
   background-image: linear-gradient(to bottom, #004800, #005500);
   border-color: #005500 #003b00;
@@ -1783,10 +1739,9 @@ samp, style[contenteditable], .output,
 .btn--base16-violet,
 .bg-base16-violet .btn--ctiles {
   border-color: #08ff08 #00bb00 #00a200;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #00bb00;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00bb00), color-stop(1px, #00c800), to(#008c00));
   background-image: -webkit-linear-gradient(top, #00bb00, #00c800 1px, #008c00);
   background-image: linear-gradient(to bottom, #00bb00, #00c800 1px, #008c00);
   letter-spacing: 1px;
@@ -1796,7 +1751,6 @@ samp, style[contenteditable], .output,
 .btn--base16-violet:hover,
 .bg-base16-violet .btn--ctiles:hover {
   background-color: #08ff08;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00c800), color-stop(1px, #00d400), to(#009500));
   background-image: -webkit-linear-gradient(top, #00c800, #00d400 1px, #009500);
   background-image: linear-gradient(to bottom, #00c800, #00d400 1px, #009500);
   color: #fff;
@@ -1804,7 +1758,6 @@ samp, style[contenteditable], .output,
 /* line 296, ../sass/partials/modules/_buttons.scss */
 .btn--base16-violet:active,
 .bg-base16-violet .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009e00), to(#00bb00));
   background-image: -webkit-linear-gradient(top, #009e00, #00bb00);
   background-image: linear-gradient(to bottom, #009e00, #00bb00);
   border-color: #00bb00 #00a200;
@@ -1814,10 +1767,9 @@ samp, style[contenteditable], .output,
 .btn--base16-blue,
 .bg-base16-blue .btn--ctiles {
   border-color: #00e600 #009900 green;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #009900;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009900), color-stop(1px, #00a600), to(#007200));
   background-image: -webkit-linear-gradient(top, #009900, #00a600 1px, #007200);
   background-image: linear-gradient(to bottom, #009900, #00a600 1px, #007200);
   letter-spacing: 1px;
@@ -1827,7 +1779,6 @@ samp, style[contenteditable], .output,
 .btn--base16-blue:hover,
 .bg-base16-blue .btn--ctiles:hover {
   background-color: #00e600;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00a600), color-stop(1px, #00b300), to(#007a00));
   background-image: -webkit-linear-gradient(top, #00a600, #00b300 1px, #007a00);
   background-image: linear-gradient(to bottom, #00a600, #00b300 1px, #007a00);
   color: #fff;
@@ -1835,7 +1786,6 @@ samp, style[contenteditable], .output,
 /* line 319, ../sass/partials/modules/_buttons.scss */
 .btn--base16-blue:active,
 .bg-base16-blue .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#008200), to(#009900));
   background-image: -webkit-linear-gradient(top, #008200, #009900);
   background-image: linear-gradient(to bottom, #008200, #009900);
   border-color: #009900 green;
@@ -1845,10 +1795,9 @@ samp, style[contenteditable], .output,
 .btn--base16-cyan,
 .bg-base16-cyan .btn--ctiles {
   border-color: #00a200 #005500 #003b00;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #005500;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#005500), color-stop(1px, #006200), to(#003f00));
   background-image: -webkit-linear-gradient(top, #005500, #006200 1px, #003f00);
   background-image: linear-gradient(to bottom, #005500, #006200 1px, #003f00);
   letter-spacing: 1px;
@@ -1858,7 +1807,6 @@ samp, style[contenteditable], .output,
 .btn--base16-cyan:hover,
 .bg-base16-cyan .btn--ctiles:hover {
   background-color: #00a200;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#006200), color-stop(1px, #006e00), to(#004400));
   background-image: -webkit-linear-gradient(top, #006200, #006e00 1px, #004400);
   background-image: linear-gradient(to bottom, #006200, #006e00 1px, #004400);
   color: #fff;
@@ -1866,7 +1814,6 @@ samp, style[contenteditable], .output,
 /* line 343, ../sass/partials/modules/_buttons.scss */
 .btn--base16-cyan:active,
 .bg-base16-cyan .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#004800), to(#005500));
   background-image: -webkit-linear-gradient(top, #004800, #005500);
   background-image: linear-gradient(to bottom, #004800, #005500);
   border-color: #005500 #003b00;
@@ -1876,10 +1823,9 @@ samp, style[contenteditable], .output,
 .btn--base16-green,
 .bg-base16-green .btn--ctiles {
   border-color: #08ff08 #00bb00 #00a200;
-  color: lime;
+  color: #00ff00;
   text-shadow: #000400 0 1px 1px;
   background-color: #00bb00;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00bb00), color-stop(1px, #00c800), to(#008c00));
   background-image: -webkit-linear-gradient(top, #00bb00, #00c800 1px, #008c00);
   background-image: linear-gradient(to bottom, #00bb00, #00c800 1px, #008c00);
   letter-spacing: 1px;
@@ -1889,7 +1835,6 @@ samp, style[contenteditable], .output,
 .btn--base16-green:hover,
 .bg-base16-green .btn--ctiles:hover {
   background-color: #08ff08;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00c800), color-stop(1px, #00d400), to(#009500));
   background-image: -webkit-linear-gradient(top, #00c800, #00d400 1px, #009500);
   background-image: linear-gradient(to bottom, #00c800, #00d400 1px, #009500);
   color: #fff;
@@ -1897,7 +1842,6 @@ samp, style[contenteditable], .output,
 /* line 366, ../sass/partials/modules/_buttons.scss */
 .btn--base16-green:active,
 .bg-base16-green .btn--ctiles:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009e00), to(#00bb00));
   background-image: -webkit-linear-gradient(top, #009e00, #00bb00);
   background-image: linear-gradient(to bottom, #009e00, #00bb00);
   border-color: #00bb00 #00a200;
@@ -1915,7 +1859,7 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 /* line 10, ../sass/partials/modules/_prism.scss */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: lime;
+  color: #00ff00;
   font-size: 14px;
   line-height: 1.375;
   direction: ltr;
@@ -2060,9 +2004,10 @@ pre > code.highlight {
 
 /* line 13, ../sass/partials/modules/_hsl-picker.scss */
 .hslpicker .color-tiles:before, .hslpicker .bgs:before, .hslpicker .slider:before {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)), -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)), linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
-  -webkit-background-size: 20px 20px;
   background-size: 20px 20px;
   background-position: 0px 0px, 10px 10px;
 }
@@ -2080,7 +2025,6 @@ pre > code.highlight {
   bottom: -3px;
   left: -4px;
   right: -4px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px inset, rgba(255, 255, 255, 0.1) 0 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px inset, rgba(255, 255, 255, 0.1) 0 1px;
 }
 /* line 34, ../sass/partials/modules/_hsl-picker.scss */
@@ -2128,7 +2072,6 @@ pre > code.highlight {
 }
 /* line 58, ../sass/partials/modules/_hsl-picker.scss */
 .hslpicker .color-tiles div .tile, .hslpicker .color-tiles .bg {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
 }
 
@@ -2247,12 +2190,10 @@ pre > code.highlight {
   right: 29px;
   width: 90px;
   height: 90px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
 }
 /* line 140, ../sass/partials/modules/_hsl-picker.scss */
 .hslpicker .exposed .foreground {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 1px 10px;
   cursor: pointer;
 }
@@ -2266,7 +2207,6 @@ pre > code.highlight {
   right: 0;
   border-radius: 5px;
   z-index: 1;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0px 1px inset, rgba(0, 0, 0, 0.5) 0 0 0 5px inset;
   box-shadow: rgba(255, 255, 255, 0.5) 0 0 0px 1px inset, rgba(0, 0, 0, 0.5) 0 0 0 5px inset;
   cursor: pointer;
 }
@@ -2341,7 +2281,6 @@ pre > code.highlight {
   top: 0;
   left: 0;
   border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 6px 5px, rgba(255, 255, 255, 0.4) 6px 6px 1px, rgba(0, 0, 0, 0.8) 18px 5px, rgba(255, 255, 255, 0.4) 18px 6px 1px, rgba(0, 0, 0, 0.8) 12px 12px, rgba(255, 255, 255, 0.4) 12px 13px 1px, rgba(0, 0, 0, 0.8) 6px 19px, rgba(255, 255, 255, 0.4) 6px 20px 1px, rgba(0, 0, 0, 0.8) 18px 19px, rgba(255, 255, 255, 0.4) 18px 20px 1px;
   box-shadow: rgba(0, 0, 0, 0.8) 6px 5px, rgba(255, 255, 255, 0.4) 6px 6px 1px, rgba(0, 0, 0, 0.8) 18px 5px, rgba(255, 255, 255, 0.4) 18px 6px 1px, rgba(0, 0, 0, 0.8) 12px 12px, rgba(255, 255, 255, 0.4) 12px 13px 1px, rgba(0, 0, 0, 0.8) 6px 19px, rgba(255, 255, 255, 0.4) 6px 20px 1px, rgba(0, 0, 0, 0.8) 18px 19px, rgba(255, 255, 255, 0.4) 18px 20px 1px;
 }
 
@@ -2362,7 +2301,6 @@ pre > code.highlight {
 .hslpicker .slider, .hslpicker .slider > div {
   width: 381px;
   height: 20px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px, black 0 0 2px 1px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px inset, rgba(0, 0, 0, 0.4) 0 -1px 1px inset, rgba(0, 0, 0, 0.4) 0 1px 1px, black 0 0 2px 1px;
 }
 /* line 213, ../sass/partials/modules/_hsl-picker.scss */
@@ -2391,10 +2329,12 @@ pre > code.highlight {
   background-color: #dddddd;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjAlIiByPSIxNSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC45Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-radial-gradient(top center, circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
-  background-image: radial-gradient(top center, circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
+  background-image: -webkit-radial-gradient(circle at top center, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
+  background-image: radial-gradient(circle at top center, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2) 15px);
   border-radius: 1em;
-  -webkit-box-shadow: white 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px -1px 1px inset, rgba(0, 0, 0, 0.4) 0px 1px 4px 0px, rgba(0, 0, 0, 0.6) 0 0 2px;
   box-shadow: white 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px -1px 1px inset, rgba(0, 0, 0, 0.4) 0px 1px 4px 0px, rgba(0, 0, 0, 0.6) 0 0 2px;
 }
 
@@ -2462,7 +2402,6 @@ pre > code.highlight {
 
 /* line 285, ../sass/partials/modules/_hsl-picker.scss */
 .hslpicker input.error {
-  -webkit-box-shadow: rgba(255, 127, 127, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   box-shadow: rgba(255, 127, 127, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   background-color: rgba(102, 0, 0, 0.3);
   color: #ff0f0f;
@@ -2481,14 +2420,12 @@ pre > code.highlight {
   width: 168px;
   color: #666;
   border-radius: 0px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   background: none;
 }
 /* line 305, ../sass/partials/modules/_hsl-picker.scss */
 .hslpicker .url:focus, .hslpicker .url:hover {
   background: rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px 0px inset;
   color: #999;
 }
@@ -2505,7 +2442,6 @@ General page and structural styles
   background: #fff;
   overflow: hidden;
   margin-bottom: 10px;
-  -webkit-box-shadow: #00dd00 3px 0;
   box-shadow: #00dd00 3px 0;
   border: 1px solid #00dd00;
   position: relative;
@@ -2537,7 +2473,6 @@ input#arc90-color {
   border: 1px solid #00bb00;
   border-bottom-color: #00dd00;
   color: #003300;
-  -webkit-box-shadow: inset 0 1px 2px #eee;
   box-shadow: inset 0 1px 2px #eee;
   border-radius: 3px;
   padding-left: 2em;
@@ -2559,7 +2494,6 @@ input#arc90-color:-moz-placeholder {
 input#arc90-color:focus {
   outline: none;
   border: 1px solid #005500;
-  -webkit-box-shadow: 0 0 8px rgba(0, 85, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 85, 0, 0.6);
 }
 
@@ -2592,7 +2526,6 @@ label[for="arc90-color"] {
 /* line 103, ../sass/partials/modules/_arc90.scss */
 .ui-slider-handle {
   background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
-  -webkit-background-size: 20px 20px;
   background-size: 20px 20px;
   position: absolute;
   z-index: 10;
@@ -2628,7 +2561,6 @@ input[type='range']::-webkit-slider-thumb {
   background-repeat: no-repeat;
   border-radius: 40px;
   background: transparent url(../img/ui/range-handle@2x.png) no-repeat;
-  -webkit-background-size: 20px 20px;
   background-size: 20px 20px;
 }
 
@@ -2649,7 +2581,7 @@ Styles for each <li> item
   position: relative;
   opacity: 1;
   -webkit-transition: .5s all ease;
-  transition: .5s all ease;
+          transition: .5s all ease;
 }
 /* line 163, ../sass/partials/modules/_arc90.scss */
 .arc90-listItem.slider {
@@ -2751,7 +2683,6 @@ Styles for the main content swatches
   position: relative;
   z-index: 500;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px inset;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px inset;
 }
 /* line 299, ../sass/partials/modules/_arc90.scss */
@@ -2777,7 +2708,6 @@ Styles for individual elements on the page */
   border: 1px solid #EBEBEB;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 -4px 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -4px 6px;
   color: #353535;
   display: none;
@@ -13150,8 +13080,6 @@ Styles for individual elements on the page */
 /* normalize.scss v2.1.3 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
 /* line 3, ../sass/partials/design/default/_normalize.scss */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -13187,10 +13115,10 @@ html {
 body {
   font-size: 100%;
   line-height: 1.375;
-  background-color: lime;
+  background-color: #00ff00;
   color: #001100;
   -webkit-transition: background-color .5s ease;
-  transition: background-color .5s ease;
+          transition: background-color .5s ease;
   outline: 1px dotted tan;
 }
 
@@ -13198,7 +13126,6 @@ body {
 body::before {
   content: "";
   position: absolute;
-  -webkit-box-shadow: 0 10px 14px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.5);
   height: 15px;
   left: 0;
@@ -13210,7 +13137,7 @@ body::before {
 /* line 58, ../sass/partials/design/default/_normalize.scss */
 .dark {
   background-color: #003300;
-  color: lime;
+  color: #00ff00;
 }
 
 /* line 59, ../sass/partials/design/default/_normalize.scss */
@@ -13296,8 +13223,8 @@ h1,
   font-weight: normal;
   display: inline-block;
   -webkit-transform: translateY(-1.11111em);
-  -ms-transform: translateY(-1.11111em);
-  transform: translateY(-1.11111em);
+      -ms-transform: translateY(-1.11111em);
+          transform: translateY(-1.11111em);
 }
 
 /* line 132, ../sass/partials/design/default/_normalize.scss */
@@ -13323,8 +13250,6 @@ dfn {
 
 /* line 150, ../sass/partials/design/default/_normalize.scss */
 hr {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -13443,7 +13368,7 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 2 */
-  margin: 0;
+  margin: 0
   /* 3 */
 }
 
@@ -13492,11 +13417,11 @@ input::-moz-focus-inner {
   padding: 2em 1.5em;
   font-size: 1.125em;
   -webkit-column-width: 20em;
-  -moz-column-width: 20em;
-  column-width: 20em;
+     -moz-column-width: 20em;
+          column-width: 20em;
   -webkit-column-gap: 2em;
-  -moz-column-gap: 2em;
-  column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
 }
 
 /* line 301, ../sass/partials/design/default/_normalize.scss */
@@ -13595,8 +13520,8 @@ input::-moz-focus-inner {
 /* line 377, ../sass/partials/design/default/_normalize.scss */
 .copyright {
   -webkit-transform: translateY(1em);
-  -ms-transform: translateY(1em);
-  transform: translateY(1em);
+      -ms-transform: translateY(1em);
+          transform: translateY(1em);
   padding: 1em 0;
   background: #005500;
   border-top: 1px solid #003300;
@@ -13612,7 +13537,7 @@ input::-moz-focus-inner {
 
 /* line 389, ../sass/partials/design/default/_normalize.scss */
 .copyright a {
-  color: lime;
+  color: #00ff00;
   display: inline-block;
 }
 
@@ -13652,8 +13577,7 @@ input::-moz-focus-inner {
   position: absolute;
   bottom: 38px;
   left: -32px;
-  background: lime;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00ff00), to(#00dd00));
+  background: #00ff00;
   background: -webkit-linear-gradient(#00ff00, #00dd00);
   background: linear-gradient(#00ff00, #00dd00);
   height: 44px;
@@ -13663,12 +13587,12 @@ input::-moz-focus-inner {
   font-size: 30px;
   line-height: 32px;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   border-top: 1px solid #00dd00;
   border-bottom: 1px solid #00bb00;
   -webkit-transition: color ease 142ms;
-  transition: color ease 142ms;
+          transition: color ease 142ms;
   letter-spacing: -1px;
 }
 
@@ -13710,14 +13634,13 @@ style[contenteditable] {
   border: 3px solid #004800;
   border-left-width: 0;
   border-right-width: 0;
-  -webkit-box-shadow: rgba(0, 17, 0, 0.75) 8px 16px 12px inset;
   box-shadow: rgba(0, 17, 0, 0.75) 8px 16px 12px inset;
   -webkit-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out;
+          transition: all .35s ease-in-out;
   height: 110px;
   -webkit-transform: translateY(-107px);
-  -ms-transform: translateY(-107px);
-  transform: translateY(-107px);
+      -ms-transform: translateY(-107px);
+          transform: translateY(-107px);
   position: relative;
   z-index: 2;
   color: transparent;
@@ -13733,8 +13656,8 @@ style[contenteditable]:focus {
 /* line 31, ../sass/partials/design/default/_layout.scss */
 style[contenteditable]:hover {
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   color: #fff;
 }
 
@@ -13755,14 +13678,13 @@ style[contenteditable]::after {
   color: #fff;
   border-bottom-right-radius: 32px 24px;
   border-bottom-left-radius: 32px 24px;
-  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* line 54, ../sass/partials/design/default/_layout.scss */
 .header {
   -webkit-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out;
+          transition: all .35s ease-in-out;
   height: 114px;
   z-index: 1;
   background-color: #00bb00;
@@ -13776,8 +13698,8 @@ style[contenteditable]::after {
 /* line 65, ../sass/partials/design/default/_layout.scss */
 .is-hovered .header {
   -webkit-transform: scale(1, 0);
-  -ms-transform: scale(1, 0);
-  transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+          transform: scale(1, 0);
   z-index: -1;
 }
 
@@ -13830,8 +13752,6 @@ style[contenteditable]::after {
 .grid-item {
   padding-left: 16px;
   padding-right: 16px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -13931,7 +13851,7 @@ style[contenteditable]::after {
 
 /* line 235, ../sass/partials/design/default/_layout.scss */
 .content .colorscheme-tiles {
-  max-width: 384px;
+  max-width: 384px
   /* 24 * 16px */
 }
 
@@ -13969,7 +13889,7 @@ rect[class^="fill-"]:hover {
 /* line 260, ../sass/partials/design/default/_layout.scss */
 .color-sliders {
   overflow: auto;
-  background-color: lime;
+  background-color: #00ff00;
 }
 
 /* line 265, ../sass/partials/design/default/_layout.scss */
@@ -13992,14 +13912,14 @@ input[type="range"] {
 /* line 276, ../sass/partials/design/default/_layout.scss */
 .output {
   min-height: 512px;
-  color: lime;
+  color: #00ff00;
 }
 
 /* line 280, ../sass/partials/design/default/_layout.scss */
 .output--text {
   -webkit-transform: translateY(-23em);
-  -ms-transform: translateY(-23em);
-  transform: translateY(-23em);
+      -ms-transform: translateY(-23em);
+          transform: translateY(-23em);
   margin-bottom: -21em;
 }
 
@@ -14066,7 +13986,7 @@ p {
   padding: 0 0 0 1em;
   margin: 0;
   -webkit-transition: max-height 1s ease-in-out;
-  transition: max-height 1s ease-in-out;
+          transition: max-height 1s ease-in-out;
   font-size: 1.125em;
   max-width: 34em;
 }
@@ -14075,7 +13995,7 @@ p {
 .accordion .slide-up {
   overflow: hidden;
   -webkit-transition: max-height 0.1s;
-  transition: max-height 0.1s;
+          transition: max-height 0.1s;
 }
 
 /* line 352, ../sass/partials/design/default/_layout.scss */

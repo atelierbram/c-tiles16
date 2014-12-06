@@ -1,32 +1,35 @@
-$placid-blue:    #87d4fa;
-$violet-tulip:   #8f9cff;
-$hemlock:        #9cf5a6;
-$paloma:         #a6c2ba;
-$sand:           #ccba85;
-$freesia:        #ffdb00;
-$cayenne:        #f04270;
-$celosia-orange: #ff5e33;
-$radiant-orchid: #ad59ff;
-$dazzling-blue:  #146eff;
-$purple-haze:    #707dd9;
-$comfrey:        #3ca555;
-$magenta-purple: #752563;
+$Aquamarine:     #9dc6d8;
+$ScubaBlue:      #00b2ca;
+$LuciteGreen:    #7dcfb6;
+$ClassicBlue:    #144e89;
+$ToastedAlmond:  #d2b29a;
+$StrawberryIce:  #e3868f;
+$Tangerine:      #f79256;
+$Custard:        #ead98b;
+$Marsala:        #955251;
+$GlacierGray:    #c6cbcc;
+$DuskBlue:       #7da1bf;
+$Treetop:        #4e6e38;
+$Woodbine:       #7f8040;
+$Sandstone:      #c78d6b;
+$Titanium:       #8a8587;
+$LavenderHerb:   #b38fb1;
 
-$blue-light: $placid-blue;
-$electric-ladyland: $violet-tulip;
-$green-light: $hemlock;
-$gray: $paloma;
-$ocre-light: $sand;
-$yellow: $freesia;
-$red: $cayenne;
-$orange: $celosia-orange;
-$violet: $radiant-orchid;
-$blue-dark: $dazzling-blue;
-$jimi-hendrix: $purple-haze;
-$green: $comfrey;
-$magenta-dark: $magenta-purple;
+$blue-light: $Aquamarine;
+$green-light: $LuciteGreen;
+$gray: $Titanium;
+$ocre-light: $Custard;
+$red: $Marsala;
+$orange: $Tangerine;
+$violet: $LavenderHerb;
+$blue-dark: $ClassicBlue;
+$blue-bright: $ScubaBlue;
+$green: $Treetop;
+$pink: $StrawberryIce;
+$olive: $Woodbine;
+$beige: $ToastedAlmond;
 
-$gray-light: lighten($gray,25%);
+$gray-light: $GlacierGray;
 
 // http://codepen.io/MadeByMike/pen/sDpxg/
 // Adapted from: https://gist.github.com/voxpelli/6304812
@@ -110,12 +113,12 @@ header p {
   animation-timing-function: linear;
 }
 h1 {
-  color: $jimi-hendrix;
+  color: $red;
   text-transform: capitalize;
 
 }
 header p {
-  color: $electric-ladyland;
+  color: $red;
   font-size: 1.75em;
   text-align: right;
   // transform: translateY(-1.03em);
@@ -173,56 +176,68 @@ td:nth-of-type(2) {
   text-align: right;
 }
 tr:nth-of-type(1) {
-  background: $placid-blue;
-  color: text-contrast($placid-blue);
+  background: $Aquamarine;
+  color: text-contrast($Aquamarine);
 }
 tr:nth-of-type(2) {
-  background: $violet-tulip;
-  color: text-contrast($violet-tulip);
+  background: $ScubaBlue;
+  color: text-contrast($ScubaBlue);
 }
 tr:nth-of-type(3) {
-  background: $hemlock;
-  color: text-contrast($hemlock);
+  background: $LuciteGreen;
+  color: text-contrast($LuciteGreen);
 }
 tr:nth-of-type(4) {
-  background: $paloma;
-  color: text-contrast($paloma);
+  background: $ClassicBlue;
+  color: text-contrast($ClassicBlue);
 }
 tr:nth-of-type(5) {
-  background: $sand;
-  color: text-contrast($sand);
+  background: $ToastedAlmond;
+  color: text-contrast($ToastedAlmond);
 }
 tr:nth-of-type(6) {
-  background: $freesia;
-  color: text-contrast($freesia);
+  background: $StrawberryIce;
+  color: text-contrast($StrawberryIce);
 }
 tr:nth-of-type(7) {
-  background: $cayenne;
-  color: text-contrast($cayenne);
+  background: $Tangerine;
+  color: text-contrast($Tangerine);
 }
 tr:nth-of-type(8) {
-  background: $celosia-orange;
-  color: text-contrast($celosia-orange);
+  background: $Custard;
+  color: text-contrast($Custard);
 }
 tr:nth-of-type(9) {
-  background: $radiant-orchid;
-  color: text-contrast($radiant-orchid);
+  background: $Marsala;
+  color: text-contrast($Marsala);
 }
 tr:nth-of-type(10) {
-  background: $dazzling-blue;
-  color: text-contrast($dazzling-blue);
+  background: $GlacierGray;
+  color: text-contrast($GlacierGray);
 }
 tr:nth-of-type(11) {
-  background: $purple-haze;
-  color: text-contrast($purple-haze);
+  background: $DuskBlue;
+  color: text-contrast($DuskBlue);
 }
 tr:nth-of-type(12) {
-  background: $comfrey;
-  color: text-contrast($comfrey);
+  background: $Treetop;
+  color: text-contrast($Treetop);
 }
 tr:nth-of-type(13) {
-  background: $magenta-purple;
-  color: text-contrast($magenta-purple);
+  background: $Woodbine;
+  color: text-contrast($Woodbine);
+}
+tr:nth-of-type(14) {
+  background: $Sandstone;
+  color: text-contrast($Sandstone);
+}
+ tr:nth-of-type(15) {
+  background: $Titanium;
+  color: text-contrast($Titanium);
+}
+ tr:nth-of-type(16) {
+  background: $LavenderHerb;
+  color: text-contrast($LavenderHerb);
 }
 
 ul {
@@ -235,7 +250,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: $magenta-purple;
+  color: $violet;
 }
 footer,
 footer ul {
@@ -269,10 +284,10 @@ footer a {
     background: $blue-light;
   }
   13.2% {
-    background: $electric-ladyland;
+    background: $pink;
   }
   19.2% {
-    background: $electric-ladyland;
+    background: $pink;
   }
   19.8% {
     background: $green-light;
@@ -293,10 +308,10 @@ footer a {
     background: $ocre-light;
   }
   39.6% {
-    background: $yellow;
+    background: $olive;
   }
   45.6% {
-    background: $yellow;
+    background: $olive;
   }
   46.2% {
     background: $red;
@@ -323,10 +338,10 @@ footer a {
     background: $blue-dark;
   }
   72.6% {
-    background: $jimi-hendrix;
+    background: $pink;
   }
   78.6% {
-    background: $jimi-hendrix;
+    background: $pink;
   }
   79.2% {
     background: $green;
@@ -335,10 +350,10 @@ footer a {
     background: $green;
   }
   85.8% {
-    background: $magenta-dark;
+    background: $Sandstone;
   }
   91.8% {
-    background: $magenta-dark;
+    background: $Sandstone;
   }
   92.4% {
     background: $gray-light;
@@ -353,10 +368,10 @@ footer a {
     color: $red;
   }
   6.6% {
-    color: $violet;
+    color: $green;
   }
   12.6% {
-    color: $violet;
+    color: $green;
   }
   13.2% {
     color:  white;
@@ -365,28 +380,28 @@ footer a {
     color:  white;
   }
   19.8% {
-    color: $orange;
+    color: $blue-dark;
   }
   25.8% {
-    color: $orange;
+    color: $blue-dark;
   }
   26.4% {
-    color: $yellow;
+    color: $ocre-light;
   }
   32.4% {
-    color: $yellow;
+    color: $ocre-light;
   }
   33% {
-    color: $magenta-dark;
+    color: $Marsala;
   }
   39% {
-    color: $magenta-dark;
+    color: $Marsala;
   }
   39.6% {
-    color: $blue-dark;
+    color: $Aquamarine;
   }
   45.6% {
-    color: $blue-dark;
+    color: $Aquamarine;
   }
   46.2% {
     color: $gray-light;
@@ -395,28 +410,28 @@ footer a {
     color: $gray-light;
   }
   52.8% {
-    color: $green-light;
+    color: $olive;
   }
   58.8% {
-    color: $green-light;
+    color: $olive;
   }
   59.4% {
-    color: $blue-light;
+    color: $gray-light;
   }
   65.4% {
-    color: $blue-light;
+    color: $gray-light;
   }
   66% {
-    color: $electric-ladyland;
+    color: $pink;
   }
   72% {
-    color: $electric-ladyland;
+    color: $pink;
   }
   72.6% {
-    color: $gray;
+    color: $gray-light;
   }
   78.6% {
-    color: $gray;
+    color: $gray-light;
   }
   79.2% {
     color: $ocre-light;
@@ -425,10 +440,10 @@ footer a {
     color: $ocre-light;
   }
   85.8% {
-    color: $jimi-hendrix;
+    color: $red;
   }
   91.8% {
-    color: $jimi-hendrix;
+    color: $red;
   }
   92.4% {
     color: $gray;
