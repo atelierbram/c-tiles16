@@ -27,11 +27,16 @@ body {
   margin: 0 auto;
   padding: 1em;
   padding-bottom: 3em;
-  width: 42em;
+  max-width: 35em;
   color: #111;
 }
 
 /* line 99, ../sass/pantone2014spring.scss */
+header {
+  padding-bottom: 3em;
+}
+
+/* line 102, ../sass/pantone2014spring.scss */
 h1,
 header p {
   letter-spacing: -1px;
@@ -51,13 +56,13 @@ header p {
           animation-timing-function: linear;
 }
 
-/* line 112, ../sass/pantone2014spring.scss */
+/* line 115, ../sass/pantone2014spring.scss */
 h1 {
   color: #707dd9;
   text-transform: capitalize;
 }
 
-/* line 117, ../sass/pantone2014spring.scss */
+/* line 120, ../sass/pantone2014spring.scss */
 header p {
   color: #8f9cff;
   font-size: 1.75em;
@@ -67,7 +72,7 @@ header p {
           transform: translateY(-100%);
 }
 
-/* line 124, ../sass/pantone2014spring.scss */
+/* line 127, ../sass/pantone2014spring.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -75,35 +80,41 @@ table {
   background: #a6c2ba;
 }
 
-/* line 131, ../sass/pantone2014spring.scss */
+/* line 134, ../sass/pantone2014spring.scss */
 col:nth-of-type(1) {
   background: rgba(0, 0, 0, 0.125);
   width: 62.5%;
 }
 
-/* line 135, ../sass/pantone2014spring.scss */
+/* line 138, ../sass/pantone2014spring.scss */
 col:nth-of-type(2) {
   width: 20%;
 }
 
-/* line 138, ../sass/pantone2014spring.scss */
+/* line 141, ../sass/pantone2014spring.scss */
 col:nth-of-type(3) {
   width: 17.5%;
 }
 
-/* line 141, ../sass/pantone2014spring.scss */
+/* line 144, ../sass/pantone2014spring.scss */
 thead {
   display: table-header-group;
 }
 
-/* line 144, ../sass/pantone2014spring.scss */
+/* line 147, ../sass/pantone2014spring.scss */
 header,
-thead th {
-  font-family: cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+head th {
+  font-family: AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
   font-weight: 700;
 }
 
-/* line 149, ../sass/pantone2014spring.scss */
+/* line 152, ../sass/pantone2014spring.scss */
+.wf-active header,
+.wf-active thead th {
+  font-family: Cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+}
+
+/* line 156, ../sass/pantone2014spring.scss */
 thead th {
   border-bottom: 1px solid #333;
   text-align: right;
@@ -112,120 +123,120 @@ thead th {
   text-transform: uppercase;
 }
 
-/* line 156, ../sass/pantone2014spring.scss */
+/* line 163, ../sass/pantone2014spring.scss */
 thead th:nth-of-type(1) {
   text-align: left;
 }
 
-/* line 160, ../sass/pantone2014spring.scss */
+/* line 167, ../sass/pantone2014spring.scss */
 th[scope="col"] {
   border-bottom: 3px solid #a6c2ba;
 }
 
-/* line 163, ../sass/pantone2014spring.scss */
+/* line 170, ../sass/pantone2014spring.scss */
 th[scope="row"] {
   text-align: left;
 }
 
-/* line 166, ../sass/pantone2014spring.scss */
+/* line 173, ../sass/pantone2014spring.scss */
 th, td {
   padding: .5em 1em;
 }
 
-/* line 169, ../sass/pantone2014spring.scss */
+/* line 176, ../sass/pantone2014spring.scss */
 td:nth-of-type(1) {
   text-align: right;
 }
 
-/* line 172, ../sass/pantone2014spring.scss */
+/* line 179, ../sass/pantone2014spring.scss */
 td:nth-of-type(2) {
   text-align: right;
 }
 
-/* line 175, ../sass/pantone2014spring.scss */
+/* line 182, ../sass/pantone2014spring.scss */
 tr:nth-of-type(1) {
   background: #87d4fa;
   color: #05557d;
 }
 
-/* line 179, ../sass/pantone2014spring.scss */
+/* line 186, ../sass/pantone2014spring.scss */
 tr:nth-of-type(2) {
   background: #8f9cff;
   color: #00118f;
 }
 
-/* line 183, ../sass/pantone2014spring.scss */
+/* line 190, ../sass/pantone2014spring.scss */
 tr:nth-of-type(3) {
   background: #9cf5a6;
   color: #095611;
 }
 
-/* line 187, ../sass/pantone2014spring.scss */
+/* line 194, ../sass/pantone2014spring.scss */
 tr:nth-of-type(4) {
   background: #a6c2ba;
   color: #2b3e39;
 }
 
-/* line 191, ../sass/pantone2014spring.scss */
+/* line 198, ../sass/pantone2014spring.scss */
 tr:nth-of-type(5) {
   background: #ccba85;
   color: #3a3118;
 }
 
-/* line 195, ../sass/pantone2014spring.scss */
+/* line 202, ../sass/pantone2014spring.scss */
 tr:nth-of-type(6) {
   background: #ffdb00;
   color: #665800;
 }
 
-/* line 199, ../sass/pantone2014spring.scss */
+/* line 206, ../sass/pantone2014spring.scss */
 tr:nth-of-type(7) {
   background: #f04270;
   color: #2f040f;
 }
 
-/* line 203, ../sass/pantone2014spring.scss */
+/* line 210, ../sass/pantone2014spring.scss */
 tr:nth-of-type(8) {
   background: #ff5e33;
   color: #330b00;
 }
 
-/* line 207, ../sass/pantone2014spring.scss */
+/* line 214, ../sass/pantone2014spring.scss */
 tr:nth-of-type(9) {
   background: #ad59ff;
   color: #130026;
 }
 
-/* line 211, ../sass/pantone2014spring.scss */
+/* line 218, ../sass/pantone2014spring.scss */
 tr:nth-of-type(10) {
   background: #146eff;
   color: #000814;
 }
 
-/* line 215, ../sass/pantone2014spring.scss */
+/* line 222, ../sass/pantone2014spring.scss */
 tr:nth-of-type(11) {
   background: #707dd9;
   color: #10153a;
 }
 
-/* line 219, ../sass/pantone2014spring.scss */
+/* line 226, ../sass/pantone2014spring.scss */
 tr:nth-of-type(12) {
   background: #3ca555;
   color: #060f08;
 }
 
-/* line 223, ../sass/pantone2014spring.scss */
+/* line 230, ../sass/pantone2014spring.scss */
 tr:nth-of-type(13) {
   background: #752563;
   color: #e7b2db;
 }
 
-/* line 228, ../sass/pantone2014spring.scss */
+/* line 235, ../sass/pantone2014spring.scss */
 ul {
   list-style: none;
 }
 
-/* line 231, ../sass/pantone2014spring.scss */
+/* line 238, ../sass/pantone2014spring.scss */
 a {
   color: #146eff;
   display: inline-block;
@@ -233,32 +244,32 @@ a {
   text-decoration: none;
 }
 
-/* line 237, ../sass/pantone2014spring.scss */
+/* line 244, ../sass/pantone2014spring.scss */
 a:hover {
   color: #752563;
 }
 
-/* line 240, ../sass/pantone2014spring.scss */
+/* line 247, ../sass/pantone2014spring.scss */
 footer,
 footer ul {
   overflow: auto;
 }
 
-/* line 244, ../sass/pantone2014spring.scss */
+/* line 251, ../sass/pantone2014spring.scss */
 footer {
   margin: 0 auto;
-  border-top: 3px solid #8da49e;
+  border-top: 3px solid #8da59e;
   padding: 2em 1em 1em;
   background: #a6c2ba;
 }
 
-/* line 250, ../sass/pantone2014spring.scss */
+/* line 257, ../sass/pantone2014spring.scss */
 footer li {
   font-size: .875em;
   text-align: center;
 }
 
-/* line 254, ../sass/pantone2014spring.scss */
+/* line 261, ../sass/pantone2014spring.scss */
 footer a {
   float: left;
   width: 100%;

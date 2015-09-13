@@ -11,7 +11,7 @@ It’ s one thing two have color variables declared on top of your Sass/Less/Sty
 
 1.  A build script named `ctiles16`, that is a fork of [Base16](https://github.com/chriskempson/base16-builder), and can be executed from the terminal/commandline, and generates preprocessor variables to be used by Sass, Less, or Stylus
 
-2. A [colorscheming test playground](http://atelierbram.github.io/c-tiles16/colorscheming) that is assembled to have the best colorscheming tools, alongside colorscheme-tiles **on one webpage**-test-playground, making it convenient to create your own colorscheme, with sixteen variables
+2. A [colorscheming test playground](http://atelierbram.github.io/c-tiles16/colorscheming/index.html#7b8a8e) that is assembled to have the best colorscheming tools, alongside colorscheme-tiles **on one webpage**-test-playground, making it convenient to create your own colorscheme, with sixteen variables
 
 ## Getting started
 A possible way to make this tool, or rather collection-of-tools, your own can be:
@@ -61,17 +61,26 @@ Build a scheme stored on some webspace.
 
 ## Credits
 
-* [Base16 Builder](https://github.com/chriskempson/base16-builder) by [Chris Kempson](http://chriskempson.com/)
-* [HSL Color Picker](http://hslpicker.com/) by [Brandon Mathis](http://brandonmathis.com)
-* [SassMe](http://sassme.arc90.com/) by [Arc90](http://arc90.com)
+- [Base16 Builder](https://github.com/chriskempson/base16-builder) by [Chris Kempson](http://chriskempson.com/)
+- [HSL Color Picker](http://hslpicker.com/) by [Brandon Mathis](http://brandonmathis.com)
+- [SassMe](http://sassme.arc90.com/) by [Arc90](http://arc90.com)
 
 ## Resources
 
-* [Prism](http://prismjs.com/) by [Lea Verou](http://lea.verou.me)
-* [Sass Prism](https://github.com/MoOx/sass-prism-theme-base) base theme by [Maxime Thirouin](http://moox.io/)
-* [Formalize](http://formalize.me/) by [Nathan Smith](http://sonspring.com/)
-* [long dropdown menu](http://codepen.io/larrygeams/pen/feoDc) by [Chris Coyier](http://css-tricks.com/long-dropdowns-solution/) and [Geams](http://larrygeams.comze.com/)
-* [lightweight accordion](http://wordimpress.com/super-lightweight-jquery-website-accordions-without-a-plugin/) by [Devin Walker](http://wordimpress.com/author/wordimpressadmin/)
+- [Prism](http://prismjs.com/) by [Lea Verou](http://lea.verou.me)
+- [Sass Prism](https://github.com/MoOx/sass-prism-theme-base) base theme by [Maxime Thirouin](http://moox.io/)
+- [Formalize](http://formalize.me/) by [Nathan Smith](http://sonspring.com/)
+- [long dropdown menu](http://codepen.io/larrygeams/pen/feoDc) by [Chris Coyier](http://css-tricks.com/long-dropdowns-solution/) and [Geams](http://larrygeams.comze.com/)
+- [lightweight accordion](http://wordimpress.com/super-lightweight-jquery-website-accordions-without-a-plugin/) by [Devin Walker](http://wordimpress.com/author/wordimpressadmin/)
+
+### Colorscheming Tools - links
+- [Coolors - the coolest schemes generator](http://app.coolors.co/)
+- [Harmonic16](https://github.com/janniks/harmonic16), by Jannik
+
+### Internal links
+- [Pantone spring colors 1014 ](colorscheming/pantone-spring-2014-colortable.html)
+- [Pantone spring colors 1015 ](colorscheming/pantone-spring-2015colortable.html)
+- [Pantone spring colors 1016 ](colorscheming/pantone-spring-2016-colortable.html)
 
 ### License
 

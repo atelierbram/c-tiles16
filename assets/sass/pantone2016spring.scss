@@ -1,35 +1,25 @@
-$Aquamarine:     #9dc6d8;
-$ScubaBlue:      #00b2ca;
-$LuciteGreen:    #7dcfb6;
-$ClassicBlue:    #144e89;
-$ToastedAlmond:  #d2b29a;
-$StrawberryIce:  #e3868f;
-$Tangerine:      #f79256;
-$Custard:        #ead98b;
-$Marsala:        #955251;
-$GlacierGray:    #c6cbcc;
-$DuskBlue:       #7da1bf;
-$Treetop:        #4e6e38;
-$Woodbine:       #7f8040;
-$Sandstone:      #c78d6b;
-$Titanium:       #8a8587;
-$LavenderHerb:   #b38fb1;
+$RoseQuartz:  #f7cac9;
+$PeachEcho:   #f7786b;
+$Serenity:    #91A8d0;
+$SnorkelBlue: #034f84;
+$Buttercup:   #fae03c;
+$LimpetShell: #98ddde;
+$LilacGray:   #9896a4;
+$Fiesta:      #dd4132;
+$IcedCoffee:  #b18f6a;
+$GreenFlash:  #79c753;
 
-$blue-light: $Aquamarine;
-$green-light: $LuciteGreen;
-$gray: $Titanium;
-$ocre-light: $Custard;
-$red: $Marsala;
-$orange: $Tangerine;
-$violet: $LavenderHerb;
-$blue-dark: $ClassicBlue;
-$blue-bright: $ScubaBlue;
-$green: $Treetop;
-$pink: $StrawberryIce;
-$olive: $Woodbine;
-$beige: $ToastedAlmond;
 
-$gray-light: $GlacierGray;
+$pink-light:  $RoseQuartz;
+$salmon:      $PeachEcho;
+$blue-light:  $Serenity;
+$blue-dark :  $SnorkelBlue;
+$yellow:      $Buttercup;
+$cyan-light:  $LimpetShell;
+$gray:        $LilacGray;
+$red:         $Fiesta;
+$tan:         $IcedCoffee;
+$green:       $GreenFlash;
 
 // http://codepen.io/MadeByMike/pen/sDpxg/
 // Adapted from: https://gist.github.com/voxpelli/6304812
@@ -84,7 +74,7 @@ $gray-light: $GlacierGray;
   box-sizing: border-box;
 }
 html {
-  background: $gray-light;
+  background: $gray;
   animation-name: bg-color;
   animation-duration: 90s;
   animation-fill-mode: both;
@@ -98,9 +88,6 @@ body {
   padding-bottom: 3em;
   max-width: 35em;
   color: #111;
-}
-header {
-  padding-bottom: 3em;
 }
 h1,
 header p {
@@ -119,6 +106,9 @@ h1 {
   color: $red;
   text-transform: capitalize;
 
+}
+header {
+  padding-bottom: 3em;
 }
 header p {
   color: $red;
@@ -151,18 +141,18 @@ header,
 head th {
   font-family: AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
   font-weight: 700;
-} 
+}
 .wf-active header,
 .wf-active thead th {
   font-family: Cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
 }
+
 thead th {
-  border-bottom: 1px solid #333;
   text-align: right;
   font-size: 1.125em;
-  background: lighten($gray,10%);
   text-transform: uppercase;
 }
+
 thead th:nth-of-type(1) {
   text-align: left;
 }
@@ -183,68 +173,68 @@ td:nth-of-type(2) {
   text-align: right;
 }
 tr:nth-of-type(1) {
-  background: $Aquamarine;
-  color: text-contrast($Aquamarine);
+  background: $pink-light;
+  color: text-contrast($pink-light);
 }
 tr:nth-of-type(2) {
-  background: $ScubaBlue;
-  color: text-contrast($ScubaBlue);
+  background: $salmon;
+  color: text-contrast($salmon);
 }
 tr:nth-of-type(3) {
-  background: $LuciteGreen;
-  color: text-contrast($LuciteGreen);
+  background: $blue-light;
+  color: text-contrast($blue-light);
 }
 tr:nth-of-type(4) {
-  background: $ClassicBlue;
-  color: text-contrast($ClassicBlue);
+  background: $blue-dark;
+  color: text-contrast($blue-dark);
 }
 tr:nth-of-type(5) {
-  background: $ToastedAlmond;
-  color: text-contrast($ToastedAlmond);
+  background: $yellow;
+  color: text-contrast($yellow);
 }
 tr:nth-of-type(6) {
-  background: $StrawberryIce;
-  color: text-contrast($StrawberryIce);
+  background: $cyan-light;
+  color: text-contrast($cyan-light);
 }
 tr:nth-of-type(7) {
-  background: $Tangerine;
-  color: text-contrast($Tangerine);
+  background: $gray;
+  color: text-contrast($gray);
 }
 tr:nth-of-type(8) {
-  background: $Custard;
-  color: text-contrast($Custard);
+  background: $red;
+  color: text-contrast($red);
 }
 tr:nth-of-type(9) {
-  background: $Marsala;
-  color: text-contrast($Marsala);
+  background: $tan;
+  color: text-contrast($tan);
 }
 tr:nth-of-type(10) {
-  background: $GlacierGray;
-  color: text-contrast($GlacierGray);
+  background: $green;
+  color: text-contrast($green);
 }
 tr:nth-of-type(11) {
-  background: $DuskBlue;
-  color: text-contrast($DuskBlue);
+  background: $blue-dark;
+  color: text-contrast($blue-dark);
 }
 tr:nth-of-type(12) {
-  background: $Treetop;
-  color: text-contrast($Treetop);
+  background: $green;
+  color: text-contrast($green);
 }
 tr:nth-of-type(13) {
-  background: $Woodbine;
-  color: text-contrast($Woodbine);
+  background: $tan;
+  color: text-contrast($tan);
 }
 tr:nth-of-type(14) {
-  background: $Sandstone;
-  color: text-contrast($Sandstone);
+  background: $yellow;
+  color: text-contrast($yellow);
 }
  tr:nth-of-type(15) {
-  background: $Titanium;
-  color: text-contrast($Titanium);
+  background: $cyan-light;
+  color: text-contrast($cyan-light);
 }
  tr:nth-of-type(16) {
-  background: $LavenderHerb;
-  color: text-contrast($LavenderHerb);
+  background: $red;
+  color: text-contrast($red);
 }
 
 ul {
@@ -257,7 +247,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: $violet;
+  color: $cyan-light;
 }
 footer,
 footer ul {
@@ -269,6 +259,19 @@ footer {
   padding: 2em 1em 1em;
   background: $gray;
 }
+
+thead th,
+thead tr:first-of-type,
+tfoot tr:first-of-type {
+  background: adjust-color($gray, $lightness: -40%);
+}
+
+thead th,
+thead tr:first-of-type a,
+tfoot tr:first-of-type a {
+  color: text-contrast(adjust-color($gray, $lightness: -40%));
+}
+
 footer li {
   font-size: .875em;
   text-align: center;
@@ -285,106 +288,106 @@ footer a {
     background: #fff;
   }
   6.6% {
-    background: $blue-light;
+    background: $pink-light;
   }
   12.6% {
-    background: $blue-light;
+    background: $pink-light;
   }
   13.2% {
-    background: $pink;
+    background: $salmon;
   }
   19.2% {
-    background: $pink;
+    background: $salmon;
   }
   19.8% {
-    background: $green-light;
+    background: $blue-light;
   }
   25.8% {
-    background: $green-light;
+    background: $blue-light;
   }
   26.4% {
-    background: $gray;
+    background: $blue-dark;
   }
   32.4% {
-    background: $gray;
+    background: $blue-dark;
   }
   33% {
-    background: $ocre-light;
+    background: $yellow;
   }
   39% {
-    background: $ocre-light;
+    background: $yellow;
   }
   39.6% {
-    background: $olive;
+    background: $cyan-light;
   }
   45.6% {
-    background: $olive;
+    background: $cyan-light;
   }
   46.2% {
-    background: $red;
+    background: $gray;
   }
   52.2% {
-    background: $red;
+    background: $gray;
   }
   52.8% {
-    background: $orange;
+    background: $red;
   }
   58.8% {
-    background: $orange;
+    background: $red;
   }
   59.4% {
-    background: $violet;
+    background: $tan;
   }
   65.4% {
-    background: $violet;
+    background: $tan;
   }
   66% {
-    background: $blue-dark;
+    background: $green;
   }
   72% {
-    background: $blue-dark;
+    background: $green;
   }
   72.6% {
-    background: $pink;
+    background: $yellow;
   }
   78.6% {
-    background: $pink;
+    background: $yellow;
   }
   79.2% {
-    background: $green;
+    background: $cyan-light;
   }
   85.2% {
-    background: $green;
+    background: $cyan-light;
   }
   85.8% {
-    background: $Sandstone;
+    background: $red;
   }
   91.8% {
-    background: $Sandstone;
+    background: $red;
   }
   92.4% {
-    background: $gray-light;
+    background: $pink-light;
   }
 }
 
 @keyframes color {
   0% {
-    color: $red;
+    color: $green;
   }
   6% {
-    color: $red;
+    color: $green;
   }
   6.6% {
-    color: $green;
+    color: $tan;
   }
   12.6% {
-    color: $green;
+    color: $tan;
   }
   13.2% {
-    color:  white;
+    color: adjust-color($red, $lightness: -10%);
   }
   19.2% {
-    color:  white;
+    color: adjust-color($red, $lightness: -10%);
   }
   19.8% {
     color: $blue-dark;
@@ -393,67 +396,66 @@ footer a {
     color: $blue-dark;
   }
   26.4% {
-    color: $ocre-light;
+    color: $cyan-light;
   }
   32.4% {
-    color: $ocre-light;
+    color: $cyan-light;
   }
   33% {
-    color: $Marsala;
+    color: $green;
   }
   39% {
-    color: $Marsala;
+    color: $green;
   }
   39.6% {
-    color: $Aquamarine;
+    color: $blue-dark;
   }
   45.6% {
-    color: $Aquamarine;
+    color: $blue-dark;
   }
   46.2% {
-    color: $gray-light;
+    color: white;
   }
   52.2% {
-    color: $gray-light;
+    color: white;
   }
   52.8% {
-    color: $olive;
+    color: adjust-color($pink-light, $lightness: 5%);
   }
   58.8% {
-    color: $olive;
+    color: adjust-color($pink-light, $lightness: 5%);
   }
   59.4% {
-    color: $gray-light;
+    color: $cyan-light;
   }
   65.4% {
-    color: $gray-light;
+    color: $cyan-light;
   }
   66% {
-    color: $pink;
+    color: $yellow;
   }
   72% {
-    color: $pink;
+    color: $yellow;
   }
   72.6% {
-    color: $gray-light;
+    color: $red;
   }
   78.6% {
-    color: $gray-light;
+    color: $red;
   }
   79.2% {
-    color: $ocre-light;
-  }
-  85.2% {
-    color: $ocre-light;
-  }
-  85.8% {
-    color: $red;
-  }
-  91.8% {
-    color: $red;
-  }
-  92.4% {
     color: $gray;
   }
+  85.2% {
+    color: $gray;
+  }
+  85.8% {
+    color: $cyan-light;
+  }
+  91.8% {
+    color: $cyan-light;
+  }
+  92.4% {
+    color: $red;
+  }
 }
-

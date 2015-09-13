@@ -1,13 +1,12 @@
-/* line 36, ../sass/pantone2014fall.scss */
+/* line 25, ../sass/pantone2014fall.scss */
 * {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 43, ../sass/pantone2014fall.scss */
+/* line 32, ../sass/pantone2014fall.scss */
 html {
   background: #dfd9de;
   -webkit-animation-name: bg-color;
@@ -22,22 +21,22 @@ html {
           animation-timing-function: linear;
 }
 
-/* line 51, ../sass/pantone2014fall.scss */
+/* line 40, ../sass/pantone2014fall.scss */
 body {
   font: 100%/1.5 AvenirNextCondensed-Regular, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
   margin: 0 auto;
   padding: 1em;
   padding-bottom: 3em;
-  width: 42em;
+  max-width: 35em;
   color: #111;
 }
 
-/* line 59, ../sass/pantone2014fall.scss */
+/* line 48, ../sass/pantone2014fall.scss */
 header {
-  padding: 0 0 2em;
+  padding: 0 0 3em;
 }
 
-/* line 63, ../sass/pantone2014fall.scss */
+/* line 51, ../sass/pantone2014fall.scss */
 h1,
 header p {
   letter-spacing: -1px;
@@ -57,13 +56,13 @@ header p {
           animation-timing-function: linear;
 }
 
-/* line 75, ../sass/pantone2014fall.scss */
+/* line 64, ../sass/pantone2014fall.scss */
 h1 {
   color: #355e91;
   text-transform: capitalize;
 }
 
-/* line 79, ../sass/pantone2014fall.scss */
+/* line 68, ../sass/pantone2014fall.scss */
 header p {
   color: #9d3158;
   font-size: 1.75em;
@@ -71,7 +70,7 @@ header p {
   margin-top: -1em;
 }
 
-/* line 92, ../sass/pantone2014fall.scss */
+/* line 74, ../sass/pantone2014fall.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -79,35 +78,41 @@ table {
   background: #a593a1;
 }
 
-/* line 99, ../sass/pantone2014fall.scss */
+/* line 81, ../sass/pantone2014fall.scss */
 col:nth-of-type(1) {
   background: rgba(0, 0, 0, 0.125);
   width: 62.5%;
 }
 
-/* line 103, ../sass/pantone2014fall.scss */
+/* line 85, ../sass/pantone2014fall.scss */
 col:nth-of-type(2) {
   width: 20%;
 }
 
-/* line 106, ../sass/pantone2014fall.scss */
+/* line 88, ../sass/pantone2014fall.scss */
 col:nth-of-type(3) {
   width: 17.5%;
 }
 
-/* line 109, ../sass/pantone2014fall.scss */
+/* line 91, ../sass/pantone2014fall.scss */
 thead {
   display: table-header-group;
 }
 
-/* line 113, ../sass/pantone2014fall.scss */
+/* line 94, ../sass/pantone2014fall.scss */
 header,
-thead th {
-  font-family: cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+head th {
+  font-family: AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
   font-weight: 700;
 }
 
-/* line 117, ../sass/pantone2014fall.scss */
+/* line 99, ../sass/pantone2014fall.scss */
+.wf-active header,
+.wf-active thead th {
+  font-family: Cuprum, AvenirNextCondensed-DemiBold, Calibri, Corbel, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, Verdana, sans-serif;
+}
+
+/* line 103, ../sass/pantone2014fall.scss */
 thead th {
   border-bottom: 1px solid #333;
   text-align: right;
@@ -116,97 +121,97 @@ thead th {
   text-transform: uppercase;
 }
 
-/* line 124, ../sass/pantone2014fall.scss */
+/* line 110, ../sass/pantone2014fall.scss */
 thead th:nth-of-type(1) {
   text-align: left;
 }
 
-/* line 128, ../sass/pantone2014fall.scss */
+/* line 114, ../sass/pantone2014fall.scss */
 th[scope="col"] {
   border-bottom: 3px solid #a593a1;
 }
 
-/* line 131, ../sass/pantone2014fall.scss */
+/* line 117, ../sass/pantone2014fall.scss */
 th[scope="row"] {
   text-align: left;
 }
 
-/* line 134, ../sass/pantone2014fall.scss */
+/* line 120, ../sass/pantone2014fall.scss */
 th, td {
   padding: .5em 1em;
 }
 
-/* line 137, ../sass/pantone2014fall.scss */
+/* line 123, ../sass/pantone2014fall.scss */
 td:nth-of-type(1) {
   text-align: right;
 }
 
-/* line 140, ../sass/pantone2014fall.scss */
+/* line 126, ../sass/pantone2014fall.scss */
 td:nth-of-type(2) {
   text-align: right;
 }
 
-/* line 155, ../sass/pantone2014fall.scss */
+/* line 141, ../sass/pantone2014fall.scss */
 tr:nth-of-type(1) {
   background: #b163a3;
 }
 
-/* line 158, ../sass/pantone2014fall.scss */
+/* line 144, ../sass/pantone2014fall.scss */
 tr:nth-of-type(2) {
   background: #3f448c;
 }
 
-/* line 161, ../sass/pantone2014fall.scss */
+/* line 147, ../sass/pantone2014fall.scss */
 tr:nth-of-type(3) {
   background: #9c9688;
 }
 
-/* line 164, ../sass/pantone2014fall.scss */
+/* line 150, ../sass/pantone2014fall.scss */
 tr:nth-of-type(4) {
   background: #b93a3e;
 }
 
-/* line 167, ../sass/pantone2014fall.scss */
+/* line 153, ../sass/pantone2014fall.scss */
 tr:nth-of-type(5) {
   background: #dbb960;
 }
 
-/* line 170, ../sass/pantone2014fall.scss */
+/* line 156, ../sass/pantone2014fall.scss */
 tr:nth-of-type(6) {
   background: #9d3158;
 }
 
-/* line 173, ../sass/pantone2014fall.scss */
+/* line 159, ../sass/pantone2014fall.scss */
 tr:nth-of-type(7) {
   background: #c49fba;
 }
 
-/* line 177, ../sass/pantone2014fall.scss */
+/* line 163, ../sass/pantone2014fall.scss */
 tr:nth-of-type(8) {
   background: #886159;
 }
 
-/* line 181, ../sass/pantone2014fall.scss */
+/* line 167, ../sass/pantone2014fall.scss */
 tr:nth-of-type(9) {
   background: #355e91;
 }
 
-/* line 185, ../sass/pantone2014fall.scss */
+/* line 171, ../sass/pantone2014fall.scss */
 tr:nth-of-type(10) {
   background: #525b41;
 }
 
-/* line 189, ../sass/pantone2014fall.scss */
+/* line 175, ../sass/pantone2014fall.scss */
 tr:nth-of-type(11) {
   background: #a593a1;
 }
 
-/* line 194, ../sass/pantone2014fall.scss */
+/* line 180, ../sass/pantone2014fall.scss */
 ul {
   list-style: none;
 }
 
-/* line 197, ../sass/pantone2014fall.scss */
+/* line 183, ../sass/pantone2014fall.scss */
 a {
   color: #3f448c;
   display: inline-block;
@@ -214,619 +219,389 @@ a {
   text-decoration: none;
 }
 
-/* line 203, ../sass/pantone2014fall.scss */
+/* line 189, ../sass/pantone2014fall.scss */
 a:hover {
   color: #355e91;
 }
 
-/* line 207, ../sass/pantone2014fall.scss */
+/* line 192, ../sass/pantone2014fall.scss */
 footer,
 footer ul {
   overflow: auto;
 }
 
-/* line 210, ../sass/pantone2014fall.scss */
+/* line 196, ../sass/pantone2014fall.scss */
 footer {
   margin: 0 auto;
-  border-top: 3px solid #847f73;
+  border-top: 3px solid #858074;
   padding: 2em 1em 1em;
   background: #a593a1;
 }
 
-/* line 216, ../sass/pantone2014fall.scss */
+/* line 202, ../sass/pantone2014fall.scss */
 footer li {
   font-size: .875em;
   text-align: center;
 }
 
-/* line 220, ../sass/pantone2014fall.scss */
+/* line 206, ../sass/pantone2014fall.scss */
 footer a {
   display: inline-block;
 }
 
 @-webkit-keyframes bg-color {
-  /* line 226, ../sass/pantone2014fall.scss */
   0% {
     background: #fff;
   }
-
-  /* line 229, ../sass/pantone2014fall.scss */
   6% {
     background: #fff;
   }
-
-  /* line 232, ../sass/pantone2014fall.scss */
   6.6% {
     background: #9c9688;
   }
-
-  /* line 235, ../sass/pantone2014fall.scss */
   12.6% {
     background: #9c9688;
   }
-
-  /* line 238, ../sass/pantone2014fall.scss */
   13.2% {
     background: #525b41;
   }
-
-  /* line 241, ../sass/pantone2014fall.scss */
   19.2% {
     background: #525b41;
   }
-
-  /* line 244, ../sass/pantone2014fall.scss */
   19.8% {
     background: #525b41;
   }
-
-  /* line 247, ../sass/pantone2014fall.scss */
   25.8% {
     background: #525b41;
   }
-
-  /* line 250, ../sass/pantone2014fall.scss */
   26.4% {
     background: #a593a1;
   }
-
-  /* line 253, ../sass/pantone2014fall.scss */
   32.4% {
     background: #a593a1;
   }
-
-  /* line 256, ../sass/pantone2014fall.scss */
   33% {
     background: #dbb960;
   }
-
-  /* line 259, ../sass/pantone2014fall.scss */
   39% {
     background: #dbb960;
   }
-
-  /* line 262, ../sass/pantone2014fall.scss */
   39.6% {
     background: #a593a1;
   }
-
-  /* line 265, ../sass/pantone2014fall.scss */
   45.6% {
     background: #a593a1;
   }
-
-  /* line 268, ../sass/pantone2014fall.scss */
   46.2% {
     background: #9d3158;
   }
-
-  /* line 271, ../sass/pantone2014fall.scss */
   52.2% {
     background: #9d3158;
   }
-
-  /* line 274, ../sass/pantone2014fall.scss */
   52.8% {
     background: #b93a3e;
   }
-
-  /* line 277, ../sass/pantone2014fall.scss */
   58.8% {
     background: #b93a3e;
   }
-
-  /* line 280, ../sass/pantone2014fall.scss */
   59.4% {
     background: #b163a3;
   }
-
-  /* line 283, ../sass/pantone2014fall.scss */
   65.4% {
     background: #b163a3;
   }
-
-  /* line 286, ../sass/pantone2014fall.scss */
   66% {
     background: #3f448c;
   }
-
-  /* line 289, ../sass/pantone2014fall.scss */
   72% {
     background: #3f448c;
   }
-
-  /* line 292, ../sass/pantone2014fall.scss */
   72.6% {
     background: #355e91;
   }
-
-  /* line 295, ../sass/pantone2014fall.scss */
   78.6% {
     background: #355e91;
   }
-
-  /* line 298, ../sass/pantone2014fall.scss */
   79.2% {
     background: #525b41;
   }
-
-  /* line 301, ../sass/pantone2014fall.scss */
   85.2% {
     background: #525b41;
   }
-
-  /* line 304, ../sass/pantone2014fall.scss */
   85.8% {
     background: #525b41;
   }
-
-  /* line 307, ../sass/pantone2014fall.scss */
   91.8% {
     background: #525b41;
   }
-
-  /* line 310, ../sass/pantone2014fall.scss */
   92.4% {
     background: #9c9688;
   }
 }
 
 @keyframes bg-color {
-  /* line 226, ../sass/pantone2014fall.scss */
   0% {
     background: #fff;
   }
-
-  /* line 229, ../sass/pantone2014fall.scss */
   6% {
     background: #fff;
   }
-
-  /* line 232, ../sass/pantone2014fall.scss */
   6.6% {
     background: #9c9688;
   }
-
-  /* line 235, ../sass/pantone2014fall.scss */
   12.6% {
     background: #9c9688;
   }
-
-  /* line 238, ../sass/pantone2014fall.scss */
   13.2% {
     background: #525b41;
   }
-
-  /* line 241, ../sass/pantone2014fall.scss */
   19.2% {
     background: #525b41;
   }
-
-  /* line 244, ../sass/pantone2014fall.scss */
   19.8% {
     background: #525b41;
   }
-
-  /* line 247, ../sass/pantone2014fall.scss */
   25.8% {
     background: #525b41;
   }
-
-  /* line 250, ../sass/pantone2014fall.scss */
   26.4% {
     background: #a593a1;
   }
-
-  /* line 253, ../sass/pantone2014fall.scss */
   32.4% {
     background: #a593a1;
   }
-
-  /* line 256, ../sass/pantone2014fall.scss */
   33% {
     background: #dbb960;
   }
-
-  /* line 259, ../sass/pantone2014fall.scss */
   39% {
     background: #dbb960;
   }
-
-  /* line 262, ../sass/pantone2014fall.scss */
   39.6% {
     background: #a593a1;
   }
-
-  /* line 265, ../sass/pantone2014fall.scss */
   45.6% {
     background: #a593a1;
   }
-
-  /* line 268, ../sass/pantone2014fall.scss */
   46.2% {
     background: #9d3158;
   }
-
-  /* line 271, ../sass/pantone2014fall.scss */
   52.2% {
     background: #9d3158;
   }
-
-  /* line 274, ../sass/pantone2014fall.scss */
   52.8% {
     background: #b93a3e;
   }
-
-  /* line 277, ../sass/pantone2014fall.scss */
   58.8% {
     background: #b93a3e;
   }
-
-  /* line 280, ../sass/pantone2014fall.scss */
   59.4% {
     background: #b163a3;
   }
-
-  /* line 283, ../sass/pantone2014fall.scss */
   65.4% {
     background: #b163a3;
   }
-
-  /* line 286, ../sass/pantone2014fall.scss */
   66% {
     background: #3f448c;
   }
-
-  /* line 289, ../sass/pantone2014fall.scss */
   72% {
     background: #3f448c;
   }
-
-  /* line 292, ../sass/pantone2014fall.scss */
   72.6% {
     background: #355e91;
   }
-
-  /* line 295, ../sass/pantone2014fall.scss */
   78.6% {
     background: #355e91;
   }
-
-  /* line 298, ../sass/pantone2014fall.scss */
   79.2% {
     background: #525b41;
   }
-
-  /* line 301, ../sass/pantone2014fall.scss */
   85.2% {
     background: #525b41;
   }
-
-  /* line 304, ../sass/pantone2014fall.scss */
   85.8% {
     background: #525b41;
   }
-
-  /* line 307, ../sass/pantone2014fall.scss */
   91.8% {
     background: #525b41;
   }
-
-  /* line 310, ../sass/pantone2014fall.scss */
   92.4% {
     background: #9c9688;
   }
 }
-
 @-webkit-keyframes color {
-  /* line 316, ../sass/pantone2014fall.scss */
   0% {
     color: #9d3158;
   }
-
-  /* line 319, ../sass/pantone2014fall.scss */
   6% {
     color: #9d3158;
   }
-
-  /* line 322, ../sass/pantone2014fall.scss */
   6.6% {
     color: #b163a3;
   }
-
-  /* line 325, ../sass/pantone2014fall.scss */
   12.6% {
     color: #b163a3;
   }
-
-  /* line 328, ../sass/pantone2014fall.scss */
   13.2% {
     color: white;
   }
-
-  /* line 331, ../sass/pantone2014fall.scss */
   19.2% {
     color: white;
   }
-
-  /* line 334, ../sass/pantone2014fall.scss */
   19.8% {
     color: #b93a3e;
   }
-
-  /* line 337, ../sass/pantone2014fall.scss */
   25.8% {
     color: #b93a3e;
   }
-
-  /* line 340, ../sass/pantone2014fall.scss */
   26.4% {
     color: #dbb960;
   }
-
-  /* line 343, ../sass/pantone2014fall.scss */
   32.4% {
     color: #dbb960;
   }
-
-  /* line 346, ../sass/pantone2014fall.scss */
   33% {
     color: #886159;
   }
-
-  /* line 349, ../sass/pantone2014fall.scss */
   39% {
     color: #886159;
   }
-
-  /* line 352, ../sass/pantone2014fall.scss */
   39.6% {
     color: #3f448c;
   }
-
-  /* line 355, ../sass/pantone2014fall.scss */
   45.6% {
     color: #3f448c;
   }
-
-  /* line 358, ../sass/pantone2014fall.scss */
   46.2% {
     color: #9c9688;
   }
-
-  /* line 361, ../sass/pantone2014fall.scss */
   52.2% {
     color: #9c9688;
   }
-
-  /* line 364, ../sass/pantone2014fall.scss */
   52.8% {
     color: #dbb960;
   }
-
-  /* line 367, ../sass/pantone2014fall.scss */
   58.8% {
     color: #dbb960;
   }
-
-  /* line 370, ../sass/pantone2014fall.scss */
   59.4% {
     color: #355e91;
   }
-
-  /* line 373, ../sass/pantone2014fall.scss */
   65.4% {
     color: #355e91;
   }
-
-  /* line 376, ../sass/pantone2014fall.scss */
   66% {
     color: #525b41;
   }
-
-  /* line 379, ../sass/pantone2014fall.scss */
   72% {
     color: #525b41;
   }
-
-  /* line 382, ../sass/pantone2014fall.scss */
   72.6% {
     color: #a593a1;
   }
-
-  /* line 385, ../sass/pantone2014fall.scss */
   78.6% {
     color: #a593a1;
   }
-
-  /* line 388, ../sass/pantone2014fall.scss */
   79.2% {
     color: #dbb960;
   }
-
-  /* line 391, ../sass/pantone2014fall.scss */
   85.2% {
     color: #dbb960;
   }
-
-  /* line 394, ../sass/pantone2014fall.scss */
   85.8% {
     color: #355e91;
   }
-
-  /* line 397, ../sass/pantone2014fall.scss */
   91.8% {
     color: #355e91;
   }
-
-  /* line 400, ../sass/pantone2014fall.scss */
   92.4% {
     color: #a593a1;
   }
 }
-
 @keyframes color {
-  /* line 316, ../sass/pantone2014fall.scss */
   0% {
     color: #9d3158;
   }
-
-  /* line 319, ../sass/pantone2014fall.scss */
   6% {
     color: #9d3158;
   }
-
-  /* line 322, ../sass/pantone2014fall.scss */
   6.6% {
     color: #b163a3;
   }
-
-  /* line 325, ../sass/pantone2014fall.scss */
   12.6% {
     color: #b163a3;
   }
-
-  /* line 328, ../sass/pantone2014fall.scss */
   13.2% {
     color: white;
   }
-
-  /* line 331, ../sass/pantone2014fall.scss */
   19.2% {
     color: white;
   }
-
-  /* line 334, ../sass/pantone2014fall.scss */
   19.8% {
     color: #b93a3e;
   }
-
-  /* line 337, ../sass/pantone2014fall.scss */
   25.8% {
     color: #b93a3e;
   }
-
-  /* line 340, ../sass/pantone2014fall.scss */
   26.4% {
     color: #dbb960;
   }
-
-  /* line 343, ../sass/pantone2014fall.scss */
   32.4% {
     color: #dbb960;
   }
-
-  /* line 346, ../sass/pantone2014fall.scss */
   33% {
     color: #886159;
   }
-
-  /* line 349, ../sass/pantone2014fall.scss */
   39% {
     color: #886159;
   }
-
-  /* line 352, ../sass/pantone2014fall.scss */
   39.6% {
     color: #3f448c;
   }
-
-  /* line 355, ../sass/pantone2014fall.scss */
   45.6% {
     color: #3f448c;
   }
-
-  /* line 358, ../sass/pantone2014fall.scss */
   46.2% {
     color: #9c9688;
   }
-
-  /* line 361, ../sass/pantone2014fall.scss */
   52.2% {
     color: #9c9688;
   }
-
-  /* line 364, ../sass/pantone2014fall.scss */
   52.8% {
     color: #dbb960;
   }
-
-  /* line 367, ../sass/pantone2014fall.scss */
   58.8% {
     color: #dbb960;
   }
-
-  /* line 370, ../sass/pantone2014fall.scss */
   59.4% {
     color: #355e91;
   }
-
-  /* line 373, ../sass/pantone2014fall.scss */
   65.4% {
     color: #355e91;
   }
-
-  /* line 376, ../sass/pantone2014fall.scss */
   66% {
     color: #525b41;
   }
-
-  /* line 379, ../sass/pantone2014fall.scss */
   72% {
     color: #525b41;
   }
-
-  /* line 382, ../sass/pantone2014fall.scss */
   72.6% {
     color: #a593a1;
   }
-
-  /* line 385, ../sass/pantone2014fall.scss */
   78.6% {
     color: #a593a1;
   }
-
-  /* line 388, ../sass/pantone2014fall.scss */
   79.2% {
     color: #dbb960;
   }
-
-  /* line 391, ../sass/pantone2014fall.scss */
   85.2% {
     color: #dbb960;
   }
-
-  /* line 394, ../sass/pantone2014fall.scss */
   85.8% {
     color: #355e91;
   }
-
-  /* line 397, ../sass/pantone2014fall.scss */
   91.8% {
     color: #355e91;
   }
-
-  /* line 400, ../sass/pantone2014fall.scss */
   92.4% {
     color: #a593a1;
   }
