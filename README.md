@@ -78,9 +78,10 @@ Build a scheme stored on some webspace.
 - [Harmonic16](https://github.com/janniks/harmonic16), by Jannik
 
 ### Internal links
-- [Pantone spring colors 1014 ](colorscheming/pantone-spring-2014-colortable.html)
-- [Pantone spring colors 1015 ](colorscheming/pantone-spring-2015colortable.html)
-- [Pantone spring colors 1016 ](colorscheming/pantone-spring-2016-colortable.html)
+- [Pantone Spring colors 1014 ](colorscheming/pantone-spring-2014-colortable.html)
+- [Pantone Fall colors 1014 ](colorscheming/pantone-fall-2014-colortable.html)
+- [Pantone Spring colors 1015 ](colorscheming/pantone-spring-2015colortable.html)
+- [Pantone Spring colors 1016 ](colorscheming/pantone-spring-2016-colortable.html)
 
 ### License
 
